@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+#  mapper-locations: classpath*:mappers/*.xml
+
+spring:
+  redis:
+    host: 47.100.39.234
+    port: 6378
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+        time-between-eviction-runs: 60ms
+
+#logging:
+#  level:
+#    com.xr.boot: debug
+#  file:
+#    path: /var/log/BOS.log

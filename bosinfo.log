@@ -1,0 +1,64 @@
+2020-01-05 20:53:06.239  INFO 2768 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 2768 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
+2020-01-05 20:53:06.244 DEBUG 2768 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-05 20:53:06.245  INFO 2768 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-01-05 20:53:08.187  WARN 2768 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-05 20:53:08.377  WARN 2768 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot]' package. Please check your configuration.
+2020-01-05 20:53:08.472  INFO 2768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-05 20:53:08.477  INFO 2768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-05 20:53:08.523  INFO 2768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2020-01-05 20:53:08.964  INFO 2768 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-05 20:53:09.525  INFO 2768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-05 20:53:09.554  INFO 2768 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-05 20:53:09.555  INFO 2768 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-05 20:53:09.823  INFO 2768 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-05 20:53:09.823  INFO 2768 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3011 ms
+2020-01-05 20:53:10.760  INFO 2768 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-05 20:53:11.191  INFO 2768 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-01-05 20:53:14.804  INFO 2768 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-01-05 20:53:18.720  INFO 2768 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+loadBalanceAlgorithmType: round_robin
+masterDataSourceName: ds0
+name: dataSource
+slaveDataSourceNames:
+- ds1
+
+2020-01-05 20:53:18.720  INFO 2768 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+{}
+
+2020-01-05 20:53:19.142  INFO 2768 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-05 20:53:19.158  INFO 2768 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-05 20:53:19.189  INFO 2768 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-05 20:53:19.220  INFO 2768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-05 20:53:19.236  INFO 2768 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 14.221 seconds (JVM running for 16.135)
+2020-01-05 21:51:04.649  INFO 15212 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 15212 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
+2020-01-05 21:51:04.653 DEBUG 15212 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-05 21:51:04.654  INFO 15212 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-01-05 21:51:06.332  WARN 15212 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-05 21:51:06.580  WARN 15212 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot]' package. Please check your configuration.
+2020-01-05 21:51:06.693  INFO 15212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-05 21:51:06.698  INFO 15212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-05 21:51:06.765  INFO 15212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
+2020-01-05 21:51:07.464  INFO 15212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-05 21:51:07.963  INFO 15212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-05 21:51:07.978  INFO 15212 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-05 21:51:07.979  INFO 15212 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-05 21:51:08.186  INFO 15212 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-05 21:51:08.187  INFO 15212 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3114 ms
+2020-01-05 21:51:09.173  INFO 15212 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-05 21:51:09.488  INFO 15212 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-01-05 21:51:14.634  INFO 15212 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-01-05 21:51:19.763  INFO 15212 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+loadBalanceAlgorithmType: round_robin
+masterDataSourceName: ds0
+name: dataSource
+slaveDataSourceNames:
+- ds1
+
+2020-01-05 21:51:19.764  INFO 15212 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+{}
+
+2020-01-05 21:51:20.902  INFO 15212 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-05 21:51:20.917  INFO 15212 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-05 21:51:20.951  INFO 15212 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-05 21:51:20.997  INFO 15212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-05 21:51:21.001  INFO 15212 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 17.101 seconds (JVM running for 18.574)
