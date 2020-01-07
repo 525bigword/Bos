@@ -185,7 +185,7 @@ public class SnowflakeIdFactory {
     }
 
     public static void main(String[] args) {
-        SnowflakeIdFactory generator = new SnowflakeIdFactory();
+        SnowflakeIdFactory generator = new SnowflakeIdFactory(1);
         for (int i = 0; i < 30; i++) {
             System.out.println(generator.generateKey());
         }

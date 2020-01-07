@@ -1,64 +1,382 @@
-2020-01-05 20:53:06.239  INFO 2768 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 2768 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
-2020-01-05 20:53:06.244 DEBUG 2768 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-01-05 20:53:06.245  INFO 2768 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
-2020-01-05 20:53:08.187  WARN 2768 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
-2020-01-05 20:53:08.377  WARN 2768 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot]' package. Please check your configuration.
-2020-01-05 20:53:08.472  INFO 2768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-01-05 20:53:08.477  INFO 2768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-01-05 20:53:08.523  INFO 2768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
-2020-01-05 20:53:08.964  INFO 2768 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-01-05 20:53:09.525  INFO 2768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-01-05 20:53:09.554  INFO 2768 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-01-05 20:53:09.555  INFO 2768 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2020-01-05 20:53:09.823  INFO 2768 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-01-05 20:53:09.823  INFO 2768 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3011 ms
-2020-01-05 20:53:10.760  INFO 2768 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-01-05 20:53:11.191  INFO 2768 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-01-05 20:53:14.804  INFO 2768 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2020-01-05 20:53:18.720  INFO 2768 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+2020-01-08 00:02:47.381  INFO 4448 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 00:02:47.482  INFO 4448 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72ms. Found 0 repository interfaces.
+2020-01-08 00:02:47.488  WARN 4448 --- [http-nio-8080-exec-2] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 00:02:48.287  INFO 4448 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-08 00:02:48.290  INFO 4448 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 00:02:48.426  INFO 4448 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 131ms. Found 0 repository interfaces.
+2020-01-08 00:02:48.800  INFO 4448 --- [http-nio-8080-exec-2] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-08 00:02:49.628 DEBUG 4448 --- [http-nio-8080-exec-2] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 00:06:28.857  INFO 4448 --- [http-nio-8080-exec-3] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 00:06:28.887  INFO 4448 --- [http-nio-8080-exec-3] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28ms. Found 0 repository interfaces.
+2020-01-08 00:06:28.889  WARN 4448 --- [http-nio-8080-exec-3] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 00:06:29.631 DEBUG 4448 --- [http-nio-8080-exec-3] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 00:13:58.814  INFO 4448 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 00:13:58.846  INFO 4448 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31ms. Found 0 repository interfaces.
+2020-01-08 00:13:58.848  WARN 4448 --- [http-nio-8080-exec-4] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 00:13:59.608 DEBUG 4448 --- [http-nio-8080-exec-4] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 00:14:44.637 DEBUG 4448 --- [http-nio-8080-exec-5] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 00:15:27.956  WARN 4448 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /jurisdiction/loadmenus
+2020-01-08 00:15:47.591  WARN 4448 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /jurisdiction/LoadMenus
+2020-01-08 00:16:28.183  WARN 4448 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /jurisdiction/loadMenus
+2020-01-08 00:17:00.383  WARN 4448 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /jurisdiction/loadMenus
+2020-01-08 00:17:16.121  INFO 4448 --- [http-nio-8080-exec-10] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 00:17:16.192  INFO 4448 --- [http-nio-8080-exec-10] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70ms. Found 0 repository interfaces.
+2020-01-08 00:17:16.208  WARN 4448 --- [http-nio-8080-exec-10] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 00:17:16.709  INFO 4448 --- [http-nio-8080-exec-10] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-08 00:17:16.755  WARN 4448 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /jurisdiction/loadMenus
+2020-01-08 00:18:23.843  INFO 4448 --- [http-nio-8080-exec-1] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 00:18:23.857  INFO 4448 --- [http-nio-8080-exec-1] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
+2020-01-08 00:18:23.859  WARN 4448 --- [http-nio-8080-exec-1] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 00:18:24.002  INFO 4448 --- [http-nio-8080-exec-1] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-08 00:18:24.004  WARN 4448 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /jurisdiction/loadMenus
+2020-01-08 00:19:15.286  WARN 4448 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /jurisdiction/loadMenus
+2020-01-08 00:19:49.257  INFO 2820 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 2820 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
+2020-01-08 00:19:49.262 DEBUG 2820 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-08 00:19:49.262  INFO 2820 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-01-08 00:19:51.090  INFO 2820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-08 00:19:51.094  INFO 2820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 00:19:51.164  INFO 2820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45ms. Found 0 repository interfaces.
+2020-01-08 00:19:51.910  INFO 2820 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-08 00:19:53.258  INFO 2820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-08 00:19:53.277  INFO 2820 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-08 00:19:53.278  INFO 2820 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-08 00:19:53.472  INFO 2820 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-08 00:19:53.472  INFO 2820 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3816 ms
+2020-01-08 00:19:54.583  INFO 2820 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-01-08 00:19:59.806  INFO 2820 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-01-08 00:20:06.915  INFO 2820 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
 loadBalanceAlgorithmType: round_robin
 masterDataSourceName: ds0
 name: dataSource
 slaveDataSourceNames:
 - ds1
 
-2020-01-05 20:53:18.720  INFO 2768 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+2020-01-08 00:20:06.917  INFO 2820 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
 {}
 
-2020-01-05 20:53:19.142  INFO 2768 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-01-05 20:53:19.158  INFO 2768 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-01-05 20:53:19.189  INFO 2768 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-01-05 20:53:19.220  INFO 2768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-01-05 20:53:19.236  INFO 2768 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 14.221 seconds (JVM running for 16.135)
-2020-01-05 21:51:04.649  INFO 15212 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 15212 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
-2020-01-05 21:51:04.653 DEBUG 15212 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-01-05 21:51:04.654  INFO 15212 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
-2020-01-05 21:51:06.332  WARN 15212 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
-2020-01-05 21:51:06.580  WARN 15212 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot]' package. Please check your configuration.
-2020-01-05 21:51:06.693  INFO 15212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-01-05 21:51:06.698  INFO 15212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-01-05 21:51:06.765  INFO 15212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
-2020-01-05 21:51:07.464  INFO 15212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-01-05 21:51:07.963  INFO 15212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-01-05 21:51:07.978  INFO 15212 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-01-05 21:51:07.979  INFO 15212 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2020-01-05 21:51:08.186  INFO 15212 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-01-05 21:51:08.187  INFO 15212 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3114 ms
-2020-01-05 21:51:09.173  INFO 15212 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-01-05 21:51:09.488  INFO 15212 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-01-05 21:51:14.634  INFO 15212 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2020-01-05 21:51:19.763  INFO 15212 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
-loadBalanceAlgorithmType: round_robin
-masterDataSourceName: ds0
-name: dataSource
-slaveDataSourceNames:
-- ds1
+2020-01-08 00:20:08.970  INFO 2820 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-08 00:20:09.875  INFO 2820 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-01-08 00:20:12.669  INFO 2820 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-01-08 00:20:12.688  INFO 2820 --- [nioEventLoopGroup-4-3] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-01-08 00:20:12.883  INFO 2820 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-08 00:20:12.925  INFO 2820 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-08 00:20:12.998  INFO 2820 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-08 00:20:13.252  INFO 2820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-08 00:20:13.258  INFO 2820 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 25.054 seconds (JVM running for 34.592)
+2020-01-08 00:20:29.881  INFO 2820 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-08 00:20:29.881  INFO 2820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-08 00:20:29.899  INFO 2820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2020-01-08 00:20:29.933  WARN 2820 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /jurisdiction/loadMenus
+2020-01-08 00:21:38.872  WARN 2820 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /jurisdiction/loadMenus
+2020-01-08 00:22:55.733  INFO 2820 --- [http-nio-8080-exec-3] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-01-08 00:22:55.736  INFO 2820 --- [http-nio-8080-exec-3] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-01-08 00:22:57.830 DEBUG 2820 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 00:22:59.781 DEBUG 2820 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 00:23:00.683 DEBUG 2820 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 1
+2020-01-08 00:23:01.714  WARN 2820 --- [http-nio-8080-exec-3] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 00:24:27.618 DEBUG 2820 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 00:24:28.623 DEBUG 2820 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 00:24:28.799 DEBUG 2820 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 1
+2020-01-08 00:24:30.647  WARN 2820 --- [http-nio-8080-exec-4] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 00:27:16.737 DEBUG 2820 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 00:27:17.700 DEBUG 2820 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 00:27:17.771 DEBUG 2820 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 1
+2020-01-08 00:27:18.797  WARN 2820 --- [http-nio-8080-exec-5] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 00:29:36.898  INFO 2820 --- [http-nio-8080-exec-6] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 00:29:37.065  INFO 2820 --- [http-nio-8080-exec-6] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 165ms. Found 0 repository interfaces.
+2020-01-08 00:29:37.231  WARN 2820 --- [http-nio-8080-exec-6] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 00:29:38.208  INFO 2820 --- [http-nio-8080-exec-6] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-08 00:29:38.209  INFO 2820 --- [http-nio-8080-exec-6] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 00:29:38.325  INFO 2820 --- [http-nio-8080-exec-6] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115ms. Found 0 repository interfaces.
+2020-01-08 00:29:39.709 DEBUG 2820 --- [http-nio-8080-exec-6] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 00:29:40.616 DEBUG 2820 --- [http-nio-8080-exec-6] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 00:29:40.700 DEBUG 2820 --- [http-nio-8080-exec-6] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 1
+2020-01-08 00:29:41.695  WARN 2820 --- [http-nio-8080-exec-6] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 00:30:07.507  INFO 2820 --- [http-nio-8080-exec-7] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 00:30:07.552  INFO 2820 --- [http-nio-8080-exec-7] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44ms. Found 0 repository interfaces.
+2020-01-08 00:30:07.645  WARN 2820 --- [http-nio-8080-exec-7] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 00:30:08.703 DEBUG 2820 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 00:30:08.806 DEBUG 2820 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 00:30:09.596 DEBUG 2820 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 1
+2020-01-08 00:30:10.764  WARN 2820 --- [http-nio-8080-exec-7] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 00:32:22.680 DEBUG 2820 --- [http-nio-8080-exec-8] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 00:32:23.602 DEBUG 2820 --- [http-nio-8080-exec-8] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 00:32:23.705 DEBUG 2820 --- [http-nio-8080-exec-8] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 1
+2020-01-08 00:32:25.613  WARN 2820 --- [http-nio-8080-exec-8] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 00:33:21.799 DEBUG 2820 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 00:33:22.618 DEBUG 2820 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 00:33:22.693 DEBUG 2820 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 00:33:24.700  WARN 2820 --- [http-nio-8080-exec-9] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 00:33:52.713 DEBUG 2820 --- [http-nio-8080-exec-10] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 00:33:52.796 DEBUG 2820 --- [http-nio-8080-exec-10] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 00:33:53.609 DEBUG 2820 --- [http-nio-8080-exec-10] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 00:33:54.765  WARN 2820 --- [http-nio-8080-exec-10] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 00:38:03.900 DEBUG 2820 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 00:38:04.701 DEBUG 2820 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 00:38:04.775 DEBUG 2820 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 00:38:06.635  WARN 2820 --- [http-nio-8080-exec-1] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 00:39:08.722 DEBUG 2820 --- [http-nio-8080-exec-2] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 00:39:09.886 DEBUG 2820 --- [http-nio-8080-exec-2] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 00:39:10.620 DEBUG 2820 --- [http-nio-8080-exec-2] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 00:39:11.700  WARN 2820 --- [http-nio-8080-exec-2] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 00:40:14.690 DEBUG 2820 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 00:40:16.588 DEBUG 2820 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 00:40:16.663 DEBUG 2820 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 00:40:18.592  WARN 2820 --- [http-nio-8080-exec-3] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 00:40:59.697 DEBUG 2820 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 00:40:59.775 DEBUG 2820 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 00:41:00.589 DEBUG 2820 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 00:41:01.678  WARN 2820 --- [http-nio-8080-exec-4] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 00:45:24.832 DEBUG 2820 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 00:45:25.851 DEBUG 2820 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 00:45:26.698 DEBUG 2820 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 00:45:29.593  WARN 2820 --- [http-nio-8080-exec-5] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 00:47:25.675 DEBUG 2820 --- [http-nio-8080-exec-6] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 00:47:26.623 DEBUG 2820 --- [http-nio-8080-exec-6] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 00:47:26.722 DEBUG 2820 --- [http-nio-8080-exec-6] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 00:47:29.582  WARN 2820 --- [http-nio-8080-exec-6] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 00:48:18.597 DEBUG 2820 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 00:48:19.581 DEBUG 2820 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 00:48:19.735 DEBUG 2820 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 00:48:21.768  WARN 2820 --- [http-nio-8080-exec-7] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 00:50:11.589 DEBUG 2820 --- [http-nio-8080-exec-8] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 00:50:11.749 DEBUG 2820 --- [http-nio-8080-exec-8] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 00:50:12.581 DEBUG 2820 --- [http-nio-8080-exec-8] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 00:50:13.665  WARN 2820 --- [http-nio-8080-exec-8] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 00:51:31.806 DEBUG 2820 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 00:51:32.667 DEBUG 2820 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 00:51:32.749 DEBUG 2820 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 00:51:34.599  WARN 2820 --- [http-nio-8080-exec-9] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 00:54:54.800 DEBUG 2820 --- [http-nio-8080-exec-10] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 00:54:55.689 DEBUG 2820 --- [http-nio-8080-exec-10] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 00:54:55.819 DEBUG 2820 --- [http-nio-8080-exec-10] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 00:54:57.609  WARN 2820 --- [http-nio-8080-exec-10] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 01:01:55.673 DEBUG 2820 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 01:01:56.836 DEBUG 2820 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 01:01:57.573 DEBUG 2820 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 01:01:58.697  WARN 2820 --- [http-nio-8080-exec-1] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 01:03:00.673 DEBUG 2820 --- [http-nio-8080-exec-2] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 01:03:01.770 DEBUG 2820 --- [http-nio-8080-exec-2] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 01:03:02.594 DEBUG 2820 --- [http-nio-8080-exec-2] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 01:03:03.672  WARN 2820 --- [http-nio-8080-exec-2] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 01:04:15.740 DEBUG 2820 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 01:04:16.751 DEBUG 2820 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 01:04:17.594 DEBUG 2820 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 01:04:18.656  WARN 2820 --- [http-nio-8080-exec-3] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 01:06:41.768 DEBUG 2820 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 01:06:42.788 DEBUG 2820 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 01:06:43.604 DEBUG 2820 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 01:06:45.677  WARN 2820 --- [http-nio-8080-exec-4] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 01:07:01.687 DEBUG 2820 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 01:07:01.764 DEBUG 2820 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 01:07:02.598 DEBUG 2820 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 01:07:03.674  WARN 2820 --- [http-nio-8080-exec-5] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 01:07:35.643 DEBUG 2820 --- [http-nio-8080-exec-6] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 01:07:35.724 DEBUG 2820 --- [http-nio-8080-exec-6] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 01:07:36.600 DEBUG 2820 --- [http-nio-8080-exec-6] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 01:07:37.710  WARN 2820 --- [http-nio-8080-exec-6] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 01:08:29.688 DEBUG 2820 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 01:08:29.779 DEBUG 2820 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 01:08:30.717 DEBUG 2820 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 01:08:33.587  WARN 2820 --- [http-nio-8080-exec-7] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 01:11:56.648 DEBUG 2820 --- [http-nio-8080-exec-8] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 01:11:56.737 DEBUG 2820 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyBigMenusAll              : ==>  Preparing: select id,bigmenus,url from sy_bigmenus 
+2020-01-08 01:11:57.584 DEBUG 2820 --- [http-nio-8080-exec-8] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 01:11:57.686 DEBUG 2820 --- [http-nio-8080-exec-8] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 01:11:58.749 DEBUG 2820 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyBigMenusAll              : ==> Parameters: 
+2020-01-08 01:11:58.761  WARN 2820 --- [http-nio-8080-exec-8] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 01:11:59.640 DEBUG 2820 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyBigMenusAll              : <==      Total: 3
+2020-01-08 01:12:01.641  WARN 2820 --- [http-nio-8080-exec-9] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findyBigmenus)
+2020-01-08 01:13:28.583 DEBUG 2820 --- [http-nio-8080-exec-10] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 01:13:28.747 DEBUG 2820 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyBigMenusAll              : ==>  Preparing: select id,bigmenus,url from sy_bigmenus 
+2020-01-08 01:13:29.655 DEBUG 2820 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyBigMenusAll              : ==> Parameters: 
+2020-01-08 01:13:29.727 DEBUG 2820 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyBigMenusAll              : <==      Total: 3
+2020-01-08 01:13:31.564  WARN 2820 --- [http-nio-8080-exec-1] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findyBigmenus)
+2020-01-08 01:14:55.722 DEBUG 2820 --- [http-nio-8080-exec-2] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 01:14:55.724 DEBUG 2820 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyBigMenusAll              : ==>  Preparing: select id,bigmenus,url from sy_bigmenus 
+2020-01-08 01:14:56.744 DEBUG 2820 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyBigMenusAll              : ==> Parameters: 
+2020-01-08 01:14:57.584 DEBUG 2820 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyBigMenusAll              : <==      Total: 3
+2020-01-08 01:14:58.795  WARN 2820 --- [http-nio-8080-exec-3] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findyBigmenus)
+2020-01-08 01:16:53.580 DEBUG 2820 --- [http-nio-8080-exec-4] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 01:16:53.688 DEBUG 2820 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyBigMenusAll              : ==>  Preparing: select id,bigmenus,url from sy_bigmenus 
+2020-01-08 01:16:54.580 DEBUG 2820 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyBigMenusAll              : ==> Parameters: 
+2020-01-08 01:16:54.661 DEBUG 2820 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyBigMenusAll              : <==      Total: 3
+2020-01-08 01:16:56.580  WARN 2820 --- [http-nio-8080-exec-5] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findyBigmenus)
+2020-01-08 01:17:39.580 DEBUG 2820 --- [http-nio-8080-exec-6] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 01:17:40.590 DEBUG 2820 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyBigMenusAll              : ==>  Preparing: select id,bigmenus,url from sy_bigmenus 
+2020-01-08 01:17:40.746 DEBUG 2820 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyBigMenusAll              : ==> Parameters: 
+2020-01-08 01:17:41.597 DEBUG 2820 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyBigMenusAll              : <==      Total: 3
+2020-01-08 01:17:42.685  WARN 2820 --- [http-nio-8080-exec-7] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findyBigmenus)
+2020-01-08 01:18:14.593 DEBUG 2820 --- [http-nio-8080-exec-8] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 01:18:15.563 DEBUG 2820 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyBigMenusAll              : ==>  Preparing: select id,bigmenus,url from sy_bigmenus 
+2020-01-08 01:18:15.660 DEBUG 2820 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyBigMenusAll              : ==> Parameters: 
+2020-01-08 01:18:15.733 DEBUG 2820 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyBigMenusAll              : <==      Total: 3
+2020-01-08 01:18:17.595  WARN 2820 --- [http-nio-8080-exec-9] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findyBigmenus)
+2020-01-08 01:18:59.651 DEBUG 2820 --- [http-nio-8080-exec-10] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 01:19:00.677 DEBUG 2820 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyBigMenusAll              : ==>  Preparing: select id,bigmenus,url from sy_bigmenus 
+2020-01-08 01:19:00.750 DEBUG 2820 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyBigMenusAll              : ==> Parameters: 
+2020-01-08 01:19:01.707 DEBUG 2820 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyBigMenusAll              : <==      Total: 3
+2020-01-08 01:19:03.561  WARN 2820 --- [http-nio-8080-exec-1] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findyBigmenus)
+2020-01-08 01:21:07.675  INFO 2820 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 01:21:07.739  INFO 2820 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62ms. Found 0 repository interfaces.
+2020-01-08 01:21:07.864  WARN 2820 --- [http-nio-8080-exec-2] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 01:21:08.422  INFO 2820 --- [http-nio-8080-exec-2] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-08 01:21:08.559 DEBUG 2820 --- [http-nio-8080-exec-2] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 01:21:11.675 DEBUG 2820 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyBigMenusAll              : ==>  Preparing: select id,bigmenus,url from sy_bigmenus 
+2020-01-08 01:21:12.576 DEBUG 2820 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyBigMenusAll              : ==> Parameters: 
+2020-01-08 01:21:12.660 DEBUG 2820 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyBigMenusAll              : <==      Total: 3
+2020-01-08 01:21:13.745  WARN 2820 --- [http-nio-8080-exec-3] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findyBigmenus)
+2020-01-08 01:23:02.482  INFO 2820 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 01:23:02.534  INFO 2820 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51ms. Found 0 repository interfaces.
+2020-01-08 01:23:02.732  WARN 2820 --- [http-nio-8080-exec-4] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 01:23:03.306  INFO 2820 --- [http-nio-8080-exec-4] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-08 01:23:03.597 DEBUG 2820 --- [http-nio-8080-exec-4] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 01:23:06.665 DEBUG 2820 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyBigMenusAll              : ==>  Preparing: select id,bigmenus,url from sy_bigmenus 
+2020-01-08 01:23:07.576 DEBUG 2820 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyBigMenusAll              : ==> Parameters: 
+2020-01-08 01:23:07.663 DEBUG 2820 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyBigMenusAll              : <==      Total: 3
+2020-01-08 01:23:09.583  WARN 2820 --- [http-nio-8080-exec-5] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findyBigmenus)
+2020-01-08 01:26:11.573 DEBUG 2820 --- [http-nio-8080-exec-6] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 01:26:12.681 DEBUG 2820 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyBigMenusAll              : ==>  Preparing: select id,bigmenus,url from sy_bigmenus 
+2020-01-08 01:26:13.819 DEBUG 2820 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyBigMenusAll              : ==> Parameters: 
+2020-01-08 01:26:14.645 DEBUG 2820 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyBigMenusAll              : <==      Total: 3
+2020-01-08 01:26:16.558  WARN 2820 --- [http-nio-8080-exec-7] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findyBigmenus)
+2020-01-08 01:28:38.683  INFO 2820 --- [http-nio-8080-exec-8] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 01:28:38.727  INFO 2820 --- [http-nio-8080-exec-8] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43ms. Found 0 repository interfaces.
+2020-01-08 01:28:38.806  WARN 2820 --- [http-nio-8080-exec-8] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 01:28:39.848 DEBUG 2820 --- [http-nio-8080-exec-8] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 01:28:40.857 DEBUG 2820 --- [http-nio-8080-exec-8] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 01:28:40.859 DEBUG 2820 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyBigMenusAll              : ==>  Preparing: select id,bigmenus,url from sy_bigmenus 
+2020-01-08 01:28:41.685 DEBUG 2820 --- [http-nio-8080-exec-8] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 01:28:41.880 DEBUG 2820 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyBigMenusAll              : ==> Parameters: 
+2020-01-08 01:28:42.690 DEBUG 2820 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyBigMenusAll              : <==      Total: 3
+2020-01-08 01:28:43.702  WARN 2820 --- [http-nio-8080-exec-8] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 01:28:44.636  WARN 2820 --- [http-nio-8080-exec-9] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findyBigmenus)
+2020-01-08 01:29:37.609  INFO 2820 --- [http-nio-8080-exec-10] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 01:29:37.654  INFO 2820 --- [http-nio-8080-exec-10] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44ms. Found 0 repository interfaces.
+2020-01-08 01:29:37.747  WARN 2820 --- [http-nio-8080-exec-10] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 01:29:38.072  INFO 2820 --- [http-nio-8080-exec-10] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-08 01:29:38.669 DEBUG 2820 --- [http-nio-8080-exec-10] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 01:29:38.768 DEBUG 2820 --- [http-nio-8080-exec-10] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 01:29:39.581 DEBUG 2820 --- [http-nio-8080-exec-10] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 01:29:39.676 DEBUG 2820 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyBigMenusAll              : ==>  Preparing: select id,bigmenus,url from sy_bigmenus 
+2020-01-08 01:29:39.759 DEBUG 2820 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyBigMenusAll              : ==> Parameters: 
+2020-01-08 01:29:40.556 DEBUG 2820 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyBigMenusAll              : <==      Total: 3
+2020-01-08 01:29:40.637  WARN 2820 --- [http-nio-8080-exec-10] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 01:29:40.908 ERROR 2820 --- [http-nio-8080-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Could not resolve view with name 'jurisdiction/loadmenus' in servlet with name 'dispatcherServlet'] with root cause
 
-2020-01-05 21:51:19.764  INFO 15212 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
-{}
+javax.servlet.ServletException: Could not resolve view with name 'jurisdiction/loadmenus' in servlet with name 'dispatcherServlet'
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1353) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:41002) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_211]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_211]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
 
-2020-01-05 21:51:20.902  INFO 15212 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-01-05 21:51:20.917  INFO 15212 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-01-05 21:51:20.951  INFO 15212 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-01-05 21:51:20.997  INFO 15212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-01-05 21:51:21.001  INFO 15212 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 17.101 seconds (JVM running for 18.574)
+2020-01-08 01:29:41.683  WARN 2820 --- [http-nio-8080-exec-1] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findyBigmenus)
+2020-01-08 01:29:41.686 ERROR 2820 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Could not resolve view with name 'jurisdiction/loadoptions' in servlet with name 'dispatcherServlet'] with root cause
+
+javax.servlet.ServletException: Could not resolve view with name 'jurisdiction/loadoptions' in servlet with name 'dispatcherServlet'
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1353) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:41002) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_211]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_211]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-01-08 01:30:57.173  INFO 2820 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 01:30:57.239  INFO 2820 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65ms. Found 0 repository interfaces.
+2020-01-08 01:30:57.325  WARN 2820 --- [http-nio-8080-exec-2] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 01:30:57.677  INFO 2820 --- [http-nio-8080-exec-2] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-08 01:30:58.569 DEBUG 2820 --- [http-nio-8080-exec-2] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 01:30:58.642 DEBUG 2820 --- [http-nio-8080-exec-3] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 01:31:35.929  INFO 2820 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 01:31:35.983  INFO 2820 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52ms. Found 0 repository interfaces.
+2020-01-08 01:31:36.078  WARN 2820 --- [http-nio-8080-exec-4] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 01:31:36.371  INFO 2820 --- [http-nio-8080-exec-4] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-08 01:31:36.661 DEBUG 2820 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 01:31:37.638 DEBUG 2820 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyBigMenusAll              : ==>  Preparing: select id,bigmenus,url from sy_bigmenus 
+2020-01-08 01:31:37.637 DEBUG 2820 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 01:31:37.716 DEBUG 2820 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 01:31:38.622 DEBUG 2820 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyBigMenusAll              : ==> Parameters: 
+2020-01-08 01:31:38.708 DEBUG 2820 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyBigMenusAll              : <==      Total: 3
+2020-01-08 01:31:39.845  WARN 2820 --- [http-nio-8080-exec-4] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 01:31:40.642  WARN 2820 --- [http-nio-8080-exec-5] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findyBigmenus)
+2020-01-08 01:32:52.344  INFO 2820 --- [http-nio-8080-exec-6] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 01:32:52.388  INFO 2820 --- [http-nio-8080-exec-6] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42ms. Found 0 repository interfaces.
+2020-01-08 01:32:52.480  WARN 2820 --- [http-nio-8080-exec-6] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 01:32:52.909  INFO 2820 --- [http-nio-8080-exec-6] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-08 01:32:53.821 DEBUG 2820 --- [http-nio-8080-exec-6] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 01:32:54.679 DEBUG 2820 --- [http-nio-8080-exec-6] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 01:32:54.806 DEBUG 2820 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyBigMenusAll              : ==>  Preparing: select id,bigmenus,url from sy_bigmenus 
+2020-01-08 01:32:55.629 DEBUG 2820 --- [http-nio-8080-exec-6] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 01:32:55.714 DEBUG 2820 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyBigMenusAll              : ==> Parameters: 
+2020-01-08 01:32:56.637 DEBUG 2820 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyBigMenusAll              : <==      Total: 3
+2020-01-08 01:32:57.688  WARN 2820 --- [http-nio-8080-exec-6] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 01:32:58.583  WARN 2820 --- [http-nio-8080-exec-7] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findyBigmenus)
+2020-01-08 01:33:17.546 DEBUG 2820 --- [http-nio-8080-exec-8] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 01:33:23.568 DEBUG 2820 --- [http-nio-8080-exec-9] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 01:34:40.559 DEBUG 2820 --- [http-nio-8080-exec-10] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 01:34:41.548 DEBUG 2820 --- [http-nio-8080-exec-1] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 01:34:56.702 DEBUG 2820 --- [http-nio-8080-exec-2] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 01:34:57.618 DEBUG 2820 --- [http-nio-8080-exec-2] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 01:34:57.694 DEBUG 2820 --- [http-nio-8080-exec-2] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 01:34:58.697 DEBUG 2820 --- [http-nio-8080-exec-3] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 01:34:59.592  WARN 2820 --- [http-nio-8080-exec-2] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)

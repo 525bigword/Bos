@@ -4,12 +4,13 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class SyMenus
  ***********************************************************************/
 
+import java.io.Serializable;
 import java.util.*;
 
 /** 角色栏目表(权限表)
  * 
  * @pdOid 84ae4f40-c0f2-4ac1-8dd1-66235eef0a70 */
-public class SyMenus {
+public class SyMenus implements Serializable {
    /** 编号  自增
     * 
     * @pdOid efffef50-3bd0-4f46-b632-956359a81631 */
