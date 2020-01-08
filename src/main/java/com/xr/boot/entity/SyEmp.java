@@ -4,12 +4,12 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class SyEmp
  ***********************************************************************/
 
-import java.util.*;
+import java.io.Serializable;
 
 /** 员工表
  * 
  * @pdOid 84cc1890-5ed5-4982-89a4-e581e4cea20e */
-public class SyEmp {
+public class SyEmp implements Serializable {
    /** 编号 自增
     * 
     * @pdOid 813b9d26-d334-4a16-aecd-b9cd38a8112b */
@@ -38,7 +38,7 @@ public class SyEmp {
     * 
     * @pdOid c277c848-3602-4104-96cb-358b8c0678cd */
    private long disabled;
-   
+   public SyEmp(){}
    /** @pdOid 35ebd555-c558-49fc-9dd0-20f4c14cd9d4 */
    public long getId() {
       return id;

@@ -4,12 +4,16 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class SyUnits
  ***********************************************************************/
 
-import java.util.*;
+import java.io.Serializable;
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Iterator;
 
 /** 员工单位表 用户单位表
  * 
  * @pdOid d2aebf06-aa88-4cdc-b0ca-53e9044fcb04 */
-public class SyUnits {
+public class SyUnits implements Serializable {
    /** 编号	自增
     * 
     * @pdOid bc8c3015-7113-4a13-983e-25e87b613cb0 */
@@ -30,7 +34,7 @@ public class SyUnits {
     * 
     * @pdOid 6dcd1ed3-c25f-4989-a9ac-3f6114989fe3 */
    private long stats;
-   
+   public  SyUnits(){}
    /** @pdRoleInfo migr=no name=PacPackagingMateriarOutBoundFrom assc=reference65 coll=java.util.Collection impl=java.util.HashSet mult=0..* */
    public Collection<PacPackagingMateriarOutBoundFrom> pacPackagingMateriarOutBoundFrom;
    
