@@ -28,6 +28,10 @@ public class SyRoles implements Serializable {
     * 
     * @pdOid 48ea153e-be2a-44ca-8a56-35ab0524a0cb */
    private Integer disabled;
+   /**
+    * 业务属性
+    */
+
    
    /** @pdOid f300bf9b-31ef-402f-8d96-166c82b4f805 */
    public long getId() {

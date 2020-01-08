@@ -8,6 +8,7 @@ package com.xr.boot.ienum;
 public enum StausEnum {
     SUCCESS(20000,"成功"),
     NO(19999,"失败"),
+    LoginNo(19998,"登录失败"),
     NO_HANDLER(10000,"无请求头"),
     HANDLER_EXCEPTION(10001,"请求头错误"),
     PERMISSIONS_EXCEPTION(10003,"无权限");

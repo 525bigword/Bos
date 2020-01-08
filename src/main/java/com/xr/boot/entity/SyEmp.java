@@ -4,12 +4,14 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class SyEmp
  ***********************************************************************/
 
+import java.io.Serializable;
 import java.util.*;
 
 /** 员工表
  * 
  * @pdOid 84cc1890-5ed5-4982-89a4-e581e4cea20e */
-public class SyEmp {
+public class SyEmp implements Serializable {
+   private static final long serialVersionUID = -3262474656539416214L;
    /** 编号 自增
     * 
     * @pdOid 813b9d26-d334-4a16-aecd-b9cd38a8112b */
@@ -30,6 +32,8 @@ public class SyEmp {
     * 
     * @pdOid 625f2e69-9b96-408b-993c-45eb749fb5e4 */
    private String queryPwd;
+   //员工单位
+   private Integer empunit;
    /** 备注
     * 
     * @pdOid c3d9d00c-3118-4124-9e99-eacf58b281cb */
@@ -37,8 +41,29 @@ public class SyEmp {
    /** 禁用  1可使用 0已禁用
     * 
     * @pdOid c277c848-3602-4104-96cb-358b8c0678cd */
-   private long disabled;
-   
+   private Integer disabled;
+   /**
+    * 业务属性
+    */
+   private SyRolesMenus syRolesMenus;
+
+
+   public Integer getEmpunit() {
+      return empunit;
+   }
+
+   public void setEmpunit(Integer empunit) {
+      this.empunit = empunit;
+   }
+
+   public SyRolesMenus getSyRolesMenus() {
+      return syRolesMenus;
+   }
+
+   public void setSyRolesMenus(SyRolesMenus syRolesMenus) {
+      this.syRolesMenus = syRolesMenus;
+   }
+
    /** @pdOid 35ebd555-c558-49fc-9dd0-20f4c14cd9d4 */
    public long getId() {
       return id;
@@ -106,13 +131,13 @@ public class SyEmp {
    }
    
    /** @pdOid 272937f5-35dc-4cd2-9502-10cf0505fe2d */
-   public long getDisabled() {
+   public Integer getDisabled() {
       return disabled;
    }
    
    /** @param newDisabled
     * @pdOid 08227057-08b7-4b47-88ef-fad95be8866c */
-   public void setDisabled(long newDisabled) {
+   public void setDisabled(Integer newDisabled) {
       disabled = newDisabled;
    }
 

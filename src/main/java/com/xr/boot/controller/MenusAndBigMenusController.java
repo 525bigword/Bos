@@ -23,7 +23,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("jurisdiction")
 @Slf4j
-@Api(tags = "权限相关接口")
+@Api(tags = "权限用户相关接口")
 public class MenusAndBigMenusController {
     @Autowired
     private RedisUtil redisUtil;

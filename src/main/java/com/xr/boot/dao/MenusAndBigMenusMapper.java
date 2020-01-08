@@ -10,6 +10,20 @@ import java.util.List;
 
 @Repository
 public interface MenusAndBigMenusMapper {
+
+    //根据Id查sy_menus
+    @Select("select id,parentid,type,text,url,tip,bigmenus from sy_menus where id=#{id}")
+    @Results({
+            @Result(id=true,column="id",property="id"),
+            @Result(column="parentID",property="parentID"),
+            @Result(column="type",property="type"),
+            @Result(column="text",property="text"),
+            @Result(column = "url",property = "url"),
+            @Result(column="tip",property="tip"),
+            @Result(column="bigmenus",property="bigmenus")
+    })
+    List<SyMenus> findSyMenusById(@Param("id")Integer parentId);
+
     //根据ParentId查sy_menus
     @Select("select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=#{parentid}")
     @Results({

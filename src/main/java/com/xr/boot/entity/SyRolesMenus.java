@@ -4,12 +4,14 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class SyRolesMenus
  ***********************************************************************/
 
+import java.io.Serializable;
 import java.util.*;
 
 /** 角色权限表
  * 
  * @pdOid b44d543b-16bc-4751-a5bb-0e65af9d4eb4 */
-public class SyRolesMenus {
+public class SyRolesMenus implements Serializable {
+   private static final long serialVersionUID = 7164587616477181376L;
    /** 编号	自增
     * 
     * @pdOid fcbbdf8e-6764-4900-9795-ec52f8f26f31 */
@@ -17,8 +19,11 @@ public class SyRolesMenus {
    /** @pdOid d7cc9786-f9eb-4dd4-848e-3c0dc791244c */
    private SyRoles roleNames;
    /** @pdOid 8f66f442-d059-4110-abbd-82597607a23e */
-   private SyMenus menuNames;
-   
+   private Set<SyMenus> menuNames;
+
+
+
+
    /** @pdOid c31537a1-63a9-4fc8-942a-e7b41f58aa14 */
    public long getId() {
       return id;
@@ -40,16 +45,16 @@ public class SyRolesMenus {
    public void setRoleNames(SyRoles newRoleNames) {
       roleNames = newRoleNames;
    }
-   
-   /** @pdOid 4b5ea540-7777-4436-8eac-c68409d1dc73 */
-   public SyMenus getMenuNames() {
-      return menuNames;
-   }
-   
-   /** @param newMenuNames
-    * @pdOid af5392c6-a8c5-47e7-9b46-7d6cd361b568 */
-   public void setMenuNames(SyMenus newMenuNames) {
-      menuNames = newMenuNames;
+
+   public static long getSerialVersionUID() {
+      return serialVersionUID;
    }
 
+   public Set<SyMenus> getMenuNames() {
+      return menuNames;
+   }
+
+   public void setMenuNames(Set<SyMenus> menuNames) {
+      this.menuNames = menuNames;
+   }
 }
