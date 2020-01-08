@@ -1,4 +1,4 @@
-package com.xr.boot.dao;
+package com.xr.boot.dao.system;
 
 import com.xr.boot.entity.SyRoles;
 import org.apache.ibatis.annotations.Insert;

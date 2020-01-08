@@ -1,14 +1,11 @@
-package com.xr.boot.service.service.impl;
+package com.xr.boot.service.system.impl;
 
-import com.alibaba.druid.sql.ast.expr.SQLExistsExpr;
-import com.xr.boot.dao.SyEmpMapper;
+import com.xr.boot.dao.system.SyEmpMapper;
 import com.xr.boot.entity.SyEmp;
-import com.xr.boot.service.service.SyEmpService;
-import com.xr.boot.util.JwtUtil;
+import com.xr.boot.service.system.SyEmpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.Serializable;
 import java.sql.SQLException;
 
 @Service

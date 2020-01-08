@@ -1,8 +1,8 @@
-package com.xr.boot.service.service.impl;
+package com.xr.boot.service.impl;
 
 import com.xr.boot.entity.SyEmp;
 import com.xr.boot.entity.po.JwtToken;
-import com.xr.boot.service.service.SyEmpService;
+import com.xr.boot.service.system.SyEmpService;
 import com.xr.boot.util.JwtUtil;
 import io.jsonwebtoken.Claims;
 import org.apache.shiro.authc.AuthenticationException;

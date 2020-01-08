@@ -1,8 +1,6 @@
-package com.xr.boot.service.service;
+package com.xr.boot.service.system;
 
 import com.xr.boot.entity.SyEmp;
-
-import java.sql.SQLException;
 
 public interface SyEmpService {
     SyEmp Login(SyEmp syEmp) throws Exception;

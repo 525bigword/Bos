@@ -13,7 +13,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableTransactionManagement
 @MapperScan("com.xr.boot.dao")
 @EnableSwagger2
-@ComponentScan(basePackages={"com"})
 public class BootApplication {
 
     public static void main(String[] args) {

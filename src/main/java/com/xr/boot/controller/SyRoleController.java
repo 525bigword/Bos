@@ -1,7 +1,7 @@
 package com.xr.boot.controller;
 
 import com.xr.boot.entity.SyRoles;
-import com.xr.boot.service.service.SyRoleService;
+import com.xr.boot.service.system.SyRoleService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

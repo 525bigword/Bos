@@ -1,4 +1,4 @@
-package com.xr.boot.dao;
+package com.xr.boot.dao.system;
 
 import com.xr.boot.entity.SyBigMenus;
 import com.xr.boot.entity.SyMenus;
@@ -22,7 +22,7 @@ public interface MenusAndBigMenusMapper {
             @Result(column="tip",property="tip"),
             @Result(column="bigmenus",property="bigmenus")
     })
-    List<SyMenus> findSyMenusById(@Param("id")Integer parentId);
+    List<SyMenus> findSyMenusById(@Param("id") Integer parentId);
 
     //根据ParentId查sy_menus
     @Select("select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=#{parentid}")
@@ -35,7 +35,7 @@ public interface MenusAndBigMenusMapper {
             @Result(column="tip",property="tip"),
             @Result(column="bigmenus",property="bigmenus")
     })
-    List<SyMenus> findSyMenusByParentId(@Param("parentid")Integer parentId);
+    List<SyMenus> findSyMenusByParentId(@Param("parentid") Integer parentId);
     //根据Id查sy_bigmenus
     @Select("select * from sy_bigmenus where id=#{id}")
     @Results({
@@ -49,7 +49,7 @@ public interface MenusAndBigMenusMapper {
                 )
             )
     })
-    SyBigMenus findSyBigMenusById(@Param("id")Integer id);
+    SyBigMenus findSyBigMenusById(@Param("id") Integer id);
 
 
     //查询所有sy_bigmenus
@@ -63,5 +63,5 @@ public interface MenusAndBigMenusMapper {
     void saveSyMenus(SyMenus syMenus);
     //根据partid查询sy_menus最后tip
     @Select("select max(tip) from sy_menus where parentid=#{parentid}")
-    int findSyMenusToTipByParentid(@Param("parentid")Integer parentId);
+    int findSyMenusToTipByParentid(@Param("parentid") Integer parentId);
 }

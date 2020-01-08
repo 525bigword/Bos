@@ -1,24 +1,19 @@
 package com.xr.boot.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.xr.boot.entity.SyBigMenus;
 import com.xr.boot.entity.SyMenus;
 import com.xr.boot.ienum.Return;
 import com.xr.boot.ienum.StausEnum;
-import com.xr.boot.service.service.MenusAndBigMenusService;
+import com.xr.boot.service.system.MenusAndBigMenusService;
 import com.xr.boot.util.RedisUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("jurisdiction")

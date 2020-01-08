@@ -1,7 +1,7 @@
 package com.xr.boot.config;
 
 import com.xr.boot.filter.MyExceptionHandler;
-import com.xr.boot.service.service.impl.CustomRealm;
+import com.xr.boot.service.impl.CustomRealm;
 import org.apache.shiro.mgt.DefaultSessionStorageEvaluator;
 import org.apache.shiro.mgt.DefaultSubjectDAO;
 import org.apache.shiro.mgt.SecurityManager;

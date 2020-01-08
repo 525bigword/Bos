@@ -1,8 +1,8 @@
-package com.xr.boot.service.impl;
+package com.xr.boot.service.system.impl;
 
-import com.xr.boot.dao.SyUnitsMapper;
+import com.xr.boot.dao.system.SyUnitsMapper;
 import com.xr.boot.entity.SyUnits;
-import com.xr.boot.service.SyUnitsService;
+import com.xr.boot.service.system.SyUnitsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.klock.annotation.Klock;
 import org.springframework.stereotype.Repository;
