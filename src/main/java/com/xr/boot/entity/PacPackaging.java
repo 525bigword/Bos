@@ -4,12 +4,17 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class PacPackaging
  ***********************************************************************/
 
+import org.springframework.stereotype.Component;
+
+import java.io.Serializable;
 import java.util.*;
 
 /** 包装材料表
  * 
  * @pdOid 7037389d-06b1-4b74-8d29-70f423c90659 */
-public class PacPackaging {
+@Component
+public class PacPackaging implements Serializable {
+   private static final long serialVersionUID = 7369162756369003896L;
    /** 编号	自增
     * 
     * @pdOid 9da94590-e9c7-4875-a477-3607028fa78b */
