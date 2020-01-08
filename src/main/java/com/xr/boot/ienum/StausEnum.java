@@ -12,6 +12,8 @@ public enum StausEnum {
     HANDLER_EXCEPTION(10001,"请求头错误"),
     PERMISSIONS_EXCEPTION(10003,"无权限");
 
+
+
     private StausEnum(Integer code, String messge){
         this.Code=code;
         this.messge=messge;

@@ -2,6 +2,7 @@ package com.xr.boot.service.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.xr.boot.dao.MenusAndBigMenusMapper;
+import com.xr.boot.entity.SyBigMenus;
 import com.xr.boot.entity.SyMenus;
 import com.xr.boot.service.service.MenusAndBigMenusService;
 import com.xr.boot.util.RedisUtil;
@@ -10,6 +11,7 @@ import org.springframework.boot.autoconfigure.klock.annotation.Klock;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.SQLException;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -25,20 +27,33 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
     @Klock(leaseTime=Long.MAX_VALUE)
     @Transactional
     @Override
-    public Map<String, List<Object>> findSyMenusBypParentidTozero() {
+    public Object findSyMenusBypParentidTozero() {
         Map<String, List<Object>> maps=new ConcurrentHashMap<String, List<Object>>();
         List<SyMenus> syMenus = menusAndBigMenusMapper.findSyMenusByParentId(0);
         maps.put("SyMenusBypParentidTozero", Collections.singletonList(syMenus));
+        redisUtil.set("com.xr.boot.controller.MenusAndBigMenusController.LoadMenus", maps);
+        return redisUtil.get("com.xr.boot.controller.MenusAndBigMenusController.LoadMenus");
+    }
+
+
+    @Klock(leaseTime=Long.MAX_VALUE)
+    @Transactional
+    @Override
+    public Object findyBigmenus() {
+        Map<String, List<Object>> maps=new ConcurrentHashMap<String, List<Object>>();
+        maps.put("bigmenus", Collections.singletonList(menusAndBigMenusMapper.findSyBigMenusAll()));
         redisUtil.set("com.xr.boot.controller.MenusAndBigMenusController.LoadOptions", maps);
-        return maps;
+        return redisUtil.get("com.xr.boot.controller.MenusAndBigMenusController.LoadOptions");
     }
     @Klock(leaseTime=Long.MAX_VALUE)
     @Transactional
     @Override
-    public Map<String, List<Object>> findyBigmenus() {
-        Map<String, List<Object>> maps=new ConcurrentHashMap<String, List<Object>>();
-        maps.put("bigmenus", Collections.singletonList(menusAndBigMenusMapper.findSyBigMenusAll()));
-        redisUtil.set("com.xr.boot.controller.MenusAndBigMenusController.LoadMenus", maps);
-        return maps;
+    public void saveSyBigMenus(SyBigMenus syBigMenus) throws SQLException {
+        try{
+            menusAndBigMenusMapper.saveSyBigMenus(syBigMenus);
+        }catch (Exception e){
+            throw new SQLException("数据库新增错误");
+        }
+
     }
 }

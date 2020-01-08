@@ -380,3 +380,393 @@ javax.servlet.ServletException: Could not resolve view with name 'jurisdiction/l
 2020-01-08 01:34:57.694 DEBUG 2820 --- [http-nio-8080-exec-2] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
 2020-01-08 01:34:58.697 DEBUG 2820 --- [http-nio-8080-exec-3] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
 2020-01-08 01:34:59.592  WARN 2820 --- [http-nio-8080-exec-2] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:10:30.038  INFO 16772 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 16772 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
+2020-01-08 09:10:30.045 DEBUG 16772 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-08 09:10:30.046  INFO 16772 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-01-08 09:10:35.156  INFO 16772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-08 09:10:35.167  INFO 16772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 09:10:35.466  INFO 16772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 242ms. Found 0 repository interfaces.
+2020-01-08 09:10:36.501  INFO 16772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-08 09:10:40.172  INFO 16772 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-08 09:10:40.221  INFO 16772 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-08 09:10:40.222  INFO 16772 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-08 09:10:41.406  INFO 16772 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-08 09:10:41.408  INFO 16772 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 10533 ms
+2020-01-08 09:10:46.021  INFO 16772 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-01-08 09:10:49.697  INFO 16772 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-01-08 09:10:51.916  INFO 16772 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+loadBalanceAlgorithmType: round_robin
+masterDataSourceName: ds0
+name: dataSource
+slaveDataSourceNames:
+- ds1
+
+2020-01-08 09:10:51.919  INFO 16772 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+{}
+
+2020-01-08 09:10:54.567  INFO 16772 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-08 09:10:55.685  INFO 16772 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-01-08 09:10:58.765  INFO 16772 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-01-08 09:10:58.767  INFO 16772 --- [nioEventLoopGroup-4-6] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-01-08 09:10:58.978  INFO 16772 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-08 09:10:59.038  INFO 16772 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-08 09:10:59.124  INFO 16772 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-08 09:10:59.507  INFO 16772 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-08 09:10:59.517  INFO 16772 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 32.029 seconds (JVM running for 57.355)
+2020-01-08 09:11:12.581  INFO 16772 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-08 09:11:12.581  INFO 16772 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-08 09:11:12.609  INFO 16772 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
+2020-01-08 09:11:13.124  INFO 16772 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-01-08 09:11:13.131  INFO 16772 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-01-08 09:11:13.731 DEBUG 16772 --- [http-nio-8080-exec-2] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:11:14.846 DEBUG 16772 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:11:17.725 DEBUG 16772 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:11:17.894 DEBUG 16772 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:11:18.853  WARN 16772 --- [http-nio-8080-exec-1] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:11:25.723 DEBUG 16772 --- [http-nio-8080-exec-4] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:11:25.744 DEBUG 16772 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:11:25.790 DEBUG 16772 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:11:25.838 DEBUG 16772 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:11:26.801  WARN 16772 --- [http-nio-8080-exec-3] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:11:49.854 DEBUG 16772 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:11:50.677 DEBUG 16772 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:11:50.726 DEBUG 16772 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:11:51.678  WARN 16772 --- [http-nio-8080-exec-5] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:11:52.675 DEBUG 16772 --- [http-nio-8080-exec-6] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:13:32.686 DEBUG 16772 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:13:32.800 DEBUG 16772 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:13:32.854 DEBUG 16772 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:13:33.685 DEBUG 16772 --- [http-nio-8080-exec-8] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:13:33.815  WARN 16772 --- [http-nio-8080-exec-7] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:14:13.926 DEBUG 16772 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:14:14.868 DEBUG 16772 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:14:14.868 DEBUG 16772 --- [http-nio-8080-exec-10] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:14:15.768 DEBUG 16772 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:14:16.760  WARN 16772 --- [http-nio-8080-exec-9] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:15:21.727 DEBUG 16772 --- [http-nio-8080-exec-2] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:15:21.799 DEBUG 16772 --- [http-nio-8080-exec-2] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:15:21.847 DEBUG 16772 --- [http-nio-8080-exec-2] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:15:22.848  WARN 16772 --- [http-nio-8080-exec-2] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:15:23.670 DEBUG 16772 --- [http-nio-8080-exec-1] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:17:33.734 DEBUG 16772 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:17:33.807 DEBUG 16772 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:17:33.858 DEBUG 16772 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:17:35.655 DEBUG 16772 --- [http-nio-8080-exec-3] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:17:35.769  WARN 16772 --- [http-nio-8080-exec-4] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:20:11.775  INFO 16772 --- [http-nio-8080-exec-5] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 09:20:11.902  INFO 16772 --- [http-nio-8080-exec-5] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 125ms. Found 0 repository interfaces.
+2020-01-08 09:20:12.163  WARN 16772 --- [http-nio-8080-exec-5] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 09:20:13.594  INFO 16772 --- [http-nio-8080-exec-5] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-08 09:20:13.597  INFO 16772 --- [http-nio-8080-exec-5] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 09:20:13.790  INFO 16772 --- [http-nio-8080-exec-5] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 190ms. Found 0 repository interfaces.
+2020-01-08 09:20:14.520  INFO 16772 --- [http-nio-8080-exec-6] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-08 09:20:14.703 DEBUG 16772 --- [http-nio-8080-exec-6] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:20:14.722 DEBUG 16772 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:20:14.797 DEBUG 16772 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:20:14.858 DEBUG 16772 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:20:15.834  WARN 16772 --- [http-nio-8080-exec-5] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:20:41.720 DEBUG 16772 --- [http-nio-8080-exec-8] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:20:41.767 DEBUG 16772 --- [http-nio-8080-exec-8] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:20:41.815 DEBUG 16772 --- [http-nio-8080-exec-8] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:20:42.798  WARN 16772 --- [http-nio-8080-exec-8] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:20:43.651 DEBUG 16772 --- [http-nio-8080-exec-7] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:23:05.711 DEBUG 16772 --- [http-nio-8080-exec-10] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:23:05.805 DEBUG 16772 --- [http-nio-8080-exec-10] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:23:06.651 DEBUG 16772 --- [http-nio-8080-exec-10] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:23:07.650  WARN 16772 --- [http-nio-8080-exec-10] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:25:11.977 DEBUG 16772 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:25:12.805 DEBUG 16772 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:25:12.869 DEBUG 16772 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:25:13.825  WARN 16772 --- [http-nio-8080-exec-9] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:26:12.692 DEBUG 16772 --- [http-nio-8080-exec-2] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:26:12.736 DEBUG 16772 --- [http-nio-8080-exec-2] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:26:12.784 DEBUG 16772 --- [http-nio-8080-exec-2] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:26:13.759  WARN 16772 --- [http-nio-8080-exec-2] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:27:18.816 DEBUG 16772 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:27:19.772 DEBUG 16772 --- [http-nio-8080-exec-3] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:27:20.040 DEBUG 16772 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:27:20.651 DEBUG 16772 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:27:21.645  WARN 16772 --- [http-nio-8080-exec-1] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:28:00.922 DEBUG 16772 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:28:01.820 DEBUG 16772 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:28:01.819 DEBUG 16772 --- [http-nio-8080-exec-6] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:28:02.644 DEBUG 16772 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:28:03.642  WARN 16772 --- [http-nio-8080-exec-4] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:30:12.879  INFO 16772 --- [http-nio-8080-exec-5] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 09:30:12.902  INFO 16772 --- [http-nio-8080-exec-5] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
+2020-01-08 09:30:12.948  WARN 16772 --- [http-nio-8080-exec-5] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 09:30:13.641 DEBUG 16772 --- [http-nio-8080-exec-8] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:30:13.700 DEBUG 16772 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:30:13.789 DEBUG 16772 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:30:14.676 DEBUG 16772 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:30:15.648  WARN 16772 --- [http-nio-8080-exec-5] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:30:44.662 DEBUG 16772 --- [http-nio-8080-exec-10] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:30:44.781 DEBUG 16772 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:30:44.826 DEBUG 16772 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:30:45.646 DEBUG 16772 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:30:45.830  WARN 16772 --- [http-nio-8080-exec-7] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:34:00.397  INFO 16772 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 09:34:00.458  INFO 16772 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60ms. Found 0 repository interfaces.
+2020-01-08 09:34:00.556  WARN 16772 --- [http-nio-8080-exec-2] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 09:34:01.076  INFO 16772 --- [http-nio-8080-exec-9] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-08 09:34:01.734 DEBUG 16772 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:34:01.751 DEBUG 16772 --- [http-nio-8080-exec-2] c.x.b.d.M.findSyBigMenusAll              : ==>  Preparing: select id,bigmenus,url from sy_bigmenus 
+2020-01-08 09:34:01.832 DEBUG 16772 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:34:02.645 DEBUG 16772 --- [http-nio-8080-exec-9] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:34:03.646 DEBUG 16772 --- [http-nio-8080-exec-2] c.x.b.d.M.findSyBigMenusAll              : ==> Parameters: 
+2020-01-08 09:34:03.665  WARN 16772 --- [http-nio-8080-exec-9] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:34:03.695 DEBUG 16772 --- [http-nio-8080-exec-2] c.x.b.d.M.findSyBigMenusAll              : <==      Total: 3
+2020-01-08 09:34:04.818  WARN 16772 --- [http-nio-8080-exec-2] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findyBigmenus)
+2020-01-08 09:35:15.061  INFO 16772 --- [http-nio-8080-exec-3] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 09:35:15.117  INFO 16772 --- [http-nio-8080-exec-3] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55ms. Found 0 repository interfaces.
+2020-01-08 09:35:15.209  WARN 16772 --- [http-nio-8080-exec-3] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 09:35:15.550  INFO 16772 --- [http-nio-8080-exec-3] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-08 09:35:15.710 DEBUG 16772 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:35:15.792 DEBUG 16772 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:35:15.842 DEBUG 16772 --- [http-nio-8080-exec-3] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:35:16.817  WARN 16772 --- [http-nio-8080-exec-3] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:35:26.664 DEBUG 16772 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:35:26.710 DEBUG 16772 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:35:26.767 DEBUG 16772 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:35:27.814  WARN 16772 --- [http-nio-8080-exec-1] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:35:54.730 DEBUG 16772 --- [http-nio-8080-exec-6] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:35:54.777 DEBUG 16772 --- [http-nio-8080-exec-6] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:35:54.819 DEBUG 16772 --- [http-nio-8080-exec-6] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:35:55.848  WARN 16772 --- [http-nio-8080-exec-6] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:36:34.689 DEBUG 16772 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:36:34.732 DEBUG 16772 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:36:34.779 DEBUG 16772 --- [http-nio-8080-exec-4] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:36:35.658 DEBUG 16772 --- [http-nio-8080-exec-8] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:36:35.830  WARN 16772 --- [http-nio-8080-exec-4] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:38:18.709 DEBUG 16772 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:38:18.792 DEBUG 16772 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:38:19.636 DEBUG 16772 --- [http-nio-8080-exec-5] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:38:20.685  WARN 16772 --- [http-nio-8080-exec-5] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:38:21.743 DEBUG 16772 --- [http-nio-8080-exec-10] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:42:10.049  INFO 16772 --- [http-nio-8080-exec-7] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 09:42:10.124  INFO 16772 --- [http-nio-8080-exec-7] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 0 repository interfaces.
+2020-01-08 09:42:10.237  WARN 16772 --- [http-nio-8080-exec-7] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 09:42:10.735 DEBUG 16772 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:42:10.829 DEBUG 16772 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:42:11.659 DEBUG 16772 --- [http-nio-8080-exec-9] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:42:11.660 DEBUG 16772 --- [http-nio-8080-exec-7] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:42:12.739  WARN 16772 --- [http-nio-8080-exec-7] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:42:43.793 DEBUG 16772 --- [http-nio-8080-exec-2] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:42:45.646 DEBUG 16772 --- [http-nio-8080-exec-3] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:42:56.685 DEBUG 16772 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyMenusByParentId          : ==>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=? 
+2020-01-08 09:42:56.727 DEBUG 16772 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyMenusByParentId          : ==> Parameters: 0(Integer)
+2020-01-08 09:42:56.770 DEBUG 16772 --- [http-nio-8080-exec-1] c.x.b.d.M.findSyMenusByParentId          : <==      Total: 2
+2020-01-08 09:42:57.770  WARN 16772 --- [http-nio-8080-exec-1] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findSyMenusBypParentidTozero)
+2020-01-08 09:42:59.713 DEBUG 16772 --- [http-nio-8080-exec-6] c.x.b.d.M.findSyBigMenusAll              : ==>  Preparing: select id,bigmenus,url from sy_bigmenus 
+2020-01-08 09:42:59.756 DEBUG 16772 --- [http-nio-8080-exec-6] c.x.b.d.M.findSyBigMenusAll              : ==> Parameters: 
+2020-01-08 09:42:59.802 DEBUG 16772 --- [http-nio-8080-exec-6] c.x.b.d.M.findSyBigMenusAll              : <==      Total: 3
+2020-01-08 09:43:01.640  WARN 16772 --- [http-nio-8080-exec-6] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.findyBigmenus)
+2020-01-08 09:43:51.647 DEBUG 16772 --- [http-nio-8080-exec-8] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:43:52.643 DEBUG 16772 --- [http-nio-8080-exec-4] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:44:24.644 DEBUG 16772 --- [http-nio-8080-exec-5] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:44:25.710 DEBUG 16772 --- [http-nio-8080-exec-10] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:44:54.709 DEBUG 16772 --- [http-nio-8080-exec-9] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 09:44:55.814 DEBUG 16772 --- [http-nio-8080-exec-7] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:08:54.689  INFO 16772 --- [http-nio-8080-exec-2] c.x.b.c.MenusAndBigMenusController       : 获取数据库资源异常。。。。
+2020-01-08 10:08:59.310  INFO 16772 --- [http-nio-8080-exec-3] c.x.b.c.MenusAndBigMenusController       : 获取数据库资源异常。。。。
+2020-01-08 10:09:34.566  INFO 16772 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.100.39.234:6378
+2020-01-08 10:09:35.618  INFO 16772 --- [lettuce-nioEventLoop-6-2] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.100.39.234:6378
+2020-01-08 10:09:35.851 DEBUG 16772 --- [http-nio-8080-exec-1] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:09:35.851 DEBUG 16772 --- [http-nio-8080-exec-6] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:10:20.642 DEBUG 16772 --- [http-nio-8080-exec-8] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:10:22.627 DEBUG 16772 --- [http-nio-8080-exec-4] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:10:30.938 ERROR 16772 --- [nioEventLoopGroup-4-4] o.redisson.client.handler.CommandsQueue  : Exception occured. Channel: [id: 0xfb0b6338, L:/172.20.10.3:60875 - R:/47.100.39.234:6378]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:247) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1147) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-01-08 10:10:37.218 ERROR 16772 --- [nioEventLoopGroup-4-2] o.redisson.client.handler.CommandsQueue  : Exception occured. Channel: [id: 0x94217652, L:/172.20.10.3:60878 - R:/47.100.39.234:6378]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:247) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1147) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-01-08 10:11:33.610 DEBUG 16772 --- [http-nio-8080-exec-5] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:11:37.621 DEBUG 16772 --- [http-nio-8080-exec-10] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:12:58.609 DEBUG 16772 --- [http-nio-8080-exec-9] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:13:00.775 DEBUG 16772 --- [http-nio-8080-exec-7] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:13:29.884 DEBUG 16772 --- [http-nio-8080-exec-2] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:13:30.677 DEBUG 16772 --- [http-nio-8080-exec-3] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:13:48.605 DEBUG 16772 --- [http-nio-8080-exec-1] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:13:49.613 DEBUG 16772 --- [http-nio-8080-exec-6] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:14:21.613 DEBUG 16772 --- [http-nio-8080-exec-8] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:14:23.608 DEBUG 16772 --- [http-nio-8080-exec-4] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:14:55.777 DEBUG 16772 --- [http-nio-8080-exec-5] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:14:56.637 DEBUG 16772 --- [http-nio-8080-exec-10] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:44:42.255  INFO 16772 --- [http-nio-8080-exec-9] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 10:44:42.327  INFO 16772 --- [http-nio-8080-exec-9] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71ms. Found 0 repository interfaces.
+2020-01-08 10:44:43.009  INFO 16772 --- [http-nio-8080-exec-9] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-08 10:44:43.603 DEBUG 16772 --- [http-nio-8080-exec-9] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:44:43.645 DEBUG 16772 --- [http-nio-8080-exec-7] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:45:35.611 DEBUG 16772 --- [http-nio-8080-exec-2] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:45:36.591 DEBUG 16772 --- [http-nio-8080-exec-3] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:45:38.771  WARN 16772 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for POST /pages/systemManagement/jurisdiction/addsybigmenus
+2020-01-08 10:45:47.609 DEBUG 16772 --- [http-nio-8080-exec-6] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:45:48.600 DEBUG 16772 --- [http-nio-8080-exec-8] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:45:50.492  WARN 16772 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for POST /pages/systemManagement/jurisdiction/addsybigmenus
+2020-01-08 10:46:38.746 DEBUG 16772 --- [http-nio-8080-exec-5] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:46:39.718 DEBUG 16772 --- [http-nio-8080-exec-10] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:47:11.282  WARN 16772 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for POST /pages/systemManagement/bjurisdiction/addsybigmenus
+2020-01-08 10:50:20.588 DEBUG 16772 --- [http-nio-8080-exec-2] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:50:20.588 DEBUG 16772 --- [http-nio-8080-exec-7] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:52:33.673 ERROR 16772 --- [nioEventLoopGroup-4-6] o.redisson.client.handler.CommandsQueue  : Exception occured. Channel: [id: 0x794fb559, L:/172.20.10.3:60877 - R:/47.100.39.234:6378]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:247) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1147) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-01-08 10:53:23.830  INFO 16772 --- [http-nio-8080-exec-1] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 10:53:23.898  INFO 16772 --- [http-nio-8080-exec-1] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67ms. Found 0 repository interfaces.
+2020-01-08 10:53:24.068  WARN 16772 --- [http-nio-8080-exec-1] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 10:53:24.723  INFO 16772 --- [http-nio-8080-exec-1] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-08 10:53:25.590 DEBUG 16772 --- [http-nio-8080-exec-1] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:53:25.704 DEBUG 16772 --- [http-nio-8080-exec-6] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:53:34.338 ERROR 16772 --- [http-nio-8080-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.redisson.client.RedisTimeoutException: Redis server response timeout (3000 ms) occured for command: (EVAL) with params: [if (redis.call('exists', KEYS[1]) == 0) then redis.call('hset', KEYS[1], ARGV[2], 1); redis.call('pe..., 1, lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.saveSyBigMenus, 9223372036854775807, 79f49f8c-7329-4c2e-8014-549c0c9a3c4f:82] channel: [id: 0x4073fb13, L:/172.20.10.3:60876 - R:/47.100.39.234:6378]] with root cause
+
+org.redisson.client.RedisTimeoutException: Redis server response timeout (3000 ms) occured for command: (EVAL) with params: [if (redis.call('exists', KEYS[1]) == 0) then redis.call('hset', KEYS[1], ARGV[2], 1); redis.call('pe..., 1, lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.saveSyBigMenus, 9223372036854775807, 79f49f8c-7329-4c2e-8014-549c0c9a3c4f:82] channel: [id: 0x4073fb13, L:/172.20.10.3:60876 - R:/47.100.39.234:6378]
+	at org.redisson.command.CommandAsyncService$10.run(CommandAsyncService.java:633) ~[redisson-3.2.0.jar:na]
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:680) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:755) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:483) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-01-08 10:55:06.289  INFO 16564 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 16564 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
+2020-01-08 10:55:06.298 DEBUG 16564 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-08 10:55:06.299  INFO 16564 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-01-08 10:55:09.563  INFO 16564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-08 10:55:09.576  INFO 16564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 10:55:09.732  INFO 16564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100ms. Found 0 repository interfaces.
+2020-01-08 10:55:10.865  INFO 16564 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-08 10:55:12.330  INFO 16564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-08 10:55:12.363  INFO 16564 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-08 10:55:12.363  INFO 16564 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-08 10:55:12.661  INFO 16564 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-08 10:55:12.662  INFO 16564 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5554 ms
+2020-01-08 10:55:14.524  INFO 16564 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-01-08 10:55:19.722  INFO 16564 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-01-08 10:55:22.994  INFO 16564 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+loadBalanceAlgorithmType: round_robin
+masterDataSourceName: ds0
+name: dataSource
+slaveDataSourceNames:
+- ds1
+
+2020-01-08 10:55:22.997  INFO 16564 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+{}
+
+2020-01-08 10:55:25.377  INFO 16564 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-08 10:55:26.188  INFO 16564 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-01-08 10:55:27.744  INFO 16564 --- [nioEventLoopGroup-4-3] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-01-08 10:55:27.744  INFO 16564 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-01-08 10:55:27.909  INFO 16564 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-08 10:55:27.986  INFO 16564 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-08 10:55:28.057  INFO 16564 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-08 10:55:28.339  INFO 16564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-08 10:55:28.345  INFO 16564 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 23.9 seconds (JVM running for 43.382)
+2020-01-08 10:55:45.172  INFO 16564 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-08 10:55:45.172  INFO 16564 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-08 10:55:45.209  INFO 16564 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 36 ms
+2020-01-08 10:55:46.074  INFO 16564 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-01-08 10:55:46.078  INFO 16564 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-01-08 10:55:46.685 DEBUG 16564 --- [http-nio-8080-exec-1] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:55:46.728 DEBUG 16564 --- [http-nio-8080-exec-2] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:55:53.716 DEBUG 16564 --- [http-nio-8080-exec-3] c.x.b.d.M.saveSyBigMenus                 : ==>  Preparing: insert into sy_bigmenus values(null,?,?) 
+2020-01-08 10:55:56.708 DEBUG 16564 --- [http-nio-8080-exec-3] c.x.b.d.M.saveSyBigMenus                 : ==> Parameters: (String), 123(String)
+2020-01-08 10:55:57.604 DEBUG 16564 --- [http-nio-8080-exec-3] c.x.b.d.M.saveSyBigMenus                 : <==    Updates: 1
+2020-01-08 10:55:58.580  WARN 16564 --- [http-nio-8080-exec-3] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.saveSyBigMenus)
+2020-01-08 10:57:25.067  INFO 16564 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 10:57:25.228  INFO 16564 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 147ms. Found 0 repository interfaces.
+2020-01-08 10:57:25.367  WARN 16564 --- [http-nio-8080-exec-4] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-01-08 10:57:26.522  INFO 16564 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-08 10:57:26.523  INFO 16564 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-08 10:57:26.699  INFO 16564 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 175ms. Found 0 repository interfaces.
+2020-01-08 10:57:27.151  INFO 16564 --- [http-nio-8080-exec-4] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-08 10:57:27.607 DEBUG 16564 --- [http-nio-8080-exec-4] c.x.b.d.M.saveSyBigMenus                 : ==>  Preparing: insert into sy_bigmenus values(null,?,?) 
+2020-01-08 10:57:27.719 DEBUG 16564 --- [http-nio-8080-exec-4] c.x.b.d.M.saveSyBigMenus                 : ==> Parameters: (String), 123(String)
+2020-01-08 10:57:28.597 DEBUG 16564 --- [http-nio-8080-exec-4] c.x.b.d.M.saveSyBigMenus                 : <==    Updates: 1
+2020-01-08 10:57:30.768  WARN 16564 --- [http-nio-8080-exec-4] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.saveSyBigMenus)
+2020-01-08 10:57:48.745 DEBUG 16564 --- [http-nio-8080-exec-5] c.x.b.d.M.saveSyBigMenus                 : ==>  Preparing: insert into sy_bigmenus values(null,?,?) 
+2020-01-08 10:57:49.604 DEBUG 16564 --- [http-nio-8080-exec-5] c.x.b.d.M.saveSyBigMenus                 : ==> Parameters: (String), 123(String)
+2020-01-08 10:57:49.740 DEBUG 16564 --- [http-nio-8080-exec-5] c.x.b.d.M.saveSyBigMenus                 : <==    Updates: 1
+2020-01-08 10:57:50.754  WARN 16564 --- [http-nio-8080-exec-5] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.saveSyBigMenus)
+2020-01-08 10:58:54.866 ERROR 16564 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.redisson.client.RedisTimeoutException: Redis server response timeout (3000 ms) occured for command: (EVAL) with params: [if (redis.call('exists', KEYS[1]) == 0) then redis.call('hset', KEYS[1], ARGV[2], 1); redis.call('pe..., 1, lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.saveSyBigMenus, 9223372036854775807, 7744afcb-1514-42b2-b4a6-59b4794b4022:80] channel: [id: 0xeb421cae, L:/172.20.10.3:56015 - R:/47.100.39.234:6378]] with root cause
+
+org.redisson.client.RedisTimeoutException: Redis server response timeout (3000 ms) occured for command: (EVAL) with params: [if (redis.call('exists', KEYS[1]) == 0) then redis.call('hset', KEYS[1], ARGV[2], 1); redis.call('pe..., 1, lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.saveSyBigMenus, 9223372036854775807, 7744afcb-1514-42b2-b4a6-59b4794b4022:80] channel: [id: 0xeb421cae, L:/172.20.10.3:56015 - R:/47.100.39.234:6378]
+	at org.redisson.command.CommandAsyncService$10.run(CommandAsyncService.java:633) ~[redisson-3.2.0.jar:na]
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:680) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:755) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:483) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-01-08 10:58:59.595  WARN 16564 --- [nioEventLoopGroup-4-2] o.r.client.handler.CommandDecoder        : response has been skipped due to timeout! channel: [id: 0xeb421cae, L:/172.20.10.3:56015 - R:/47.100.39.234:6378], command: CommandData [promise=org.redisson.misc.RedissonPromise@65f89eb6[Completed exceptionally], command=(EVAL), params=[if (redis.call('exists', KEYS[1]) == 0) then redis.call('hset', KEYS[1], ARGV[2], 1); redis.call('pe..., 1, lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.saveSyBigMenus, 9223372036854775807, 7744afcb-1514-42b2-b4a6-59b4794b4022:80], codec=org.redisson.client.codec.LongCodec@76fde39a], result: null
+2020-01-08 10:59:47.585 DEBUG 16564 --- [http-nio-8080-exec-7] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:59:48.570 DEBUG 16564 --- [http-nio-8080-exec-8] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 10:59:54.594 DEBUG 16564 --- [http-nio-8080-exec-9] c.x.b.d.M.saveSyBigMenus                 : ==>  Preparing: insert into sy_bigmenus values(null,?,?) 
+2020-01-08 10:59:54.684 DEBUG 16564 --- [http-nio-8080-exec-9] c.x.b.d.M.saveSyBigMenus                 : ==> Parameters: (String), 123(String)
+2020-01-08 10:59:54.777 DEBUG 16564 --- [http-nio-8080-exec-9] c.x.b.d.M.saveSyBigMenus                 : <==    Updates: 1
+2020-01-08 10:59:57.769  WARN 16564 --- [http-nio-8080-exec-9] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.saveSyBigMenus)
+2020-01-08 11:00:46.599 DEBUG 16564 --- [http-nio-8080-exec-10] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 11:00:47.580 DEBUG 16564 --- [http-nio-8080-exec-1] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 11:00:51.593 DEBUG 16564 --- [http-nio-8080-exec-2] c.x.b.d.M.saveSyBigMenus                 : ==>  Preparing: insert into sy_bigmenus values(null,?,?) 
+2020-01-08 11:00:51.632 DEBUG 16564 --- [http-nio-8080-exec-2] c.x.b.d.M.saveSyBigMenus                 : ==> Parameters: 321(String), 213(String)
+2020-01-08 11:00:51.726 DEBUG 16564 --- [http-nio-8080-exec-2] c.x.b.d.M.saveSyBigMenus                 : <==    Updates: 1
+2020-01-08 11:00:52.709  WARN 16564 --- [http-nio-8080-exec-2] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.service.impl.MenusAndBigMenusServiceImpl.saveSyBigMenus)
+2020-01-08 11:04:16.573 DEBUG 16564 --- [http-nio-8080-exec-3] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 11:04:16.577 DEBUG 16564 --- [http-nio-8080-exec-4] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 11:07:25.733 DEBUG 16564 --- [http-nio-8080-exec-5] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 11:07:26.597 DEBUG 16564 --- [http-nio-8080-exec-6] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 11:08:03.617 DEBUG 16564 --- [http-nio-8080-exec-8] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 11:08:03.658 DEBUG 16564 --- [http-nio-8080-exec-7] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 11:08:48.579 DEBUG 16564 --- [http-nio-8080-exec-9] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值
+2020-01-08 11:08:48.634 DEBUG 16564 --- [http-nio-8080-exec-10] c.x.b.c.MenusAndBigMenusController       : 从redis中取出值

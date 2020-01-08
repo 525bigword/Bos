@@ -17,6 +17,10 @@ public class Return implements Serializable {
     public Return() {
     }
 
+    public Return(StausEnum stausEnum) {
+        this.stausEnum = stausEnum;
+    }
+
     public Return(StausEnum stausEnum, Object map) {
         this.stausEnum = stausEnum;
         this.map = map;
