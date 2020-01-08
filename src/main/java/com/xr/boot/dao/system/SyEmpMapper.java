@@ -46,8 +46,9 @@ public interface SyEmpMapper {
             )
     })
     SyEmp findSyEmpByEmpNoAndPwd(SyEmp syEmp);
+    //shiro使用的
     @Select("select id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled from sy_emp where empno=#{empNo}")
-    SyEmp findSyEmpByEmpNoAndPwd(@Param("empNo") String empNo);
+    SyEmp login(@Param("empNo") String empNo);
     /**
      * 未判断状态
      * @param

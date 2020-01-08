@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class BasDeliveryStandardSqlProvider {
     public String findBasDeliveryStandardbyWhere(BasDeliveryStandard basDeliveryStandard){
+
         return new SQL(){
             {
                 SELECT("ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status`");
@@ -14,7 +15,7 @@ public class BasDeliveryStandardSqlProvider {
                 String tj="ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1";
                 try {
                     if (basDeliveryStandard.getName() != null && !basDeliveryStandard.getName().equals("")) {
-                        tj += " and ds.`Name` Like #{name}";
+                        tj += " and ds.`Name` Like CONCAT('%',#{name},'%')";
                     }
                     if (basDeliveryStandard.getStatus() != null) {
                         tj += " and ds.`Status`=#{status}";
@@ -26,7 +27,7 @@ public class BasDeliveryStandardSqlProvider {
                         tj += " and ds.MaxWeight=#{maxWeight}";
                     }
                     if (basDeliveryStandard.getSyEmp().getEmpName() != null && !basDeliveryStandard.getSyEmp().getEmpName().equals("")) {
-                        tj += " and se.EmpName Like #{empName}";
+                        tj += " and se.EmpName Like CONCAT('%',#{syEmp.empName},'%')";
                     }
                     if (basDeliveryStandard.getOperationTime() != null && !basDeliveryStandard.getOperationTime().equals("")) {
                         tj += " and ds.OperationTime=#{operationTime}";

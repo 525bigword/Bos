@@ -39,6 +39,6 @@ public class SyEmpServiceImpl implements SyEmpService {
 
     @Override
     public SyEmp getUserByName(String username) {
-        return syEmpMapper.findSyEmpByEmpNoAndPwd(username);
+        return syEmpMapper.login(username);
     }
 }

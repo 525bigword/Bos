@@ -1,6 +1,5 @@
 package com.xr.boot.service.impl;
 
-import com.alibaba.fastjson.JSON;
 import com.xr.boot.dao.BasDeliveryStandardMapper;
 import com.xr.boot.entity.BasDeliveryStandard;
 import com.xr.boot.service.BasDeliveryStandardService;
@@ -10,7 +9,10 @@ import org.springframework.boot.autoconfigure.klock.annotation.Klock;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
 public class BasDeliveryStandardServiceImpl implements BasDeliveryStandardService {
@@ -21,9 +23,15 @@ public class BasDeliveryStandardServiceImpl implements BasDeliveryStandardServic
     @Klock(leaseTime=Long.MAX_VALUE)
     @Transactional
     @Override
-    public String findBasDeliveryStandardAll(BasDeliveryStandard basDeliveryStandard) {
-        List<BasDeliveryStandard> basDeliveryStandardAll = basDeliveryStandardMapper.findBasDeliveryStandardAll(basDeliveryStandard);
-        redisUtil.set("com.xr.boot.controller.BasDeliveryStandardController", JSON.toJSONString(basDeliveryStandard));
-        return redisUtil.get("com.xr.boot.controller.BasDeliveryStandardController").toString();
+    public Object findBasDeliveryStandardAll(BasDeliveryStandard basDeliveryStandard) {
+        Map<String, List<Object>> maps=new ConcurrentHashMap<String, List<Object>>();
+        maps.put("BasDeliveryStandardAll", Collections.singletonList(basDeliveryStandardMapper.findBasDeliveryStandards(basDeliveryStandard)));
+        redisUtil.set("com.xr.boot.controller.BasDeliveryStandardController.findBasDeliveryStandardAll", maps);
+        return redisUtil.get("com.xr.boot.controller.BasDeliveryStandardController.findBasDeliveryStandardAll");
+    }
+
+    @Override
+    public List<BasDeliveryStandard> findBasDeliveryStandardByTerm(BasDeliveryStandard basDeliveryStandard) {
+        return basDeliveryStandardMapper.findBasDeliveryStandards(basDeliveryStandard);
     }
 }
