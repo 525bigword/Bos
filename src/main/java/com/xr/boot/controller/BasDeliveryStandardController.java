@@ -21,7 +21,7 @@ public class BasDeliveryStandardController {
     @ApiOperation("收派标准")
     @RequestMapping("/findBasDeliveryStandardAll")
     public String findBasDeliveryStandardAll(){
-        String basDeliveryStandardAll="";
+        String basDeliveryStandardAll=null;
         if(redisUtil.hasKey("com.xr.boot.controller.BasDeliveryStandardController")){
             log.debug("从redis中取出值");
             basDeliveryStandardAll=redisUtil.get("com.xr.boot.controller.BasDeliveryStandardController").toString();
