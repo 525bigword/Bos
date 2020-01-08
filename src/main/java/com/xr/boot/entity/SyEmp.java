@@ -7,113 +7,103 @@ package com.xr.boot.entity; /***************************************************
 import java.io.Serializable;
 
 /** 员工表
- * 
+ *
  * @pdOid 84cc1890-5ed5-4982-89a4-e581e4cea20e */
 public class SyEmp implements Serializable {
+   private static final long serialVersionUID = -3262474656539416214L;
    /** 编号 自增
-    * 
+    *
     * @pdOid 813b9d26-d334-4a16-aecd-b9cd38a8112b */
    private long id;
    /** 员工姓名
-    * 
+    *
     * @pdOid 0527082b-9426-4f34-bdb6-089082350ee4 */
    private String empName;
    /** 工号
-    * 
+    *
     * @pdOid cd972f43-1b65-4e01-92ee-ba24cd6bb5c2 */
    private String empNo;
    /** 密码
-    * 
+    *
     * @pdOid 0ee7ae80-fc38-4c50-8857-b3f427c771b7 */
    private String pwd;
    /** 查台密码   小件员查询时需要用到此密码
-    * 
+    *
     * @pdOid 625f2e69-9b96-408b-993c-45eb749fb5e4 */
    private String queryPwd;
    /** 备注
-    * 
+    *
     * @pdOid c3d9d00c-3118-4124-9e99-eacf58b281cb */
    private String remark;
    /** 禁用  1可使用 0已禁用
-    * 
+    *
     * @pdOid c277c848-3602-4104-96cb-358b8c0678cd */
    private long disabled;
    public SyEmp(){}
-   /** @pdOid 35ebd555-c558-49fc-9dd0-20f4c14cd9d4 */
+
+   public SyEmp(long id, String empName, String empNo, String pwd, String queryPwd, String remark, long disabled) {
+      this.id = id;
+      this.empName = empName;
+      this.empNo = empNo;
+      this.pwd = pwd;
+      this.queryPwd = queryPwd;
+      this.remark = remark;
+      this.disabled = disabled;
+   }
+
    public long getId() {
       return id;
    }
-   
-   /** @param newId
-    * @pdOid 94e92383-9ffa-44b8-af1b-630e7b1095c2 */
-   public void setId(long newId) {
-      id = newId;
+
+   public void setId(long id) {
+      this.id = id;
    }
-   
-   /** @pdOid ecafae4f-23ea-412e-9d1a-b783caf17f3c */
+
    public String getEmpName() {
       return empName;
    }
-   
-   /** @param newEmpName
-    * @pdOid fa3a1ee9-2e96-4274-9dc3-982c2116c929 */
-   public void setEmpName(String newEmpName) {
-      empName = newEmpName;
+
+   public void setEmpName(String empName) {
+      this.empName = empName;
    }
-   
-   /** @pdOid f511dd7c-2ee0-4b50-809e-8c469f4dd9a8 */
+
    public String getEmpNo() {
       return empNo;
    }
-   
-   /** @param newEmpNo
-    * @pdOid c772061e-28ab-40e6-bc30-c9bee18de0ad */
-   public void setEmpNo(String newEmpNo) {
-      empNo = newEmpNo;
+
+   public void setEmpNo(String empNo) {
+      this.empNo = empNo;
    }
-   
-   /** @pdOid cb463957-1223-4c57-9a70-4819982eab57 */
+
    public String getPwd() {
       return pwd;
    }
-   
-   /** @param newPwd
-    * @pdOid 5c880029-2e8c-4192-a41a-441bf3c41745 */
-   public void setPwd(String newPwd) {
-      pwd = newPwd;
+
+   public void setPwd(String pwd) {
+      this.pwd = pwd;
    }
-   
-   /** @pdOid 3f2dda59-cf89-4e2a-a37b-7dae72a0987c */
+
    public String getQueryPwd() {
       return queryPwd;
    }
-   
-   /** @param newQueryPwd
-    * @pdOid bcc4f85c-2c3b-4f4d-b2b6-d85d4c86fcdf */
-   public void setQueryPwd(String newQueryPwd) {
-      queryPwd = newQueryPwd;
+
+   public void setQueryPwd(String queryPwd) {
+      this.queryPwd = queryPwd;
    }
-   
-   /** @pdOid 7f9fcf81-f335-4705-a4bf-682625d3087e */
+
    public String getRemark() {
       return remark;
    }
-   
-   /** @param newRemark
-    * @pdOid 43b771d8-768a-40f7-af25-977640e5848e */
-   public void setRemark(String newRemark) {
-      remark = newRemark;
+
+   public void setRemark(String remark) {
+      this.remark = remark;
    }
-   
-   /** @pdOid 272937f5-35dc-4cd2-9502-10cf0505fe2d */
+
    public long getDisabled() {
       return disabled;
    }
-   
-   /** @param newDisabled
-    * @pdOid 08227057-08b7-4b47-88ef-fad95be8866c */
-   public void setDisabled(long newDisabled) {
-      disabled = newDisabled;
-   }
 
+   public void setDisabled(long disabled) {
+      this.disabled = disabled;
+   }
 }

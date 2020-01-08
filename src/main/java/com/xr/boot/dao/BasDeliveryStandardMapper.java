@@ -25,5 +25,5 @@ public interface BasDeliveryStandardMapper {
             @Result(column = "OperationTime", property = "operationTime"),
             @Result(column = "Status", property = "status")
     })
-    List<BasDeliveryStandard> findBasDeliveryStandardAll(BasDeliveryStandard basDeliveryStandard);
+    List<BasDeliveryStandard> findBasDeliveryStandards(BasDeliveryStandard basDeliveryStandard);
 }

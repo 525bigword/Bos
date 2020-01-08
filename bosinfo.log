@@ -5096,3 +5096,147 @@ slaveDataSourceNames:
 2020-01-08 17:23:16.750  WARN 15504 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /layui/font/iconfont.woff
 2020-01-08 17:23:16.760  WARN 15504 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /layui/font/iconfont.ttf
 >>>>>>> Stashed changes
+2020-01-09 00:16:06.367  INFO 13072 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on E53WRL7JY0MW6H1 with PID 13072 (H:\Bos\target\classes started by Administrator in H:\Bos)
+2020-01-09 00:16:06.372 DEBUG 13072 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-09 00:16:06.373  INFO 13072 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-01-09 00:16:15.019  INFO 13072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-09 00:16:15.023  INFO 13072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-09 00:16:15.088  INFO 13072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 0 repository interfaces.
+2020-01-09 00:16:15.792  INFO 13072 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-09 00:16:16.489  INFO 13072 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-09 00:16:16.508  INFO 13072 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-09 00:16:16.509  INFO 13072 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-09 00:16:16.512  INFO 13072 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.21] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-01-09 00:16:16.513  INFO 13072 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-01-09 00:16:16.514  INFO 13072 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-01-09 00:16:16.518  INFO 13072 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-01-09 00:16:16.523  INFO 13072 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-01-09 00:16:17.170  INFO 13072 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-09 00:16:17.175  INFO 13072 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 10303 ms
+2020-01-09 00:16:17.285 DEBUG 13072 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-01-09 00:16:17.987  INFO 13072 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-01-09 00:16:21.956  INFO 13072 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-01-09 00:16:24.011  INFO 13072 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+loadBalanceAlgorithmType: round_robin
+masterDataSourceName: ds0
+name: dataSource
+slaveDataSourceNames:
+- ds1
+
+2020-01-09 00:16:24.015  INFO 13072 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+{}
+
+2020-01-09 00:16:26.496  INFO 13072 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-09 00:16:27.565  INFO 13072 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-01-09 00:16:30.859  INFO 13072 --- [nioEventLoopGroup-4-3] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-01-09 00:16:30.862  INFO 13072 --- [nioEventLoopGroup-4-2] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-01-09 00:16:30.972  INFO 13072 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-09 00:16:30.996  INFO 13072 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-09 00:16:31.057  INFO 13072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-09 00:16:31.560  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_1
+2020-01-09 00:16:31.564  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_2
+2020-01-09 00:16:31.569  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_3
+2020-01-09 00:16:31.573  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_4
+2020-01-09 00:16:31.577  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_5
+2020-01-09 00:16:31.581  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_6
+2020-01-09 00:16:31.591  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_7
+2020-01-09 00:16:31.598  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_1
+2020-01-09 00:16:31.603  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_2
+2020-01-09 00:16:31.606  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_3
+2020-01-09 00:16:31.609  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_4
+2020-01-09 00:16:31.612  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_5
+2020-01-09 00:16:31.616  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_6
+2020-01-09 00:16:31.620  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_7
+2020-01-09 00:16:31.627  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_1
+2020-01-09 00:16:31.631  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_2
+2020-01-09 00:16:31.635  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_3
+2020-01-09 00:16:31.638  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_4
+2020-01-09 00:16:31.642  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_5
+2020-01-09 00:16:31.645  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_6
+2020-01-09 00:16:31.647  INFO 13072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_7
+2020-01-09 00:16:31.912  INFO 13072 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-09 00:16:31.921  INFO 13072 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 27.072 seconds (JVM running for 30.295)
+2020-01-09 00:18:23.306  INFO 13072 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-09 00:18:23.307  INFO 13072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-09 00:18:23.347  INFO 13072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2020-01-09 00:18:24.150  INFO 13072 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-01-09 00:18:24.154  INFO 13072 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-01-09 00:18:25.869 DEBUG 13072 --- [http-nio-8080-exec-1] c.x.b.c.BasDeliveryStandardController    : 从redis中取出值
+2020-01-09 00:18:34.807 DEBUG 13072 --- [http-nio-8080-exec-2] c.x.b.d.B.findBasDeliveryStandards       : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1 and ds.`Name` Like CONCAT('%',?,'%')) 
+2020-01-09 00:18:35.895 DEBUG 13072 --- [http-nio-8080-exec-2] c.x.b.d.B.findBasDeliveryStandards       : ==> Parameters: 1(String)
+2020-01-09 00:18:35.963 DEBUG 13072 --- [http-nio-8080-exec-2] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-01-09 00:18:35.996 DEBUG 13072 --- [http-nio-8080-exec-2] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : ====> Parameters: 1(Integer)
+2020-01-09 00:18:36.054 DEBUG 13072 --- [http-nio-8080-exec-2] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : <====      Total: 1
+2020-01-09 00:18:36.059 DEBUG 13072 --- [http-nio-8080-exec-2] c.x.b.dao.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,OperationTime,Stats from sy_units where id=? 
+2020-01-09 00:18:36.080 DEBUG 13072 --- [http-nio-8080-exec-2] c.x.b.dao.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-01-09 00:18:36.869 DEBUG 13072 --- [http-nio-8080-exec-2] c.x.b.dao.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-01-09 00:18:36.870 DEBUG 13072 --- [http-nio-8080-exec-2] c.x.b.d.B.findBasDeliveryStandards       : <==      Total: 1
+2020-01-09 00:18:43.084 DEBUG 13072 --- [http-nio-8080-exec-3] c.x.b.d.B.findBasDeliveryStandards       : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1 and ds.`Status`=?) 
+2020-01-09 00:18:43.160 DEBUG 13072 --- [http-nio-8080-exec-3] c.x.b.d.B.findBasDeliveryStandards       : ==> Parameters: 0(Integer)
+2020-01-09 00:18:43.872 DEBUG 13072 --- [http-nio-8080-exec-3] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-01-09 00:18:43.873 DEBUG 13072 --- [http-nio-8080-exec-3] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : ====> Parameters: 1(Integer)
+2020-01-09 00:18:43.934 DEBUG 13072 --- [http-nio-8080-exec-3] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : <====      Total: 1
+2020-01-09 00:18:43.936 DEBUG 13072 --- [http-nio-8080-exec-3] c.x.b.dao.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,OperationTime,Stats from sy_units where id=? 
+2020-01-09 00:18:43.937 DEBUG 13072 --- [http-nio-8080-exec-3] c.x.b.dao.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-01-09 00:18:43.983 DEBUG 13072 --- [http-nio-8080-exec-3] c.x.b.dao.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-01-09 00:18:43.984 DEBUG 13072 --- [http-nio-8080-exec-3] c.x.b.d.B.findBasDeliveryStandards       : <==      Total: 1
+2020-01-09 00:18:53.190 DEBUG 13072 --- [http-nio-8080-exec-4] c.x.b.d.B.findBasDeliveryStandards       : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1 and ds.MaxWeight=?) 
+2020-01-09 00:18:53.247 DEBUG 13072 --- [http-nio-8080-exec-4] c.x.b.d.B.findBasDeliveryStandards       : ==> Parameters: 12.0(Double)
+2020-01-09 00:18:53.860 DEBUG 13072 --- [http-nio-8080-exec-4] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-01-09 00:18:53.860 DEBUG 13072 --- [http-nio-8080-exec-4] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : ====> Parameters: 1(Integer)
+2020-01-09 00:18:53.902 DEBUG 13072 --- [http-nio-8080-exec-4] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : <====      Total: 1
+2020-01-09 00:18:53.902 DEBUG 13072 --- [http-nio-8080-exec-4] c.x.b.dao.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,OperationTime,Stats from sy_units where id=? 
+2020-01-09 00:18:53.903 DEBUG 13072 --- [http-nio-8080-exec-4] c.x.b.dao.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-01-09 00:18:53.952 DEBUG 13072 --- [http-nio-8080-exec-4] c.x.b.dao.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-01-09 00:18:53.952 DEBUG 13072 --- [http-nio-8080-exec-4] c.x.b.d.B.findBasDeliveryStandards       : <==      Total: 1
+2020-01-09 00:18:59.804 DEBUG 13072 --- [http-nio-8080-exec-5] c.x.b.d.B.findBasDeliveryStandards       : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1 and ds.`Name` Like CONCAT('%',?,'%') and ds.MaxWeight=?) 
+2020-01-09 00:18:59.890 DEBUG 13072 --- [http-nio-8080-exec-5] c.x.b.d.B.findBasDeliveryStandards       : ==> Parameters: 1(String), 12.0(Double)
+2020-01-09 00:18:59.973 DEBUG 13072 --- [http-nio-8080-exec-5] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-01-09 00:18:59.973 DEBUG 13072 --- [http-nio-8080-exec-5] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : ====> Parameters: 1(Integer)
+2020-01-09 00:19:00.017 DEBUG 13072 --- [http-nio-8080-exec-5] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : <====      Total: 1
+2020-01-09 00:19:00.017 DEBUG 13072 --- [http-nio-8080-exec-5] c.x.b.dao.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,OperationTime,Stats from sy_units where id=? 
+2020-01-09 00:19:00.018 DEBUG 13072 --- [http-nio-8080-exec-5] c.x.b.dao.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-01-09 00:19:00.079 DEBUG 13072 --- [http-nio-8080-exec-5] c.x.b.dao.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-01-09 00:19:00.079 DEBUG 13072 --- [http-nio-8080-exec-5] c.x.b.d.B.findBasDeliveryStandards       : <==      Total: 1
+2020-01-09 00:20:13.085 DEBUG 13072 --- [http-nio-8080-exec-6] c.x.b.d.B.findBasDeliveryStandards       : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1 and ds.`Name` Like CONCAT('%',?,'%') and ds.`Status`=? and ds.MaxWeight=?) 
+2020-01-09 00:20:13.875 DEBUG 13072 --- [http-nio-8080-exec-6] c.x.b.d.B.findBasDeliveryStandards       : ==> Parameters: 1(String), 1(Integer), 12.0(Double)
+2020-01-09 00:20:13.937 DEBUG 13072 --- [http-nio-8080-exec-6] c.x.b.d.B.findBasDeliveryStandards       : <==      Total: 0
+2020-01-09 00:20:20.742 DEBUG 13072 --- [http-nio-8080-exec-7] c.x.b.d.B.findBasDeliveryStandards       : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1 and ds.`Name` Like CONCAT('%',?,'%') and ds.MaxWeight=?) 
+2020-01-09 00:20:20.743 DEBUG 13072 --- [http-nio-8080-exec-7] c.x.b.d.B.findBasDeliveryStandards       : ==> Parameters: 1(String), 12.0(Double)
+2020-01-09 00:20:20.881 DEBUG 13072 --- [http-nio-8080-exec-7] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-01-09 00:20:20.882 DEBUG 13072 --- [http-nio-8080-exec-7] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : ====> Parameters: 1(Integer)
+2020-01-09 00:20:20.925 DEBUG 13072 --- [http-nio-8080-exec-7] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : <====      Total: 1
+2020-01-09 00:20:20.926 DEBUG 13072 --- [http-nio-8080-exec-7] c.x.b.dao.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,OperationTime,Stats from sy_units where id=? 
+2020-01-09 00:20:20.928 DEBUG 13072 --- [http-nio-8080-exec-7] c.x.b.dao.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-01-09 00:20:20.980 DEBUG 13072 --- [http-nio-8080-exec-7] c.x.b.dao.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-01-09 00:20:20.981 DEBUG 13072 --- [http-nio-8080-exec-7] c.x.b.d.B.findBasDeliveryStandards       : <==      Total: 1
+2020-01-09 00:20:49.997 DEBUG 13072 --- [http-nio-8080-exec-8] c.x.b.d.B.findBasDeliveryStandards       : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1 and ds.`Name` Like CONCAT('%',?,'%') and ds.MaxWeight=?) 
+2020-01-09 00:20:49.999 DEBUG 13072 --- [http-nio-8080-exec-8] c.x.b.d.B.findBasDeliveryStandards       : ==> Parameters: 1(String), 12.0(Double)
+2020-01-09 00:20:50.852 DEBUG 13072 --- [http-nio-8080-exec-8] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-01-09 00:20:50.852 DEBUG 13072 --- [http-nio-8080-exec-8] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : ====> Parameters: 1(Integer)
+2020-01-09 00:20:50.898 DEBUG 13072 --- [http-nio-8080-exec-8] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : <====      Total: 1
+2020-01-09 00:20:50.898 DEBUG 13072 --- [http-nio-8080-exec-8] c.x.b.dao.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,OperationTime,Stats from sy_units where id=? 
+2020-01-09 00:20:50.899 DEBUG 13072 --- [http-nio-8080-exec-8] c.x.b.dao.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-01-09 00:20:50.946 DEBUG 13072 --- [http-nio-8080-exec-8] c.x.b.dao.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-01-09 00:20:50.947 DEBUG 13072 --- [http-nio-8080-exec-8] c.x.b.d.B.findBasDeliveryStandards       : <==      Total: 1
+2020-01-09 00:21:04.622 DEBUG 13072 --- [http-nio-8080-exec-9] c.x.b.d.B.findBasDeliveryStandards       : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1 and ds.`Name` Like CONCAT('%',?,'%') and ds.MaxWeight=?) 
+2020-01-09 00:21:04.623 DEBUG 13072 --- [http-nio-8080-exec-9] c.x.b.d.B.findBasDeliveryStandards       : ==> Parameters: 1(String), 11.0(Double)
+2020-01-09 00:21:04.884 DEBUG 13072 --- [http-nio-8080-exec-9] c.x.b.d.B.findBasDeliveryStandards       : <==      Total: 0
+2020-01-09 00:21:11.052 DEBUG 13072 --- [http-nio-8080-exec-10] c.x.b.d.B.findBasDeliveryStandards       : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1 and ds.`Name` Like CONCAT('%',?,'%') and ds.MaxWeight=? and ds.OperationTime=?) 
+2020-01-09 00:21:11.121 DEBUG 13072 --- [http-nio-8080-exec-10] c.x.b.d.B.findBasDeliveryStandards       : ==> Parameters: 1(String), 11.0(Double), 2020-01-03(String)
+2020-01-09 00:21:11.870 DEBUG 13072 --- [http-nio-8080-exec-10] c.x.b.d.B.findBasDeliveryStandards       : <==      Total: 0
+2020-01-09 00:21:32.580 DEBUG 13072 --- [http-nio-8080-exec-1] c.x.b.d.B.findBasDeliveryStandards       : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1 and ds.`Name` Like CONCAT('%',?,'%') and ds.MaxWeight=? and ds.OperationTime=?) 
+2020-01-09 00:21:32.581 DEBUG 13072 --- [http-nio-8080-exec-1] c.x.b.d.B.findBasDeliveryStandards       : ==> Parameters: 1(String), 12.0(Double), 2020-01-03(String)
+2020-01-09 00:21:32.910 DEBUG 13072 --- [http-nio-8080-exec-1] c.x.b.d.B.findBasDeliveryStandards       : <==      Total: 0
+2020-01-09 00:21:40.065 DEBUG 13072 --- [http-nio-8080-exec-2] c.x.b.d.B.findBasDeliveryStandards       : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1 and ds.`Name` Like CONCAT('%',?,'%') and ds.MaxWeight=?) 
+2020-01-09 00:21:40.066 DEBUG 13072 --- [http-nio-8080-exec-2] c.x.b.d.B.findBasDeliveryStandards       : ==> Parameters: 1(String), 12.0(Double)
+2020-01-09 00:21:40.867 DEBUG 13072 --- [http-nio-8080-exec-2] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-01-09 00:21:40.867 DEBUG 13072 --- [http-nio-8080-exec-2] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : ====> Parameters: 1(Integer)
+2020-01-09 00:21:40.913 DEBUG 13072 --- [http-nio-8080-exec-2] c.xr.boot.dao.SyEmpMapper.findSyEmpById  : <====      Total: 1
+2020-01-09 00:21:40.914 DEBUG 13072 --- [http-nio-8080-exec-2] c.x.b.dao.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,OperationTime,Stats from sy_units where id=? 
+2020-01-09 00:21:40.915 DEBUG 13072 --- [http-nio-8080-exec-2] c.x.b.dao.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-01-09 00:21:40.965 DEBUG 13072 --- [http-nio-8080-exec-2] c.x.b.dao.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-01-09 00:21:40.966 DEBUG 13072 --- [http-nio-8080-exec-2] c.x.b.d.B.findBasDeliveryStandards       : <==      Total: 1
+2020-01-09 00:21:47.971 DEBUG 13072 --- [http-nio-8080-exec-3] c.x.b.d.B.findBasDeliveryStandards       : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1 and ds.`Name` Like CONCAT('%',?,'%') and ds.`Status`=? and ds.MaxWeight=?) 
+2020-01-09 00:21:47.972 DEBUG 13072 --- [http-nio-8080-exec-3] c.x.b.d.B.findBasDeliveryStandards       : ==> Parameters: 1(String), 1(Integer), 12.0(Double)
+2020-01-09 00:21:48.034 DEBUG 13072 --- [http-nio-8080-exec-3] c.x.b.d.B.findBasDeliveryStandards       : <==      Total: 0
