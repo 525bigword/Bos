@@ -2,7 +2,9 @@ package com.xr.boot.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,10 +17,10 @@ import java.util.Random;
 @Api(tags = "权限相关接口")
 @RequestMapping("jurisdiction")
 public class SyEmpController {
-    @ApiOperation("获取图片验证码")
-    @GetMapping("/ImageCode")
-    public String getImageCode(){
-// 创建一张图片
+    @ApiOperation("验证码图片化")
+    @GetMapping(value = "/ImageCode")
+    public BufferedImage  getImageCode(String code){
+        // 创建一张图片
         int width = 120;
         int height = 25;
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
@@ -28,9 +30,7 @@ public class SyEmpController {
         graphics.setColor(Color.white);
         // 填充矩形
         graphics.fillRect(0, 0, width, height);
-
-        String str = this.getString();
-
+        String str = code;
         Random random = new Random();
         // 根据验证码长度随机画干扰线(颜色随机，位置随机，长度随机)
         for (int i = 0; i < str.length(); i++) {
@@ -50,13 +50,15 @@ public class SyEmpController {
         graphics.dispose();
         // 将图像写入 File，并指定图片格式
         //ImageIO.write(image, "jpg", arg1.getOutputStream());
-        return null;
+        return image;
     }
     /**
      * 生成一个长度为4的字符串(随机包含大写字母，小写字母，数字)
      *
      * @return
      */
+    @ApiOperation("获取验证码")
+    @GetMapping("/getCode")
     public String getString() {
         Random random = new Random();
         String str = "";
