@@ -2,6 +2,7 @@ package com.xr.boot.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.xr.boot.entity.SyBigMenus;
+import com.xr.boot.entity.SyMenus;
 import com.xr.boot.ienum.Return;
 import com.xr.boot.ienum.StausEnum;
 import com.xr.boot.service.service.MenusAndBigMenusService;
@@ -71,6 +72,16 @@ public class MenusAndBigMenusController {
         System.out.println(syBigMenus.getBigmenus());
             menusAndBigMenusService.saveSyBigMenus(syBigMenus);
 
+        return new Return(StausEnum.SUCCESS);
+    }
+    @ApiOperation("新增栏目")
+    @PostMapping("/addsymenus")
+    public Return addSyMenus(SyMenus syMenus){
+        try{
+            menusAndBigMenusService.saveSyMenus(syMenus);
+        }catch (Exception e){
+            return new Return(StausEnum.NO);
+        }
         return new Return(StausEnum.SUCCESS);
     }
 }

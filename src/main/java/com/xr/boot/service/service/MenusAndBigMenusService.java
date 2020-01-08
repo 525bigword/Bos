@@ -1,6 +1,7 @@
 package com.xr.boot.service.service;
 
 import com.xr.boot.entity.SyBigMenus;
+import com.xr.boot.entity.SyMenus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,4 +16,6 @@ public interface MenusAndBigMenusService {
     Object findyBigmenus();
     //向sy_bigmenus表新增
     void saveSyBigMenus(SyBigMenus syBigMenus) throws Exception;
+    //向sy_menus表新增
+    void saveSyMenus(SyMenus syMenus) throws Exception;
 }

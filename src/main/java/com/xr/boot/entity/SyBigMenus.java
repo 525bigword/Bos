@@ -6,10 +6,22 @@ import java.io.Serializable;
  * 大模块表实体类
  */
 public class SyBigMenus implements Serializable {
+
+    private static final long serialVersionUID = -8879585974869390036L;
     //基础数据
     private Integer id;
     private String bigmenus;
     private String url;
+    //业务属性
+    private SyMenus syMenus;
+
+    public SyMenus getSyMenus() {
+        return syMenus;
+    }
+
+    public void setSyMenus(SyMenus syMenus) {
+        this.syMenus = syMenus;
+    }
 
     public Integer getId() {
         return id;

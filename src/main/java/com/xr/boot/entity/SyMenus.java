@@ -4,6 +4,8 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class SyMenus
  ***********************************************************************/
 
+import io.swagger.models.auth.In;
+
 import java.io.Serializable;
 import java.util.*;
 
@@ -11,6 +13,7 @@ import java.util.*;
  * 
  * @pdOid 84ae4f40-c0f2-4ac1-8dd1-66235eef0a70 */
 public class SyMenus implements Serializable {
+   private static final long serialVersionUID = 2078999636031664665L;
    /** 编号  自增
     * 
     * @pdOid efffef50-3bd0-4f46-b632-956359a81631 */
@@ -18,7 +21,7 @@ public class SyMenus implements Serializable {
    /** 上级栏目编号	Menus表ID
     * 
     * @pdOid 98189cb0-0713-44a8-b99b-a2f88cbd308c */
-   private String parentID;
+   private Integer parentID;
    /** 栏目类型
     * 
     * @pdOid 0a543198-04fa-4c72-b5a4-d97d816b812f */
@@ -31,11 +34,35 @@ public class SyMenus implements Serializable {
     * 
     * @pdOid 5e7a560d-fbdb-4aa2-be6f-976ba3ad9cab */
    private String url;
-   /** 栏目提示语
+   /** 栏目排序列
     * 
     * @pdOid 300cc816-f66b-4ebd-aaf5-fdec490c14ce */
-   private String tip;
-   
+   private Integer tip;
+   /**
+    * 外键所属大模块
+    */
+   private Integer bigmenus;
+   /**
+    * 业务属性
+    */
+    private SyBigMenus syBigMenus;
+
+   public Integer getBigmenus() {
+      return bigmenus;
+   }
+
+   public void setBigmenus(Integer bigmenus) {
+      this.bigmenus = bigmenus;
+   }
+
+   public SyBigMenus getSyBigMenus() {
+      return syBigMenus;
+   }
+
+   public void setSyBigMenus(SyBigMenus syBigMenus) {
+      this.syBigMenus = syBigMenus;
+   }
+
    /** @pdOid 4203d2f1-7c3a-45a4-b27d-2c6e1e1821dc */
    public long getId() {
       return id;
@@ -48,13 +75,13 @@ public class SyMenus implements Serializable {
    }
    
    /** @pdOid ace3344c-0a11-480c-8d13-6824761aca03 */
-   public String getParentID() {
+   public Integer getParentID() {
       return parentID;
    }
    
    /** @param newParentID
     * @pdOid 94aed87b-5fae-4375-8b77-ae89c6ab4b4e */
-   public void setParentID(String newParentID) {
+   public void setParentID(Integer newParentID) {
       parentID = newParentID;
    }
    
@@ -92,13 +119,13 @@ public class SyMenus implements Serializable {
    }
    
    /** @pdOid 277d6239-d196-4909-b0f0-8b2833ceddd9 */
-   public String getTip() {
+   public Integer getTip() {
       return tip;
    }
    
    /** @param newTip
     * @pdOid e10fd546-ce5c-4134-913d-59cbd9773ca1 */
-   public void setTip(String newTip) {
+   public void setTip(Integer newTip) {
       tip = newTip;
    }
 

@@ -4,12 +4,14 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class SyRoles
  ***********************************************************************/
 
+import java.io.Serializable;
 import java.util.*;
 
 /** 角色表
  * 
  * @pdOid 2f52fd7d-6069-4211-97ae-727bbb216ae4 */
-public class SyRoles {
+public class SyRoles implements Serializable {
+   private static final long serialVersionUID = -4397073850859386604L;
    /** 编号 自增
     * 
     * @pdOid 19a73d9e-524d-4190-be97-e72dc28e469f */
@@ -25,7 +27,7 @@ public class SyRoles {
    /** 禁用   1可使用 0已禁用
     * 
     * @pdOid 48ea153e-be2a-44ca-8a56-35ab0524a0cb */
-   private long disabled;
+   private Integer disabled;
    
    /** @pdOid f300bf9b-31ef-402f-8d96-166c82b4f805 */
    public long getId() {
@@ -61,13 +63,13 @@ public class SyRoles {
    }
    
    /** @pdOid 8284feb3-2e74-4196-8d3d-1bf70bfb208c */
-   public long getDisabled() {
+   public Integer getDisabled() {
       return disabled;
    }
    
    /** @param newDisabled
     * @pdOid 67246a3b-ca5f-4649-a181-5d4bb5b251dd */
-   public void setDisabled(long newDisabled) {
+   public void setDisabled(Integer newDisabled) {
       disabled = newDisabled;
    }
 

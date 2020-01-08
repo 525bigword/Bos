@@ -6,6 +6,7 @@ import com.xr.boot.entity.SyBigMenus;
 import com.xr.boot.entity.SyMenus;
 import com.xr.boot.service.service.MenusAndBigMenusService;
 import com.xr.boot.util.RedisUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.klock.annotation.Klock;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Service
+@Slf4j
 public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
     @Autowired
     private MenusAndBigMenusMapper menusAndBigMenusMapper;
@@ -54,6 +56,22 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
         }catch (Exception e){
             throw new SQLException("数据库新增错误");
         }
-
+    }
+    @Klock(leaseTime=Long.MAX_VALUE)
+    @Transactional
+    @Override
+    public void saveSyMenus(SyMenus syMenus) throws Exception {
+        try {
+            int parentid = menusAndBigMenusMapper.findSyMenusToTipByParentid(syMenus.getParentID());
+            syMenus.setTip(++parentid);
+        }catch (Exception e){
+            throw new SQLException("获取排序错误");
+        }
+        try {
+            menusAndBigMenusMapper.saveSyMenus(syMenus);
+        }catch (Exception e){
+            log.debug("新增失败");
+            throw new SQLException("新增错误");
+        }
     }
 }
