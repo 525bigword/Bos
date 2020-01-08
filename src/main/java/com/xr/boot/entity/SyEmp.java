@@ -131,13 +131,13 @@ public class SyEmp implements Serializable {
    }
    
    /** @pdOid 272937f5-35dc-4cd2-9502-10cf0505fe2d */
-   public Integer getDisabled() {
+   public long getDisabled() {
       return disabled;
    }
    
    /** @param newDisabled
     * @pdOid 08227057-08b7-4b47-88ef-fad95be8866c */
-   public void setDisabled(Integer newDisabled) {
+   public void setDisabled(long newDisabled) {
       disabled = newDisabled;
    }
 
