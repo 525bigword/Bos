@@ -45,7 +45,7 @@ public class SyMenus implements Serializable {
    /**
     * 业务属性
     */
-    private SyBigMenus syBigMenus;
+   private SyBigMenus syBigMenus;
 
    public Integer getBigmenus() {
       return bigmenus;
@@ -129,4 +129,17 @@ public class SyMenus implements Serializable {
       tip = newTip;
    }
 
+   @Override
+   public String toString() {
+      return "SyMenus{" +
+              "id=" + id +
+              ", parentID=" + parentID +
+              ", type='" + type + '\'' +
+              ", text='" + text + '\'' +
+              ", url='" + url + '\'' +
+              ", tip=" + tip +
+              ", bigmenus=" + bigmenus +
+              ", syBigMenus=" + syBigMenus +
+              '}';
+   }
 }

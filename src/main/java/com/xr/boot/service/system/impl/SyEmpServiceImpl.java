@@ -23,12 +23,15 @@ public class SyEmpServiceImpl implements SyEmpService {
     @Override
     public SyEmp login(SyEmp syEmp) throws Exception {
         SyEmp syEmps=null;
-       // try {
-            syEmp.setPwd(AES.decryptr(syEmp.getPwd()));
-            syEmps = syEmpMapper.findSyEmpByEmpNoAndPwd(syEmp);
-      //  }catch (Exception e){
-           // throw new SQLException("sql查询出错");
-        //}
+        syEmp.setEmpNo("007");
+        try {
+        System.out.println(syEmp.getPwd());
+        syEmps= syEmpMapper.findSyEmpByEmpNoAndPwd(syEmp);
+            System.out.println(syEmp.toString() );
+        System.out.println(syEmps);
+        }catch (Exception e){
+            throw new SQLException("sql查询出错");
+        }
         if(syEmps.getDisabled()==0){
             throw new Exception("账号已经被冻结");
         }

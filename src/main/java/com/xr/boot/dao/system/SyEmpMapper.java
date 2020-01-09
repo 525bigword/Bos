@@ -6,41 +6,44 @@ import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.mapping.FetchType;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface SyEmpMapper {
     //根据roleid查询sy_rolesmenus
     @Select("select id,roleid,menuid from sy_rolesmenus where roleid=#{roleid}")
     @Results({
             @Result(id = true,column = "id",property = "id"),
+            @Result(property = "roleid",column = "roleid"),
             @Result(column = "roleid",property = "roleNames",
                     one = @One(
-                            select = "com.xr.boot.dao.SyRoleMapper.findSyRolesById",
-                            fetchType = FetchType.LAZY
+                            select = "com.xr.boot.dao.system.SyRoleMapper.findSyRolesById",
+                            fetchType = FetchType.DEFAULT
                     )
             ),
             @Result(column = "menuid",property = "menuNames",
                     many = @Many(
-                            select = "com.xr.boot.dao.MenusAndBigMenusMapper.findSyMenusById",
-                            fetchType = FetchType.LAZY
+                            select = "com.xr.boot.dao.system.MenusAndBigMenusMapper.findSyMenusById",
+                            fetchType = FetchType.EAGER
                     )
             )
     })
-    SyRolesMenus findSyRolesMenusByroleId(@Param("roleid") Integer roleid);
+    List<SyRolesMenus> findSyRolesMenusByroleId(@Param("roleid") Integer roleid);
     //根据员工编号密码查询员工
-    @Select("select id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled from sy_emp where empno=#{empNo} and pwd=#{pwd}")
+    @Select("select id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled from sy_emp where empno=#{empNo}")
     @Results({
             @Result(id = true,column = "id",property = "id"),
             @Result(column = "empname",property = "empName"),
-            @Result(column = "empno",property = "empno"),
+            @Result(column = "empno",property = "empNo"),
             @Result(column = "pwd",property ="pwd" ),
             @Result(column = "querypwd",property = "queryPwd"),
             @Result(column = "empunit",property = "empunit"),
             @Result(column = "remark",property = "remark"),
-            @Result(column = "disable",property = "disable"),
+            @Result(column = "disabled",property = "disabled"),
             @Result(column = "roleid",property = "syRolesMenus",
-                    one = @One(
-                            select="com.xr.boot.dao.SyEmpMapper.findSyRolesMenusByroleId",
-                            fetchType = FetchType.LAZY
+                    many = @Many(
+                            select="findSyRolesMenusByroleId",
+                            fetchType = FetchType.DEFAULT
                     )
             )
     })

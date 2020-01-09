@@ -20,7 +20,7 @@ public class SyRolesMenus implements Serializable {
    private Integer roleid;
    private SyRoles roleNames;
    /** @pdOid 8f66f442-d059-4110-abbd-82597607a23e */
-   private Set<SyMenus> menuNames;
+   private List<SyMenus> menuNames;
 
 
    public Integer getRoleid() {
@@ -35,7 +35,9 @@ public class SyRolesMenus implements Serializable {
    public long getId() {
       return id;
    }
-   
+
+
+
    /** @param newId
     * @pdOid 4a37915d-92da-44e5-9507-3a14cb9e7f08 */
    public void setId(long newId) {
@@ -43,25 +45,33 @@ public class SyRolesMenus implements Serializable {
    }
    
    /** @pdOid 561fe296-8df1-40a1-be33-45db80cc2bd6 */
-   public SyRoles getRoleNames() {
-      return roleNames;
-   }
-   
-   /** @param newRoleNames
-    * @pdOid 51c0ef49-0435-46de-8574-097d25dfd3f2 */
-   public void setRoleNames(SyRoles newRoleNames) {
-      roleNames = newRoleNames;
-   }
-
    public static long getSerialVersionUID() {
       return serialVersionUID;
    }
 
-   public Set<SyMenus> getMenuNames() {
+   @Override
+   public String toString() {
+      return "SyRolesMenus{" +
+              "id=" + id +
+              ", roleid=" + roleid +
+              ", roleNames=" + roleNames +
+              ", menuNames=" + menuNames +
+              '}';
+   }
+
+   public SyRoles getRoleNames() {
+      return roleNames;
+   }
+
+   public void setRoleNames(SyRoles roleNames) {
+      this.roleNames = roleNames;
+   }
+
+   public List<SyMenus> getMenuNames() {
       return menuNames;
    }
 
-   public void setMenuNames(Set<SyMenus> menuNames) {
+   public void setMenuNames(List<SyMenus> menuNames) {
       this.menuNames = menuNames;
    }
 }

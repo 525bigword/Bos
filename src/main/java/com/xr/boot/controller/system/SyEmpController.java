@@ -33,6 +33,7 @@ public class SyEmpController {
     @PutMapping("/uppassword")
     public void upPassWord(String empno,String ypwd,String xpwd){
         SyEmp syEmp=new SyEmp();
+
         String pwd="";
         try {
             syEmp.setPwd(AES.encryptAES(xpwd));
@@ -48,7 +49,9 @@ public class SyEmpController {
     @ApiOperation("登录")
     public Return login(SyEmp syEmp) throws Exception {
         SyEmp login = syEmpService.login(syEmp);
-        String jwt = JwtUtil.createJwt(login.getEmpNo(), login.getEmpName(), login.getSyRolesMenus().getRoleNames().getRoleName());
+        login.getSyRolesMenus();
+        String jwt = JwtUtil.createJwt(login.getEmpNo(), login.getEmpName(),
+                login.getSyRolesMenus().get(0).getRoleNames().getRoleName(),login);
         return new Return(StausEnum.SUCCESS,jwt);
     }
 

@@ -77,4 +77,13 @@ public class SyRoles implements Serializable {
       disabled = newDisabled;
    }
 
+   @Override
+   public String toString() {
+      return "SyRoles{" +
+              "id=" + id +
+              ", roleName='" + roleName + '\'' +
+              ", roleDesc='" + roleDesc + '\'' +
+              ", disabled=" + disabled +
+              '}';
+   }
 }

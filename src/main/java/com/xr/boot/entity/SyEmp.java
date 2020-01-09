@@ -32,7 +32,9 @@ public class SyEmp implements Serializable {
     * 
     * @pdOid 625f2e69-9b96-408b-993c-45eb749fb5e4 */
    private String queryPwd;
+   private Integer roleid;
    //员工单位
+
    private Integer empunit;
    /** 备注
     * 
@@ -45,14 +47,34 @@ public class SyEmp implements Serializable {
    /**
     * 业务属性
     */
-   private SyRolesMenus syRolesMenus;
+   private List<SyRolesMenus> syRolesMenus;
 
-   public static long getSerialVersionUID() {
-      return serialVersionUID;
+   @Override
+   public String toString() {
+      return "SyEmp{" +
+              "id=" + id +
+              ", empName='" + empName + '\'' +
+              ", empNo='" + empNo + '\'' +
+              ", pwd='" + pwd + '\'' +
+              ", queryPwd='" + queryPwd + '\'' +
+              ", roleid=" + roleid +
+              ", empunit=" + empunit +
+              ", remark='" + remark + '\'' +
+              ", disabled=" + disabled +
+              ", syRolesMenus=" + syRolesMenus +
+              '}';
    }
 
    public long getId() {
       return id;
+   }
+
+   public Integer getRoleid() {
+      return roleid;
+   }
+
+   public void setRoleid(Integer roleid) {
+      this.roleid = roleid;
    }
 
    public void setId(long id) {
@@ -115,11 +137,11 @@ public class SyEmp implements Serializable {
       this.disabled = disabled;
    }
 
-   public SyRolesMenus getSyRolesMenus() {
+   public List<SyRolesMenus> getSyRolesMenus() {
       return syRolesMenus;
    }
 
-   public void setSyRolesMenus(SyRolesMenus syRolesMenus) {
+   public void setSyRolesMenus(List<SyRolesMenus> syRolesMenus) {
       this.syRolesMenus = syRolesMenus;
    }
 }

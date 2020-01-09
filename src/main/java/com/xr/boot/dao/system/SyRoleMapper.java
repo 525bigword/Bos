@@ -4,6 +4,8 @@ import com.xr.boot.entity.SyRoles;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface SyRoleMapper {
     //向角色表新增
@@ -11,7 +13,7 @@ public interface SyRoleMapper {
     void saveSyRole(SyRoles syRoles);
 
     //根据Id查sy_roles
-    @Select("select id,rolename,roledesc,disable from sy_roles where id=#{id}")
+    @Select("select id,rolename,roledesc,disabled from sy_roles where id=#{id}")
     SyRoles findSyRolesById(@Param("id") Integer Id);
 
     @Select("select roleid from sy_emp where empno=#{empno}")

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xr.boot.dao.system.SyEmpMapper">
+    <select id="findSyEmpByEmpNoAndPwd" resultType="abc">
+       select
+            id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled
+       from
+            sy_emp
+       where
+            empno=#{empNo}
+       and
+            pwd=#{pwd}
+    </select>
+
+    <resultMap id="abc" type="com.xr.boot.entity.SyEmp">
+        <id column="id" property="id"></id>
+        <result column="empname" property="empName"></result>
+        <result column="empno" property="empNo"></result>
+        <result column="pwd" property="pwd"></result>
+        <result column="querypwd" property="queryPwd"></result>
+        <result column="roleid" property="empNo"></result>
+        <result column="empunit" property="empNo"></result>
+        <result column="remark" property="empNo"></result>
+        <result column="disabled" property="empNo"></result>
+        <result column="remark" property="empNo"></result>
+
+
+
+    </resultMap>
+</mapper>
