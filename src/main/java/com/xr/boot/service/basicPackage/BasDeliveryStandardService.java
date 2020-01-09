@@ -1,4 +1,4 @@
-package com.xr.boot.service;
+package com.xr.boot.service.basicPackage;
 
 
 import com.xr.boot.entity.BasDeliveryStandard;

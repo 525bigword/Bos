@@ -4,6 +4,7 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class SyEmp
  ***********************************************************************/
 
+
 import java.io.Serializable;
 import java.util.*;
 
@@ -32,9 +33,7 @@ public class SyEmp implements Serializable {
     * 
     * @pdOid 625f2e69-9b96-408b-993c-45eb749fb5e4 */
    private String queryPwd;
-   private Integer roleid;
    //员工单位
-
    private Integer empunit;
    /** 备注
     * 
@@ -47,71 +46,8 @@ public class SyEmp implements Serializable {
    /**
     * 业务属性
     */
-   private List<SyRolesMenus> syRolesMenus;
+   private SyRolesMenus syRolesMenus;
 
-   @Override
-   public String toString() {
-      return "SyEmp{" +
-              "id=" + id +
-              ", empName='" + empName + '\'' +
-              ", empNo='" + empNo + '\'' +
-              ", pwd='" + pwd + '\'' +
-              ", queryPwd='" + queryPwd + '\'' +
-              ", roleid=" + roleid +
-              ", empunit=" + empunit +
-              ", remark='" + remark + '\'' +
-              ", disabled=" + disabled +
-              ", syRolesMenus=" + syRolesMenus +
-              '}';
-   }
-
-   public long getId() {
-      return id;
-   }
-
-   public Integer getRoleid() {
-      return roleid;
-   }
-
-   public void setRoleid(Integer roleid) {
-      this.roleid = roleid;
-   }
-
-   public void setId(long id) {
-      this.id = id;
-   }
-
-   public String getEmpName() {
-      return empName;
-   }
-
-   public void setEmpName(String empName) {
-      this.empName = empName;
-   }
-
-   public String getEmpNo() {
-      return empNo;
-   }
-
-   public void setEmpNo(String empNo) {
-      this.empNo = empNo;
-   }
-
-   public String getPwd() {
-      return pwd;
-   }
-
-   public void setPwd(String pwd) {
-      this.pwd = pwd;
-   }
-
-   public String getQueryPwd() {
-      return queryPwd;
-   }
-
-   public void setQueryPwd(String queryPwd) {
-      this.queryPwd = queryPwd;
-   }
 
    public Integer getEmpunit() {
       return empunit;
@@ -121,27 +57,89 @@ public class SyEmp implements Serializable {
       this.empunit = empunit;
    }
 
-   public String getRemark() {
-      return remark;
-   }
-
-   public void setRemark(String remark) {
-      this.remark = remark;
-   }
-
-   public Integer getDisabled() {
-      return disabled;
-   }
-
-   public void setDisabled(Integer disabled) {
-      this.disabled = disabled;
-   }
-
-   public List<SyRolesMenus> getSyRolesMenus() {
+   public SyRolesMenus getSyRolesMenus() {
       return syRolesMenus;
    }
 
-   public void setSyRolesMenus(List<SyRolesMenus> syRolesMenus) {
+   public void setSyRolesMenus(SyRolesMenus syRolesMenus) {
       this.syRolesMenus = syRolesMenus;
    }
+
+   /** @pdOid 35ebd555-c558-49fc-9dd0-20f4c14cd9d4 */
+   public long getId() {
+      return id;
+   }
+   
+   /** @param newId
+    * @pdOid 94e92383-9ffa-44b8-af1b-630e7b1095c2 */
+   public void setId(long newId) {
+      id = newId;
+   }
+   
+   /** @pdOid ecafae4f-23ea-412e-9d1a-b783caf17f3c */
+   public String getEmpName() {
+      return empName;
+   }
+   
+   /** @param newEmpName
+    * @pdOid fa3a1ee9-2e96-4274-9dc3-982c2116c929 */
+   public void setEmpName(String newEmpName) {
+      empName = newEmpName;
+   }
+   
+   /** @pdOid f511dd7c-2ee0-4b50-809e-8c469f4dd9a8 */
+   public String getEmpNo() {
+      return empNo;
+   }
+   
+   /** @param newEmpNo
+    * @pdOid c772061e-28ab-40e6-bc30-c9bee18de0ad */
+   public void setEmpNo(String newEmpNo) {
+      empNo = newEmpNo;
+   }
+   
+   /** @pdOid cb463957-1223-4c57-9a70-4819982eab57 */
+   public String getPwd() {
+      return pwd;
+   }
+   
+   /** @param newPwd
+    * @pdOid 5c880029-2e8c-4192-a41a-441bf3c41745 */
+   public void setPwd(String newPwd) {
+      pwd = newPwd;
+   }
+   
+   /** @pdOid 3f2dda59-cf89-4e2a-a37b-7dae72a0987c */
+   public String getQueryPwd() {
+      return queryPwd;
+   }
+   
+   /** @param newQueryPwd
+    * @pdOid bcc4f85c-2c3b-4f4d-b2b6-d85d4c86fcdf */
+   public void setQueryPwd(String newQueryPwd) {
+      queryPwd = newQueryPwd;
+   }
+   
+   /** @pdOid 7f9fcf81-f335-4705-a4bf-682625d3087e */
+   public String getRemark() {
+      return remark;
+   }
+   
+   /** @param newRemark
+    * @pdOid 43b771d8-768a-40f7-af25-977640e5848e */
+   public void setRemark(String newRemark) {
+      remark = newRemark;
+   }
+   
+   /** @pdOid 272937f5-35dc-4cd2-9502-10cf0505fe2d */
+   public Integer getDisabled() {
+      return disabled;
+   }
+   
+   /** @param newDisabled
+    * @pdOid 08227057-08b7-4b47-88ef-fad95be8866c */
+   public void setDisabled(Integer newDisabled) {
+      disabled = newDisabled;
+   }
+
 }

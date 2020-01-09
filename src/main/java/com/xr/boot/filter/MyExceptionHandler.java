@@ -13,7 +13,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@Component
+//@Component
 public class MyExceptionHandler extends BasicHttpAuthenticationFilter {
     @Autowired
     private JwtUtil jwtUtil;
@@ -41,13 +41,13 @@ public class MyExceptionHandler extends BasicHttpAuthenticationFilter {
      */
     @Override
     protected boolean executeLogin(ServletRequest request, ServletResponse response) throws Exception {
-        HttpServletRequest httpServletRequest = (HttpServletRequest) request;
+        /*HttpServletRequest httpServletRequest = (HttpServletRequest) request;
         String token = httpServletRequest.getHeader("Authorization");
 
         JwtToken jwtToken = new JwtToken(token);
         // 提交给realm进行登入，如果错误他会抛出异常并被捕获
         getSubject(request, response).login(jwtToken);
-        // 如果没有抛出异常则代表登入成功，返回true
+        // 如果没有抛出异常则代表登入成功，返回true*/
         return true;
     }
 

@@ -12,8 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 public class SyUnitsServiceImpl implements SyUnitsService {
     @Autowired
     private SyUnitsMapper syUnitsMapper;
-    @Klock(leaseTime=Long.MAX_VALUE)
-    @Transactional
     @Override
     public SyUnits findSyUnitById(Integer operationUnitid) {
         return syUnitsMapper.findSyUnitById(operationUnitid);
