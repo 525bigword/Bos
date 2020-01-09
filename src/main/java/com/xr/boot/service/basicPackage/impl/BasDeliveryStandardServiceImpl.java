@@ -1,8 +1,8 @@
-package com.xr.boot.service.impl;
+package com.xr.boot.service.basicPackage.impl;
 
-import com.xr.boot.dao.BasDeliveryStandardMapper;
+import com.xr.boot.dao.basicPackage.BasDeliveryStandardMapper;
 import com.xr.boot.entity.BasDeliveryStandard;
-import com.xr.boot.service.BasDeliveryStandardService;
+import com.xr.boot.service.basicPackage.BasDeliveryStandardService;
 import com.xr.boot.util.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.klock.annotation.Klock;
@@ -29,7 +29,8 @@ public class BasDeliveryStandardServiceImpl implements BasDeliveryStandardServic
         redisUtil.set("com.xr.boot.controller.BasDeliveryStandardController.findBasDeliveryStandardAll", maps);
         return redisUtil.get("com.xr.boot.controller.BasDeliveryStandardController.findBasDeliveryStandardAll");
     }
-
+    @Klock(leaseTime=Long.MAX_VALUE)
+    @Transactional
     @Override
     public List<BasDeliveryStandard> findBasDeliveryStandardByTerm(BasDeliveryStandard basDeliveryStandard) {
         return basDeliveryStandardMapper.findBasDeliveryStandards(basDeliveryStandard);

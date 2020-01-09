@@ -41,4 +41,8 @@ public class SyEmpServiceImpl implements SyEmpService {
     public SyEmp getUserByName(String username) {
         return syEmpMapper.login(username);
     }
+    @Override
+    public SyEmp findSyEmpById(int operatorid) {
+        return  syEmpMapper.findSyEmpById(operatorid);
+    }
 }

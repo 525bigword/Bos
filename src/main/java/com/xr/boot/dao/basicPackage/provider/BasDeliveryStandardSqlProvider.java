@@ -1,4 +1,4 @@
-package com.xr.boot.dao.provider;
+package com.xr.boot.dao.basicPackage.provider;
 
 import com.xr.boot.entity.BasDeliveryStandard;
 import org.apache.ibatis.jdbc.SQL;
@@ -20,7 +20,7 @@ public class BasDeliveryStandardSqlProvider {
                     if (basDeliveryStandard.getStatus() != null) {
                         tj += " and ds.`Status`=#{status}";
                     }
-                    if (basDeliveryStandard.getMinWeight() != null && basDeliveryStandard.getMinWeight().equals("")) {
+                    if (basDeliveryStandard.getMinWeight() != null &&! basDeliveryStandard.getMinWeight().equals("")) {
                         tj += " and ds.MinWeight=#{minWeight}";
                     }
                     if (basDeliveryStandard.getMaxWeight() != null && !basDeliveryStandard.getMaxWeight().equals("")) {
