@@ -2,6 +2,7 @@ package com.xr.boot.dao.system;
 
 import com.xr.boot.entity.SyBigMenus;
 import com.xr.boot.entity.SyMenus;
+import com.xr.boot.entity.SyRolesMenus;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.mapping.FetchType;
 import org.springframework.stereotype.Repository;
@@ -10,6 +11,20 @@ import java.util.List;
 
 @Repository
 public interface MenusAndBigMenusMapper {
+
+    //根据角色Id查询权限
+    @Select("select id,roleid,menuid from sy_rolesmenus where roleid=#{roleid}")
+    @Results({
+            @Result(id = true,column = "id",property = "id"),
+            @Result(column = "roleid",property = "roleid"),
+            @Result(property = "menuNames",column = "menuid",
+                one = @One(
+                        select = "com.xr.boot.dao.system.MenusAndBigMenusMapper.findSyMenusById",
+                        fetchType = FetchType.LAZY
+                )
+            )
+    })
+    SyRolesMenus findSyMenusByRoleId(@Param("roleid") Integer roleid);
 
     //根据Id查sy_menus
     @Select("select id,parentid,type,text,url,tip,bigmenus from sy_menus where id=#{id}")
@@ -22,7 +37,7 @@ public interface MenusAndBigMenusMapper {
             @Result(column="tip",property="tip"),
             @Result(column="bigmenus",property="bigmenus")
     })
-    List<SyMenus> findSyMenusById(@Param("id") Integer parentId);
+    SyMenus findSyMenusById(@Param("id") Integer id);
 
     //根据ParentId查sy_menus
     @Select("select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=#{parentid}")

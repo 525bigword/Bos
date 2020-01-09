@@ -3,6 +3,7 @@ package com.xr.boot.service.system.impl;
 import com.xr.boot.dao.system.SyEmpMapper;
 import com.xr.boot.entity.SyEmp;
 import com.xr.boot.service.system.SyEmpService;
+import com.xr.boot.util.AES;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,18 +21,16 @@ public class SyEmpServiceImpl implements SyEmpService {
      * @return
      */
     @Override
-    public SyEmp Login(SyEmp syEmp) throws Exception {
+    public SyEmp login(SyEmp syEmp) throws Exception {
         SyEmp syEmps=null;
-        try {
+       // try {
+            syEmp.setPwd(AES.decryptr(syEmp.getPwd()));
             syEmps = syEmpMapper.findSyEmpByEmpNoAndPwd(syEmp);
-        }catch (Exception e){
-            throw new SQLException("sql查询出错");
-        }
+      //  }catch (Exception e){
+           // throw new SQLException("sql查询出错");
+        //}
         if(syEmps.getDisabled()==0){
             throw new Exception("账号已经被冻结");
-        }else{
-            //生成一个token码
-
         }
         return syEmps;
     }
@@ -40,5 +39,10 @@ public class SyEmpServiceImpl implements SyEmpService {
     @Override
     public SyEmp getUserByName(String username) {
         return syEmpMapper.login(username);
+    }
+
+    @Override
+    public void upSyEmpById(SyEmp syEmp) {
+        syEmpMapper.UpSyEmpById(syEmp);
     }
 }

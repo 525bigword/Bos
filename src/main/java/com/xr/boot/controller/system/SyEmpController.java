@@ -1,18 +1,16 @@
-package com.xr.boot.controller;
+package com.xr.boot.controller.system;
 
 import com.xr.boot.entity.SyEmp;
 import com.xr.boot.ienum.Return;
 import com.xr.boot.ienum.StausEnum;
 import com.xr.boot.service.system.SyEmpService;
+import com.xr.boot.util.AES;
 import com.xr.boot.util.JwtUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +18,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.Random;
 
 @RestController
@@ -32,20 +29,26 @@ public class SyEmpController {
     @Autowired
     private SyEmpService syEmpService;
 
+    @ApiOperation("修改密码")
+    @PutMapping("/uppassword")
+    public void upPassWord(String empno,String ypwd,String xpwd){
+        SyEmp syEmp=new SyEmp();
+        String pwd="";
+        try {
+            syEmp.setPwd(AES.encryptAES(xpwd));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        syEmp.setEmpNo("007");
+        syEmpService.upSyEmpById(syEmp);
+    }
+
+
     @PostMapping("/login")
     @ApiOperation("登录")
-    public Return login(SyEmp syEmp){
-        syEmp.setPwd(syEmp.getPwd());
-        SyEmp emp=null;
-        try {
-            emp  = syEmpService.Login(syEmp);
-        } catch (SQLException e) {
-            return new Return(StausEnum.LoginNo,"账号或者密码错误");
-        }catch (Exception e){
-            return new Return(StausEnum.LoginNo,"账号已冻结");
-        }
-        String jwt = JwtUtil.createJwt(emp.getId() + "", emp.getEmpName(),
-                emp.getSyRolesMenus().getRoleNames().getRoleName());
+    public Return login(SyEmp syEmp) throws Exception {
+        SyEmp login = syEmpService.login(syEmp);
+        String jwt = JwtUtil.createJwt(login.getEmpNo(), login.getEmpName(), login.getSyRolesMenus().getRoleNames().getRoleName());
         return new Return(StausEnum.SUCCESS,jwt);
     }
 

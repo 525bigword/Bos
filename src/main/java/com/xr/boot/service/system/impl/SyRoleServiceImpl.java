@@ -20,12 +20,12 @@ public class SyRoleServiceImpl implements SyRoleService {
     @Transactional
     @Override
     public void saveSyRole(SyRoles syRoles) throws SQLException {
-        //try{
+        try{
             syRoleMapper.saveSyRole(syRoles);
-        //}catch (Exception e){
-          //  log.debug("com.xr.boot.service.service.impl.SyRoleServiceImpl查询数据库错误");
-          //  throw new SQLException("com.xr.boot.service.service.impl.SyRoleServiceImpl查询数据库错误");
-        //}
+        }catch (Exception e){
+            log.debug("com.xr.boot.service.service.impl.SyRoleServiceImpl查询数据库错误");
+            throw new SQLException("com.xr.boot.service.service.impl.SyRoleServiceImpl查询数据库错误");
+        }
 
     }
 }

@@ -27,8 +27,7 @@ public interface SyEmpMapper {
     })
     SyRolesMenus findSyRolesMenusByroleId(@Param("roleid") Integer roleid);
     //根据员工编号密码查询员工
-    @Select("select id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled from sy_emp where empno=#{empNo} and" +
-            " pwd=#{pwd}")
+    @Select("select id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled from sy_emp where empno=#{empNo} and pwd=#{pwd}")
     @Results({
             @Result(id = true,column = "id",property = "id"),
             @Result(column = "empname",property = "empName"),
@@ -66,4 +65,24 @@ public interface SyEmpMapper {
             @Result(column = "Disabled", property = "disabled")
     })
     SyEmp findSyEmpById(int operatorid);
+
+    //根据员工编号查询员工
+    @Select("select id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled from sy_emp where empno=#{empNo}")
+    @Results({
+            @Result(id = true,column = "id",property = "id"),
+            @Result(column = "empname",property = "empName"),
+            @Result(column = "empno",property = "empno"),
+            @Result(column = "pwd",property ="pwd" ),
+            @Result(column = "querypwd",property = "queryPwd"),
+            @Result(column = "empunit",property = "empunit"),
+            @Result(column = "remark",property = "remark"),
+            @Result(column = "disable",property = "disable"),
+
+    })
+    SyEmp findSyEmpByEmpNo(SyEmp syEmp);
+
+    @Update("update sy_emp set pwd=#{pwd} where empno=#{empNo}")
+    //修改密码
+    void UpSyEmpById(SyEmp syEmp);
+
 }

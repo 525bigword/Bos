@@ -1,4 +1,4 @@
-package com.xr.boot.controller;
+package com.xr.boot.controller.system;
 
 import com.xr.boot.entity.BasDeliveryStandard;
 import com.xr.boot.service.BasDeliveryStandardService;
@@ -6,7 +6,6 @@ import com.xr.boot.util.RedisUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

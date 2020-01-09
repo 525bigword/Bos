@@ -1,4 +1,4 @@
-package com.xr.boot.controller;
+package com.xr.boot.controller.system;
 
 import com.xr.boot.entity.SyBigMenus;
 import com.xr.boot.entity.SyMenus;

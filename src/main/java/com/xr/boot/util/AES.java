@@ -2,10 +2,19 @@ package com.xr.boot.util;
 
 import org.springframework.stereotype.Component;
 
+import java.io.UnsupportedEncodingException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+
+import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
-import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.KeyGenerator;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
-import java.nio.charset.StandardCharsets;
+
 /**
  * AES加密工具类
  */
@@ -14,109 +23,114 @@ import java.nio.charset.StandardCharsets;
 @Component
 public class AES {
 
-  public static String getKey(String key) {
-    if (key != null && !key.equals("")) {
-      if (key.length() > 16) {
-        key = key.substring(0, 16);
-      } else if (key.length() < 16) {
-        int count = 16 - key.length();
-        for (int i = 1; i <= count; i++) {
-          key = key + "0";
-        }
-      }
-    } else {
-      key = "0000000000000000";
-    }
-    return key;
-  }
+
 
   /**
-   * 加密方法
-   * @param data  需要加密的数据
-   * @param key key强制为定义为data的首位字符和尾位字符
-   * @return  加密后的数据
-   * @throws Exception
-   */
-  public static String encryptAES(String data,String key) throws Exception {
-    String iv = getIv();
-    if (key == null) {
-      System.out.print("Key为空null");
-      return null;
-    }
-    // 判断Key是否为16位
-    if (key.length() != 16) {
-      key = getKey(key);
-    }
-    Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
-
-    byte[] dataBytes = data.getBytes(StandardCharsets.UTF_8.name());
-
-    int plaintextLength = dataBytes.length;
-
-    byte[] plaintext = new byte[plaintextLength];
-    System.arraycopy(dataBytes, 0, plaintext, 0, dataBytes.length);
-
-    SecretKeySpec keyspec = new SecretKeySpec(key.getBytes(StandardCharsets.UTF_8), "AES");
-    IvParameterSpec ivspec = new IvParameterSpec(iv.getBytes(StandardCharsets.UTF_8));
-
-    cipher.init(Cipher.ENCRYPT_MODE, keyspec, ivspec);
-    byte[] encrypted = cipher.doFinal(plaintext);
-
-    return toHexString(encrypted);
-  }
-
-  /**
-   * 解密方法
-   * @param data 需要解密的值
-   * @param key 加密时的密钥
+   * 获取key
+   * @param data 需要加密的字符串
    * @return
-   * @throws Exception
    */
-  public static String decryptr(String data, String key) throws Exception {
-    // 判断Key是否为16位
-    if (key.length() != 16) {
-      key = getKey(key);
+  public static String findKey(String data){
+    String key=data.charAt(0)+data.charAt(data.length()-1)+"";
+     return key;
+  }
+  /**
+   * 加密
+   *
+   * @param content 需要加密的内容
+   * @param password  加密密码
+   * @return
+   */
+  public static byte[] encrypt(String content, String password) {
+    try {
+      KeyGenerator kgen = KeyGenerator.getInstance("AES");
+      kgen.init(128, new SecureRandom(password.getBytes()));
+      SecretKey secretKey = kgen.generateKey();
+      byte[] enCodeFormat = secretKey.getEncoded();
+      SecretKeySpec key = new SecretKeySpec(enCodeFormat, "AES");
+      Cipher cipher = Cipher.getInstance("AES");// 创建密码器
+      byte[] byteContent = content.getBytes("utf-8");
+      cipher.init(Cipher.ENCRYPT_MODE, key);// 初始化
+      byte[] result = cipher.doFinal(byteContent);
+      return result; // 加密
+    } catch (NoSuchAlgorithmException e) {
+      e.printStackTrace();
+    } catch (NoSuchPaddingException e) {
+      e.printStackTrace();
+    } catch (InvalidKeyException e) {
+      e.printStackTrace();
+    } catch (UnsupportedEncodingException e) {
+      e.printStackTrace();
+    } catch (IllegalBlockSizeException e) {
+      e.printStackTrace();
+    } catch (BadPaddingException e) {
+      e.printStackTrace();
     }
-    byte[] encrypted1 = toByte(data); // getFromBASE64(data);
-    Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
-    SecretKeySpec keyspec = new SecretKeySpec(key.getBytes(StandardCharsets.UTF_8.name()), "AES");
-    IvParameterSpec ivspec = new IvParameterSpec("zxcvbnmk09876543".getBytes());
-    cipher.init(Cipher.DECRYPT_MODE, keyspec, ivspec);
-    byte[] original = cipher.doFinal(encrypted1);
-    String originalString = new String(original, StandardCharsets.UTF_8);
-
-    return originalString.trim();
+    return null;
   }
 
-  public static byte[] toByte(String hexString) {
-    int len = hexString.length() / 2;
-    byte[] result = new byte[len];
-    for (int i = 0; i < len; i++) {
-      result[i] = Integer.valueOf(hexString.substring(2 * i, 2 * i + 2), 16).byteValue();
+
+
+  /**解密
+   * @param content  待解密内容
+   * @param password 解密密钥
+   * @return
+   */
+  public static byte[] decrypt(byte[] content, String password) {
+    try {
+      KeyGenerator kgen = KeyGenerator.getInstance("AES");
+      kgen.init(128, new SecureRandom(password.getBytes()));
+      SecretKey secretKey = kgen.generateKey();
+      byte[] enCodeFormat = secretKey.getEncoded();
+      SecretKeySpec key = new SecretKeySpec(enCodeFormat, "AES");
+      Cipher cipher = Cipher.getInstance("AES");// 创建密码器
+      cipher.init(Cipher.DECRYPT_MODE, key);// 初始化
+      byte[] result = cipher.doFinal(content);
+      return result; // 加密
+    } catch (NoSuchAlgorithmException e) {
+      e.printStackTrace();
+    } catch (NoSuchPaddingException e) {
+      e.printStackTrace();
+    } catch (InvalidKeyException e) {
+      e.printStackTrace();
+    } catch (IllegalBlockSizeException e) {
+      e.printStackTrace();
+    } catch (BadPaddingException e) {
+      e.printStackTrace();
     }
-    // [7, 33, 70, -40, 77, 65, 17, -76, -21, -98, -62, -101, 18, 98, 80,
-    // 69, -88, 67, 71, 68, 64, -79,
-    // -35, -120, 19, 104, -105, 98, 7, -6, 13, 27
+    return null;
+  }
+
+
+
+  /**将二进制转换成16进制
+   * @param buf
+   * @return
+   */
+  public static String parseByte2HexStr(byte buf[]) {
+    StringBuffer sb = new StringBuffer();
+    for (int i = 0; i < buf.length; i++) {
+      String hex = Integer.toHexString(buf[i] & 0xFF);
+      if (hex.length() == 1) {
+        hex = '0' + hex;
+      }
+      sb.append(hex.toUpperCase());
+    }
+    return sb.toString();
+  }
+  /**将16进制转换为二进制
+   * @param hexStr
+   * @return
+   */
+  public static byte[] parseHexStr2Byte(String hexStr) {
+    if (hexStr.length() < 1)
+      return null;
+    byte[] result = new byte[hexStr.length()/2];
+    for (int i = 0;i< hexStr.length()/2; i++) {
+      int high = Integer.parseInt(hexStr.substring(i*2, i*2+1), 16);
+      int low = Integer.parseInt(hexStr.substring(i*2+1, i*2+2), 16);
+      result[i] = (byte) (high * 16 + low);
+    }
     return result;
   }
-
-  public static String toHexString(byte[] bytes) {
-    int len = bytes.length;
-    StringBuilder stringBuilder = new StringBuilder();
-    for (int i = 0; i < len; i++) {
-      int v = bytes[i] & 0xFF;
-      String hv = Integer.toHexString(v);
-      if (hv.length() < 2) {
-        stringBuilder.append(0);
-      }
-      stringBuilder.append(hv);
-    }
-    return stringBuilder.toString().toUpperCase();
-  }
-
-  private static String getIv() {
-    return "zxcvbnmk09876543";
-  }
-
-  public static void main(String[] args) {}
 }

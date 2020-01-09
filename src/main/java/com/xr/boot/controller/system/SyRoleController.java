@@ -1,4 +1,4 @@
-package com.xr.boot.controller;
+package com.xr.boot.controller.system;
 
 import com.xr.boot.entity.SyRoles;
 import com.xr.boot.service.system.SyRoleService;
