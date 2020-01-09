@@ -2,21 +2,20 @@ package com.xr.boot.controller.PacPackaging;
 
 import com.alibaba.fastjson.JSON;
 import com.xr.boot.entity.PacPackaging;
+import com.xr.boot.entity.SyEmp;
 import com.xr.boot.ienum.Return;
 import com.xr.boot.ienum.StausEnum;
 import com.xr.boot.service.PacPackaging.PacPackagingService;
 import com.xr.boot.util.RedisUtil;
+import com.xr.boot.util.SnowflakeIdFactory;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
-import java.util.Map;
-
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+import java.util.*;
 @Api(value="包装材料管理",description="包装材料管理的API")
 @RestController
 @Controller
@@ -34,8 +33,11 @@ public class PacPackagingController {
 public Return queryAllpacpackaging(){
     Map<String, List<Object>> pacPack = null;
     if(redisUtil.hasKey("com.xr.boot.controller.PacPackagingController.queryAllpacpackaging")){
+
         log.debug("从redis中取出值");
-        return new Return(StausEnum.SUCCESS,redisUtil.get("com.xr.boot.controller.PacPackagingController.queryAllpacpackaging"));
+       /* redisUtil.del("com.xr.boot.controller.PacPackagingController.queryAllpacpackaging");
+        return null;*/
+       return new Return(StausEnum.SUCCESS,redisUtil.get("com.xr.boot.controller.PacPackagingController.queryAllpacpackaging"));
     }else {
         try {
             pacPack = pacPackagingService.queryAllpacpackaging();
@@ -52,12 +54,27 @@ public Return queryAllpacpackaging(){
 }
 @ApiOperation(value = "新增包装材料",notes="暂时无需参数", httpMethod = "POST")
 @RequestMapping("/pacpackaging/addPacpackaging")
-public void addPacpackaging(PacPackaging packaging) {
+public void addPacpackaging(PacPackaging packaging,String empName) {
+    System.out.println(packaging+","+empName+"进");
+   SyEmp syEmps=pacPackagingService.selectIdbyname(empName);
+    System.out.println(syEmps);
+    Long id = syEmps.getId();
+    packaging.setMeasurementUnit("个");
+    packaging.setOperatorId(Integer.parseInt(id.toString()));
+    packaging.setOperationUnitid(syEmps.getEmpunit());
  pacPackagingService.addPacpackaging(packaging);
 }
 @ApiOperation(value = "修改包装材料信息",notes="需要", httpMethod = "POST")
 @RequestMapping("/pacpackaging/updatePacpackaging")
 public void updatePacpackaging(PacPackaging packaging){
 pacPackagingService.updatePacpackaging(packaging);
+}
+    @ApiOperation(value = "物品编码",notes="无需参数", httpMethod = "POST")
+@RequestMapping("/pacpackaging/getPacPackagingma")
+    public long getPacPackagingma(){
+    System.out.println("取编码");
+    long a=new SnowflakeIdFactory().generateKey();
+    System.out.println(a);
+    return a;
 }
 }

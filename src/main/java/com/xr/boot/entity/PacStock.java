@@ -1,7 +1,7 @@
 package com.xr.boot.entity; /***********************************************************************
- * Module:  PacStock.java
+ * Module:  PacStockMapper.java
  * Author:  Administrator
- * Purpose: Defines the Class PacStock
+ * Purpose: Defines the Class PacStockMapper
  ***********************************************************************/
 
 import java.util.*;

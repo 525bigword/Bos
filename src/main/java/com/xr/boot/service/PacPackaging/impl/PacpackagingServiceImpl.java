@@ -2,6 +2,7 @@ package com.xr.boot.service.PacPackaging.impl;
 
 import com.xr.boot.dao.PacPackaging.PacPackagingMapper;
 import com.xr.boot.entity.PacPackaging;
+import com.xr.boot.entity.SyEmp;
 import com.xr.boot.entity.SyMenus;
 import com.xr.boot.service.PacPackaging.PacPackagingService;
 import com.xr.boot.util.RedisUtil;
@@ -34,11 +35,31 @@ public class PacpackagingServiceImpl implements PacPackagingService {
     }
 
     @Override
+    public PacPackaging findOnebyid(int id) {
+        return pacPackagingMapper.findOnebyid(id);
+    }
+
+    @Override
+    public List<PacPackaging> findWherepacpackaging(PacPackaging pacPackaging) {
+        return pacPackagingMapper.findWherepacpackaging(pacPackaging);
+    }
+
+    @Override
     public void addPacpackaging(PacPackaging pacPackaging) {
         pacPackagingMapper.addPacpackaging(pacPackaging);
     }
     @Override
     public void updatePacpackaging(PacPackaging pacPackaging) {
 pacPackagingMapper.updatePacpackaging(pacPackaging);
+    }
+
+    @Override
+    public void updatePaczuofei(PacPackaging pacPackaging) {
+pacPackagingMapper.updatePaczuofei(pacPackaging);
+    }
+
+    @Override
+    public SyEmp selectIdbyname(String empName) {
+        return pacPackagingMapper.selectIdbyname(empName);
     }
 }

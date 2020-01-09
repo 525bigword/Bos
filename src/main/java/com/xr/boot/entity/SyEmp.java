@@ -4,12 +4,15 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class SyEmp
  ***********************************************************************/
 
+import org.springframework.stereotype.Component;
+
 import java.io.Serializable;
 import java.util.*;
 
 /** 员工表
  * 
  * @pdOid 84cc1890-5ed5-4982-89a4-e581e4cea20e */
+@Component
 public class SyEmp implements Serializable {
    private static final long serialVersionUID = -3262474656539416214L;
    /** 编号 自增
@@ -35,6 +38,7 @@ public class SyEmp implements Serializable {
    private Integer roleid;
    //员工单位
    private Integer empunit;
+
    /** 备注
     * 
     * @pdOid c3d9d00c-3118-4124-9e99-eacf58b281cb */
@@ -62,6 +66,22 @@ public class SyEmp implements Serializable {
               ", disabled=" + disabled +
               ", syRolesMenus=" + syRolesMenus +
               '}';
+   }
+
+   public Integer getRoleid() {
+      return roleid;
+   }
+
+   public void setRoleid(Integer roleid) {
+      this.roleid = roleid;
+   }
+
+   public Integer getEmpunit() {
+      return empunit;
+   }
+
+   public void setEmpunit(Integer empunit) {
+      this.empunit = empunit;
    }
 
    public List<SyRolesMenus> getSyRolesMenus() {

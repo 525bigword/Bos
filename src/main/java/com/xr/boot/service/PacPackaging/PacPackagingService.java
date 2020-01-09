@@ -1,6 +1,7 @@
 package com.xr.boot.service.PacPackaging;
 
 import com.xr.boot.entity.PacPackaging;
+import com.xr.boot.entity.SyEmp;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,7 +13,17 @@ public interface PacPackagingService {
      * @return
      */
     Map<String,List<Object>> queryAllpacpackaging();
+    /**
+     * 根据id查询材料信息
+     */
+    PacPackaging findOnebyid(int id);
 
+    /**
+     * 多条件查询材料信息
+     * @param pacPackaging
+     * @return
+     */
+    List<PacPackaging> findWherepacpackaging(PacPackaging pacPackaging);
     /**
      * 新增包装材料
      * @param pacPackaging
@@ -24,4 +35,9 @@ public interface PacPackagingService {
      * @param pacPackaging
      */
     public void updatePacpackaging(PacPackaging pacPackaging);
+    /**
+     * 包装材料作废登记
+     */
+    void updatePaczuofei(PacPackaging pacPackaging);
+    SyEmp selectIdbyname(String empName);
 }

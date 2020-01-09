@@ -5521,3 +5521,148 @@ slaveDataSourceNames:
 2020-01-09 00:40:37.524  INFO 16888 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_7
 2020-01-09 00:40:37.603  INFO 16888 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2020-01-09 00:40:37.608  INFO 16888 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 47.825 seconds (JVM running for 50.29)
+2020-01-09 20:43:51.348  INFO 16880 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on WIN-IAIRJF5MGH7 with PID 16880 (E:\newise\Bos\target\classes started by Administrator in E:\newise\Bos)
+2020-01-09 20:43:51.351 DEBUG 16880 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-09 20:43:51.352  INFO 16880 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-01-09 20:43:52.645  INFO 16880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-09 20:43:52.648  INFO 16880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-09 20:43:52.689  INFO 16880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
+2020-01-09 20:43:53.009  INFO 16880 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-09 20:43:53.352  INFO 16880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-09 20:43:53.361  INFO 16880 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-09 20:43:53.361  INFO 16880 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-09 20:43:53.565  INFO 16880 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-09 20:43:53.565  INFO 16880 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1921 ms
+2020-01-09 20:43:53.606 DEBUG 16880 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-01-09 20:43:54.224  INFO 16880 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-01-09 20:43:56.585  INFO 16880 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-01-09 20:43:58.656  INFO 16880 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+loadBalanceAlgorithmType: round_robin
+masterDataSourceName: ds0
+name: dataSource
+slaveDataSourceNames:
+- ds1
+
+2020-01-09 20:43:58.657  INFO 16880 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+{}
+
+2020-01-09 20:44:00.103  INFO 16880 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-09 20:44:00.573  INFO 16880 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-01-09 20:44:02.596  INFO 16880 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-01-09 20:44:02.605  INFO 16880 --- [nioEventLoopGroup-4-5] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-01-09 20:44:02.674  INFO 16880 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-09 20:44:02.692  INFO 16880 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-09 20:44:02.728  INFO 16880 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-09 20:44:02.991  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_1
+2020-01-09 20:44:02.995  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_2
+2020-01-09 20:44:02.999  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_3
+2020-01-09 20:44:03.004  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_4
+2020-01-09 20:44:03.008  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_5
+2020-01-09 20:44:03.012  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_6
+2020-01-09 20:44:03.016  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_7
+2020-01-09 20:44:03.022  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPacPackagingmaUsingPOST_1
+2020-01-09 20:44:03.025  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPacPackagingmaUsingPOST_2
+2020-01-09 20:44:03.028  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPacPackagingmaUsingPOST_3
+2020-01-09 20:44:03.031  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPacPackagingmaUsingPOST_4
+2020-01-09 20:44:03.034  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPacPackagingmaUsingPOST_5
+2020-01-09 20:44:03.036  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPacPackagingmaUsingPOST_6
+2020-01-09 20:44:03.038  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPacPackagingmaUsingPOST_7
+2020-01-09 20:44:03.050  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_1
+2020-01-09 20:44:03.054  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_2
+2020-01-09 20:44:03.057  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_3
+2020-01-09 20:44:03.060  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_4
+2020-01-09 20:44:03.065  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_5
+2020-01-09 20:44:03.070  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_6
+2020-01-09 20:44:03.073  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_7
+2020-01-09 20:44:03.080  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_1
+2020-01-09 20:44:03.084  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_2
+2020-01-09 20:44:03.087  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_3
+2020-01-09 20:44:03.090  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_4
+2020-01-09 20:44:03.094  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_5
+2020-01-09 20:44:03.098  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_6
+2020-01-09 20:44:03.101  INFO 16880 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_7
+2020-01-09 20:44:03.184  INFO 16880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-09 20:44:03.188  INFO 16880 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 12.391 seconds (JVM running for 15.673)
+2020-01-09 20:47:04.954  INFO 16880 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-09 20:47:04.955  INFO 16880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-09 20:47:04.967  INFO 16880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-01-09 20:47:04.988  WARN 16880 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /pages/fonts/iconfont.woff
+2020-01-09 20:47:05.149  WARN 16880 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /pages/fonts/iconfont.ttf
+2020-01-09 20:47:09.537  WARN 16880 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /layui/font/iconfont.woff2
+2020-01-09 20:47:09.551  WARN 16880 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /layui/font/iconfont.woff
+2020-01-09 20:47:09.566  WARN 16880 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /layui/font/iconfont.ttf
+2020-01-09 20:47:09.673  INFO 16880 --- [http-nio-8080-exec-6] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-01-09 20:47:09.674  INFO 16880 --- [http-nio-8080-exec-6] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-01-09 20:47:10.574 DEBUG 16880 --- [http-nio-8080-exec-6] c.x.b.c.P.PacPackagingController         : 从redis中取出值
+2020-01-09 20:47:16.062  WARN 16880 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /layui/font/iconfont.woff2
+2020-01-09 20:47:16.318  WARN 16880 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /layui/font/iconfont.woff
+2020-01-09 20:47:16.338  WARN 16880 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /layui/font/iconfont.ttf
+2020-01-09 20:47:16.499 DEBUG 16880 --- [http-nio-8080-exec-8] c.x.b.c.P.PacOutBoundTypeController      : 从redis中取出值
+2020-01-09 20:47:54.758 DEBUG 16880 --- [http-nio-8080-exec-2] c.x.b.d.P.P.selectIdbyname               : ==>  Preparing: select id,empunit from sy_emp where empName=? 
+2020-01-09 20:47:55.517 DEBUG 16880 --- [http-nio-8080-exec-2] c.x.b.d.P.P.selectIdbyname               : ==> Parameters: 邬童(String)
+2020-01-09 20:47:55.571 DEBUG 16880 --- [http-nio-8080-exec-2] c.x.b.d.P.P.selectIdbyname               : <==      Total: 1
+2020-01-09 20:47:55.578 DEBUG 16880 --- [http-nio-8080-exec-2] c.x.b.d.P.P.addPacpackaging              : ==>  Preparing: insert into PAC_Packaging(itemCode,ItemName,PlannedPrice,Specifications,type,MeasurementUnit,`Status`,OperatorID,OperationUnitID,OperationTime) values(?,?,?,?,?,?,?,?,?,?); 
+2020-01-09 20:47:55.661 DEBUG 16880 --- [http-nio-8080-exec-2] c.x.b.d.P.P.addPacpackaging              : ==> Parameters: 664933231816081400(String), 扎带(String), 31.0(Double), 99cm(String), 0(Long), 个(String), 0(Long), 1(Integer), 2(Integer), 2020-01-09 20:47:16.0(Timestamp)
+2020-01-09 20:47:56.612 DEBUG 16880 --- [http-nio-8080-exec-2] c.x.b.d.P.P.addPacpackaging              : <==    Updates: 1
+2020-01-09 20:48:57.891  INFO 17124 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on WIN-IAIRJF5MGH7 with PID 17124 (E:\newise\Bos\target\classes started by Administrator in E:\newise\Bos)
+2020-01-09 20:48:57.896 DEBUG 17124 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-09 20:48:57.897  INFO 17124 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-01-09 20:48:59.255  INFO 17124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-09 20:48:59.258  INFO 17124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-09 20:48:59.305  INFO 17124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30ms. Found 0 repository interfaces.
+2020-01-09 20:48:59.665  INFO 17124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-09 20:49:00.052  INFO 17124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-09 20:49:00.062  INFO 17124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-09 20:49:00.063  INFO 17124 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-09 20:49:00.189  INFO 17124 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-09 20:49:00.190  INFO 17124 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1943 ms
+2020-01-09 20:49:00.289 DEBUG 17124 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-01-09 20:49:00.918  INFO 17124 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-01-09 20:49:03.564  INFO 17124 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-01-09 20:49:05.594  INFO 17124 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+loadBalanceAlgorithmType: round_robin
+masterDataSourceName: ds0
+name: dataSource
+slaveDataSourceNames:
+- ds1
+
+2020-01-09 20:49:05.595  INFO 17124 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+{}
+
+2020-01-09 20:49:06.332  INFO 17124 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-09 20:49:06.855  INFO 17124 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-01-09 20:49:08.577  INFO 17124 --- [nioEventLoopGroup-4-5] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-01-09 20:49:08.577  INFO 17124 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-01-09 20:49:08.633  INFO 17124 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-09 20:49:08.646  INFO 17124 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-09 20:49:08.675  INFO 17124 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-09 20:49:08.888  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_1
+2020-01-09 20:49:08.891  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_2
+2020-01-09 20:49:08.894  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_3
+2020-01-09 20:49:08.897  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_4
+2020-01-09 20:49:08.899  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_5
+2020-01-09 20:49:08.902  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_6
+2020-01-09 20:49:08.906  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPacpackagingUsingPOST_7
+2020-01-09 20:49:08.911  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPacPackagingmaUsingPOST_1
+2020-01-09 20:49:08.913  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPacPackagingmaUsingPOST_2
+2020-01-09 20:49:08.914  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPacPackagingmaUsingPOST_3
+2020-01-09 20:49:08.916  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPacPackagingmaUsingPOST_4
+2020-01-09 20:49:08.918  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPacPackagingmaUsingPOST_5
+2020-01-09 20:49:08.920  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPacPackagingmaUsingPOST_6
+2020-01-09 20:49:08.922  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getPacPackagingmaUsingPOST_7
+2020-01-09 20:49:08.927  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_1
+2020-01-09 20:49:08.929  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_2
+2020-01-09 20:49:08.930  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_3
+2020-01-09 20:49:08.932  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_4
+2020-01-09 20:49:08.935  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_5
+2020-01-09 20:49:08.937  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_6
+2020-01-09 20:49:08.939  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllpacpackagingUsingPOST_7
+2020-01-09 20:49:08.943  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_1
+2020-01-09 20:49:08.945  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_2
+2020-01-09 20:49:08.948  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_3
+2020-01-09 20:49:08.950  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_4
+2020-01-09 20:49:08.952  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_5
+2020-01-09 20:49:08.953  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_6
+2020-01-09 20:49:08.956  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_7
+2020-01-09 20:49:09.011  INFO 17124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-09 20:49:09.014  INFO 17124 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 11.753 seconds (JVM running for 13.789)
