@@ -20,7 +20,7 @@ public class SyEmpServiceImpl implements SyEmpService {
      * @return
      */
     @Override
-    public SyEmp Login(SyEmp syEmp) throws Exception {
+    public SyEmp login(SyEmp syEmp) throws Exception {
         SyEmp syEmps=null;
         try {
             syEmps = syEmpMapper.findSyEmpByEmpNoAndPwd(syEmp);
@@ -40,5 +40,16 @@ public class SyEmpServiceImpl implements SyEmpService {
     @Override
     public SyEmp getUserByName(String username) {
         return syEmpMapper.login(username);
+    }
+
+    @Override
+    public void upSyEmpById(SyEmp syEmp) {
+        syEmpMapper.upSyEmpById(syEmp);
+    }
+
+    @Override
+    public SyEmp findSyEmpById(int operatorid) {
+
+        return null;
     }
 }

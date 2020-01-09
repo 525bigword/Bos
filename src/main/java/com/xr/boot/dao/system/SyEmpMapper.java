@@ -86,6 +86,6 @@ public interface SyEmpMapper {
 
     @Update("update sy_emp set pwd=#{pwd} where empno=#{empNo}")
     //修改密码
-    void UpSyEmpById(SyEmp syEmp);
+    void upSyEmpById(SyEmp syEmp);
 
 }

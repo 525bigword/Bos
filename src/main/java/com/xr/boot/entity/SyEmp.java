@@ -4,7 +4,6 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class SyEmp
  ***********************************************************************/
 
-
 import java.io.Serializable;
 import java.util.*;
 
@@ -33,6 +32,7 @@ public class SyEmp implements Serializable {
     * 
     * @pdOid 625f2e69-9b96-408b-993c-45eb749fb5e4 */
    private String queryPwd;
+   private Integer roleid;
    //员工单位
    private Integer empunit;
    /** 备注
@@ -46,22 +46,29 @@ public class SyEmp implements Serializable {
    /**
     * 业务属性
     */
-   private SyRolesMenus syRolesMenus;
+   private List<SyRolesMenus> syRolesMenus;
 
-
-   public Integer getEmpunit() {
-      return empunit;
+   @Override
+   public String toString() {
+      return "SyEmp{" +
+              "id=" + id +
+              ", empName='" + empName + '\'' +
+              ", empNo='" + empNo + '\'' +
+              ", pwd='" + pwd + '\'' +
+              ", queryPwd='" + queryPwd + '\'' +
+              ", roleid=" + roleid +
+              ", empunit=" + empunit +
+              ", remark='" + remark + '\'' +
+              ", disabled=" + disabled +
+              ", syRolesMenus=" + syRolesMenus +
+              '}';
    }
 
-   public void setEmpunit(Integer empunit) {
-      this.empunit = empunit;
-   }
-
-   public SyRolesMenus getSyRolesMenus() {
+   public List<SyRolesMenus> getSyRolesMenus() {
       return syRolesMenus;
    }
 
-   public void setSyRolesMenus(SyRolesMenus syRolesMenus) {
+   public void setSyRolesMenus(List<SyRolesMenus> syRolesMenus) {
       this.syRolesMenus = syRolesMenus;
    }
 
@@ -69,51 +76,51 @@ public class SyEmp implements Serializable {
    public long getId() {
       return id;
    }
-   
+
    /** @param newId
     * @pdOid 94e92383-9ffa-44b8-af1b-630e7b1095c2 */
    public void setId(long newId) {
       id = newId;
    }
-   
+
    /** @pdOid ecafae4f-23ea-412e-9d1a-b783caf17f3c */
    public String getEmpName() {
       return empName;
    }
-   
+
    /** @param newEmpName
     * @pdOid fa3a1ee9-2e96-4274-9dc3-982c2116c929 */
    public void setEmpName(String newEmpName) {
       empName = newEmpName;
    }
-   
+
    /** @pdOid f511dd7c-2ee0-4b50-809e-8c469f4dd9a8 */
    public String getEmpNo() {
       return empNo;
    }
-   
+
    /** @param newEmpNo
     * @pdOid c772061e-28ab-40e6-bc30-c9bee18de0ad */
    public void setEmpNo(String newEmpNo) {
       empNo = newEmpNo;
    }
-   
+
    /** @pdOid cb463957-1223-4c57-9a70-4819982eab57 */
    public String getPwd() {
       return pwd;
    }
-   
+
    /** @param newPwd
     * @pdOid 5c880029-2e8c-4192-a41a-441bf3c41745 */
    public void setPwd(String newPwd) {
       pwd = newPwd;
    }
-   
+
    /** @pdOid 3f2dda59-cf89-4e2a-a37b-7dae72a0987c */
    public String getQueryPwd() {
       return queryPwd;
    }
-   
+
    /** @param newQueryPwd
     * @pdOid bcc4f85c-2c3b-4f4d-b2b6-d85d4c86fcdf */
    public void setQueryPwd(String newQueryPwd) {
@@ -135,7 +142,7 @@ public class SyEmp implements Serializable {
    public Integer getDisabled() {
       return disabled;
    }
-   
+
    /** @param newDisabled
     * @pdOid 08227057-08b7-4b47-88ef-fad95be8866c */
    public void setDisabled(Integer newDisabled) {
