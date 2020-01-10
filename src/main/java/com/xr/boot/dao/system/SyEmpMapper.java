@@ -30,7 +30,8 @@ public interface SyEmpMapper {
     })
     List<SyRolesMenus> findSyRolesMenusByroleId(@Param("roleid") Integer roleid);
     //根据员工编号密码查询员工
-    @Select("select id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled from sy_emp where empno=#{empNo}")
+    @Select("select id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled from sy_emp where empno=#{empNo} and" +
+            " #{pwd}")
     @Results({
             @Result(id = true,column = "id",property = "id"),
             @Result(column = "empname",property = "empName"),
