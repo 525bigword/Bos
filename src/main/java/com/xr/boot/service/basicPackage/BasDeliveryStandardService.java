@@ -34,4 +34,10 @@ public interface BasDeliveryStandardService {
      * @param basDeliveryStandard
      */
     void upBasDeliveryStandardStatus(BasDeliveryStandard basDeliveryStandard);
+
+    /**
+     * 新增收派标准
+     * @param basDeliveryStandard
+     */
+    void saveBasDeliveryStandard(BasDeliveryStandard basDeliveryStandard);
 }

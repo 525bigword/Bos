@@ -72,5 +72,11 @@ public class BasDeliveryStandardServiceImpl implements BasDeliveryStandardServic
     public void upBasDeliveryStandardStatus(BasDeliveryStandard basDeliveryStandard) {
         basDeliveryStandardMapper.upBasDeliveryStandardStatus(basDeliveryStandard);
     }
+    @Klock(leaseTime=Long.MAX_VALUE)
+    @Transactional
+    @Override
+    public void saveBasDeliveryStandard(BasDeliveryStandard basDeliveryStandard) {
+        basDeliveryStandardMapper.saveBasDeliveryStandard(basDeliveryStandard);
+    }
 
 }

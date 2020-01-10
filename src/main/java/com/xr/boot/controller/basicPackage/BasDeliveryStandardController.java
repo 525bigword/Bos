@@ -1,8 +1,9 @@
-package com.xr.boot.controller.baiscPackage;
+package com.xr.boot.controller.basicPackage;
 
 import com.xr.boot.entity.BasDeliveryStandard;
 import com.xr.boot.service.basicPackage.BasDeliveryStandardService;
 import com.xr.boot.util.RedisUtil;
+import com.xr.boot.util.SnowflakeIdFactory;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +19,7 @@ import java.util.List;
 @Slf4j
 @Api(tags = "权限接口")
 public class BasDeliveryStandardController {
+    private  SnowflakeIdFactory snowflakeIdFactory=new SnowflakeIdFactory();
     @Autowired
     private BasDeliveryStandardService basDeliveryStandardService;
     @Autowired
@@ -58,5 +60,17 @@ public class BasDeliveryStandardController {
     public void upBasDeliveryStandardStatus(BasDeliveryStandard basDeliveryStandard){
         basDeliveryStandardService.upBasDeliveryStandardStatus(basDeliveryStandard);
         redisUtil.del("com.xr.boot.controller.BasDeliveryStandardController.findBasDeliveryStandardAll");
+    }
+    @PostMapping("/saveBasDeliveryStandard")
+    public int saveBasDeliveryStandard(BasDeliveryStandard basDeliveryStandard) {
+        List<String> nameList = basDeliveryStandardService.findBasDeliveryStandardByName(basDeliveryStandard.getName());
+        if(nameList.size()!=0){
+            return 1;
+        }
+        String basicFileNumber = snowflakeIdFactory.generateKey().toString();
+        basDeliveryStandard.setBasicFileNumber(basicFileNumber);
+        basDeliveryStandardService.saveBasDeliveryStandard(basDeliveryStandard);
+        redisUtil.del("com.xr.boot.controller.BasDeliveryStandardController.findBasDeliveryStandardAll");
+        return 0;
     }
 }
