@@ -26,4 +26,17 @@ public interface BasDeliveryStandardMapper {
             @Result(column = "Status", property = "status")
     })
     List<BasDeliveryStandard> findBasDeliveryStandards(BasDeliveryStandard basDeliveryStandard);
+
+    @Select("select `name` from bas_deliverystandard where `name`=#{name}")
+    @Results({
+            @Result(column = "Name", property = "name")
+    })
+    List<String> findBasDeliveryStandardByName(String name);
+
+    @Update("UPDATE bas_deliverystandard set `name`=#{name},minweight=#{minWeight},maxweight=#{maxWeight} where BasicFileNumber=#{basicFileNumber}")
+    void upBasDeliveryStandardByBasicFileNumber(BasDeliveryStandard basDeliveryStandard);
+
+    @Update("UPDATE bas_deliverystandard set `status`=#{status}  where BasicFileNumber=#{basicFileNumber}")
+    void upBasDeliveryStandardStatus(BasDeliveryStandard basDeliveryStandard);
+
 }

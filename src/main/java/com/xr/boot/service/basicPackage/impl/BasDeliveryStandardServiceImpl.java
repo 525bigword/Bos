@@ -20,7 +20,12 @@ public class BasDeliveryStandardServiceImpl implements BasDeliveryStandardServic
     private BasDeliveryStandardMapper basDeliveryStandardMapper;
     @Autowired
     private RedisUtil redisUtil;
-    @Klock(leaseTime=Long.MAX_VALUE)
+
+    /**
+     * 查询收派标准所有未作废的数据
+     * @param basDeliveryStandard
+     * @return
+     */
     @Transactional
     @Override
     public Object findBasDeliveryStandardAll(BasDeliveryStandard basDeliveryStandard) {
@@ -29,10 +34,43 @@ public class BasDeliveryStandardServiceImpl implements BasDeliveryStandardServic
         redisUtil.set("com.xr.boot.controller.BasDeliveryStandardController.findBasDeliveryStandardAll", maps);
         return redisUtil.get("com.xr.boot.controller.BasDeliveryStandardController.findBasDeliveryStandardAll");
     }
-    @Klock(leaseTime=Long.MAX_VALUE)
+
+    /**
+     * 按条件查询收派标准
+     * @param basDeliveryStandard
+     * @return
+     */
     @Transactional
     @Override
     public List<BasDeliveryStandard> findBasDeliveryStandardByTerm(BasDeliveryStandard basDeliveryStandard) {
         return basDeliveryStandardMapper.findBasDeliveryStandards(basDeliveryStandard);
     }
+
+    /**
+     *查询是否重复
+     * @param name
+     * @return
+     */
+    @Transactional
+    @Override
+    public List<String> findBasDeliveryStandardByName(String name){
+        return basDeliveryStandardMapper.findBasDeliveryStandardByName(name);
+    }
+    /**
+     * 通过id修改
+     * @param basDeliveryStandard
+     */
+    @Klock(leaseTime=Long.MAX_VALUE)
+    @Transactional
+    @Override
+    public void upBasDeliveryStandardByBasicFileNumber(BasDeliveryStandard basDeliveryStandard) {
+        basDeliveryStandardMapper.upBasDeliveryStandardByBasicFileNumber(basDeliveryStandard);
+    }
+    @Klock(leaseTime=Long.MAX_VALUE)
+    @Transactional
+    @Override
+    public void upBasDeliveryStandardStatus(BasDeliveryStandard basDeliveryStandard) {
+        basDeliveryStandardMapper.upBasDeliveryStandardStatus(basDeliveryStandard);
+    }
+
 }

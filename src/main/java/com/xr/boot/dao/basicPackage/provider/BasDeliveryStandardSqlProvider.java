@@ -17,6 +17,7 @@ public class BasDeliveryStandardSqlProvider {
                     if (basDeliveryStandard.getName() != null && !basDeliveryStandard.getName().equals("")) {
                         tj += " and ds.`Name` Like CONCAT('%',#{name},'%')";
                     }
+
                     if (basDeliveryStandard.getStatus() != null) {
                         tj += " and ds.`Status`=#{status}";
                     }
@@ -34,10 +35,10 @@ public class BasDeliveryStandardSqlProvider {
                     }
                     WHERE(tj);
                 }catch (Exception e){
-                    WHERE(tj);
+                    WHERE(tj += " and ds.`Status`=0");
                 }
 
             }
-        }.toString();
+        }.toString()+" order by ds.OperationTime desc";
     }
 }

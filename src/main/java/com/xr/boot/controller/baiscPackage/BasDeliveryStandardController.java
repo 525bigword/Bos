@@ -1,4 +1,4 @@
-package com.xr.boot.controller.system;
+package com.xr.boot.controller.baiscPackage;
 
 import com.xr.boot.entity.BasDeliveryStandard;
 import com.xr.boot.service.basicPackage.BasDeliveryStandardService;
@@ -7,6 +7,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,7 +23,7 @@ public class BasDeliveryStandardController {
     @Autowired
     private RedisUtil redisUtil;
     @ApiOperation("收派标准")
-    @RequestMapping("/findBasDeliveryStandardAll")
+    @PostMapping("/findBasDeliveryStandardAll")
     public Object findBasDeliveryStandardAll(){
         Object basDeliveryStandardAll = null;
         if(redisUtil.hasKey("com.xr.boot.controller.BasDeliveryStandardController.findBasDeliveryStandardAll")){
@@ -38,9 +39,24 @@ public class BasDeliveryStandardController {
             }
         }
     }
-    @RequestMapping("/findBasDeliveryStandards")
+    @PostMapping("/findBasDeliveryStandards")
     public List<BasDeliveryStandard> findBasDeliveryStandardByTerm(BasDeliveryStandard basDeliveryStandard){
-        basDeliveryStandard.getSyEmp().setEmpName(basDeliveryStandard.getSyEmp().getEmpName());
+       // basDeliveryStandard.getSyEmp().setEmpName(basDeliveryStandard.getSyEmp().getEmpName());
         return basDeliveryStandardService.findBasDeliveryStandardByTerm(basDeliveryStandard);
+    }
+    @PostMapping("/upBasDeliveryStandardByBasicFileNumber")
+    public int upBasDeliveryStandardByBasicFileNumber(BasDeliveryStandard basDeliveryStandard){
+        List<String> nameList = basDeliveryStandardService.findBasDeliveryStandardByName(basDeliveryStandard.getName());
+        if(nameList.size()!=0){
+            return 1;
+        }
+        basDeliveryStandardService.upBasDeliveryStandardByBasicFileNumber(basDeliveryStandard);
+        redisUtil.del("com.xr.boot.controller.BasDeliveryStandardController.findBasDeliveryStandardAll");
+        return 0;
+    }
+    @PostMapping("/upBasDeliveryStandardStatus")
+    public void upBasDeliveryStandardStatus(BasDeliveryStandard basDeliveryStandard){
+        basDeliveryStandardService.upBasDeliveryStandardStatus(basDeliveryStandard);
+        redisUtil.del("com.xr.boot.controller.BasDeliveryStandardController.findBasDeliveryStandardAll");
     }
 }

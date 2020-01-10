@@ -5666,3 +5666,122 @@ slaveDataSourceNames:
 2020-01-09 20:49:08.956  INFO 17124 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updatePacpackagingUsingPOST_7
 2020-01-09 20:49:09.011  INFO 17124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2020-01-09 20:49:09.014  INFO 17124 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 11.753 seconds (JVM running for 13.789)
+2020-01-10 21:00:36.494  INFO 5528 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on E53WRL7JY0MW6H1 with PID 5528 (H:\Bos\target\classes started by Administrator in H:\Bos)
+2020-01-10 21:00:36.499 DEBUG 5528 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-10 21:00:36.500  INFO 5528 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-01-10 21:00:38.454  INFO 5528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-10 21:00:38.458  INFO 5528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-10 21:00:38.522  INFO 5528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40ms. Found 0 repository interfaces.
+2020-01-10 21:00:39.119  INFO 5528 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-10 21:00:39.749  INFO 5528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-10 21:00:39.765  INFO 5528 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-10 21:00:39.765  INFO 5528 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-10 21:00:39.768  INFO 5528 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.21] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-01-10 21:00:39.768  INFO 5528 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-01-10 21:00:39.769  INFO 5528 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-01-10 21:00:39.772  INFO 5528 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-01-10 21:00:39.778  INFO 5528 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-01-10 21:00:39.967  INFO 5528 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-10 21:00:39.969  INFO 5528 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2990 ms
+2020-01-10 21:00:40.246 DEBUG 5528 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-01-10 21:00:41.299  INFO 5528 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-01-10 21:00:46.110  INFO 5528 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-01-10 21:00:48.242  INFO 5528 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+loadBalanceAlgorithmType: round_robin
+masterDataSourceName: ds0
+name: dataSource
+slaveDataSourceNames:
+- ds1
+
+2020-01-10 21:00:48.243  INFO 5528 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+{}
+
+2020-01-10 21:00:50.190  INFO 5528 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-10 21:00:51.006  INFO 5528 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-01-10 21:00:53.201  INFO 5528 --- [nioEventLoopGroup-4-3] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-01-10 21:00:53.205  INFO 5528 --- [nioEventLoopGroup-4-2] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-01-10 21:00:53.316  INFO 5528 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-10 21:00:53.342  INFO 5528 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-10 21:00:53.400  INFO 5528 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-10 21:00:53.471  INFO 5528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-10 21:00:53.477  INFO 5528 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 18.63 seconds (JVM running for 21.628)
+2020-01-10 21:02:08.824  INFO 5528 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-10 21:02:08.824  INFO 5528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-10 21:02:08.844  INFO 5528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2020-01-10 21:02:09.512  INFO 5528 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-01-10 21:02:09.517  INFO 5528 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-01-10 21:02:11.096 DEBUG 5528 --- [http-nio-8080-exec-1] c.x.b.c.b.BasDeliveryStandardController  : 从redis中取出值
+2020-01-10 21:02:48.765 DEBUG 5528 --- [http-nio-8080-exec-2] .x.b.d.b.B.findBasDeliveryStandardByName : ==>  Preparing: select `name` from bas_deliverystandard where `name`=? 
+2020-01-10 21:02:50.150 DEBUG 5528 --- [http-nio-8080-exec-2] .x.b.d.b.B.findBasDeliveryStandardByName : ==> Parameters: 1-10公斤(String)
+2020-01-10 21:02:50.209 DEBUG 5528 --- [http-nio-8080-exec-2] .x.b.d.b.B.findBasDeliveryStandardByName : <==      Total: 1
+2020-01-10 21:02:56.034 DEBUG 5528 --- [http-nio-8080-exec-3] .x.b.d.b.B.findBasDeliveryStandardByName : ==>  Preparing: select `name` from bas_deliverystandard where `name`=? 
+2020-01-10 21:02:56.105 DEBUG 5528 --- [http-nio-8080-exec-3] .x.b.d.b.B.findBasDeliveryStandardByName : ==> Parameters: 2-10公斤(String)
+2020-01-10 21:02:56.150 DEBUG 5528 --- [http-nio-8080-exec-3] .x.b.d.b.B.findBasDeliveryStandardByName : <==      Total: 0
+2020-01-10 21:02:57.085 DEBUG 5528 --- [http-nio-8080-exec-3] B.upBasDeliveryStandardByBasicFileNumber : ==>  Preparing: UPDATE bas_deliverystandard set `name`=?,minweight=?,maxweight=? where BasicFileNumber=? 
+2020-01-10 21:02:57.198 DEBUG 5528 --- [http-nio-8080-exec-3] B.upBasDeliveryStandardByBasicFileNumber : ==> Parameters: 2-10公斤(String), 2.0(Double), 10.0(Double), 2(String)
+2020-01-10 21:02:57.279 DEBUG 5528 --- [http-nio-8080-exec-3] B.upBasDeliveryStandardByBasicFileNumber : <==    Updates: 1
+2020-01-10 21:02:58.225  WARN 5528 --- [http-nio-8080-exec-3] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.basicPackage.impl.BasDeliveryStandardServiceImpl.upBasDeliveryStandardByBasicFileNumber)
+2020-01-10 21:02:59.091 DEBUG 5528 --- [http-nio-8080-exec-4] c.x.b.d.b.B.findBasDeliveryStandards     : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1 and ds.`Status`=0) order by ds.OperationTime desc 
+2020-01-10 21:02:59.211 DEBUG 5528 --- [http-nio-8080-exec-4] c.x.b.d.b.B.findBasDeliveryStandards     : ==> Parameters: 
+2020-01-10 21:02:59.272 DEBUG 5528 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-01-10 21:02:59.311 DEBUG 5528 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 1(Integer)
+2020-01-10 21:03:00.091 DEBUG 5528 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-01-10 21:03:00.092 DEBUG 5528 --- [http-nio-8080-exec-4] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,OperationTime,Stats from sy_units where id=? 
+2020-01-10 21:03:00.112 DEBUG 5528 --- [http-nio-8080-exec-4] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-01-10 21:03:00.161 DEBUG 5528 --- [http-nio-8080-exec-4] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-01-10 21:03:00.163 DEBUG 5528 --- [http-nio-8080-exec-4] c.x.b.d.b.B.findBasDeliveryStandards     : <==      Total: 2
+2020-01-10 21:03:29.112 DEBUG 5528 --- [http-nio-8080-exec-5] c.x.b.c.b.BasDeliveryStandardController  : 从redis中取出值
+2020-01-10 21:03:54.088 DEBUG 5528 --- [http-nio-8080-exec-6] c.x.b.c.b.BasDeliveryStandardController  : 从redis中取出值
+2020-01-10 21:04:17.195 DEBUG 5528 --- [http-nio-8080-exec-7] c.x.b.d.b.B.upBasDeliveryStandardStatus  : ==>  Preparing: UPDATE bas_deliverystandard set `status`=? where BasicFileNumber=? 
+2020-01-10 21:04:18.091 DEBUG 5528 --- [http-nio-8080-exec-7] c.x.b.d.b.B.upBasDeliveryStandardStatus  : ==> Parameters: 1(Integer), 2(String)
+2020-01-10 21:04:18.168 DEBUG 5528 --- [http-nio-8080-exec-7] c.x.b.d.b.B.upBasDeliveryStandardStatus  : <==    Updates: 1
+2020-01-10 21:04:19.133  WARN 5528 --- [http-nio-8080-exec-7] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.basicPackage.impl.BasDeliveryStandardServiceImpl.upBasDeliveryStandardStatus)
+2020-01-10 21:04:20.084 DEBUG 5528 --- [http-nio-8080-exec-8] c.x.b.d.b.B.findBasDeliveryStandards     : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1 and ds.`Status`=0) order by ds.OperationTime desc 
+2020-01-10 21:04:20.177 DEBUG 5528 --- [http-nio-8080-exec-8] c.x.b.d.b.B.findBasDeliveryStandards     : ==> Parameters: 
+2020-01-10 21:04:20.223 DEBUG 5528 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-01-10 21:04:20.224 DEBUG 5528 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 1(Integer)
+2020-01-10 21:04:20.262 DEBUG 5528 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-01-10 21:04:20.263 DEBUG 5528 --- [http-nio-8080-exec-8] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,OperationTime,Stats from sy_units where id=? 
+2020-01-10 21:04:20.264 DEBUG 5528 --- [http-nio-8080-exec-8] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-01-10 21:04:21.093 DEBUG 5528 --- [http-nio-8080-exec-8] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-01-10 21:04:21.095 DEBUG 5528 --- [http-nio-8080-exec-8] c.x.b.d.b.B.findBasDeliveryStandards     : <==      Total: 1
+2020-01-10 21:04:27.162 DEBUG 5528 --- [http-nio-8080-exec-9] c.x.b.d.b.B.findBasDeliveryStandards     : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1) order by ds.OperationTime desc 
+2020-01-10 21:04:27.246 DEBUG 5528 --- [http-nio-8080-exec-9] c.x.b.d.b.B.findBasDeliveryStandards     : ==> Parameters: 
+2020-01-10 21:04:28.090 DEBUG 5528 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-01-10 21:04:28.091 DEBUG 5528 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 1(Integer)
+2020-01-10 21:04:28.127 DEBUG 5528 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-01-10 21:04:28.128 DEBUG 5528 --- [http-nio-8080-exec-9] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,OperationTime,Stats from sy_units where id=? 
+2020-01-10 21:04:28.129 DEBUG 5528 --- [http-nio-8080-exec-9] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-01-10 21:04:28.173 DEBUG 5528 --- [http-nio-8080-exec-9] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-01-10 21:04:28.174 DEBUG 5528 --- [http-nio-8080-exec-9] c.x.b.d.b.B.findBasDeliveryStandards     : <==      Total: 2
+2020-01-10 21:05:02.282 DEBUG 5528 --- [http-nio-8080-exec-10] c.x.b.d.b.B.upBasDeliveryStandardStatus  : ==>  Preparing: UPDATE bas_deliverystandard set `status`=? where BasicFileNumber=? 
+2020-01-10 21:05:03.108 DEBUG 5528 --- [http-nio-8080-exec-10] c.x.b.d.b.B.upBasDeliveryStandardStatus  : ==> Parameters: 0(Integer), 2(String)
+2020-01-10 21:05:03.257 DEBUG 5528 --- [http-nio-8080-exec-10] c.x.b.d.b.B.upBasDeliveryStandardStatus  : <==    Updates: 1
+2020-01-10 21:05:04.259  WARN 5528 --- [http-nio-8080-exec-10] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.basicPackage.impl.BasDeliveryStandardServiceImpl.upBasDeliveryStandardStatus)
+2020-01-10 21:05:06.092 DEBUG 5528 --- [http-nio-8080-exec-1] c.x.b.d.b.B.findBasDeliveryStandards     : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1 and ds.`Status`=0) order by ds.OperationTime desc 
+2020-01-10 21:05:06.146 DEBUG 5528 --- [http-nio-8080-exec-1] c.x.b.d.b.B.findBasDeliveryStandards     : ==> Parameters: 
+2020-01-10 21:05:06.209 DEBUG 5528 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-01-10 21:05:06.210 DEBUG 5528 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 1(Integer)
+2020-01-10 21:05:06.268 DEBUG 5528 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-01-10 21:05:06.268 DEBUG 5528 --- [http-nio-8080-exec-1] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,OperationTime,Stats from sy_units where id=? 
+2020-01-10 21:05:06.268 DEBUG 5528 --- [http-nio-8080-exec-1] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-01-10 21:05:07.092 DEBUG 5528 --- [http-nio-8080-exec-1] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-01-10 21:05:07.094 DEBUG 5528 --- [http-nio-8080-exec-1] c.x.b.d.b.B.findBasDeliveryStandards     : <==      Total: 2
+2020-01-10 21:05:35.700 DEBUG 5528 --- [http-nio-8080-exec-2] c.x.b.d.b.B.findBasDeliveryStandards     : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1 and ds.MinWeight=?) order by ds.OperationTime desc 
+2020-01-10 21:05:36.093 DEBUG 5528 --- [http-nio-8080-exec-2] c.x.b.d.b.B.findBasDeliveryStandards     : ==> Parameters: 2.0(Double)
+2020-01-10 21:05:36.175 DEBUG 5528 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-01-10 21:05:36.176 DEBUG 5528 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 1(Integer)
+2020-01-10 21:05:36.229 DEBUG 5528 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-01-10 21:05:36.230 DEBUG 5528 --- [http-nio-8080-exec-2] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,OperationTime,Stats from sy_units where id=? 
+2020-01-10 21:05:36.231 DEBUG 5528 --- [http-nio-8080-exec-2] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-01-10 21:05:36.267 DEBUG 5528 --- [http-nio-8080-exec-2] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-01-10 21:05:36.269 DEBUG 5528 --- [http-nio-8080-exec-2] c.x.b.d.b.B.findBasDeliveryStandards     : <==      Total: 2
+2020-01-10 21:05:45.053 DEBUG 5528 --- [http-nio-8080-exec-3] c.x.b.d.b.B.findBasDeliveryStandards     : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1 and ds.MinWeight=? and ds.MaxWeight=?) order by ds.OperationTime desc 
+2020-01-10 21:05:45.193 DEBUG 5528 --- [http-nio-8080-exec-3] c.x.b.d.b.B.findBasDeliveryStandards     : ==> Parameters: 2.0(Double), 5.0(Double)
+2020-01-10 21:05:45.249 DEBUG 5528 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-01-10 21:05:45.250 DEBUG 5528 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 1(Integer)
+2020-01-10 21:05:46.092 DEBUG 5528 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-01-10 21:05:46.093 DEBUG 5528 --- [http-nio-8080-exec-3] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,OperationTime,Stats from sy_units where id=? 
+2020-01-10 21:05:46.093 DEBUG 5528 --- [http-nio-8080-exec-3] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-01-10 21:05:46.144 DEBUG 5528 --- [http-nio-8080-exec-3] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-01-10 21:05:46.145 DEBUG 5528 --- [http-nio-8080-exec-3] c.x.b.d.b.B.findBasDeliveryStandards     : <==      Total: 1
