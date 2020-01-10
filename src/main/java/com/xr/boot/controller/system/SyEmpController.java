@@ -6,6 +6,7 @@ import com.xr.boot.ienum.StausEnum;
 import com.xr.boot.service.system.SyEmpService;
 import com.xr.boot.util.AES;
 import com.xr.boot.util.JwtUtil;
+import io.jsonwebtoken.Claims;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -29,6 +30,16 @@ public class SyEmpController {
     @Autowired
     private SyEmpService syEmpService;
 
+    @ApiOperation("从token中获取用户信息")
+    @GetMapping("/parsetoken")
+    public Return parseToken(HttpServletRequest request){
+        String authorization = request.getHeader("Authorization");
+        String token=authorization.substring(3);
+        Claims claims = JwtUtil.parseJWT(token);
+        SyEmp syemp = (SyEmp)claims.get("syemp");
+        return new Return(StausEnum.SUCCESS,syemp);
+    }
+
     @ApiOperation("修改密码")
     @PutMapping("/uppassword")
     public void upPassWord(String empno,String ypwd,String xpwd){
@@ -47,8 +58,17 @@ public class SyEmpController {
 
     @PostMapping("/login")
     @ApiOperation("登录")
-    public Return login(SyEmp syEmp) throws Exception {
-        SyEmp login = syEmpService.login(syEmp);
+    public Return login(SyEmp syEmp) {
+        SyEmp login = null;
+        try {
+            login = syEmpService.login(syEmp);
+            if(login==null){
+                return new Return(StausEnum.NO,null);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new Return(StausEnum.NO,null);
+        }
         login.getSyRolesMenus();
         String jwt = JwtUtil.createJwt(login.getEmpNo(), login.getEmpName(),
                 login.getSyRolesMenus().get(0).getRoleNames().getRoleName(),login);
