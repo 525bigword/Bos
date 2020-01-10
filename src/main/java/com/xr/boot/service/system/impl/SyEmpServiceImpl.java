@@ -3,6 +3,7 @@ package com.xr.boot.service.system.impl;
 import com.xr.boot.dao.system.SyEmpMapper;
 import com.xr.boot.entity.SyEmp;
 import com.xr.boot.service.system.SyEmpService;
+import com.xr.boot.util.AES;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +24,11 @@ public class SyEmpServiceImpl implements SyEmpService {
     public SyEmp login(SyEmp syEmp) throws Exception {
         SyEmp syEmps=null;
         try {
+            syEmp.setPwd(AES.encryptAES(syEmp.getPwd()));
             syEmps = syEmpMapper.findSyEmpByEmpNoAndPwd(syEmp);
+            if(syEmps==null){
+                return null;
+            }
         }catch (Exception e){
             throw new SQLException("sql查询出错");
         }
