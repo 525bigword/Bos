@@ -22,7 +22,7 @@ public class SyUnits implements Serializable {
    /** 单位名称
     *
     * @pdOid 7e07b0ec-433f-4012-b8f1-d60d4bda25b2 */
-   private String name;
+      private String name;
    private Integer operatorid;
    private Integer parentid;
    /** 备注
@@ -32,7 +32,7 @@ public class SyUnits implements Serializable {
    /** 操作时间	当前操作时间
     *
     * @pdOid cd32d194-c726-4c58-ab11-16fd1b9e74f5 */
-   private Date operationTime;
+   private String operationTime;
    /** 状态	0：正常，1：停用
     *
     * @pdOid 6dcd1ed3-c25f-4989-a9ac-3f6114989fe3 */
@@ -91,13 +91,13 @@ public class SyUnits implements Serializable {
    }
 
    /** @pdOid 2675d95a-73ec-4e7d-a685-3fc56b4c1edf */
-   public Date getOperationTime() {
+   public String getOperationTime() {
       return operationTime;
    }
 
    /** @param newOperationTime
     * @pdOid c66bccf9-d555-4d0f-be0a-9e8f734c8370 */
-   public void setOperationTime(Date newOperationTime) {
+   public void setOperationTime(String newOperationTime) {
       operationTime = newOperationTime;
    }
 

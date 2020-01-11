@@ -4,10 +4,12 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class BasBasicArchives
  ***********************************************************************/
 
+import java.io.Serializable;
+
 /** 基础档案表（BAS_BasicArchives）
  * 
  * @pdOid 9aa0630c-28a8-4bd2-826a-a6c256c1a71a */
-public class BasBasicArchives {
+public class BasBasicArchives implements Serializable {
    /** 编号	自增
     * 
     * @pdOid bfac2d38-6536-4d02-9c3f-e54b3b84bd62 */
@@ -34,11 +36,10 @@ public class BasBasicArchives {
     * 
     * @pdOid f506033f-36fc-4c96-805a-8148cff09a43 */
    private String operationTime;
-   private Integer status;
    
    public BasBasicArchives(){}
 
-   public BasBasicArchives(long id, String basicFileNumber, String name, long grade, SyEmp syEmp, SyUnits syUnits, String remarks, String operationTime, Integer status) {
+   public BasBasicArchives(long id, String basicFileNumber, String name, long grade, SyEmp syEmp, SyUnits syUnits, String remarks, String operationTime) {
       this.id = id;
       this.basicFileNumber = basicFileNumber;
       this.name = name;
@@ -47,7 +48,6 @@ public class BasBasicArchives {
       this.syUnits = syUnits;
       this.remarks = remarks;
       this.operationTime = operationTime;
-      this.status = status;
    }
 
    public long getId() {
@@ -112,13 +112,5 @@ public class BasBasicArchives {
 
    public void setOperationTime(String operationTime) {
       this.operationTime = operationTime;
-   }
-
-   public Integer getStatus() {
-      return status;
-   }
-
-   public void setStatus(Integer status) {
-      this.status = status;
    }
 }

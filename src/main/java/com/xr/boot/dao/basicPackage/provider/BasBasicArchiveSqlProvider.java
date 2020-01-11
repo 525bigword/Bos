@@ -28,9 +28,9 @@ public class BasBasicArchiveSqlProvider {
                     }
                     WHERE(tj);
                 }catch (Exception e){
-                    WHERE(tj += " and ds.`Status`=0");
+                    WHERE(tj);
                 }
             }
-        }.toString()+" order by ds.OperationTime desc";
+        }.toString()+" order by bb.OperationTime desc";
     }
 }

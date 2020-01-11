@@ -24,8 +24,7 @@ public interface BasBasicArchiveMapper {
             @Result(column = "OperationUnitID", property = "syUnits",
                     one = @One(select = "com.xr.boot.dao.system.SyUnitsMapper.findSyUnitById", fetchType = FetchType.DEFAULT)
             ),
-            @Result(column = "OperationTime", property = "operationTime"),
-            @Result(column = "status", property = "status")
+            @Result(column = "OperationTime", property = "operationTime")
     })
     List<BasBasicArchives> findBasicArchives(BasBasicArchives basBasicArchive);
 }
