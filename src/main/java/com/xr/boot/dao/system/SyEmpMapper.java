@@ -49,7 +49,7 @@ public interface SyEmpMapper {
             ),
             @Result(column = "empunit",property = "syUnits",
                     one=@One(
-                            select = "com.xr.boot.dao.system.SyUnitsMapper.findSyUnitById",
+                            select = "com.xr.boot.dao.system.SyUnitsMapper.findSyUnitAllById",
                             fetchType = FetchType.DEFAULT
                     )
             )

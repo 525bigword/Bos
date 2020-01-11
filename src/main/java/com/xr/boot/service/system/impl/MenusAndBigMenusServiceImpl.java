@@ -1,5 +1,6 @@
 package com.xr.boot.service.system.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.xr.boot.dao.system.MenusAndBigMenusMapper;
 import com.xr.boot.entity.SyBigMenus;
 import com.xr.boot.entity.SyMenus;
@@ -8,6 +9,8 @@ import com.xr.boot.util.RedisUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.klock.annotation.Klock;
+import org.springframework.boot.autoconfigure.klock.model.LockTimeoutStrategy;
+import org.springframework.boot.autoconfigure.klock.model.ReleaseTimeoutStrategy;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,6 +20,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static org.springframework.boot.autoconfigure.klock.model.LockTimeoutStrategy.KEEP_ACQUIRE;
+import static org.springframework.boot.autoconfigure.klock.model.LockTimeoutStrategy.NO_OPERATION;
+
 @Service
 @Slf4j
 public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
@@ -24,6 +30,15 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
     private MenusAndBigMenusMapper menusAndBigMenusMapper;
     @Autowired
     private RedisUtil redisUtil;
+
+    @Override
+    public Object findAllSyMenus(SyMenus syMenus) {
+        List<SyMenus> syMenusAll = menusAndBigMenusMapper.findSyMenusAll(syMenus);
+        System.out.println(syMenusAll.size());
+        redisUtil.set("com.xr.boot.controller.loadMenues", syMenusAll);
+
+        return redisUtil.get("com.xr.boot.controller.loadMenues");
+    }
 
     @Klock(leaseTime=Long.MAX_VALUE)
     @Transactional
@@ -56,21 +71,25 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
             throw new SQLException("数据库新增错误");
         }
     }
-    @Klock(leaseTime=Long.MAX_VALUE)
+    @Klock(
+            releaseTimeoutStrategy = ReleaseTimeoutStrategy.NO_OPERATION,leaseTime=Long.MAX_VALUE,waitTime = Long
+           .MAX_VALUE)
     @Transactional
     @Override
     public void saveSyMenus(SyMenus syMenus) throws Exception {
         try {
-            int parentid = menusAndBigMenusMapper.findSyMenusToTipByParentid(syMenus.getParentID());
-            syMenus.setTip(++parentid);
+            int count = menusAndBigMenusMapper.findSyMenusTochildcount(syMenus.getParentID());
+            if(count==0){
+                syMenus.setTip(0);
+                menusAndBigMenusMapper.saveSyMenus(syMenus);
+            }else{
+                int parentid = menusAndBigMenusMapper.findSyMenusToTipByParentid(syMenus.getParentID());
+                syMenus.setTip(++parentid);
+                menusAndBigMenusMapper.saveSyMenus(syMenus);
+            }
+
         }catch (Exception e){
             throw new SQLException("获取排序错误");
-        }
-        try {
-            menusAndBigMenusMapper.saveSyMenus(syMenus);
-        }catch (Exception e){
-            log.debug("新增失败");
-            throw new SQLException("新增错误");
         }
     }
 }

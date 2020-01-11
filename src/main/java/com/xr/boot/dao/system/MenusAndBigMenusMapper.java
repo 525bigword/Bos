@@ -1,5 +1,7 @@
 package com.xr.boot.dao.system;
 
+import com.xr.boot.dao.basicPackage.provider.BasDeliveryStandardSqlProvider;
+import com.xr.boot.dao.system.provider.MenusAndBigMenusSqlProvider;
 import com.xr.boot.entity.SyBigMenus;
 import com.xr.boot.entity.SyMenus;
 import com.xr.boot.entity.SyRolesMenus;
@@ -14,7 +16,17 @@ public interface MenusAndBigMenusMapper {
 
 
     //查询所有栏目信息
-    @Select("SELECT id,(select text from sy_menus where sy_menus.id=sym.parentid) parentid,type,text,sym.url,tip,bigmenus FROM  sy_menus as sym")
+    /*@Select("SELECT id,(select text from sy_menus where sy_menus.id=sym.parentid) parentid,type,text,sym.url,tip,bigmenus FROM  sy_menus as sym")*/
+    @SelectProvider(type = MenusAndBigMenusSqlProvider.class,method ="findselect" )
+    @Results({
+            @Result(id = true,column = "id",property = "id"),
+            @Result(column = "parentname",property = "parentname"),
+            @Result(column = "type",property = "type"),
+            @Result(column = "text",property = "text"),
+            @Result(column = "url",property = "url"),
+            @Result(column = "tip",property = "tip"),
+            @Result(column = "bigmenus",property = "bigmenus")
+    })
     List<SyMenus> findSyMenusAll(SyMenus syMenus);
 
 
@@ -71,4 +83,7 @@ public interface MenusAndBigMenusMapper {
     //根据partid查询sy_menus最后tip
     @Select("select max(tip) from sy_menus where parentid=#{parentid}")
     int findSyMenusToTipByParentid(@Param("parentid") Integer parentId);
+    //查功能模块下子模块数量
+    @Select("select count(*) from sy_menus where parentid=#{parentid}")
+    int findSyMenusTochildcount(@Param("parentid") Integer parentId);
 }

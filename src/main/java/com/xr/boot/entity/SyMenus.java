@@ -22,6 +22,7 @@ public class SyMenus implements Serializable {
     * 
     * @pdOid 98189cb0-0713-44a8-b99b-a2f88cbd308c */
    private Integer parentID;
+   private String parentname;
    /** 栏目类型
     * 
     * @pdOid 0a543198-04fa-4c72-b5a4-d97d816b812f */
@@ -82,7 +83,11 @@ public class SyMenus implements Serializable {
    /** @param newParentID
     * @pdOid 94aed87b-5fae-4375-8b77-ae89c6ab4b4e */
    public void setParentID(Integer newParentID) {
-      parentID = newParentID;
+      try{
+         parentID = newParentID;
+      }catch (NullPointerException e){
+
+      }
    }
    
    /** @pdOid 071868db-a403-49c3-8c90-d3ba44a3dc69 */
@@ -129,9 +134,15 @@ public class SyMenus implements Serializable {
       tip = newTip;
    }
 
+    public String getParentname() {
+        return parentname;
+    }
 
+    public void setParentname(String parentname) {
+        this.parentname = parentname;
+    }
 
-   @Override
+    @Override
    public String toString() {
       return "SyMenus{" +
               "id=" + id +

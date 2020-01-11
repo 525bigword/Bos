@@ -10,10 +10,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -47,9 +44,18 @@ public class MenusAndBigMenusController {
     }
     @ApiOperation("查询所有栏目信息")
     @GetMapping("/loadmenues")
-    public List<SyMenus> loadMenus(SyMenus syMenus){
-    return null;
+    public String loadMenus(SyMenus syMenus){
+
+        String syMenusa=null;
+        if(redisUtil.hasKey("com.xr.boot.controller.loadMenues")){
+            syMenusa = redisUtil.get("com.xr.boot.controller.loadMenues").toString();
+        }else{
+            syMenusa=menusAndBigMenusService.findAllSyMenus(syMenus).toString();
+        }
+        System.out.println(syMenusa);
+        return syMenusa;
     }
+
 
     @ApiOperation("父级栏目信息")
     @GetMapping("/loadmenus")
@@ -77,7 +83,7 @@ public class MenusAndBigMenusController {
         return new Return(StausEnum.SUCCESS);
     }
     @ApiOperation("新增栏目")
-    @PostMapping("/addsymenus")
+    @RequestMapping(value = "/addsymenus",method = RequestMethod.POST)
     public Return addSyMenus(SyMenus syMenus){
         try{
             menusAndBigMenusService.saveSyMenus(syMenus);
