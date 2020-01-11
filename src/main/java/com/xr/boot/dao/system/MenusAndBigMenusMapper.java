@@ -13,6 +13,10 @@ import java.util.List;
 public interface MenusAndBigMenusMapper {
 
 
+    //查询所有栏目信息
+    @Select("select ")
+    List<SyMenus> findSyMenusAll(SyMenus syMenus);
+
 
     //根据Id查sy_menus
     @Select("select id,parentid,type,text,url,tip,bigmenus from sy_menus where id=#{id}")

@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("jurisdiction")
 @Slf4j
@@ -42,6 +44,11 @@ public class MenusAndBigMenusController {
                 return null;
             }
         }
+    }
+    @ApiOperation("查询所有栏目信息")
+    @GetMapping("/loadmenues")
+    public List<SyMenus> loadMenus(SyMenus syMenus){
+    return null;
     }
 
     @ApiOperation("父级栏目信息")

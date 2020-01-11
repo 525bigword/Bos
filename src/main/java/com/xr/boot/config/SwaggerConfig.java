@@ -20,7 +20,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @EnableSwagger2
 @Configuration
-public class SwaggerConfig extends WebMvcConfigurationSupport {
+public class SwaggerConfig  {
     @Value(value = "server.port")
     String serverPort;
     //构建 api文档的详细信息函数,注意这里的注解引用的是哪个
@@ -46,29 +46,6 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
                 .apis(RequestHandlerSelectors.basePackage("com.xingyun"))
                 .paths(PathSelectors.any())
                 .build();
-    }
-
-//    /**
-//     * API分组二
-//     * **/
-//    @Bean
-//    public Docket createHomeInfoGroup2RestApi() {
-//        return new Docket(DocumentationType.SWAGGER_2)
-//                .apiInfo(apiInfo())
-//                .groupName("SwaggerGroupTwoAPI")
-//                .select()
-//                .apis(RequestHandlerSelectors.basePackage("com.xingyun"))
-//                .paths(PathSelectors.any())
-//                .build();
-//    }
-
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
-        //Swagger 静态资源处理
-        registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
-        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
-        registry.addResourceHandler("/csrf/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
 
 }

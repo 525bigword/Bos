@@ -32,7 +32,7 @@ public class SyEmpServiceImpl implements SyEmpService {
         }catch (Exception e){
             throw new SQLException("sql查询出错");
         }
-        if(syEmps.getDisabled()==0){
+        if(syEmps.getDisabled()==1){
             throw new Exception("账号已经被冻结");
         }else{
             //生成一个token码
