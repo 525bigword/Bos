@@ -64,3 +64,87 @@ slaveDataSourceNames:
 2020-01-11 00:42:38.209 DEBUG 12112 --- [http-nio-8080-exec-5] c.x.b.c.b.BasDeliveryStandardController  : 从redis中取出值
 2020-01-11 00:43:58.226 DEBUG 12112 --- [http-nio-8080-exec-6] c.x.b.c.b.BasDeliveryStandardController  : 从redis中取出值
 2020-01-11 00:45:24.327 DEBUG 12112 --- [http-nio-8080-exec-7] c.x.b.c.b.BasDeliveryStandardController  : 从redis中取出值
+2020-01-11 09:16:55.499  INFO 5600 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on E53WRL7JY0MW6H1 with PID 5600 (H:\Bos\target\classes started by Administrator in H:\Bos)
+2020-01-11 09:16:55.503 DEBUG 5600 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-11 09:16:55.504  INFO 5600 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-01-11 09:16:59.797  INFO 5600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-11 09:16:59.802  INFO 5600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-11 09:16:59.868  INFO 5600 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38ms. Found 0 repository interfaces.
+2020-01-11 09:17:00.487  INFO 5600 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-11 09:17:01.436  INFO 5600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-11 09:17:01.454  INFO 5600 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-11 09:17:01.454  INFO 5600 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-11 09:17:01.457  INFO 5600 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.21] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-01-11 09:17:01.458  INFO 5600 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-01-11 09:17:01.459  INFO 5600 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-01-11 09:17:01.461  INFO 5600 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-01-11 09:17:01.476  INFO 5600 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-01-11 09:17:01.881  INFO 5600 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-11 09:17:01.884  INFO 5600 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4943 ms
+2020-01-11 09:17:01.973 DEBUG 5600 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-01-11 09:17:03.467  INFO 5600 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-01-11 09:17:05.980  INFO 5600 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-01-11 09:17:08.860  INFO 5600 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+loadBalanceAlgorithmType: round_robin
+masterDataSourceName: ds0
+name: dataSource
+slaveDataSourceNames:
+- ds1
+
+2020-01-11 09:17:08.862  INFO 5600 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+{}
+
+2020-01-11 09:17:10.148  INFO 5600 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-11 09:17:10.890  INFO 5600 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-01-11 09:17:12.959  INFO 5600 --- [nioEventLoopGroup-4-3] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-01-11 09:17:12.976  INFO 5600 --- [nioEventLoopGroup-4-2] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-01-11 09:17:13.076  INFO 5600 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-11 09:17:13.102  INFO 5600 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-11 09:17:13.156  INFO 5600 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-11 09:17:13.365  INFO 5600 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-11 09:17:13.370  INFO 5600 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 19.76 seconds (JVM running for 23.512)
+2020-01-11 09:18:03.313  INFO 5600 --- [http-nio-8080-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-11 09:18:03.314  INFO 5600 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-11 09:18:03.827  INFO 5600 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 513 ms
+2020-01-11 09:18:04.120  INFO 5600 --- [http-nio-8080-exec-10] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-01-11 09:18:04.122  INFO 5600 --- [http-nio-8080-exec-10] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-01-11 09:18:04.896 DEBUG 5600 --- [http-nio-8080-exec-10] c.x.b.c.b.BasDeliveryStandardController  : 从redis中取出值
+2020-01-11 09:19:38.852  INFO 11188 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on E53WRL7JY0MW6H1 with PID 11188 (H:\Bos\target\classes started by Administrator in H:\Bos)
+2020-01-11 09:19:38.857 DEBUG 11188 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-11 09:19:38.858  INFO 11188 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-01-11 09:19:41.835  INFO 11188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-11 09:19:41.846  INFO 11188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-11 09:19:41.996  INFO 11188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79ms. Found 0 repository interfaces.
+2020-01-11 09:19:42.775  INFO 11188 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-11 09:19:44.471  INFO 11188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-11 09:19:44.490  INFO 11188 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-11 09:19:44.492  INFO 11188 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-11 09:19:44.495  INFO 11188 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.21] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-01-11 09:19:44.496  INFO 11188 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-01-11 09:19:44.497  INFO 11188 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-01-11 09:19:44.499  INFO 11188 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-01-11 09:19:44.506  INFO 11188 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-01-11 09:19:44.943  INFO 11188 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-11 09:19:44.945  INFO 11188 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5320 ms
+2020-01-11 09:19:45.018 DEBUG 11188 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-01-11 09:19:46.274  INFO 11188 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-01-11 09:19:48.925  INFO 11188 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-01-11 09:19:50.956  INFO 11188 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+loadBalanceAlgorithmType: round_robin
+masterDataSourceName: ds0
+name: dataSource
+slaveDataSourceNames:
+- ds1
+
+2020-01-11 09:19:50.958  INFO 11188 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+{}
+
+2020-01-11 09:19:51.994  INFO 11188 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-11 09:19:52.873  INFO 11188 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-01-11 09:19:54.941  INFO 11188 --- [nioEventLoopGroup-4-2] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-01-11 09:19:54.941  INFO 11188 --- [nioEventLoopGroup-4-3] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-01-11 09:19:55.042  INFO 11188 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-11 09:19:55.064  INFO 11188 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-11 09:19:55.164  INFO 11188 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-11 09:19:55.242  INFO 11188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-11 09:19:55.247  INFO 11188 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 18.446 seconds (JVM running for 21.354)
