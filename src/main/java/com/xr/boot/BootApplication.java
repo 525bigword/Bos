@@ -12,12 +12,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication(exclude = JtaAutoConfiguration.class)
 @EnableTransactionManagement
 @MapperScan("com.xr.boot.dao")
-//@EnableSwagger2
+@EnableSwagger2
 public class BootApplication {
 
     public static void main(String[] args) {
         JwtUtil.setKey("java");
-        JwtUtil.setTtl(60000);
+        JwtUtil.setTtl(60000*30);
         SpringApplication.run(BootApplication.class, args);
     }
 

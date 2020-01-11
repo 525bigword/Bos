@@ -51,6 +51,15 @@ public class SyEmp implements Serializable {
     * 业务属性
     */
    private List<SyRolesMenus> syRolesMenus;
+   private SyUnits syUnits;
+
+   public SyUnits getSyUnits() {
+      return syUnits;
+   }
+
+   public void setSyUnits(SyUnits syUnits) {
+      this.syUnits = syUnits;
+   }
 
    @Override
    public String toString() {

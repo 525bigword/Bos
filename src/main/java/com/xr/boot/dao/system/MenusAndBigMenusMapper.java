@@ -14,7 +14,7 @@ public interface MenusAndBigMenusMapper {
 
 
     //查询所有栏目信息
-    @Select("select ")
+    @Select("SELECT id,(select text from sy_menus where sy_menus.id=sym.parentid) parentid,type,text,sym.url,tip,bigmenus FROM  sy_menus as sym")
     List<SyMenus> findSyMenusAll(SyMenus syMenus);
 
 

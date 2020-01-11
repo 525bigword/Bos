@@ -23,6 +23,8 @@ public class SyUnits implements Serializable {
     *
     * @pdOid 7e07b0ec-433f-4012-b8f1-d60d4bda25b2 */
    private String name;
+   private Integer operatorid;
+   private Integer parentid;
    /** 备注
     *
     * @pdOid 2e216151-f182-4c9b-bb4a-3b58c05116ee */
@@ -34,7 +36,7 @@ public class SyUnits implements Serializable {
    /** 状态	0：正常，1：停用
     *
     * @pdOid 6dcd1ed3-c25f-4989-a9ac-3f6114989fe3 */
-   private long stats;
+   private Integer stats;
    public  SyUnits(){}
    /** @pdRoleInfo migr=no name=PacPackagingMateriarOutBoundFrom assc=reference65 coll=java.util.Collection impl=java.util.HashSet mult=0..* */
    public Collection<PacPackagingMateriarOutBoundFrom> pacPackagingMateriarOutBoundFrom;
@@ -42,6 +44,14 @@ public class SyUnits implements Serializable {
    /** @pdOid 10220544-0d27-4996-bd64-bd960169e464 */
    public long getId() {
       return id;
+   }
+
+   public Integer getOperatorid() {
+      return operatorid;
+   }
+
+   public void setOperatorid(Integer operatorid) {
+      this.operatorid = operatorid;
    }
 
    /** @param newId
@@ -53,6 +63,14 @@ public class SyUnits implements Serializable {
    /** @pdOid 73da11a1-9cce-43ef-a2f9-f8fbaa86a422 */
    public String getName() {
       return name;
+   }
+
+   public Integer getParentid() {
+      return parentid;
+   }
+
+   public void setParentid(Integer parentid) {
+      this.parentid = parentid;
    }
 
    /** @param newName
@@ -84,13 +102,13 @@ public class SyUnits implements Serializable {
    }
 
    /** @pdOid 51188031-f3c4-4fc5-a954-652a7aecf58d */
-   public long getStats() {
+   public Integer getStats() {
       return stats;
    }
 
    /** @param newStats
     * @pdOid d722c222-74f6-417f-a127-f688dd97a7cd */
-   public void setStats(long newStats) {
+   public void setStats(Integer newStats) {
       stats = newStats;
    }
 

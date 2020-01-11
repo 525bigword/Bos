@@ -38,12 +38,18 @@ public interface SyEmpMapper {
             @Result(column = "empno",property = "empNo"),
             @Result(column = "pwd",property ="pwd" ),
             @Result(column = "querypwd",property = "queryPwd"),
-            @Result(column = "empunit",property = "empunit"),
+            /*@Result(column = "empunit",property = "empunit"),*/
             @Result(column = "remark",property = "remark"),
             @Result(column = "disabled",property = "disabled"),
             @Result(column = "roleid",property = "syRolesMenus",
                     many = @Many(
                             select="findSyRolesMenusByroleId",
+                            fetchType = FetchType.DEFAULT
+                    )
+            ),
+            @Result(column = "empunit",property = "syUnits",
+                    one=@One(
+                            select = "com.xr.boot.dao.system.SyUnitsMapper.findSyUnitById",
                             fetchType = FetchType.DEFAULT
                     )
             )
