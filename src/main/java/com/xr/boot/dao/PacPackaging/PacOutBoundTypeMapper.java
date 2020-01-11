@@ -10,4 +10,6 @@ import java.util.List;
 public interface PacOutBoundTypeMapper {
     @Select("select id,outBoundType from PAC_outboundtype;")
     List<PacOutBoundType> queryAllpactype();
+    @Select("select id,outBoundType from PAC_outboundtype where id=#{id};")
+    PacOutBoundType findPacTypeById(int id);
 }

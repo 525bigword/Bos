@@ -3,42 +3,67 @@ package com.xr.boot.dao.PacPackaging;
 import com.xr.boot.entity.PacPackaging;
 import com.xr.boot.entity.SyEmp;
 import org.apache.ibatis.annotations.*;
+import org.apache.ibatis.mapping.FetchType;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 @Repository
 public interface PacPackagingMapper {
-    @Select("select id,ItemCode,ItemName,PlannedPrice,Specifications,type,MeasurementUnit,`Status` from PAC_Packaging;")
-    List<PacPackaging> queryAllpacpackaging();
-    @Select("select id,ItemCode,ItemName,PlannedPrice,Specifications,type,MeasurementUnit,`Status` from PAC_Packaging where id=#{id};")
-    PacPackaging findOnebyid(int id);
-    @Select(value = {" <script>" +
-            " SELECT * FROM kuser " +
-            " <where> 1=1 " +
-            " <if test=\"itemCode != null\"> AND itemCode=#{itemCode}</if> " +
-            " <if test=\"itemName != null\" >  AND itemName=#{itemName}</if> " +
-            " <if test=\"plannedPrice != null\" >  AND plannedPrice=#{plannedPrice}</if> " +
-            " <if test=\"specifications != null\" >  AND specifications=#{specifications}</if> " +
-            " <if test=\"type != null\" >  AND type=#{type}</if> " +
-            " <if test=\"status != null\" >  AND status=#{status}</if> " +
-            " </where>" +
-            " </script>"})
+    @Select("select id,ItemCode,ItemName,PlannedPrice,Specifications,type,MeasurementUnit,`Status`,operatorId from PAC_Packaging order by id desc;")
     @Results({
             @Result(property = "id", column = "id"),
             @Result(property = "itemCode", column = "itemCode"),
             @Result(property = "itemName", column = "itemName"),
             @Result(property = "plannedPrice", column = "plannedPrice"),
             @Result(property = "specifications", column = "specifications"),
-            @Result(property = "type", column = "type"),
+            @Result(column = "type", property = "pacOutBoundType",
+                    one = @One(select = "com.xr.boot.dao.PacPackaging.PacOutBoundTypeMapper.findPacTypeById", fetchType = FetchType.DEFAULT)
+            ),
             @Result(property = "measurementUnit", column = "measurementUnit"),
-            @Result(property = "status", column = "status")
+            @Result(property = "status", column = "status"), @Result(column = "operatorId", property = "syEmp",
+            one = @One(select = "com.xr.boot.dao.system.SyEmpMapper.findSyEmpById", fetchType = FetchType.DEFAULT)
+    )
+    })
+    List<PacPackaging> queryAllpacpackaging();
+    @Select("select id,ItemCode,ItemName,PlannedPrice,Specifications,type,MeasurementUnit,`Status`,operatorId,operationTime from PAC_Packaging where id=#{id};")
+    @Results({
+            @Result(property = "id", column = "id"),
+            @Result(property = "itemCode", column = "itemCode"),
+            @Result(property = "itemName", column = "itemName"),
+            @Result(property = "plannedPrice", column = "plannedPrice"),
+            @Result(property = "specifications", column = "specifications"),
+            @Result(column = "type", property = "pacOutBoundType",
+                    one = @One(select = "com.xr.boot.dao.PacPackaging.PacOutBoundTypeMapper.findPacTypeById", fetchType = FetchType.DEFAULT)
+            ),
+            @Result(property = "operationTime", column = "operationTime"),
+            @Result(property = "measurementUnit", column = "measurementUnit"),
+            @Result(property = "status", column = "status"),
+            @Result(column = "operatorId", property = "syEmp",
+                    one = @One(select = "com.xr.boot.dao.system.SyEmpMapper.findSyEmpById", fetchType = FetchType.DEFAULT)
+            )
+    })
+    PacPackaging findOnebyid(int id);
+    @SelectProvider(type = PacPackSql.class,method = "findPacPackWhere")
+    @Results({
+            @Result(property = "id", column = "id"),
+            @Result(property = "itemCode", column = "itemCode"),
+            @Result(property = "itemName", column = "itemName"),
+            @Result(property = "plannedPrice", column = "plannedPrice"),
+            @Result(property = "specifications", column = "specifications"),
+            @Result(column = "type", property = "pacOutBoundType",
+                    one = @One(select = "com.xr.boot.dao.PacPackaging.PacOutBoundTypeMapper.findPacTypeById", fetchType = FetchType.DEFAULT)
+            ),
+            @Result(property = "measurementUnit", column = "measurementUnit"),
+            @Result(property = "status", column = "status"), @Result(column = "operatorId", property = "syEmp",
+            one = @One(select = "com.xr.boot.dao.system.SyEmpMapper.findSyEmpById", fetchType = FetchType.DEFAULT)
+    )
     })
     List<PacPackaging> findWherepacpackaging(PacPackaging pacPackaging);
     @Insert("insert into PAC_Packaging(itemCode,ItemName,PlannedPrice,Specifications,type,MeasurementUnit,`Status`,OperatorID,OperationUnitID,OperationTime) values(#{itemCode},#{itemName},#{plannedPrice},#{specifications},#{type},#{measurementUnit},#{status},#{operatorId},#{operationUnitid},#{operationTime});")
    void addPacpackaging(PacPackaging pacPackaging);
-    @Update("update PAC_Packaging set ItemCode=#{itemCode},ItemName=#{itemName},PlannedPrice=#{plannedPrice},Specifications=#{specifications},type=#{type},MeasurementUnit=#{measurementUnit},`Status`=#{status},OperatorID=#{operatorId},OperationUnitID=#{operationUnitid},OperationTime=#{operationTime} where id=#{id};")
+    @Update("update PAC_Packaging set ItemCode=#{itemCode},ItemName=#{itemName},PlannedPrice=#{plannedPrice},Specifications=#{specifications},type=#{type},`Status`=#{status} where id=#{id};")//,OperatorID=#{operatorId},OperationUnitID=#{operationUnitid},OperationTime=#{operationTime}
     void updatePacpackaging(PacPackaging pacPackaging);
-    @Update("update PAC_Packaging set status=#{status},InvalidateJobInt=#{invalidateJobInt},invalidateName=#{invalidateName},invalidateTime=#{invalidateTime} where id=#{id}")
+    @Update("update PAC_Packaging set status=0 where id=#{id}")
     void updatePaczuofei(PacPackaging pacPackaging);
     @Select("select id,empunit from sy_emp where empName=#{empName}")
     SyEmp selectIdbyname(String empName);

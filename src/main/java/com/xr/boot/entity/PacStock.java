@@ -4,12 +4,27 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class PacStockMapper
  ***********************************************************************/
 
+import org.springframework.stereotype.Component;
+
+import java.io.Serializable;
 import java.util.*;
 
 /** 库存表
  * 
  * @pdOid 691e2f06-dddb-4a06-ba80-e9b9cb80eadf */
-public class PacStock {
+@Component
+public class PacStock implements Serializable {
+   private static final long serialVersionUID = 3575509107770414228L;
+   private Integer id;
+
+   public Integer getId() {
+      return id;
+   }
+
+   public void setId(Integer id) {
+      this.id = id;
+   }
+
    /** 入库单号	唯一,雪花算法二十六
     * 
     * @pdOid 93e1decd-bfb6-4336-b264-de3127d0d675 */
@@ -18,7 +33,17 @@ public class PacStock {
     * 3.下发入库、4.盘盈调整
     * 
     * @pdOid 9aecc3fb-dda5-40c5-a4ec-e0bb6c5c5c6c */
-   private long reservoirType;
+  /* private long reservoirType;*/
+   private PacGetBoundType pacGetBoundType;
+
+   public PacGetBoundType getPacGetBoundType() {
+      return pacGetBoundType;
+   }
+
+   public void setPacGetBoundType(PacGetBoundType pacGetBoundType) {
+      this.pacGetBoundType = pacGetBoundType;
+   }
+
    /** 运输单号
     * 
     * @pdOid 68f6fedd-dc0e-405a-827a-1cc1339d70c0 */
@@ -26,7 +51,16 @@ public class PacStock {
    /** 所属单位	系统默认登录人所在单位
     * 
     * @pdOid 98d64a9e-48e2-4463-97ab-5cc1b5a14706 */
-   private String subordinateUnit;
+ private SyUnits syUnits;
+
+   public SyUnits getSyUnits() {
+      return syUnits;
+   }
+
+   public void setSyUnits(SyUnits syUnits) {
+      this.syUnits = syUnits;
+   }
+
    /** 开单人工号	登录人工号
     * 
     * @pdOid dd11e04a-b41a-4da0-b80b-5c233a2de100 */
@@ -72,15 +106,12 @@ public class PacStock {
    
    /** @pdOid a8f6df9f-144b-4f30-b3ab-287c6eec0fda */
    public long getReservoirType() {
-      return reservoirType;
+      return getPacGetBoundType().getPacGetid();
    }
    
    /** @param newReservoirType
     * @pdOid 132509e1-f4e0-4830-aa99-a35d4c7b3ed8 */
-   public void setReservoirType(long newReservoirType) {
-      reservoirType = newReservoirType;
-   }
-   
+
    /** @pdOid c25afbef-de1a-4320-94b5-e70b26fdaa39 */
    public String getTransport() {
       return transport;
@@ -94,15 +125,12 @@ public class PacStock {
    
    /** @pdOid 74025c7b-084b-446a-9a8c-774bc92df4fd */
    public String getSubordinateUnit() {
-      return subordinateUnit;
+      return getSyUnits().getName();
    }
    
    /** @param newSubordinateUnit
     * @pdOid fbe9c161-6d4e-43dc-9204-fbe2314f75e1 */
-   public void setSubordinateUnit(String newSubordinateUnit) {
-      subordinateUnit = newSubordinateUnit;
-   }
-   
+
    /** @pdOid f0d622aa-ecd4-41e0-8dce-d9e7832cdd34 */
    public int getDrawerNo() {
       return drawerNo;

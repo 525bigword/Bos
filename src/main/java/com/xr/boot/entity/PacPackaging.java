@@ -4,6 +4,7 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class PacPackaging
  ***********************************************************************/
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
@@ -38,7 +39,8 @@ public class PacPackaging implements Serializable {
    /** 类型
     *
     * @pdOid c78210cd-64c9-43ed-8cb7-14ac5d7a45a9 */
-   private long type;
+ /*  private Integer type;*/
+   private PacOutBoundType pacOutBoundType;
    /** 计量单位	张、箱、大箱、小箱、个、包、袋等
     *
     * @pdOid 88c19e53-b511-4313-be43-ed1bc508f294 */
@@ -46,18 +48,29 @@ public class PacPackaging implements Serializable {
    /** 状态	默认：正常状态1（作废状态-1）
     *
     * @pdOid f8593afc-ddfc-4701-99aa-105409d03b2d */
-   private long status;
+   private Integer status;
    /**
+    *
     * 操作人id
     */
-private Integer operatorId;
-/**
+private SyEmp syEmp;
+
+   public SyEmp getSyEmp() {
+      return syEmp;
+   }
+
+   public void setSyEmp(SyEmp syEmp) {
+      this.syEmp = syEmp;
+   }
+
+   /**
  * 操作人单位id
  */
 private Integer operationUnitid;
    /** 操作时间
     *
     * @pdOid b832bb4b-33df-4048-bf73-ddd44501c8bb */
+   @JsonFormat(pattern="yyyy/MM/dd HH:mm:ss",timezone="GMT+8")
    private Date operationTime;
    /**
     * 作废人id即工号
@@ -72,14 +85,9 @@ private Integer operationUnitid;
     * @pdOid 8120b166-2412-4c5a-be2e-731883a2b18b */
    private Date invalidateTime;
 
-   public Integer getOperatorId() {
-      return operatorId;
+   public long getOperatorId() {
+      return getSyEmp().getId();
    }
-
-   public void setOperatorId(Integer operatorId) {
-      this.operatorId = operatorId;
-   }
-
    public Integer getOperationUnitid() {
       return operationUnitid;
    }
@@ -160,14 +168,17 @@ private Integer operationUnitid;
    }
 
    /** @pdOid 0e989670-7561-491a-b875-d8dc9ad61e4b */
-   public long getType() {
-      return type;
+   public PacOutBoundType getPacOutBoundType() {
+      return pacOutBoundType;
    }
-
-   /** @param newType
-    * @pdOid 00700cc3-f7e6-44e9-b699-781ade6e479b */
-   public void setType(long newType) {
-      type = newType;
+   public long getType() {
+      if(getPacOutBoundType()==null) {
+      return -1;
+      }else {
+      return getPacOutBoundType().getId();}
+   }
+   public void setPacOutBoundType(PacOutBoundType pacOutBoundType) {
+      this.pacOutBoundType = pacOutBoundType;
    }
 
    /** @pdOid 2fd3f77b-2624-4c87-ae67-36303a6e76e9 */
@@ -182,13 +193,13 @@ private Integer operationUnitid;
    }
 
    /** @pdOid 37fa450a-2913-42c0-af48-b402f0604cad */
-   public long getStatus() {
+   public Integer getStatus() {
       return status;
    }
 
    /** @param newStatus
     * @pdOid 41676ca0-001c-4620-9495-9b9ea236b275 */
-   public void setStatus(long newStatus) {
+   public void setStatus(Integer newStatus) {
       status = newStatus;
    }
 
@@ -225,10 +236,8 @@ private Integer operationUnitid;
               ", itemName='" + itemName + '\'' +
               ", plannedPrice=" + plannedPrice +
               ", specifications='" + specifications + '\'' +
-              ", type=" + type +
               ", measurementUnit='" + measurementUnit + '\'' +
               ", status=" + status +
-              ", operatorId=" + operatorId +
               ", operationUnitid=" + operationUnitid +
               ", operationTime=" + operationTime +
               ", invalidateJobInt=" + invalidateJobInt +
