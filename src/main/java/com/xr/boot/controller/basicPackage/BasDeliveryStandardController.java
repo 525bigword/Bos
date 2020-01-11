@@ -43,7 +43,6 @@ public class BasDeliveryStandardController {
     }
     @PostMapping("/findBasDeliveryStandards")
     public List<BasDeliveryStandard> findBasDeliveryStandardByTerm(BasDeliveryStandard basDeliveryStandard){
-       // basDeliveryStandard.getSyEmp().setEmpName(basDeliveryStandard.getSyEmp().getEmpName());
         return basDeliveryStandardService.findBasDeliveryStandardByTerm(basDeliveryStandard);
     }
     @PostMapping("/upBasDeliveryStandardByBasicFileNumber")
