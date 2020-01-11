@@ -19,7 +19,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.List;
 
-//@Configuration
+@Configuration
 public class MySpringMVCConfig extends WebMvcConfigurationSupport {
   @Autowired private UrlInterceptor interceptor;
 

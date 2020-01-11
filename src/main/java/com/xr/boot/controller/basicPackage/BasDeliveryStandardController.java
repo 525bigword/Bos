@@ -62,14 +62,14 @@ public class BasDeliveryStandardController {
     }
     @PostMapping("/saveBasDeliveryStandard")
     public int saveBasDeliveryStandard(BasDeliveryStandard basDeliveryStandard) {
-       /* List<String> nameList = basDeliveryStandardService.findBasDeliveryStandardByName(basDeliveryStandard.getName());
+        List<String> nameList = basDeliveryStandardService.findBasDeliveryStandardByName(basDeliveryStandard.getName());
         if(nameList.size()!=0){
             return 1;
         }
         String basicFileNumber = snowflakeIdFactory.generateKey().toString();
         basDeliveryStandard.setBasicFileNumber(basicFileNumber);
         basDeliveryStandardService.saveBasDeliveryStandard(basDeliveryStandard);
-        redisUtil.del("com.xr.boot.controller.BasDeliveryStandardController.findBasDeliveryStandardAll");*/
+        redisUtil.del("com.xr.boot.controller.BasDeliveryStandardController.findBasDeliveryStandardAll");
         return 0;
     }
 }
