@@ -56,9 +56,10 @@ public class BasDeliveryStandardController {
         return 0;
     }
     @PostMapping("/upBasDeliveryStandardStatus")
-    public void upBasDeliveryStandardStatus(BasDeliveryStandard basDeliveryStandard){
+    public int upBasDeliveryStandardStatus(BasDeliveryStandard basDeliveryStandard){
         basDeliveryStandardService.upBasDeliveryStandardStatus(basDeliveryStandard);
         redisUtil.del("com.xr.boot.controller.BasDeliveryStandardController.findBasDeliveryStandardAll");
+        return 1;
     }
     @PostMapping("/saveBasDeliveryStandard")
     public int saveBasDeliveryStandard(BasDeliveryStandard basDeliveryStandard) {
