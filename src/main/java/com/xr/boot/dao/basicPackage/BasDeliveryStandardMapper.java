@@ -39,6 +39,6 @@ public interface BasDeliveryStandardMapper {
     @Update("UPDATE bas_deliverystandard set `status`=#{status}  where BasicFileNumber=#{basicFileNumber}")
     void upBasDeliveryStandardStatus(BasDeliveryStandard basDeliveryStandard);
 
-    @Insert("insert into bas_deliverystandard(BasicFileNumber,`Name`,MinWeight,MaxWeight,OperatorID,OperationUnitID,OperationTime,`Status`) values(#{basicFileNumber},#{name},#{minWeight},#{maxWeight},#{syEmp.id},#{syUnits.id},now(),#{status})")
+    @Insert("insert into bas_deliverystandard(BasicFileNumber,`Name`,MinWeight,MaxWeight,OperatorID,OperationUnitID,OperationTime,`Status`) values(#{basicFileNumber},#{name},#{minWeight},#{maxWeight},#{empId},#{unitId},now(),#{status})")
     void saveBasDeliveryStandard(BasDeliveryStandard basDeliveryStandard);
 }

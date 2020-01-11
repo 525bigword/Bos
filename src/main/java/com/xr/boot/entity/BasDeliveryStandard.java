@@ -38,6 +38,12 @@ public class BasDeliveryStandard implements Serializable {
      * @pdOid 92d2390d-40ab-448e-b92b-5ff0b9cb0857 */
     private Integer status;
     public BasDeliveryStandard(){}
+    public long getempId(){
+        return syEmp.getId();
+    }
+    public  long getunitId(){
+        return syUnits.getId();
+    }
     public BasDeliveryStandard(String basicFileNumber, String name, Double minWeight, Double maxWeight, SyEmp syEmp, SyUnits syUnits, String operationTime, Integer status) {
         this.basicFileNumber = basicFileNumber;
         this.name = name;
