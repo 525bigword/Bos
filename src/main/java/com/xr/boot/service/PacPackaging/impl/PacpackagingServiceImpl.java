@@ -23,7 +23,6 @@ public class PacpackagingServiceImpl implements PacPackagingService {
     private PacPackagingMapper pacPackagingMapper;
     @Autowired
     private RedisUtil redisUtil;
-    @Klock(leaseTime=Long.MAX_VALUE)
     @Transactional
     @Override
     public Map<String,List<Object>> queryAllpacpackaging() {
@@ -36,11 +35,15 @@ public class PacpackagingServiceImpl implements PacPackagingService {
 
     @Override
     public PacPackaging findOnebyid(int id) {
-        return pacPackagingMapper.findOnebyid(id);
+        PacPackaging onebyid = pacPackagingMapper.findOnebyid(id);
+        return onebyid;
     }
 
     @Override
     public List<PacPackaging> findWherepacpackaging(PacPackaging pacPackaging) {
+        String itemName = pacPackaging.getItemName();
+        System.out.println("serviceimpl"+itemName);
+
         return pacPackagingMapper.findWherepacpackaging(pacPackaging);
     }
 
