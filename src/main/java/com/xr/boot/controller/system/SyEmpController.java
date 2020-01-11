@@ -36,7 +36,7 @@ public class SyEmpController {
         String authorization = request.getHeader("Authorization");
         String token=authorization.substring(3);
         Claims claims = JwtUtil.parseJWT(token);
-        SyEmp syemp = (SyEmp)claims.get("syemp");
+        Object syemp = claims.get("syemp");
         return new Return(StausEnum.SUCCESS,syemp);
     }
 
