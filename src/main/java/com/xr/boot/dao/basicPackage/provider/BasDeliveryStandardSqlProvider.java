@@ -27,13 +27,14 @@ public class BasDeliveryStandardSqlProvider {
                     if (basDeliveryStandard.getMaxWeight() != null && !basDeliveryStandard.getMaxWeight().equals("")) {
                         tj += " and ds.MaxWeight=#{maxWeight}";
                     }
-                    if (basDeliveryStandard.getSyEmp().getEmpName() != null && !basDeliveryStandard.getSyEmp().getEmpName().equals("")) {
+                    if(basDeliveryStandard.getSyEmp().getEmpName()!=null&&!basDeliveryStandard.getSyEmp().getEmpName().equals("")){
                         tj += " and se.EmpName Like CONCAT('%',#{syEmp.empName},'%')";
                     }
                     if (basDeliveryStandard.getOperationTime() != null && !basDeliveryStandard.getOperationTime().equals("")) {
                         tj += " and ds.OperationTime=#{operationTime}";
                     }
                     WHERE(tj);
+
                 }catch (Exception e){
                     WHERE(tj += " and ds.`Status`=0");
                 }

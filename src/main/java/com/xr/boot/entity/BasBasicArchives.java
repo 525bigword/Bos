@@ -4,8 +4,6 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class BasBasicArchives
  ***********************************************************************/
 
-import java.util.*;
-
 /** 基础档案表（BAS_BasicArchives）
  * 
  * @pdOid 9aa0630c-28a8-4bd2-826a-a6c256c1a71a */
@@ -26,6 +24,8 @@ public class BasBasicArchives {
     * 
     * @pdOid e8637092-3e43-4ce5-8ea4-cb7698661933 */
    private long grade;
+   private SyEmp syEmp;
+   private SyUnits syUnits;
    /** 备注
     * 
     * @pdOid cfed9ff2-0d19-4fce-a860-bf9d7e2795d3 */
@@ -33,72 +33,92 @@ public class BasBasicArchives {
    /** 操作时间	当前操作时间
     * 
     * @pdOid f506033f-36fc-4c96-805a-8148cff09a43 */
-   private Date operationTime;
+   private String operationTime;
+   private Integer status;
    
-   /** @pdOid 33bc946f-4188-46ec-ba07-992e2c78b775 */
+   public BasBasicArchives(){}
+
+   public BasBasicArchives(long id, String basicFileNumber, String name, long grade, SyEmp syEmp, SyUnits syUnits, String remarks, String operationTime, Integer status) {
+      this.id = id;
+      this.basicFileNumber = basicFileNumber;
+      this.name = name;
+      this.grade = grade;
+      this.syEmp = syEmp;
+      this.syUnits = syUnits;
+      this.remarks = remarks;
+      this.operationTime = operationTime;
+      this.status = status;
+   }
+
    public long getId() {
       return id;
    }
-   
-   /** @param newId
-    * @pdOid 2e4ca957-83fa-449f-b981-2d36966123d3 */
-   public void setId(long newId) {
-      id = newId;
+
+   public void setId(long id) {
+      this.id = id;
    }
-   
-   /** @pdOid 16acfc57-3448-4d64-9c4a-fe592d078f20 */
+
    public String getBasicFileNumber() {
       return basicFileNumber;
    }
-   
-   /** @param newBasicFileNumber
-    * @pdOid 6594f038-6705-478b-a55d-7f9784e27146 */
-   public void setBasicFileNumber(String newBasicFileNumber) {
-      basicFileNumber = newBasicFileNumber;
+
+   public void setBasicFileNumber(String basicFileNumber) {
+      this.basicFileNumber = basicFileNumber;
    }
-   
-   /** @pdOid 5aa60d42-1ed4-443b-a008-da355e2b4d0f */
+
    public String getName() {
       return name;
    }
-   
-   /** @param newName
-    * @pdOid fbcfa8c0-7098-4111-9f3c-6e37d069ace7 */
-   public void setName(String newName) {
-      name = newName;
+
+   public void setName(String name) {
+      this.name = name;
    }
-   
-   /** @pdOid 5fc7cd6f-85c2-4cff-af86-21ab5ae5125d */
+
    public long getGrade() {
       return grade;
    }
-   
-   /** @param newGrade
-    * @pdOid b9dd4610-d0c9-4dec-bced-5d9f54c46dc1 */
-   public void setGrade(long newGrade) {
-      grade = newGrade;
+
+   public void setGrade(long grade) {
+      this.grade = grade;
    }
-   
-   /** @pdOid 99952441-f203-40e5-ba57-8efb847aa8d6 */
+
+   public SyEmp getSyEmp() {
+      return syEmp;
+   }
+
+   public void setSyEmp(SyEmp syEmp) {
+      this.syEmp = syEmp;
+   }
+
+   public SyUnits getSyUnits() {
+      return syUnits;
+   }
+
+   public void setSyUnits(SyUnits syUnits) {
+      this.syUnits = syUnits;
+   }
+
    public String getRemarks() {
       return remarks;
    }
-   
-   /** @param newRemarks
-    * @pdOid 2b600911-2143-4947-a259-b4d5e21328cc */
-   public void setRemarks(String newRemarks) {
-      remarks = newRemarks;
-   }
-   
-   /** @pdOid c22ec9ad-f081-45ab-972d-c6333d03b9db */
-   public Date getOperationTime() {
-      return operationTime;
-   }
-   
-   /** @param newOperationTime
-    * @pdOid 1fdd337d-5bdc-421b-be89-0d02e14a99b9 */
-   public void setOperationTime(Date newOperationTime) {
-      operationTime = newOperationTime;
+
+   public void setRemarks(String remarks) {
+      this.remarks = remarks;
    }
 
+   public String getOperationTime() {
+      return operationTime;
+   }
+
+   public void setOperationTime(String operationTime) {
+      this.operationTime = operationTime;
+   }
+
+   public Integer getStatus() {
+      return status;
+   }
+
+   public void setStatus(Integer status) {
+      this.status = status;
+   }
 }

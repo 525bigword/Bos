@@ -4,9 +4,10 @@ import com.xr.boot.dao.basicPackage.BasDeliveryStandardMapper;
 import com.xr.boot.entity.BasDeliveryStandard;
 import com.xr.boot.service.basicPackage.BasDeliveryStandardService;
 import com.xr.boot.util.RedisUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.klock.annotation.Klock;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collections;
@@ -14,7 +15,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-@Repository
+@Service
+@Slf4j
 public class BasDeliveryStandardServiceImpl implements BasDeliveryStandardService {
     @Autowired
     private BasDeliveryStandardMapper basDeliveryStandardMapper;

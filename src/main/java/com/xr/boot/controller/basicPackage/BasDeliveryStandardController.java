@@ -17,9 +17,8 @@ import java.util.List;
 @RestController
 @RequestMapping("basDeliveryStandard")
 @Slf4j
-@Api(tags = "权限接口")
+@Api(tags = "收派接口")
 public class BasDeliveryStandardController {
-    private  SnowflakeIdFactory snowflakeIdFactory=new SnowflakeIdFactory();
     @Autowired
     private BasDeliveryStandardService basDeliveryStandardService;
     @Autowired
@@ -67,6 +66,7 @@ public class BasDeliveryStandardController {
         if(nameList.size()!=0){
             return 1;
         }
+        SnowflakeIdFactory snowflakeIdFactory=new SnowflakeIdFactory(1,0);
         String basicFileNumber = snowflakeIdFactory.generateKey().toString();
         basDeliveryStandard.setBasicFileNumber(basicFileNumber);
         basDeliveryStandardService.saveBasDeliveryStandard(basDeliveryStandard);

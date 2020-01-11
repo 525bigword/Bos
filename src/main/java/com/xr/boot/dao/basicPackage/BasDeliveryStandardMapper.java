@@ -7,6 +7,7 @@ import org.apache.ibatis.mapping.FetchType;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+
 @Component
 @Mapper
 public interface BasDeliveryStandardMapper {
