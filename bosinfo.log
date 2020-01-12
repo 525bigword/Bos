@@ -805,3 +805,592 @@ slaveDataSourceNames:
 2020-01-12 10:25:39.484 DEBUG 1772 --- [http-nio-8080-exec-7] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
 2020-01-12 10:26:04.566 DEBUG 1772 --- [http-nio-8080-exec-6] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
 2020-01-12 10:26:16.479 DEBUG 1772 --- [http-nio-8080-exec-8] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 10:38:35.762  INFO 8744 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on E53WRL7JY0MW6H1 with PID 8744 (H:\working\Bos\target\classes started by Administrator in H:\working\Bos)
+2020-01-12 10:38:35.767 DEBUG 8744 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-12 10:38:35.768  INFO 8744 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-01-12 10:38:38.877  INFO 8744 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-12 10:38:38.884  INFO 8744 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-12 10:38:38.943  INFO 8744 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 0 repository interfaces.
+2020-01-12 10:38:39.601  INFO 8744 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-12 10:38:40.540  INFO 8744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-12 10:38:40.557  INFO 8744 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-12 10:38:40.558  INFO 8744 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-12 10:38:40.561  INFO 8744 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.21] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-01-12 10:38:40.561  INFO 8744 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-01-12 10:38:40.562  INFO 8744 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-01-12 10:38:40.564  INFO 8744 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-01-12 10:38:40.570  INFO 8744 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-01-12 10:38:40.945  INFO 8744 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-12 10:38:40.946  INFO 8744 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4135 ms
+2020-01-12 10:38:41.033 DEBUG 8744 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-01-12 10:38:41.752  INFO 8744 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-01-12 10:38:45.635  INFO 8744 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-01-12 10:38:47.674  INFO 8744 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+loadBalanceAlgorithmType: round_robin
+masterDataSourceName: ds0
+name: dataSource
+slaveDataSourceNames:
+- ds1
+
+2020-01-12 10:38:47.677  INFO 8744 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+{}
+
+2020-01-12 10:38:50.575  INFO 8744 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-12 10:38:50.872  INFO 8744 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-12 10:38:51.771  INFO 8744 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-01-12 10:38:54.586  INFO 8744 --- [nioEventLoopGroup-4-3] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-01-12 10:38:54.611  INFO 8744 --- [nioEventLoopGroup-4-1] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-01-12 10:38:54.756  INFO 8744 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-12 10:38:54.788  INFO 8744 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-12 10:38:54.853  INFO 8744 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-12 10:38:54.919  INFO 8744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-12 10:38:54.924  INFO 8744 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 21.535 seconds (JVM running for 25.685)
+2020-01-12 10:39:00.700  INFO 8744 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-12 10:39:00.700  INFO 8744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-12 10:39:00.717  INFO 8744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2020-01-12 10:39:01.118  INFO 8744 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-01-12 10:39:01.127  INFO 8744 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-01-12 10:39:02.660 DEBUG 8744 --- [http-nio-8080-exec-1] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 10:39:05.585 DEBUG 8744 --- [http-nio-8080-exec-2] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 10:39:19.484 DEBUG 8744 --- [http-nio-8080-exec-3] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 10:40:59.494 DEBUG 8744 --- [http-nio-8080-exec-5] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 10:41:07.463 DEBUG 8744 --- [http-nio-8080-exec-6] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 10:42:03.513 DEBUG 8744 --- [http-nio-8080-exec-7] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 10:42:08.471 DEBUG 8744 --- [http-nio-8080-exec-8] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 10:46:23.459 DEBUG 8744 --- [http-nio-8080-exec-9] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 10:47:55.479 DEBUG 8744 --- [http-nio-8080-exec-10] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 10:50:37.467 DEBUG 8744 --- [http-nio-8080-exec-1] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 10:50:41.456 DEBUG 8744 --- [http-nio-8080-exec-2] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 10:50:41.493 DEBUG 8744 --- [http-nio-8080-exec-3] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 10:52:49.594 DEBUG 8744 --- [http-nio-8080-exec-4] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 10:56:31.475 DEBUG 8744 --- [http-nio-8080-exec-5] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 10:58:36.452 DEBUG 8744 --- [http-nio-8080-exec-6] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 10:58:37.615 DEBUG 8744 --- [http-nio-8080-exec-7] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 10:59:42.479 DEBUG 8744 --- [http-nio-8080-exec-8] c.x.b.c.b.BasDeliveryStandardController  : 从redis中取出值
+2020-01-12 11:01:16.557 DEBUG 8744 --- [http-nio-8080-exec-9] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:01:38.478 DEBUG 8744 --- [http-nio-8080-exec-10] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:03:01.457 DEBUG 8744 --- [http-nio-8080-exec-1] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:05:11.449 DEBUG 8744 --- [http-nio-8080-exec-2] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:08:11.448 DEBUG 8744 --- [http-nio-8080-exec-3] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:08:40.454 DEBUG 8744 --- [http-nio-8080-exec-4] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:08:56.466 DEBUG 8744 --- [http-nio-8080-exec-5] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:10:01.474 DEBUG 8744 --- [http-nio-8080-exec-6] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:10:11.623 DEBUG 8744 --- [http-nio-8080-exec-7] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:11:22.464 DEBUG 8744 --- [http-nio-8080-exec-8] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:11:27.465 DEBUG 8744 --- [http-nio-8080-exec-9] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:11:40.463 DEBUG 8744 --- [http-nio-8080-exec-10] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:12:10.472 DEBUG 8744 --- [http-nio-8080-exec-1] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:15:25.639 DEBUG 8744 --- [http-nio-8080-exec-2] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:21:10.653 DEBUG 8744 --- [http-nio-8080-exec-3] c.x.b.d.b.B.findBasicArchives            : ==>  Preparing: SELECT bb.ID,bb.BasicFileNumber,bb.`Name`,bb.Grade,bb.OperatorID,bb.OperationUnitID,bb.Remarks,bb.OperationTime FROM bas_basicarchives bb,sy_emp se,sy_units su WHERE (bb.OperatorID=se.ID and bb.OperationUnitID=su.ID and 1=1) order by bb.OperationTime desc 
+2020-01-12 11:21:13.552 DEBUG 8744 --- [http-nio-8080-exec-3] c.x.b.d.b.B.findBasicArchives            : ==> Parameters: 
+2020-01-12 11:21:13.633 DEBUG 8744 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-01-12 11:21:13.670 DEBUG 8744 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 1(Integer)
+2020-01-12 11:21:14.462 DEBUG 8744 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-01-12 11:21:14.464 DEBUG 8744 --- [http-nio-8080-exec-3] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-01-12 11:21:14.488 DEBUG 8744 --- [http-nio-8080-exec-3] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-01-12 11:21:14.538 DEBUG 8744 --- [http-nio-8080-exec-3] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-01-12 11:21:14.540 DEBUG 8744 --- [http-nio-8080-exec-3] c.x.b.d.b.B.findBasicArchives            : <==      Total: 2
+2020-01-12 11:22:00.439 DEBUG 8744 --- [http-nio-8080-exec-4] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:25:03.313  INFO 3160 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on E53WRL7JY0MW6H1 with PID 3160 (H:\working\Bos\target\classes started by Administrator in H:\working\Bos)
+2020-01-12 11:25:03.319 DEBUG 3160 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-12 11:25:03.320  INFO 3160 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-01-12 11:25:06.689  INFO 3160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-12 11:25:06.694  INFO 3160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-12 11:25:06.789  INFO 3160 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58ms. Found 0 repository interfaces.
+2020-01-12 11:25:07.715  INFO 3160 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-12 11:25:08.517  INFO 3160 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-12 11:25:08.542  INFO 3160 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-12 11:25:08.543  INFO 3160 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-12 11:25:08.547  INFO 3160 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.21] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-01-12 11:25:08.547  INFO 3160 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-01-12 11:25:08.549  INFO 3160 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-01-12 11:25:08.550  INFO 3160 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-01-12 11:25:08.557  INFO 3160 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-01-12 11:25:08.819  INFO 3160 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-12 11:25:08.820  INFO 3160 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4242 ms
+2020-01-12 11:25:08.930 DEBUG 3160 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-01-12 11:25:10.472  INFO 3160 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-01-12 11:25:13.628  INFO 3160 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-01-12 11:25:15.674  INFO 3160 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+loadBalanceAlgorithmType: round_robin
+masterDataSourceName: ds0
+name: dataSource
+slaveDataSourceNames:
+- ds1
+
+2020-01-12 11:25:15.676  INFO 3160 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+{}
+
+2020-01-12 11:25:18.195  INFO 3160 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-12 11:25:18.564  INFO 3160 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-12 11:25:19.301  INFO 3160 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-01-12 11:25:21.563  INFO 3160 --- [nioEventLoopGroup-4-2] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-01-12 11:25:21.563  INFO 3160 --- [nioEventLoopGroup-4-3] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-01-12 11:25:21.677  INFO 3160 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-12 11:25:21.701  INFO 3160 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-12 11:25:21.757  INFO 3160 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-12 11:25:21.837  INFO 3160 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-12 11:25:21.842  INFO 3160 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 20.091 seconds (JVM running for 22.905)
+2020-01-12 11:25:55.699  INFO 3160 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-12 11:25:55.700  INFO 3160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-12 11:25:55.715  INFO 3160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-01-12 11:25:55.908  INFO 3160 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-01-12 11:25:55.910  INFO 3160 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-01-12 11:25:56.502 DEBUG 3160 --- [http-nio-8080-exec-1] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:26:54.530  INFO 15260 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on E53WRL7JY0MW6H1 with PID 15260 (H:\working\Bos\target\classes started by Administrator in H:\working\Bos)
+2020-01-12 11:26:54.534 DEBUG 15260 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-12 11:26:54.535  INFO 15260 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-01-12 11:26:57.779  INFO 15260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-12 11:26:57.782  INFO 15260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-12 11:26:57.836  INFO 15260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30ms. Found 0 repository interfaces.
+2020-01-12 11:26:58.413  INFO 15260 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-12 11:26:59.152  INFO 15260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-12 11:26:59.167  INFO 15260 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-12 11:26:59.170  INFO 15260 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-12 11:26:59.173  INFO 15260 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.21] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-01-12 11:26:59.174  INFO 15260 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-01-12 11:26:59.174  INFO 15260 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-01-12 11:26:59.176  INFO 15260 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-01-12 11:26:59.182  INFO 15260 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-01-12 11:26:59.584  INFO 15260 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-12 11:26:59.585  INFO 15260 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4061 ms
+2020-01-12 11:26:59.659 DEBUG 15260 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-01-12 11:27:00.665  INFO 15260 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-01-12 11:27:03.607  INFO 15260 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-01-12 11:27:05.612  INFO 15260 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+loadBalanceAlgorithmType: round_robin
+masterDataSourceName: ds0
+name: dataSource
+slaveDataSourceNames:
+- ds1
+
+2020-01-12 11:27:05.614  INFO 15260 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+{}
+
+2020-01-12 11:27:08.078  INFO 15260 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-12 11:27:08.315  INFO 15260 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-12 11:27:09.047  INFO 15260 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-01-12 11:27:11.544  INFO 15260 --- [nioEventLoopGroup-4-3] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-01-12 11:27:11.546  INFO 15260 --- [nioEventLoopGroup-4-2] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-01-12 11:27:11.654  INFO 15260 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-12 11:27:11.678  INFO 15260 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-12 11:27:11.730  INFO 15260 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-12 11:27:11.806  INFO 15260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-12 11:27:11.814  INFO 15260 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 19.115 seconds (JVM running for 23.199)
+2020-01-12 11:27:50.935  INFO 15260 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-12 11:27:50.936  INFO 15260 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-12 11:27:50.957  INFO 15260 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
+2020-01-12 11:27:51.956  INFO 15260 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-01-12 11:27:51.958  INFO 15260 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-01-12 11:27:52.571 DEBUG 15260 --- [http-nio-8080-exec-1] c.x.b.d.b.B.findBasDeliveryStandards     : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1 and ds.`Status`=0) order by ds.OperationTime desc 
+2020-01-12 11:27:53.498 DEBUG 15260 --- [http-nio-8080-exec-1] c.x.b.d.b.B.findBasDeliveryStandards     : ==> Parameters: 
+2020-01-12 11:27:53.569 DEBUG 15260 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-01-12 11:27:53.601 DEBUG 15260 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 1(Integer)
+2020-01-12 11:27:54.439 DEBUG 15260 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-01-12 11:27:54.441 DEBUG 15260 --- [http-nio-8080-exec-1] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-01-12 11:27:54.465 DEBUG 15260 --- [http-nio-8080-exec-1] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-01-12 11:27:54.515 DEBUG 15260 --- [http-nio-8080-exec-1] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-01-12 11:27:54.522 DEBUG 15260 --- [http-nio-8080-exec-1] c.x.b.d.b.B.findBasDeliveryStandards     : <==      Total: 7
+2020-01-12 11:27:57.439 DEBUG 15260 --- [http-nio-8080-exec-2] c.x.b.d.b.B.findBasicArchives            : ==>  Preparing: SELECT bb.ID,bb.BasicFileNumber,bb.`Name`,bb.Grade,bb.OperatorID,bb.OperationUnitID,bb.Remarks,bb.OperationTime FROM bas_basicarchives bb,sy_emp se,sy_units su WHERE (bb.OperatorID=se.ID and bb.OperationUnitID=su.ID and 1=1) order by bb.OperationTime desc 
+2020-01-12 11:27:57.530 DEBUG 15260 --- [http-nio-8080-exec-2] c.x.b.d.b.B.findBasicArchives            : ==> Parameters: 
+2020-01-12 11:27:57.580 DEBUG 15260 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-01-12 11:27:57.580 DEBUG 15260 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 1(Integer)
+2020-01-12 11:27:57.624 DEBUG 15260 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-01-12 11:27:57.625 DEBUG 15260 --- [http-nio-8080-exec-2] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-01-12 11:27:57.626 DEBUG 15260 --- [http-nio-8080-exec-2] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-01-12 11:27:58.438 DEBUG 15260 --- [http-nio-8080-exec-2] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-01-12 11:27:58.440 DEBUG 15260 --- [http-nio-8080-exec-2] c.x.b.d.b.B.findBasicArchives            : <==      Total: 2
+2020-01-12 11:28:03.462 DEBUG 15260 --- [http-nio-8080-exec-3] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:29:00.434 DEBUG 15260 --- [http-nio-8080-exec-4] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:29:19.440 DEBUG 15260 --- [http-nio-8080-exec-5] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:29:37.537 DEBUG 15260 --- [http-nio-8080-exec-6] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:30:53.476 DEBUG 15260 --- [http-nio-8080-exec-7] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:31:12.433 DEBUG 15260 --- [http-nio-8080-exec-8] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:35:04.622 DEBUG 15260 --- [http-nio-8080-exec-9] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:36:08.428 DEBUG 15260 --- [http-nio-8080-exec-10] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:36:41.431 DEBUG 15260 --- [http-nio-8080-exec-1] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:37:32.450 DEBUG 15260 --- [http-nio-8080-exec-2] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:42:20.446 DEBUG 15260 --- [http-nio-8080-exec-3] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:44:21.425 DEBUG 15260 --- [http-nio-8080-exec-4] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:44:28.425 DEBUG 15260 --- [http-nio-8080-exec-5] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:44:34.426 DEBUG 15260 --- [http-nio-8080-exec-6] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:45:48.445 DEBUG 15260 --- [http-nio-8080-exec-7] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:45:55.431 DEBUG 15260 --- [http-nio-8080-exec-8] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:46:23.574 DEBUG 15260 --- [http-nio-8080-exec-9] c.x.b.c.b.BasDeliveryStandardController  : 从redis中取出值
+2020-01-12 11:46:26.830 DEBUG 15260 --- [http-nio-8080-exec-10] c.x.b.d.b.B.findBasDeliveryStandards     : ==>  Preparing: SELECT ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status` FROM bas_deliverystandard ds,sy_emp se,sy_units su WHERE (ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1) order by ds.OperationTime desc 
+2020-01-12 11:46:27.460 DEBUG 15260 --- [http-nio-8080-exec-10] c.x.b.d.b.B.findBasDeliveryStandards     : ==> Parameters: 
+2020-01-12 11:46:27.512 DEBUG 15260 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-01-12 11:46:27.513 DEBUG 15260 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 1(Integer)
+2020-01-12 11:46:27.570 DEBUG 15260 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-01-12 11:46:27.571 DEBUG 15260 --- [http-nio-8080-exec-10] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-01-12 11:46:27.572 DEBUG 15260 --- [http-nio-8080-exec-10] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-01-12 11:46:27.617 DEBUG 15260 --- [http-nio-8080-exec-10] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-01-12 11:46:27.628 DEBUG 15260 --- [http-nio-8080-exec-10] c.x.b.d.b.B.findBasDeliveryStandards     : <==      Total: 9
+2020-01-12 11:46:43.422 DEBUG 15260 --- [http-nio-8080-exec-1] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:48:59.443 DEBUG 15260 --- [http-nio-8080-exec-2] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:49:29.541 DEBUG 15260 --- [http-nio-8080-exec-3] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 11:49:54.445 DEBUG 15260 --- [http-nio-8080-exec-4] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 16:12:16.476  INFO 10888 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on E53WRL7JY0MW6H1 with PID 10888 (H:\working\Bos\target\classes started by Administrator in H:\working\Bos)
+2020-01-12 16:12:16.575 DEBUG 10888 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-12 16:12:16.576  INFO 10888 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-01-12 16:12:22.082  INFO 10888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-12 16:12:22.088  INFO 10888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-12 16:12:22.233  INFO 10888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85ms. Found 0 repository interfaces.
+2020-01-12 16:12:24.008  INFO 10888 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-12 16:12:26.563  INFO 10888 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-12 16:12:26.691  INFO 10888 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-12 16:12:26.694  INFO 10888 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-12 16:12:26.697  INFO 10888 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.21] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-01-12 16:12:26.698  INFO 10888 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-01-12 16:12:26.698  INFO 10888 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-01-12 16:12:26.698  INFO 10888 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-01-12 16:12:26.707  INFO 10888 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-01-12 16:12:27.585  INFO 10888 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-12 16:12:27.598  INFO 10888 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 9854 ms
+2020-01-12 16:12:28.526 DEBUG 10888 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-01-12 16:12:40.525  INFO 10888 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-01-12 16:12:59.721  INFO 10888 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-01-12 16:13:11.818  INFO 10888 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+loadBalanceAlgorithmType: round_robin
+masterDataSourceName: ds0
+name: dataSource
+slaveDataSourceNames:
+- ds1
+
+2020-01-12 16:13:11.821  INFO 10888 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+{}
+
+2020-01-12 16:13:15.849  INFO 10888 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-12 16:13:16.462  INFO 10888 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-12 16:13:18.310  INFO 10888 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-01-12 16:13:24.727  INFO 10888 --- [nioEventLoopGroup-4-3] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-01-12 16:13:24.728  INFO 10888 --- [nioEventLoopGroup-4-3] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-01-12 16:13:24.936  INFO 10888 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-12 16:13:24.989  INFO 10888 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-12 16:13:25.187  INFO 10888 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-12 16:13:25.420  INFO 10888 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-12 16:13:25.425  INFO 10888 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 71.029 seconds (JVM running for 79.747)
+2020-01-12 16:14:25.603  INFO 1136 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on E53WRL7JY0MW6H1 with PID 1136 (H:\working\Bos\target\classes started by Administrator in H:\working\Bos)
+2020-01-12 16:14:25.617 DEBUG 1136 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-12 16:14:25.618  INFO 1136 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-01-12 16:14:31.636  INFO 1136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-12 16:14:31.640  INFO 1136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-12 16:14:31.793  INFO 1136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66ms. Found 0 repository interfaces.
+2020-01-12 16:14:32.792  INFO 1136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-12 16:14:34.592  INFO 1136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-12 16:14:34.659  INFO 1136 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-12 16:14:34.660  INFO 1136 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-12 16:14:34.664  INFO 1136 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.21] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-01-12 16:14:34.664  INFO 1136 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-01-12 16:14:34.665  INFO 1136 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-01-12 16:14:34.666  INFO 1136 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-01-12 16:14:34.672  INFO 1136 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-01-12 16:14:35.820  INFO 1136 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-12 16:14:35.820  INFO 1136 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8385 ms
+2020-01-12 16:14:35.975 DEBUG 1136 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-01-12 16:14:41.801  INFO 1136 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-01-12 16:15:00.723  INFO 1136 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-01-12 16:15:13.616  INFO 1136 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+loadBalanceAlgorithmType: round_robin
+masterDataSourceName: ds0
+name: dataSource
+slaveDataSourceNames:
+- ds1
+
+2020-01-12 16:15:13.618  INFO 1136 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+{}
+
+2020-01-12 16:15:17.016  INFO 1136 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-12 16:15:17.597  INFO 1136 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-12 16:15:19.353  INFO 1136 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-01-12 16:15:26.638  INFO 1136 --- [nioEventLoopGroup-4-3] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-01-12 16:15:26.668  INFO 1136 --- [nioEventLoopGroup-4-3] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-01-12 16:15:26.895  INFO 1136 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-12 16:15:26.950  INFO 1136 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-12 16:15:27.175  INFO 1136 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-12 16:15:27.304  INFO 1136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-12 16:15:27.341  INFO 1136 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 64.69 seconds (JVM running for 72.427)
+2020-01-12 16:16:08.452  INFO 1136 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-12 16:16:08.457  INFO 1136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-12 16:16:08.531  INFO 1136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 73 ms
+2020-01-12 16:16:09.147  INFO 1136 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-01-12 16:16:09.150  INFO 1136 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-01-12 16:16:10.547 DEBUG 1136 --- [http-nio-8080-exec-1] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 16:20:44.559 DEBUG 1136 --- [http-nio-8080-exec-2] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 16:21:45.560 DEBUG 1136 --- [http-nio-8080-exec-3] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 16:24:24.557 DEBUG 1136 --- [http-nio-8080-exec-4] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 16:24:30.537 DEBUG 1136 --- [http-nio-8080-exec-5] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 16:24:35.568 DEBUG 1136 --- [http-nio-8080-exec-6] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 16:25:04.559 DEBUG 1136 --- [http-nio-8080-exec-7] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 16:25:10.566 DEBUG 1136 --- [http-nio-8080-exec-8] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 16:35:36.599 DEBUG 1136 --- [http-nio-8080-exec-9] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 16:35:52.551 DEBUG 1136 --- [http-nio-8080-exec-10] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 16:36:20.569 DEBUG 1136 --- [http-nio-8080-exec-1] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 16:36:27.559 DEBUG 1136 --- [http-nio-8080-exec-2] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 23:13:55.563 ERROR 1136 --- [nioEventLoopGroup-4-2] o.redisson.client.handler.CommandsQueue  : Exception occured. Channel: [id: 0xf50b7aca, L:/192.168.43.20:53563 - R:/47.100.39.234:6378]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:247) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1147) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-01-12 23:13:55.563 ERROR 1136 --- [nioEventLoopGroup-4-1] o.redisson.client.handler.CommandsQueue  : Exception occured. Channel: [id: 0x95dab7ac, L:/192.168.43.20:53561 - R:/47.100.39.234:6378]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:247) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1147) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-01-12 23:13:55.569 ERROR 1136 --- [nioEventLoopGroup-4-4] o.redisson.client.handler.CommandsQueue  : Exception occured. Channel: [id: 0x1641c1e2, L:/192.168.43.20:53562 - R:/47.100.39.234:6378]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:247) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1147) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-01-12 23:13:55.569 ERROR 1136 --- [nioEventLoopGroup-4-3] o.redisson.client.handler.CommandsQueue  : Exception occured. Channel: [id: 0x801bc185, L:/192.168.43.20:53565 - R:/47.100.39.234:6378]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:247) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1147) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-01-12 23:13:55.570  INFO 1136 --- [lettuce-nioEventLoop-6-1] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:247) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1147) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-01-12 23:13:56.117 ERROR 1136 --- [nioEventLoopGroup-4-3] o.redisson.client.handler.CommandsQueue  : Exception occured. Channel: [id: 0xb32e6551, L:/192.168.43.20:53564 - R:/47.100.39.234:6378]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:247) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1147) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-01-12 23:13:56.117 ERROR 1136 --- [nioEventLoopGroup-4-2] o.redisson.client.handler.CommandsQueue  : Exception occured. Channel: [id: 0x75ca90e4, L:/192.168.43.20:53566 - R:/47.100.39.234:6378]
+
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:247) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1147) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-01-12 23:13:56.491  INFO 1136 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.100.39.234:6378
+2020-01-12 23:13:56.771  WARN 1136 --- [lettuce-nioEventLoop-6-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [47.100.39.234:6378]: No route to host: no further information: /47.100.39.234:6378
+
+io.netty.channel.AbstractChannel$AnnotatedNoRouteToHostException: No route to host: no further information: /47.100.39.234:6378
+Caused by: java.net.NoRouteToHostException: No route to host: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_211]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:688) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_211]
+
+2020-01-12 23:14:01.592  INFO 1136 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.100.39.234:6378
+2020-01-12 23:14:01.603  WARN 1136 --- [lettuce-nioEventLoop-6-1] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [47.100.39.234:6378]: No route to host: no further information: /47.100.39.234:6378
+
+io.netty.channel.AbstractChannel$AnnotatedNoRouteToHostException: No route to host: no further information: /47.100.39.234:6378
+Caused by: java.net.NoRouteToHostException: No route to host: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_211]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:688) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_211]
+
+2020-01-12 23:14:06.909  INFO 1136 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.100.39.234:6378
+2020-01-12 23:14:06.911  WARN 1136 --- [lettuce-nioEventLoop-6-1] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [47.100.39.234:6378]: No route to host: no further information: /47.100.39.234:6378
+
+io.netty.channel.AbstractChannel$AnnotatedNoRouteToHostException: No route to host: no further information: /47.100.39.234:6378
+Caused by: java.net.NoRouteToHostException: No route to host: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_211]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_211]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:688) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_211]
+
+2020-01-12 23:14:23.659  INFO 1136 --- [lettuce-eventExecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was 47.100.39.234:6378
+2020-01-12 23:14:24.200  INFO 1136 --- [lettuce-nioEventLoop-6-3] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.100.39.234:6378
+2020-01-12 23:16:04.199  INFO 15060 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on E53WRL7JY0MW6H1 with PID 15060 (H:\working\Bos\target\classes started by Administrator in H:\working\Bos)
+2020-01-12 23:16:04.204 DEBUG 15060 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-12 23:16:04.204  INFO 15060 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-01-12 23:16:08.109  INFO 15060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-12 23:16:08.114  INFO 15060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-12 23:16:08.176  INFO 15060 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 0 repository interfaces.
+2020-01-12 23:16:08.782  INFO 15060 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-12 23:16:09.535  INFO 15060 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-12 23:16:09.555  INFO 15060 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-12 23:16:09.556  INFO 15060 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-12 23:16:09.560  INFO 15060 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.21] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-01-12 23:16:09.561  INFO 15060 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-01-12 23:16:09.562  INFO 15060 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-01-12 23:16:09.562  INFO 15060 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-01-12 23:16:09.568  INFO 15060 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-01-12 23:16:10.279  INFO 15060 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-12 23:16:10.279  INFO 15060 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4990 ms
+2020-01-12 23:16:10.370 DEBUG 15060 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-01-12 23:16:11.159  INFO 15060 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-01-12 23:16:28.374  INFO 15060 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-01-12 23:16:32.283  INFO 15060 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+loadBalanceAlgorithmType: round_robin
+masterDataSourceName: ds0
+name: dataSource
+slaveDataSourceNames:
+- ds1
+
+2020-01-12 23:16:32.284  INFO 15060 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+{}
+
+2020-01-12 23:16:33.769  INFO 15060 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-12 23:16:33.998  INFO 15060 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-12 23:16:34.663  INFO 15060 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-01-12 23:16:37.324  INFO 15060 --- [nioEventLoopGroup-4-3] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-01-12 23:16:37.325  INFO 15060 --- [nioEventLoopGroup-4-4] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-01-12 23:16:37.428  INFO 15060 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-12 23:16:37.450  INFO 15060 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-12 23:16:37.544  INFO 15060 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-12 23:16:37.604  INFO 15060 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-12 23:16:37.608  INFO 15060 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 35.95 seconds (JVM running for 39.525)
+2020-01-12 23:17:05.928  INFO 15060 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-12 23:17:05.931  INFO 15060 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-12 23:17:05.950  INFO 15060 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2020-01-12 23:17:06.576  INFO 15060 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-01-12 23:17:06.579  INFO 15060 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-01-12 23:17:07.288 DEBUG 15060 --- [http-nio-8080-exec-1] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 23:17:12.212 DEBUG 15060 --- [http-nio-8080-exec-2] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 23:18:15.278 DEBUG 15060 --- [http-nio-8080-exec-3] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 23:18:51.249 DEBUG 15060 --- [http-nio-8080-exec-4] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 23:19:30.190 DEBUG 15060 --- [http-nio-8080-exec-5] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 23:19:54.485 DEBUG 15060 --- [http-nio-8080-exec-6] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 23:20:17.200 DEBUG 15060 --- [http-nio-8080-exec-7] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 23:20:25.189 DEBUG 15060 --- [http-nio-8080-exec-8] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 23:21:14.197 DEBUG 15060 --- [http-nio-8080-exec-9] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 23:21:42.208 DEBUG 15060 --- [http-nio-8080-exec-10] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 23:22:16.188 DEBUG 15060 --- [http-nio-8080-exec-1] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 23:23:48.294 DEBUG 15060 --- [http-nio-8080-exec-2] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 23:24:14.187 DEBUG 15060 --- [http-nio-8080-exec-3] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 23:24:19.319 DEBUG 15060 --- [http-nio-8080-exec-4] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 23:24:23.266 DEBUG 15060 --- [http-nio-8080-exec-5] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 23:25:15.191 DEBUG 15060 --- [http-nio-8080-exec-6] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 23:25:34.188 DEBUG 15060 --- [http-nio-8080-exec-7] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 23:25:38.238 DEBUG 15060 --- [http-nio-8080-exec-8] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-12 23:25:42.187 DEBUG 15060 --- [http-nio-8080-exec-9] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
