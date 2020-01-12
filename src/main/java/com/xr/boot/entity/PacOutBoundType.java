@@ -4,12 +4,15 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class PacOutBoundTypeMapper
  ***********************************************************************/
 
+import org.springframework.stereotype.Component;
+
 import java.io.Serializable;
 import java.util.*;
 
 /** 包装材料出库类型表
  * 
  * @pdOid bcfc9295-ca95-4c7f-84bc-0c0791b02947 */
+@Component
 public class PacOutBoundType implements Serializable {
    private static final long serialVersionUID = 4327398225527680809L;
    /** @pdOid 5729ffbe-f67c-4b34-947c-519a352741d2 */
@@ -39,4 +42,11 @@ public class PacOutBoundType implements Serializable {
       outBoundType = newOutBoundType;
    }
 
+   public PacOutBoundType() {
+   }
+
+   public PacOutBoundType(long id, String outBoundType) {
+      this.id = id;
+      this.outBoundType = outBoundType;
+   }
 }

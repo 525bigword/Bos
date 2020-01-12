@@ -1,5 +1,6 @@
 package com.xr.boot.controller.system;
 
+import com.alibaba.fastjson.JSON;
 import com.xr.boot.entity.SyBigMenus;
 import com.xr.boot.entity.SyMenus;
 import com.xr.boot.ienum.Return;
@@ -34,7 +35,6 @@ public class MenusAndBigMenusController {
         }else {
             try {
                 sySyBigmenus = menusAndBigMenusService.findyBigmenus();
-
                 return sySyBigmenus;
             } catch (Exception e) {
                 log.info("获取数据库资源异常。。。。");
@@ -44,13 +44,13 @@ public class MenusAndBigMenusController {
     }
     @ApiOperation("查询所有栏目信息")
     @GetMapping("/loadmenues")
-    public String loadMenus(SyMenus syMenus){
+    public Object loadMenus(SyMenus syMenus){
 
-        String syMenusa=null;
+        Object syMenusa=null;
         if(redisUtil.hasKey("com.xr.boot.controller.loadMenues")){
-            syMenusa = redisUtil.get("com.xr.boot.controller.loadMenues").toString();
+            syMenusa = redisUtil.get("com.xr.boot.controller.loadMenues");
         }else{
-            syMenusa=menusAndBigMenusService.findAllSyMenus(syMenus).toString();
+            syMenusa=menusAndBigMenusService.findAllSyMenus(syMenus);
         }
         System.out.println(syMenusa);
         return syMenusa;
