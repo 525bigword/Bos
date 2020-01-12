@@ -24,7 +24,7 @@ public class BasBasicArchiveSqlProvider {
                     }
 
                     if (basBasicArchive.getOperationTime() != null && !basBasicArchive.getOperationTime().equals("")) {
-                        tj += " and ds.OperationTime=#{operationTime}";
+                        tj += " and bb.OperationTime=#{operationTime}";
                     }
                     WHERE(tj);
                 }catch (Exception e){

@@ -1,5 +1,7 @@
 package com.xr.boot.controller.basicPackage;
 
+import com.xr.boot.entity.BasBasicArchives;
+import com.xr.boot.entity.BasDeliveryStandard;
 import com.xr.boot.service.basicPackage.BasBasicArchiveService;
 import com.xr.boot.util.RedisUtil;
 import io.swagger.annotations.Api;
@@ -9,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/basicArchiveController")
@@ -35,5 +39,9 @@ public class BasicArchiveController {
                 return null;
             }
         }
+    }
+    @PostMapping("/findBasBasicArchivesByTerm")
+    public List<BasBasicArchives> findBasBasicArchivesByTerm(BasBasicArchives basBasicArchive){
+        return basBasicArchiveService.findBasBasicArchivesByTerm(basBasicArchive);
     }
 }

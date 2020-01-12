@@ -29,4 +29,9 @@ public class BasBasicArchiveServiceImpl implements BasBasicArchiveService {
         redisUtil.set("com.xr.boot.controller.BasicArchiveController.findBasicArchives", maps);
         return redisUtil.get("com.xr.boot.controller.BasicArchiveController.findBasicArchives");
     }
+
+    @Override
+    public List<BasBasicArchives> findBasBasicArchivesByTerm(BasBasicArchives basBasicArchive) {
+        return basBasicArchiveMapper.findBasicArchives(basBasicArchive);
+    }
 }
