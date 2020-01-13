@@ -44,4 +44,16 @@ public class BasicArchiveController {
     public List<BasBasicArchives> findBasBasicArchivesByTerm(BasBasicArchives basBasicArchive){
         return basBasicArchiveService.findBasBasicArchivesByTerm(basBasicArchive);
     }
+    @PostMapping("/upBasBasicArchivesById")
+    public int upBasBasicArchivesById(BasBasicArchives basBasicArchive){
+        basBasicArchiveService.upBasBasicArchivesById(basBasicArchive);
+        redisUtil.del("com.xr.boot.controller.BasicArchiveController.findBasicArchives");
+        return 0;
+    }
+    @PostMapping("/delBasBasicArchivesById")
+    public int delBasBasicArchivesById(BasBasicArchives basBasicArchive){
+        basBasicArchiveService.delBasBasicArchivesById(basBasicArchive);
+        redisUtil.del("com.xr.boot.controller.BasicArchiveController.findBasicArchives");
+        return 0;
+    }
 }
