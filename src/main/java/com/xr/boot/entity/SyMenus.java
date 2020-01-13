@@ -43,10 +43,19 @@ public class SyMenus implements Serializable {
     * 外键所属大模块
     */
    private Integer bigmenus;
+   private String bigmenusname;
    /**
     * 业务属性
     */
    private SyBigMenus syBigMenus;
+
+   public String getBigmenusname() {
+      return bigmenusname;
+   }
+
+   public void setBigmenusname(String bigmenusname) {
+      this.bigmenusname = bigmenusname;
+   }
 
    public Integer getBigmenus() {
       return bigmenus;
