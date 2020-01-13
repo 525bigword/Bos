@@ -27,4 +27,16 @@ public interface BasBasicArchiveMapper {
             @Result(column = "OperationTime", property = "operationTime")
     })
     List<BasBasicArchives> findBasicArchives(BasBasicArchives basBasicArchive);
+
+    @Select("select `name` from bas_basicarchives where `name`=#{name}")
+    @Results({
+            @Result(column = "Name", property = "name")
+    })
+    List<String> findBasBasicArchivesByName(String name);
+
+    @Update("update bas_basicarchives set Grade=#{grade},Remarks=#{remarks} where Id=#{id}")
+    void upBasBasicArchivesById(BasBasicArchives basBasicArchive);
+
+    @Delete("delete from bas_basicarchives where id=#{id}")
+    void delBasBasicArchivesById(BasBasicArchives basBasicArchive);
 }

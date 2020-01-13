@@ -17,4 +17,23 @@ public interface BasBasicArchiveService {
      * 按条件查询收派标准
      */
     List<BasBasicArchives> findBasBasicArchivesByTerm(BasBasicArchives BasBasicArchive);
+
+    /**
+     * 查询是否有重复
+     * @param name
+     * @return
+     */
+    List<String> findBasBasicArchivesByName(String name);
+
+    /**
+     * 按id修改
+     * @param basBasicArchive
+     */
+    void upBasBasicArchivesById(BasBasicArchives basBasicArchive);
+
+    /**
+     * 取消基础档案  (删除)
+     * @param basBasicArchive
+     */
+    void delBasBasicArchivesById(BasBasicArchives basBasicArchive);
 }

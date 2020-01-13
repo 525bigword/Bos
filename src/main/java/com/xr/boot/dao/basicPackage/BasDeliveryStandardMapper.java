@@ -34,7 +34,7 @@ public interface BasDeliveryStandardMapper {
     })
     List<String> findBasDeliveryStandardByName(String name);
 
-    @Update("UPDATE bas_deliverystandard set `name`=#{name},minweight=#{minWeight},maxweight=#{maxWeight} where BasicFileNumber=#{basicFileNumber}")
+    @Update("UPDATE bas_deliverystandard set minweight=#{minWeight},maxweight=#{maxWeight} where BasicFileNumber=#{basicFileNumber}")
     void upBasDeliveryStandardByBasicFileNumber(BasDeliveryStandard basDeliveryStandard);
 
     @Update("UPDATE bas_deliverystandard set `status`=#{status}  where BasicFileNumber=#{basicFileNumber}")

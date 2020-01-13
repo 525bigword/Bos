@@ -46,10 +46,6 @@ public class BasDeliveryStandardController {
     }
     @PostMapping("/upBasDeliveryStandardByBasicFileNumber")
     public int upBasDeliveryStandardByBasicFileNumber(BasDeliveryStandard basDeliveryStandard){
-        List<String> nameList = basDeliveryStandardService.findBasDeliveryStandardByName(basDeliveryStandard.getName());
-        if(nameList.size()!=0){
-            return 1;
-        }
         basDeliveryStandardService.upBasDeliveryStandardByBasicFileNumber(basDeliveryStandard);
         redisUtil.del("com.xr.boot.controller.BasDeliveryStandardController.findBasDeliveryStandardAll");
         return 0;
