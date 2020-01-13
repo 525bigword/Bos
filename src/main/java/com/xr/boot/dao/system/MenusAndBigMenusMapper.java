@@ -13,20 +13,25 @@ import java.util.List;
 
 @Repository
 public interface MenusAndBigMenusMapper {
-
+    //删除sy_menus
+    @DeleteProvider(type = MenusAndBigMenusSqlProvider.class,method ="delListSyMenus")
+    void delSyMenusById(@Param("ids")List<Integer> ids);
+    //修改sy_menus信息
+    @Update("update sy_menus set parentid=#{parentID},type=#{type},text=#{text},url=#{url},bigmenus=#{bigmenus} where" +
+            " id=#{id}")
+    void upSymenus(SyMenus syMenus);
 
     //查询所有栏目信息
     /*@Select("SELECT id,(select text from sy_menus where sy_menus.id=sym.parentid) parentid,type,text,sym.url,tip,bigmenus FROM  sy_menus as sym")*/
     @SelectProvider(type = MenusAndBigMenusSqlProvider.class,method ="findselect" )
     @Results({
             @Result(id = true,column = "id",property = "id"),
-            @Result(column = "parentname",property = "parentname"),
             @Result(column = "parentid",property = "parentID"),
             @Result(column = "type",property = "type"),
             @Result(column = "text",property = "text"),
             @Result(column = "url",property = "url"),
             @Result(column = "tip",property = "tip"),
-            @Result(column = "bigmenus",property = "bigmenus")
+            @Result(column = "bigmenusname",property = "bigmenusname")
     })
     List<SyMenus> findSyMenusAll(SyMenus syMenus);
 

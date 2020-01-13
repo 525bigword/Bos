@@ -32,12 +32,14 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
     private RedisUtil redisUtil;
 
     @Override
+    @Klock(leaseTime = Long.MAX_VALUE)
+    @Transactional
     public Object findAllSyMenus(SyMenus syMenus) {
         List<SyMenus> syMenusAll = menusAndBigMenusMapper.findSyMenusAll(syMenus);
         System.out.println(syMenusAll.size());
-        redisUtil.set("com.xr.boot.controller.loadMenues", syMenusAll);
+        redisUtil.set("com.xr.boot.controller.loadMenues"+syMenus.getParentID()+syMenus.getText(), syMenusAll);
 
-        return redisUtil.get("com.xr.boot.controller.loadMenues");
+        return redisUtil.get("com.xr.boot.controller.loadMenues"+syMenus.getParentID()+syMenus.getText());
     }
 
     @Klock(leaseTime=Long.MAX_VALUE)
@@ -87,9 +89,34 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
                 syMenus.setTip(++parentid);
                 menusAndBigMenusMapper.saveSyMenus(syMenus);
             }
-
+            redisUtil.likeDel("com.xr.boot.controller.loadMenues");
         }catch (Exception e){
             throw new SQLException("获取排序错误");
+        }
+    }
+
+    @Klock(leaseTime = Long.MAX_VALUE)
+    @Transactional
+    @Override
+    public void upSyMenus(SyMenus syMenus) throws Exception {
+        try{
+            menusAndBigMenusMapper.upSymenus(syMenus);
+            redisUtil.likeDel("com.xr.boot.controller.loadMenues");
+        }catch (Exception e){
+            throw new Exception("com.xr.boot.service.system.impl.MenusAndBigMenusServiceImpl.upSymenus");
+        }
+
+    }
+
+    @Klock
+    @Transactional
+    @Override
+    public void delSyMenus(List<Integer> id) throws Exception {
+        try{
+            menusAndBigMenusMapper.delSyMenusById(id);
+            redisUtil.likeDel("com.xr.boot.controller.loadMenues");
+        }catch (Exception e){
+            throw new Exception("com.xr.boot.service.system.impl.MenusAndBigMenusServiceImpl.delSyMenus");
         }
     }
 }
