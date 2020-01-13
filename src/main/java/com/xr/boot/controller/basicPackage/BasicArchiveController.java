@@ -4,6 +4,7 @@ import com.xr.boot.entity.BasBasicArchives;
 import com.xr.boot.entity.BasDeliveryStandard;
 import com.xr.boot.service.basicPackage.BasBasicArchiveService;
 import com.xr.boot.util.RedisUtil;
+import com.xr.boot.util.SnowflakeIdFactory;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -53,6 +54,19 @@ public class BasicArchiveController {
     @PostMapping("/delBasBasicArchivesById")
     public int delBasBasicArchivesById(BasBasicArchives basBasicArchive){
         basBasicArchiveService.delBasBasicArchivesById(basBasicArchive);
+        redisUtil.del("com.xr.boot.controller.BasicArchiveController.findBasicArchives");
+        return 0;
+    }
+    @PostMapping("/saveBasBasicArchives")
+    public int saveBasBasicArchives(BasBasicArchives basBasicArchive){
+        List<String> nameList = basBasicArchiveService.findBasBasicArchivesByName(basBasicArchive.getName());
+        if(nameList.size()!=0){
+            return 1;
+        }
+        SnowflakeIdFactory snowflakeIdFactory=new SnowflakeIdFactory(23);
+        String basicFileNumber = snowflakeIdFactory.generateKey().toString();
+        basBasicArchive.setBasicFileNumber(basicFileNumber);
+        basBasicArchiveService.saveBasBasicArchives(basBasicArchive);
         redisUtil.del("com.xr.boot.controller.BasicArchiveController.findBasicArchives");
         return 0;
     }

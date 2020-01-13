@@ -31,6 +31,6 @@ public class BasBasicArchiveSqlProvider {
                     WHERE(tj);
                 }
             }
-        }.toString()+" order by bb.OperationTime desc";
+        }.toString()+" order by bb.grade desc,bb.operationtime desc";
     }
 }

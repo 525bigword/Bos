@@ -46,9 +46,16 @@ public class BasBasicArchiveServiceImpl implements BasBasicArchiveService {
     public void upBasBasicArchivesById(BasBasicArchives basBasicArchive) {
         basBasicArchiveMapper.upBasBasicArchivesById(basBasicArchive);
     }
-
+    @Klock(leaseTime=Long.MAX_VALUE)
+    @Transactional
     @Override
     public void delBasBasicArchivesById(BasBasicArchives basBasicArchive) {
         basBasicArchiveMapper.delBasBasicArchivesById(basBasicArchive);
+    }
+    @Klock(leaseTime=Long.MAX_VALUE)
+    @Transactional
+    @Override
+    public void saveBasBasicArchives(BasBasicArchives basBasicArchive) {
+        basBasicArchiveMapper.saveBasBasicArchives(basBasicArchive);
     }
 }

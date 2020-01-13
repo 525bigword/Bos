@@ -36,4 +36,10 @@ public interface BasBasicArchiveService {
      * @param basBasicArchive
      */
     void delBasBasicArchivesById(BasBasicArchives basBasicArchive);
+
+    /**
+     * 基础档案添加
+     * @param basBasicArchive
+     */
+    void saveBasBasicArchives(BasBasicArchives basBasicArchive);
 }

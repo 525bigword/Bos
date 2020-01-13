@@ -39,4 +39,7 @@ public interface BasBasicArchiveMapper {
 
     @Delete("delete from bas_basicarchives where id=#{id}")
     void delBasBasicArchivesById(BasBasicArchives basBasicArchive);
+
+    @Insert("insert into bas_basicarchives(id,BasicFileNumber,`Name`,Grade,OperatorID,OperationUnitID,Remarks,OperationTime) VALUES(null,#{basicFileNumber},#{name},#{grade},#{empId},#{unitId},#{remarks},NOW())")
+    void saveBasBasicArchives(BasBasicArchives basBasicArchive);
 }
