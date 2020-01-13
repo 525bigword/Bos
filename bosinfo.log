@@ -2660,3 +2660,281 @@ slaveDataSourceNames:
 2020-01-13 21:10:48.874 DEBUG 14128 --- [http-nio-8080-exec-7] c.x.b.c.b.BasDeliveryStandardController  : 从redis中取出值
 2020-01-13 21:11:08.018 DEBUG 14128 --- [http-nio-8080-exec-6] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
 2020-01-13 21:11:32.796 DEBUG 14128 --- [http-nio-8080-exec-4] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-13 22:56:48.358  INFO 616 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on E53WRL7JY0MW6H1 with PID 616 (H:\working\Bos\target\classes started by Administrator in H:\working\Bos)
+2020-01-13 22:56:48.362 DEBUG 616 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-13 22:56:48.362  INFO 616 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-01-13 22:56:51.318  INFO 616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-13 22:56:51.324  INFO 616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-13 22:56:51.410  INFO 616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 0 repository interfaces.
+2020-01-13 22:56:52.353  INFO 616 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-13 22:56:53.028  INFO 616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-13 22:56:53.045  INFO 616 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-13 22:56:53.046  INFO 616 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-13 22:56:53.049  INFO 616 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.21] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-01-13 22:56:53.050  INFO 616 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-01-13 22:56:53.050  INFO 616 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-01-13 22:56:53.051  INFO 616 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-01-13 22:56:53.057  INFO 616 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-01-13 22:56:53.460  INFO 616 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-13 22:56:53.460  INFO 616 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4358 ms
+2020-01-13 22:56:53.527 DEBUG 616 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-01-13 22:56:54.176  INFO 616 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-01-13 22:56:57.015  INFO 616 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-01-13 22:57:00.002  INFO 616 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+loadBalanceAlgorithmType: round_robin
+masterDataSourceName: ds0
+name: dataSource
+slaveDataSourceNames:
+- ds1
+
+2020-01-13 22:57:00.004  INFO 616 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+{}
+
+2020-01-13 22:57:01.764  INFO 616 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-13 22:57:02.528  INFO 616 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-01-13 22:57:04.979  INFO 616 --- [nioEventLoopGroup-4-3] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-01-13 22:57:09.418 ERROR 616 --- [nioEventLoopGroup-4-3] o.redisson.client.handler.CommandsQueue  : Exception occured. Channel: [id: 0x1f7c2142, L:0.0.0.0/0.0.0.0:63434 ! R:/47.100.39.234:6378]
+
+java.lang.IllegalStateException: cannot be started once stopped
+	at io.netty.util.HashedWheelTimer.start(HashedWheelTimer.java:348) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.HashedWheelTimer.newTimeout(HashedWheelTimer.java:427) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at org.redisson.client.handler.ConnectionWatchdog.reconnect(ConnectionWatchdog.java:88) ~[redisson-3.2.0.jar:na]
+	at org.redisson.client.handler.ConnectionWatchdog.channelInactive(ConnectionWatchdog.java:75) ~[redisson-3.2.0.jar:na]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:257) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:243) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:236) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1417) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:257) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:243) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:913) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$8.run(AbstractChannel.java:819) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasksFrom(SingleThreadEventExecutor.java:466) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:415) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:824) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:528) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-01-13 22:57:09.418 ERROR 616 --- [nioEventLoopGroup-4-2] o.redisson.client.handler.CommandsQueue  : Exception occured. Channel: [id: 0x92bc8c6b, L:0.0.0.0/0.0.0.0:63435 ! R:/47.100.39.234:6378]
+
+java.lang.IllegalStateException: cannot be started once stopped
+	at io.netty.util.HashedWheelTimer.start(HashedWheelTimer.java:348) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.HashedWheelTimer.newTimeout(HashedWheelTimer.java:427) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at org.redisson.client.handler.ConnectionWatchdog.reconnect(ConnectionWatchdog.java:88) ~[redisson-3.2.0.jar:na]
+	at org.redisson.client.handler.ConnectionWatchdog.channelInactive(ConnectionWatchdog.java:75) ~[redisson-3.2.0.jar:na]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:257) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:243) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:236) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1417) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:257) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:243) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:913) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$8.run(AbstractChannel.java:819) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasksFrom(SingleThreadEventExecutor.java:466) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:415) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.confirmShutdown(SingleThreadEventExecutor.java:824) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:528) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2020-01-13 22:57:11.437  WARN 616 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.klock.core.KlockAspectHandler': Unsatisfied dependency expressed through field 'lockFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'lockFactory': Unsatisfied dependency expressed through field 'redissonClient'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/springframework/boot/autoconfigure/klock/KlockAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Can't init enough connections amount! Only 4 from 5 were initialized. Server: /47.100.39.234:6378
+2020-01-13 22:57:11.460  INFO 616 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2020-01-13 22:57:11.467  INFO 616 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-01-13 22:57:11.467  INFO 616 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
+2020-01-13 22:57:11.469  INFO 616 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2020-01-13 22:57:11.473  INFO 616 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-01-13 22:57:11.490  INFO 616 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-01-13 22:57:11.504 ERROR 616 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.klock.core.KlockAspectHandler': Unsatisfied dependency expressed through field 'lockFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'lockFactory': Unsatisfied dependency expressed through field 'redissonClient'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/springframework/boot/autoconfigure/klock/KlockAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Can't init enough connections amount! Only 4 from 5 were initialized. Server: /47.100.39.234:6378
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:397) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1429) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at com.xr.boot.BootApplication.main(BootApplication.java:21) [classes/:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'lockFactory': Unsatisfied dependency expressed through field 'redissonClient'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/springframework/boot/autoconfigure/klock/KlockAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Can't init enough connections amount! Only 4 from 5 were initialized. Server: /47.100.39.234:6378
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:397) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1429) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:636) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [org/springframework/boot/autoconfigure/klock/KlockAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Can't init enough connections amount! Only 4 from 5 were initialized. Server: /47.100.39.234:6378
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:645) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:475) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:636) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	... 32 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redisson' threw exception; nested exception is org.redisson.client.RedisConnectionException: Can't init enough connections amount! Only 4 from 5 were initialized. Server: /47.100.39.234:6378
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:640) ~[spring-beans-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	... 45 common frames omitted
+Caused by: org.redisson.client.RedisConnectionException: Can't init enough connections amount! Only 4 from 5 were initialized. Server: /47.100.39.234:6378
+	at org.redisson.connection.pool.ConnectionPool$2$1.operationComplete(ConnectionPool.java:128) ~[redisson-3.2.0.jar:na]
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:577) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:551) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:490) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:615) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:608) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at org.redisson.misc.RedissonPromise.tryFailure(RedissonPromise.java:98) ~[redisson-3.2.0.jar:na]
+	at org.redisson.connection.pool.ConnectionPool.promiseFailure(ConnectionPool.java:279) ~[redisson-3.2.0.jar:na]
+	at org.redisson.connection.pool.ConnectionPool.access$400(ConnectionPool.java:51) ~[redisson-3.2.0.jar:na]
+	at org.redisson.connection.pool.ConnectionPool$4.operationComplete(ConnectionPool.java:249) ~[redisson-3.2.0.jar:na]
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:577) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:570) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:549) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:490) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:615) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:608) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at org.redisson.misc.RedissonPromise.tryFailure(RedissonPromise.java:98) ~[redisson-3.2.0.jar:na]
+	at org.redisson.connection.FutureConnectionListener.operationComplete(FutureConnectionListener.java:71) ~[redisson-3.2.0.jar:na]
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:577) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:570) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:549) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:490) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:615) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:608) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at org.redisson.misc.RedissonPromise.tryFailure(RedissonPromise.java:98) ~[redisson-3.2.0.jar:na]
+	at org.redisson.client.RedisConnection$2.run(RedisConnection.java:190) ~[redisson-3.2.0.jar:na]
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:150) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:510) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:518) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_211]
+Caused by: org.redisson.client.RedisTimeoutException: Command execution timeout for /47.100.39.234:6378
+	at org.redisson.client.RedisConnection$2.run(RedisConnection.java:189) ~[redisson-3.2.0.jar:na]
+	... 9 common frames omitted
+
+2020-01-13 22:57:46.653  INFO 15796 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on E53WRL7JY0MW6H1 with PID 15796 (H:\working\Bos\target\classes started by Administrator in H:\working\Bos)
+2020-01-13 22:57:46.657 DEBUG 15796 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-13 22:57:46.658  INFO 15796 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-01-13 22:57:49.354  INFO 15796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-13 22:57:49.357  INFO 15796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-13 22:57:49.411  INFO 15796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29ms. Found 0 repository interfaces.
+2020-01-13 22:57:50.141  INFO 15796 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-13 22:57:51.189  INFO 15796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-01-13 22:57:51.205  INFO 15796 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-13 22:57:51.206  INFO 15796 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-01-13 22:57:51.208  INFO 15796 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.21] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-01-13 22:57:51.209  INFO 15796 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-01-13 22:57:51.210  INFO 15796 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-01-13 22:57:51.211  INFO 15796 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-01-13 22:57:51.216  INFO 15796 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-01-13 22:57:51.645  INFO 15796 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-13 22:57:51.646  INFO 15796 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4003 ms
+2020-01-13 22:57:51.750 DEBUG 15796 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-01-13 22:57:52.442  INFO 15796 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-01-13 22:57:55.022  INFO 15796 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-01-13 22:57:58.075  INFO 15796 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+loadBalanceAlgorithmType: round_robin
+masterDataSourceName: ds0
+name: dataSource
+slaveDataSourceNames:
+- ds1
+
+2020-01-13 22:57:58.079  INFO 15796 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+{}
+
+2020-01-13 22:58:00.414  INFO 15796 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-01-13 22:58:00.787  INFO 15796 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-13 22:58:01.547  INFO 15796 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-01-13 22:58:03.966  INFO 15796 --- [nioEventLoopGroup-4-3] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-01-13 22:58:03.973  INFO 15796 --- [nioEventLoopGroup-4-3] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-01-13 22:58:04.073  INFO 15796 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-13 22:58:04.096  INFO 15796 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-13 22:58:04.149  INFO 15796 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-13 22:58:04.209  INFO 15796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-01-13 22:58:04.216  INFO 15796 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 19.667 seconds (JVM running for 22.921)
+2020-01-13 22:58:16.640  INFO 15796 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-13 22:58:16.640  INFO 15796 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-13 22:58:16.669  INFO 15796 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 29 ms
+2020-01-13 22:58:30.678 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyEmpByEmpNoAndPwd       : ==>  Preparing: select id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled from sy_emp where empno=? and ? 
+2020-01-13 22:58:31.464 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyEmpByEmpNoAndPwd       : ==> Parameters: 007(String), 36E205C05D8FF28AAD410CF5CABD16ED(String)
+2020-01-13 22:58:31.881 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyRolesMenusByroleId     : ====>  Preparing: select id,roleid,menuid from sy_rolesmenus where roleid=? 
+2020-01-13 22:58:31.896 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyRolesMenusByroleId     : ====> Parameters: 1(Integer)
+2020-01-13 22:58:31.946 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.SyRoleMapper.findSyRolesById   : ======>  Preparing: select id,rolename,roledesc,disabled from sy_roles where id=? 
+2020-01-13 22:58:31.961 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.SyRoleMapper.findSyRolesById   : ======> Parameters: 1(Integer)
+2020-01-13 22:58:32.009 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.SyRoleMapper.findSyRolesById   : <======      Total: 1
+2020-01-13 22:58:32.012 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyMenusById              : ======>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where id=? 
+2020-01-13 22:58:32.036 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyMenusById              : ======> Parameters: 13(Integer)
+2020-01-13 22:58:32.865 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyMenusById              : <======      Total: 1
+2020-01-13 22:58:32.866 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyMenusById              : ======>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where id=? 
+2020-01-13 22:58:32.867 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyMenusById              : ======> Parameters: 14(Integer)
+2020-01-13 22:58:32.910 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyMenusById              : <======      Total: 1
+2020-01-13 22:58:32.911 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyMenusById              : ======>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where id=? 
+2020-01-13 22:58:32.912 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyMenusById              : ======> Parameters: 15(Integer)
+2020-01-13 22:58:32.969 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyMenusById              : <======      Total: 1
+2020-01-13 22:58:32.970 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyMenusById              : ======>  Preparing: select id,parentid,type,text,url,tip,bigmenus from sy_menus where id=? 
+2020-01-13 22:58:32.971 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyMenusById              : ======> Parameters: 16(Integer)
+2020-01-13 22:58:33.017 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyMenusById              : <======      Total: 1
+2020-01-13 22:58:33.018 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyRolesMenusByroleId     : <====      Total: 4
+2020-01-13 22:58:33.019 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyUnitAllById            : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-01-13 22:58:33.043 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyUnitAllById            : ====> Parameters: 2(Integer)
+2020-01-13 22:58:33.866 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyUnitAllById            : <====      Total: 1
+2020-01-13 22:58:33.867 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyEmpByEmpNoAndPwd       : <==      Total: 1
+2020-01-13 22:58:36.867  INFO 15796 --- [http-nio-8080-exec-4] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-01-13 22:58:36.871  INFO 15796 --- [http-nio-8080-exec-4] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-01-13 22:58:37.891 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.b.B.findBasicArchives            : ==>  Preparing: SELECT bb.ID,bb.BasicFileNumber,bb.`Name`,bb.Grade,bb.OperatorID,bb.OperationUnitID,bb.Remarks,bb.OperationTime FROM bas_basicarchives bb,sy_emp se,sy_units su WHERE (bb.OperatorID=se.ID and bb.OperationUnitID=su.ID and 1=1) order by bb.grade desc,bb.operationtime desc 
+2020-01-13 22:58:38.048 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.b.B.findBasicArchives            : ==> Parameters: 
+2020-01-13 22:58:38.871 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-01-13 22:58:38.911 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 1(Integer)
+2020-01-13 22:58:38.975 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-01-13 22:58:38.975 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-01-13 22:58:38.976 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-01-13 22:58:39.017 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-01-13 22:58:39.018 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-01-13 22:58:39.019 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 3(Integer)
+2020-01-13 22:58:39.865 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-01-13 22:58:39.870 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.b.B.findBasicArchives            : <==      Total: 13
+2020-01-13 22:59:13.859 DEBUG 15796 --- [http-nio-8080-exec-5] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-13 23:00:24.871 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-01-13 23:01:57.879 DEBUG 15796 --- [http-nio-8080-exec-7] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
