@@ -10,6 +10,7 @@ import java.io.Serializable;
  * 
  * @pdOid 9aa0630c-28a8-4bd2-826a-a6c256c1a71a */
 public class BasBasicArchives implements Serializable {
+   private static final long serialVersionUID =-6210759141288004477L;
    /** 编号	自增
     * 
     * @pdOid bfac2d38-6536-4d02-9c3f-e54b3b84bd62 */
@@ -38,7 +39,12 @@ public class BasBasicArchives implements Serializable {
    private String operationTime;
    
    public BasBasicArchives(){}
-
+   public long getempId(){
+      return syEmp.getId();
+   }
+   public  long getunitId(){
+      return syUnits.getId();
+   }
    public BasBasicArchives(long id, String basicFileNumber, String name, long grade, SyEmp syEmp, SyUnits syUnits, String remarks, String operationTime) {
       this.id = id;
       this.basicFileNumber = basicFileNumber;
