@@ -21,6 +21,7 @@ public interface MenusAndBigMenusMapper {
     @Results({
             @Result(id = true,column = "id",property = "id"),
             @Result(column = "parentname",property = "parentname"),
+            @Result(column = "parentid",property = "parentID"),
             @Result(column = "type",property = "type"),
             @Result(column = "text",property = "text"),
             @Result(column = "url",property = "url"),
@@ -39,7 +40,8 @@ public interface MenusAndBigMenusMapper {
             @Result(column="text",property="text"),
             @Result(column = "url",property = "url"),
             @Result(column="tip",property="tip"),
-            @Result(column="bigmenus",property="bigmenus")
+            @Result(column="bigmenus",property="bigmenus"),
+            @Result(column="bigmenusname",property="bigmenusname")
     })
     List<SyMenus> findSyMenusById(@Param("id") Integer id);
 
