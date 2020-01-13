@@ -25,6 +25,29 @@ public class MenusAndBigMenusController {
     @Autowired
     private MenusAndBigMenusService menusAndBigMenusService;
 
+    @ApiOperation("根据id删除栏目")
+    @PostMapping("/delmenus")
+    public StausEnum delMenus(@RequestParam("ids[]") List<Integer> ids){
+        try {
+            menusAndBigMenusService.delSyMenus(ids);
+            return StausEnum.SUCCESS;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return StausEnum.NO;
+        }
+    }
+
+    @ApiOperation("修改栏目")
+    @PostMapping("/upmenus")
+    public StausEnum upSyMenus(SyMenus syMenus){
+        try {
+            menusAndBigMenusService.upSyMenus(syMenus);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return StausEnum.NO;
+        }
+        return  StausEnum.SUCCESS;
+    }
     @ApiOperation("模块信息")
     @GetMapping("/loadoptions")
     public Object loadOptions(){
@@ -45,10 +68,10 @@ public class MenusAndBigMenusController {
     @ApiOperation("查询所有栏目信息")
     @GetMapping("/loadmenues")
     public Object loadMenus(SyMenus syMenus){
-
+        System.out.println(syMenus.getParentID()+syMenus.getText());
         Object syMenusa=null;
-        if(redisUtil.hasKey("com.xr.boot.controller.loadMenues")){
-            syMenusa = redisUtil.get("com.xr.boot.controller.loadMenues");
+        if(redisUtil.hasKey("com.xr.boot.controller.loadMenues"+syMenus.getParentID()+syMenus.getText())){
+            syMenusa = redisUtil.get("com.xr.boot.controller.loadMenues"+syMenus.getParentID()+syMenus.getText());
         }else{
             syMenusa=menusAndBigMenusService.findAllSyMenus(syMenus);
         }

@@ -1,5 +1,6 @@
 package com.xr.boot.util;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
@@ -16,6 +17,7 @@ import java.util.concurrent.TimeUnit;
  * 用于对redis各种数据类型的操作F
  */
 @Component
+@Slf4j
 public class RedisUtil {
     @Resource
     private RedisTemplate<String, Object> redisTemplate;
@@ -70,7 +72,6 @@ public class RedisUtil {
      *
      * @param key 可以传一个值 或多个
      */
-    @SuppressWarnings("unchecked")
     public void del(String... key) {
         if (key != null && key.length > 0) {
             if (key.length == 1) {
@@ -79,6 +80,16 @@ public class RedisUtil {
                 redisTemplate.delete(CollectionUtils.arrayToList(key));
             }
         }
+    }
+    /**
+     * 模糊删除缓存
+     *
+     * @param key 以key开头的将被删除
+     */
+    public void likeDel(String key) {
+        Set<String> keys = redisTemplate.keys(key + "*");
+        redisTemplate.delete(keys);
+        log.info("{}, redis中用户收听历史被清空");
     }
     // ============================String=============================
 

@@ -19,4 +19,9 @@ public interface MenusAndBigMenusService {
     void saveSyBigMenus(SyBigMenus syBigMenus) throws Exception;
     //向sy_menus表新增
     void saveSyMenus(SyMenus syMenus) throws Exception;
+    //修改栏目信息
+    void upSyMenus(SyMenus syMenus) throws Exception;
+    //删除栏目
+    void delSyMenus(List<Integer> id) throws Exception;
+
 }

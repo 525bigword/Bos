@@ -22,7 +22,6 @@ public class SyMenus implements Serializable {
     * 
     * @pdOid 98189cb0-0713-44a8-b99b-a2f88cbd308c */
    private Integer parentID;
-   private String parentname;
    /** 栏目类型
     * 
     * @pdOid 0a543198-04fa-4c72-b5a4-d97d816b812f */
@@ -49,13 +48,7 @@ public class SyMenus implements Serializable {
     */
    private SyBigMenus syBigMenus;
 
-   public String getBigmenusname() {
-      return bigmenusname;
-   }
 
-   public void setBigmenusname(String bigmenusname) {
-      this.bigmenusname = bigmenusname;
-   }
 
    public Integer getBigmenus() {
       return bigmenus;
@@ -98,7 +91,15 @@ public class SyMenus implements Serializable {
 
       }
    }
-   
+
+   public String getBigmenusname() {
+      return bigmenusname;
+   }
+
+   public void setBigmenusname(String bigmenusname) {
+      this.bigmenusname = bigmenusname;
+   }
+
    /** @pdOid 071868db-a403-49c3-8c90-d3ba44a3dc69 */
    public String getType() {
       return type;
@@ -143,15 +144,8 @@ public class SyMenus implements Serializable {
       tip = newTip;
    }
 
-    public String getParentname() {
-        return parentname;
-    }
 
-    public void setParentname(String parentname) {
-        this.parentname = parentname;
-    }
-
-    @Override
+   @Override
    public String toString() {
       return "SyMenus{" +
               "id=" + id +
@@ -161,6 +155,7 @@ public class SyMenus implements Serializable {
               ", url='" + url + '\'' +
               ", tip=" + tip +
               ", bigmenus=" + bigmenus +
+              ", bigmenusname='" + bigmenusname + '\'' +
               ", syBigMenus=" + syBigMenus +
               '}';
    }
