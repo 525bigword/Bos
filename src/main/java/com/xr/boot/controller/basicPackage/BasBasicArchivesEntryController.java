@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("basBasicArchivesEntry")
+@RequestMapping("basBasicArchivesEntryController")
 @Slf4j
 @Api(tags = "基础档案条目")
 public class BasBasicArchivesEntryController {
@@ -24,17 +24,17 @@ public class BasBasicArchivesEntryController {
     @PostMapping("/findBasBasicArchivesEntryByParentID")
     public Object findBasBasicArchivesEntryByParentID(int parentID) {
         Object basBasBasicArchivesEntry = null;
-        if(redisUtil.hasKey("com.xr.boot.controller.basicPackage.BasBasicArchivesEntryController.findBasBasicArchivesEntryByParentID")){
+       /* if(redisUtil.hasKey("com.xr.boot.controller.basicPackage.BasBasicArchivesEntryController.findBasBasicArchivesEntryByParentID")){
             log.debug("从redis中取出值");
             return redisUtil.get("com.xr.boot.controller.basicPackage.BasBasicArchivesEntryController.findBasBasicArchivesEntryByParentID");
         }else {
-            try {
+            try {*/
                 basBasBasicArchivesEntry = basBasicArchivesEntryService.findBasBasicArchivesEntryByParentID(parentID);
                 return basBasBasicArchivesEntry;
-            } catch (Exception e) {
+           /* } catch (Exception e) {
                 log.info("获取数据库资源异常。。。。");
                 return null;
-            }
-        }
+            }*/
+      /*  }*/
     }
 }
