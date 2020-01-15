@@ -1,5 +1,6 @@
 package com.xr.boot.util;
 
+import com.xr.boot.entity.SyBigMenus;
 import com.xr.boot.entity.SyEmp;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
@@ -8,6 +9,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
+import java.util.Map;
 
 @Component
 public class JwtUtil {
@@ -47,23 +49,20 @@ public class JwtUtil {
                 .setExpiration(new Date(new Date().getTime()+60000));//失效时间(毫秒为单位)这里是一分钟超过时间抛出io.jsonwebtoken
         return builder.compact();
     }
+
     /**
      * 生成存放了登录信息的Token
-     * @param id
-     * @param subject   用户名
-     * @param roles     角色
-     * @param syEmp    客户实体
+     * @param map
      * @return
      */
-    public static String createJwt(String id, String subject, String roles, SyEmp syEmp){
+    public static String createJwt(Map map){
         long nowMillis=System.currentTimeMillis();
         Date now=new Date(nowMillis);
-        JwtBuilder builder = Jwts.builder().setId(id)//用户ID
-                .setSubject(subject)//用户名
+        JwtBuilder builder = Jwts.builder()
                 .setIssuedAt(now)//生成时间
-                .claim("syemp",syEmp)
+                .claim("map",map)
                 .signWith(SignatureAlgorithm.HS256, key)//前面算法，这里采用HS256加密算法盐值是java
-                .setExpiration(new Date(new Date().getTime()+60000*30));//失效时间(毫秒为单位)这里是一分钟超过时间抛出io.jsonwebtoken
+                .setExpiration(new Date(new Date().getTime()+60000*30000));//失效时间(毫秒为单位)这里是一分钟超过时间抛出io.jsonwebtoken
         return builder.compact();
     }
 

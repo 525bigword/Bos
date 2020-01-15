@@ -1,8 +1,11 @@
 package com.xr.boot.controller.system;
 
+import com.xr.boot.dao.system.MenusAndBigMenusMapper;
+import com.xr.boot.entity.SyBigMenus;
 import com.xr.boot.entity.SyEmp;
 import com.xr.boot.ienum.Return;
 import com.xr.boot.ienum.StausEnum;
+import com.xr.boot.service.system.MenusAndBigMenusService;
 import com.xr.boot.service.system.SyEmpService;
 import com.xr.boot.util.AES;
 import com.xr.boot.util.JwtUtil;
@@ -19,7 +22,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.ConcurrentMap;
 
 @RestController
 @Api(tags = "权限用户相关接口")
@@ -29,6 +35,8 @@ public class SyEmpController {
 
     @Autowired
     private SyEmpService syEmpService;
+    @Autowired
+    private MenusAndBigMenusService menusAndBigMenusService;
 
     @ApiOperation("从token中获取用户信息")
     @GetMapping("/parsetoken")
@@ -36,8 +44,8 @@ public class SyEmpController {
         String authorization = request.getHeader("Authorization");
         String token=authorization.substring(3);
         Claims claims = JwtUtil.parseJWT(token);
-        Object syemp = claims.get("syemp");
-        return new Return(StausEnum.SUCCESS,syemp);
+        Object map = claims.get("map");
+        return new Return(StausEnum.SUCCESS,map);
     }
 
     @ApiOperation("修改密码")
@@ -59,7 +67,7 @@ public class SyEmpController {
     @PostMapping("/login")
     @ApiOperation("登录")
     public Return login(SyEmp syEmp) {
-        SyEmp login = null;
+        Map<String,Object> login = null;
         try {
             login = syEmpService.login(syEmp);
             if(login==null){
@@ -69,9 +77,7 @@ public class SyEmpController {
             e.printStackTrace();
             return new Return(StausEnum.NO,null);
         }
-        login.getSyRolesMenus();
-        String jwt = JwtUtil.createJwt(login.getEmpNo(), login.getEmpName(),
-                login.getSyRolesMenus().get(0).getRoleNames().getRoleName(),login);
+        String jwt = JwtUtil.createJwt(login);
         return new Return(StausEnum.SUCCESS,jwt);
     }
 

@@ -37,18 +37,19 @@ public interface MenusAndBigMenusMapper {
 
 
     //根据Id查sy_menus
-    @Select("select id,parentid,type,text,url,tip,bigmenus from sy_menus where id=#{id}")
+    @Select("select id,parentid,type,text,url,tip,bigmenus,icon from sy_menus where id=#{id}")
     @Results({
             @Result(id=true,column="id",property="id"),
             @Result(column="parentID",property="parentID"),
             @Result(column="type",property="type"),
+            @Result(column="icon",property="icon"),
             @Result(column="text",property="text"),
             @Result(column = "url",property = "url"),
             @Result(column="tip",property="tip"),
             @Result(column="bigmenus",property="bigmenus"),
             @Result(column="bigmenusname",property="bigmenusname")
     })
-    List<SyMenus> findSyMenusById(@Param("id") Integer id);
+    List<SyMenus> findSyMenusById(@Param("id")Integer id);
 
     //根据ParentId查sy_menus
     @Select("select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=#{parentid}")
@@ -58,6 +59,7 @@ public interface MenusAndBigMenusMapper {
             @Result(column="type",property="type"),
             @Result(column="text",property="text"),
             @Result(column = "url",property = "url"),
+            @Result(column = "icon",property = "icon"),
             @Result(column="tip",property="tip"),
             @Result(column="bigmenus",property="bigmenus")
     })
@@ -68,6 +70,7 @@ public interface MenusAndBigMenusMapper {
             @Result(id = true,column = "id",property = "id"),
             @Result(column = "bigmenus",property = "bigmenus"),
             @Result(column = "url",property = "url"),
+            @Result(column = "icon",property = "icon"),
             @Result(column = "id",property = "syMenus",
                 many = @Many(
                     select = "com.xr.boot.dao.MenusAndBigMenusMapper.findSyMenusByParentId",
@@ -79,13 +82,13 @@ public interface MenusAndBigMenusMapper {
 
 
     //查询所有sy_bigmenus
-    @Select("select id,bigmenus,url from sy_bigmenus")
+    @Select("select id,bigmenus,url,icon from sy_bigmenus")
     List<SyBigMenus> findSyBigMenusAll();
     //新增sy_bigmenus
     @Insert("insert into sy_bigmenus values(null,#{bigmenus},#{url})")
     void saveSyBigMenus(SyBigMenus syBigMenus);
     //新增sy_menus
-    @Insert("insert into sy_menus values(null,#{parentID},#{type},#{text},#{url},#{tip},#{bigmenus})")
+    @Insert("insert into sy_menus values(null,#{parentID},#{type},#{text},#{url},#{tip},#{bigmenus},#{icon})")
     void saveSyMenus(SyMenus syMenus);
     //根据partid查询sy_menus最后tip
     @Select("select max(tip) from sy_menus where parentid=#{parentid}")

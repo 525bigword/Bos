@@ -80,6 +80,7 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
     @Override
     public void saveSyMenus(SyMenus syMenus) throws Exception {
         try {
+            syMenus.setIcon("&#xe620;");
             int count = menusAndBigMenusMapper.findSyMenusTochildcount(syMenus.getParentID());
             if(count==0){
                 syMenus.setTip(0);

@@ -11,16 +11,10 @@ import java.util.List;
 @Repository
 public interface SyEmpMapper {
     //根据roleid查询sy_rolesmenus
-    @Select("select id,roleid,menuid from sy_rolesmenus where roleid=#{roleid}")
+    @Select("select id,menuid from sy_rolesmenus where roleid=#{roleid}")
     @Results({
             @Result(id = true,column = "id",property = "id"),
             @Result(property = "roleid",column = "roleid"),
-            @Result(column = "roleid",property = "roleNames",
-                    one = @One(
-                            select = "com.xr.boot.dao.system.SyRoleMapper.findSyRolesById",
-                            fetchType = FetchType.DEFAULT
-                    )
-            ),
             @Result(column = "menuid",property = "menuNames",
                     many = @Many(
                             select = "com.xr.boot.dao.system.MenusAndBigMenusMapper.findSyMenusById",
@@ -38,12 +32,12 @@ public interface SyEmpMapper {
             @Result(column = "empno",property = "empNo"),
             @Result(column = "pwd",property ="pwd" ),
             @Result(column = "querypwd",property = "queryPwd"),
-            /*@Result(column = "empunit",property = "empunit"),*/
             @Result(column = "remark",property = "remark"),
             @Result(column = "disabled",property = "disabled"),
-            @Result(column = "roleid",property = "syRolesMenus",
-                    many = @Many(
-                            select="findSyRolesMenusByroleId",
+            @Result(column = "roleid",property = "roleid"),
+            @Result(column = "roleid",property = "syRoles",
+                    one = @One(
+                            select="com.xr.boot.dao.system.SyRoleMapper.findSyRolesById",
                             fetchType = FetchType.DEFAULT
                     )
             ),
@@ -55,9 +49,6 @@ public interface SyEmpMapper {
             )
     })
     SyEmp findSyEmpByEmpNoAndPwd(SyEmp syEmp);
-    //shiro使用的
-    @Select("select id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled from sy_emp where empno=#{empNo}")
-    SyEmp login(@Param("empNo") String empNo);
     /**
      * 未判断状态
      * @param

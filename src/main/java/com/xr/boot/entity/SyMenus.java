@@ -38,6 +38,7 @@ public class SyMenus implements Serializable {
     * 
     * @pdOid 300cc816-f66b-4ebd-aaf5-fdec490c14ce */
    private Integer tip;
+   private String icon;
    /**
     * 外键所属大模块
     */
@@ -56,6 +57,14 @@ public class SyMenus implements Serializable {
 
    public void setBigmenus(Integer bigmenus) {
       this.bigmenus = bigmenus;
+   }
+
+   public String getIcon() {
+      return icon;
+   }
+
+   public void setIcon(String icon) {
+      this.icon = icon;
    }
 
    public SyBigMenus getSyBigMenus() {

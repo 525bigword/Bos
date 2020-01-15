@@ -25,6 +25,8 @@ public class MenusAndBigMenusController {
     @Autowired
     private MenusAndBigMenusService menusAndBigMenusService;
 
+
+
     @ApiOperation("根据id删除栏目")
     @PostMapping("/delmenus")
     public StausEnum delMenus(@RequestParam("ids[]") List<Integer> ids){
@@ -65,7 +67,7 @@ public class MenusAndBigMenusController {
             }
         }
     }
-    @ApiOperation("查询所有栏目信息")
+    @ApiOperation("查询栏目信息")
     @GetMapping("/loadmenues")
     public Object loadMenus(SyMenus syMenus){
         System.out.println(syMenus.getParentID()+syMenus.getText());

@@ -31,6 +31,7 @@ public class SyRolesMenus implements Serializable {
       this.roleid = roleid;
    }
 
+
    /** @pdOid c31537a1-63a9-4fc8-942a-e7b41f58aa14 */
    public long getId() {
       return id;

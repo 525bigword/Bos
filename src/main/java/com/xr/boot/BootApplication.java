@@ -17,7 +17,7 @@ public class BootApplication {
 
     public static void main(String[] args) {
         JwtUtil.setKey("java");
-        JwtUtil.setTtl(60000*30);
+        JwtUtil.setTtl(60000*3000);
         SpringApplication.run(BootApplication.class, args);
     }
 

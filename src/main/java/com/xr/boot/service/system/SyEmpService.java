@@ -2,10 +2,12 @@ package com.xr.boot.service.system;
 
 import com.xr.boot.entity.SyEmp;
 
-public interface SyEmpService {
-    SyEmp login(SyEmp syEmp) throws Exception;
+import java.util.Map;
 
-    SyEmp getUserByName(String username);
+public interface SyEmpService {
+    Map<String,Object> login(SyEmp syEmp) throws Exception;
+
+
     //修改密码
     void upSyEmpById(SyEmp syEmp);
 

@@ -12,8 +12,17 @@ public class SyBigMenus implements Serializable {
     private Integer id;
     private String bigmenus;
     private String url;
+    private String icon;
     //业务属性
     private SyMenus syMenus;
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
 
     public SyMenus getSyMenus() {
         return syMenus;
