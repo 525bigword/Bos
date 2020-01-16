@@ -4,6 +4,8 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class SyUnits
  ***********************************************************************/
 
+import org.springframework.stereotype.Component;
+
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
@@ -13,6 +15,7 @@ import java.util.Iterator;
 /** 员工单位表 用户单位表
  *
  * @pdOid d2aebf06-aa88-4cdc-b0ca-53e9044fcb04 */
+@Component
 public class SyUnits implements Serializable {
    private static final long serialVersionUID = -4695670349422002294L;
    /** 编号	自增

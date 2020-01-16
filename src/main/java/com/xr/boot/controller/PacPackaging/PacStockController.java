@@ -1,8 +1,12 @@
 package com.xr.boot.controller.PacPackaging;
 
+import com.xr.boot.entity.PacGetBoundType;
 import com.xr.boot.entity.PacStock;
+import com.xr.boot.entity.SyUnits;
 import com.xr.boot.service.PacPackaging.PacStockService;
+import com.xr.boot.util.SnowflakeIdFactory;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,8 +21,41 @@ import java.util.List;
 public class PacStockController {
     @Autowired
     private PacStockService pacStockService;
+    @Autowired
+    private SyUnits syUnits;
+    @ApiOperation(value = "查看入库管理记录",notes="暂时无需参数", httpMethod = "POST")
     @RequestMapping("/queryAllpacStock")
   public List<PacStock> queryAllpacStock(){
       return pacStockService.queryAllpacStock();
   }
+    @ApiOperation(value = "入库管理记录新增",notes="需参数", httpMethod = "POST")
+  @RequestMapping("/addpacStock")
+    public void addpacStock(PacStock pacStock,String reservoirType){
+        System.out.println(reservoirType);
+        syUnits.setId(2);
+        pacStock.setSyUnits(syUnits);
+        pacStock.setPacGetBoundType(new PacGetBoundType(Integer.parseInt(reservoirType),""));
+        pacStock.setStats(0);
+        Long a=new SnowflakeIdFactory().generateKey();
+        pacStock.setWarehouseNo(a.toString());
+        pacStockService.addpacStock(pacStock);
+  }
+    @ApiOperation(value = "根据id查入库记录",notes="需参数", httpMethod = "POST")
+    @RequestMapping("/queryOnebyid")
+   public PacStock queryOnebyid(int id){
+        System.out.println("进根据id查询");
+        PacStock pacStock = pacStockService.queryOnebyid(id);
+        System.out.println(pacStock);
+
+        return pacStock;
+    }
+    @ApiOperation(value = "入库管理记录修改",notes="需参数", httpMethod = "POST")
+    @RequestMapping("/updatePacStock")
+    public void updatePacStock(PacStock pacStock,String reservoirType){
+        System.out.println(reservoirType);
+        syUnits.setId(2);
+        pacStock.setSyUnits(syUnits);
+        pacStock.setPacGetBoundType(new PacGetBoundType(Integer.parseInt(reservoirType),""));
+        pacStockService.updatePacStock(pacStock);
+    }
 }

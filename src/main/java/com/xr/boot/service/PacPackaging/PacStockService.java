@@ -17,4 +17,16 @@ public interface PacStockService {
      * @return
      */
     PacStock queryOnebyid(int id);
+
+    /**
+     * 入库管理新增记录
+     * @param pacStock
+     */
+    void addpacStock(PacStock pacStock);
+
+    /**
+     * 入库记录修改
+     * @param pacStock
+     */
+    void updatePacStock(PacStock pacStock);
 }
