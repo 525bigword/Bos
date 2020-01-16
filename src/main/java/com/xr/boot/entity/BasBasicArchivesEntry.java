@@ -42,7 +42,12 @@ public class BasBasicArchivesEntry implements Serializable {
     * @pdOid 78b2e29d-4081-4b13-a3cd-8684b40e2b96 */
    private String operationTime;
    public BasBasicArchivesEntry(){}
-
+   public long getempId(){
+      return syEmp.getId();
+   }
+   public  long getunitId(){
+      return syUnits.getId();
+   }
    public BasBasicArchivesEntry(long id, String name, int parentID, String mnemonicCode, long available, String remarks, SyEmp syEmp, SyUnits syUnits, String operationTime) {
       this.id = id;
       this.name = name;
