@@ -5,6 +5,9 @@ import com.xr.boot.entity.SyEmp;
 import java.util.Map;
 
 public interface SyEmpService {
+    //动态查询员工
+    Object findSyEmpByWhere(SyEmp syEmp);
+
     Map<String,Object> login(SyEmp syEmp) throws Exception;
 
 
