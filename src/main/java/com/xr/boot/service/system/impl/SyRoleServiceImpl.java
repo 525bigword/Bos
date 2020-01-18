@@ -31,6 +31,7 @@ public class SyRoleServiceImpl implements SyRoleService {
             throw new SQLException("com.xr.boot.service.service.impl.SyRoleServiceImpl查询数据库错误");
         }
     }
+    @Klock(leaseTime=Long.MAX_VALUE)
     @Transactional
     @Override
     public Object findSyRoleByWhere(SyRoles syRoles) {

@@ -5,6 +5,7 @@ import com.xr.boot.ienum.StausEnum;
 import com.xr.boot.service.PacPackaging.PacOutBoundTypeService;
 import com.xr.boot.util.RedisUtil;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,6 +25,7 @@ public class PacOutBoundTypeController {
     @Autowired
     private PacOutBoundTypeService pacOutBoundTypeService;
     @RequestMapping("/pacpackaging/queryAllpactype")
+    @ApiOperation(value = "查看包装材料类型的接口",notes="暂时无需参数", httpMethod = "POST")
     public Return queryAllpactype() {
         Map<String, List<Object>> pacOut = null;
         if (redisUtil.hasKey("com.xr.boot.controller.PacPackagingController.queryAllpactype")) {

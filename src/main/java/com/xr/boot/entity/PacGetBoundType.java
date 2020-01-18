@@ -35,6 +35,11 @@ public class PacGetBoundType implements Serializable {
     public PacGetBoundType() {
     }
 
+    public PacGetBoundType(Integer pacGetid, String getBoundType) {
+        this.pacGetid = pacGetid;
+        this.getBoundType = getBoundType;
+    }
+
     @Override
     public String toString() {
         return "PacGetBoundType{" +

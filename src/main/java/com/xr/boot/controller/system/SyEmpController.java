@@ -9,6 +9,7 @@ import com.xr.boot.service.system.MenusAndBigMenusService;
 import com.xr.boot.service.system.SyEmpService;
 import com.xr.boot.util.AES;
 import com.xr.boot.util.JwtUtil;
+import com.xr.boot.util.RedisUtil;
 import io.jsonwebtoken.Claims;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -32,11 +33,26 @@ import java.util.concurrent.ConcurrentMap;
 @RequestMapping("jurisdiction")
 @Slf4j
 public class SyEmpController {
-
+    @Autowired
+    private RedisUtil redisUtil;
     @Autowired
     private SyEmpService syEmpService;
     @Autowired
     private MenusAndBigMenusService menusAndBigMenusService;
+
+    @ApiOperation("动态查询SyEmp")
+    @GetMapping("/getempall")
+    public Object getEmpAll(SyEmp syEmp){
+        System.out.println(syEmp);
+        Object o=null;
+        String key="SyEmpController.getEmpAll"+syEmp.getEmpName()+syEmp.getDisabled();
+        if(redisUtil.hasKey(key)){
+            o=redisUtil.get(key);
+        }else{
+            o=syEmpService.findSyEmpByWhere(syEmp);
+        }
+        return o;
+    }
 
     @ApiOperation("从token中获取用户信息")
     @GetMapping("/parsetoken")

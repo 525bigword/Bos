@@ -20,4 +20,15 @@ public class PacStockServiceImpl implements PacStockService {
     public PacStock queryOnebyid(int id) {
         return pacStockMapper.queryOnebyid(id);
     }
+
+    @Override
+    public void addpacStock(PacStock pacStock) {
+        System.out.println(pacStock);
+        pacStockMapper.addpacStock(pacStock);
+    }
+
+    @Override
+    public void updatePacStock(PacStock pacStock) {
+        pacStockMapper.updatePacStock(pacStock);
+    }
 }

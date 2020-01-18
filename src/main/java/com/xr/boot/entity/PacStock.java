@@ -4,6 +4,7 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class PacStockMapper
  ***********************************************************************/
 
+import io.swagger.models.auth.In;
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
@@ -64,7 +65,7 @@ public class PacStock implements Serializable {
    /** 开单人工号	登录人工号
     * 
     * @pdOid dd11e04a-b41a-4da0-b80b-5c233a2de100 */
-   private int drawerNo;
+   private String drawerNo;
    /** 开单人姓名	登录人姓名
     * 
     * @pdOid 3a6c46f8-4570-44f3-a9b9-1e81999864b8 */
@@ -124,21 +125,22 @@ public class PacStock implements Serializable {
    }
    
    /** @pdOid 74025c7b-084b-446a-9a8c-774bc92df4fd */
-   public String getSubordinateUnit() {
-      return getSyUnits().getName();
+   public long getSubordinateUnit() {
+       if(getSyUnits()==null){}
+      return getSyUnits().getId();
    }
    
    /** @param newSubordinateUnit
     * @pdOid fbe9c161-6d4e-43dc-9204-fbe2314f75e1 */
 
    /** @pdOid f0d622aa-ecd4-41e0-8dce-d9e7832cdd34 */
-   public int getDrawerNo() {
+   public String getDrawerNo() {
       return drawerNo;
    }
    
    /** @param newDrawerNo
     * @pdOid ec735c5f-0982-483d-b0b5-0266c3f1ff25 */
-   public void setDrawerNo(int newDrawerNo) {
+   public void setDrawerNo(String newDrawerNo) {
       drawerNo = newDrawerNo;
    }
    
@@ -175,4 +177,17 @@ public class PacStock implements Serializable {
       stats = newStats;
    }
 
+    @Override
+    public String toString() {
+        return "PacStock{" +
+                "id=" + id +
+                ", warehouseNo='" + warehouseNo + '\'' +
+                ", transport='" + transport + '\'' +
+                ", drawerNo=" + drawerNo +
+                ", drawerName='" + drawerName + '\'' +
+                ", drawerTime=" + drawerTime +
+                ", stats=" + stats +
+                ", remark='" + remark + '\'' +
+                '}';
+    }
 }

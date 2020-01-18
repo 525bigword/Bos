@@ -53,13 +53,22 @@ public class SyEmp implements Serializable {
    private List<SyRolesMenus> syRolesMenus;
    private SyUnits syUnits;
    private SyRoles syRoles;
-
+   private String rolename;
    public SyRoles getSyRoles() {
       return syRoles;
    }
 
    public void setSyRoles(SyRoles syRoles) {
       this.syRoles = syRoles;
+   }
+
+
+   public void setRolename(String rolename) {
+      this.rolename = rolename;
+   }
+
+   public String getRolename() {
+      return rolename;
    }
 
    public SyUnits getSyUnits() {

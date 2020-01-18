@@ -7,6 +7,7 @@ import com.xr.boot.entity.SyEmp;
 import com.xr.boot.service.system.MenusAndBigMenusService;
 import com.xr.boot.service.system.SyEmpService;
 import com.xr.boot.util.AES;
+import com.xr.boot.util.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +20,8 @@ import static javafx.scene.input.KeyCode.L;
 
 @Service
 public class SyEmpServiceImpl implements SyEmpService {
-
+    @Autowired
+    private RedisUtil redisUtil;
     @Autowired
     private SyEmpMapper syEmpMapper;
     @Autowired
@@ -67,5 +69,13 @@ public class SyEmpServiceImpl implements SyEmpService {
     public SyEmp findSyEmpById(int operatorid) {
 
         return null;
+    }
+
+    @Override
+    public Object findSyEmpByWhere(SyEmp syEmp) {
+        String key="SyEmpController.getEmpAll"+syEmp.getEmpName()+syEmp.getDisabled();
+        List<SyEmp> syEmpByWhere = syEmpMapper.findSyEmpByWhere(syEmp);
+        redisUtil.set(key,syEmpByWhere);
+        return redisUtil.get(key);
     }
 }

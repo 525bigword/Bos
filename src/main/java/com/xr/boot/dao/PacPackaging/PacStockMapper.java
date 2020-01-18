@@ -1,10 +1,7 @@
 package com.xr.boot.dao.PacPackaging;
 
 import com.xr.boot.entity.PacStock;
-import org.apache.ibatis.annotations.One;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.mapping.FetchType;
 import org.springframework.stereotype.Repository;
 
@@ -49,5 +46,9 @@ public interface PacStockMapper {
             @Result(property = "remark", column = "remark")
     })
     PacStock queryOnebyid(int id);
+    @Insert("insert into pac_stock(WarehouseNo,ReservoirType,Transport,SubordinateUnit,DrawerNo,DrawerName,DrawerTime,Stats,Remark) values(#{warehouseNo},#{reservoirType},#{transport},#{subordinateUnit},#{drawerNo},#{drawerName},#{drawerTime},#{stats},#{remark});")
+    void addpacStock(PacStock pacStock);
+    @Update("update pac_stock set reservoirType=#{reservoirType},Transport=#{transport},SubordinateUnit=#{subordinateUnit},DrawerNo=#{drawerNo},DrawerName=#{drawerName},DrawerTime=#{drawerTime},Remark=#{remark} where id=#{id}")
+    void updatePacStock(PacStock pacStock);
 
 }

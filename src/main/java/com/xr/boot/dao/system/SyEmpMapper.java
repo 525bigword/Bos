@@ -1,5 +1,6 @@
 package com.xr.boot.dao.system;
 
+import com.xr.boot.dao.system.provider.SyEmpSqlProvider;
 import com.xr.boot.entity.SyEmp;
 import com.xr.boot.entity.SyRolesMenus;
 import org.apache.ibatis.annotations.*;
@@ -10,6 +11,15 @@ import java.util.List;
 
 @Repository
 public interface SyEmpMapper {
+    //动态查询员工和员工得角色
+    @SelectProvider(type = SyEmpSqlProvider.class,method = "findSyEmpByWhere")
+    @Results({
+            @Result(column = "empname",property = "empName"),
+            @Result(column = "empno",property = "empNo"),
+            @Result(column = "rolename",property = "rolename"),
+            @Result(column = "disabled",property = "disabled"),
+    })
+    List<SyEmp> findSyEmpByWhere(SyEmp syEmp);
     //根据roleid查询sy_rolesmenus
     @Select("select id,menuid from sy_rolesmenus where roleid=#{roleid}")
     @Results({
