@@ -11,7 +11,7 @@ public class BasBasicArchiveSqlProvider {
             {
                 SELECT("bb.ID,bb.BasicFileNumber,bb.`Name`,bb.Grade,bb.OperatorID,bb.OperationUnitID,bb.Remarks,bb.OperationTime");
                 FROM("bas_basicarchives bb,sy_emp se,sy_units su");
-                String tj="bb.OperatorID=se.ID and bb.OperationUnitID=su.ID and 1=1";
+                String tj="bb.OperatorID=se.ID and bb.OperationUnitID=su.ID";
                 try {
                     if (basBasicArchive.getBasicFileNumber()!= null && !basBasicArchive.getBasicFileNumber().equals("")) {
                         tj += " and bb.BasicFileNumber=#{basicFileNumber}";

@@ -12,7 +12,7 @@ public class BasDeliveryStandardSqlProvider {
             {
                 SELECT("ds.BasicFileNumber,ds.`Name`,ds.MinWeight,ds.MaxWeight,ds.OperatorID,ds.OperationUnitID,ds.OperationTime,ds.`Status`");
                 FROM("bas_deliverystandard ds,sy_emp se,sy_units su");
-                String tj="ds.OperatorID=se.ID and ds.OperationUnitID=su.ID and 1=1";
+                String tj="ds.OperatorID=se.ID and ds.OperationUnitID=su.ID";
                 try {
                     if (basDeliveryStandard.getName() != null && !basDeliveryStandard.getName().equals("")) {
                         tj += " and ds.`Name` Like CONCAT('%',#{name},'%')";

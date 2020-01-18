@@ -4,12 +4,13 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class LogLogistics
  ***********************************************************************/
 
+import java.io.Serializable;
 import java.util.*;
 
 /** 物流详情表
  * 
  * @pdOid 2a84d12c-e036-49d7-be00-aec5e09af4bc */
-public class LogLogistics {
+public class LogLogistics implements Serializable {
    /** 编号
     * 
     * @pdOid 1ffe4f98-775d-4827-b08f-42422e2c13a1 */
