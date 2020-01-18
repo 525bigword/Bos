@@ -18,10 +18,39 @@ public class PacPackagingMateriarOutBoundFrom {
     * 
     * @pdOid 9aa7df9b-f0d3-4871-aebe-f8779f9ac482 */
    private String outboundNumber;
+   /**
+    * 出库类型
+    */
+   private PacOutType pacOutType;
+
+   public PacOutType getPacOutType() {
+      return pacOutType;
+   }
+
+   public void setPacOutType(PacOutType pacOutType) {
+      this.pacOutType = pacOutType;
+   }
+//取出库类型
+   public Integer getOutboundType() {
+      return pacOutType.getId();
+   }
+
    /** 运输单号，出库单号，雪花算法三号数据中心
     * 
     * @pdOid c21a5970-f4dd-4629-a843-65152614b326 */
+
    private String transportSlip;
+
+   public Integer getAffiliatedUnit() {
+      return syUnits.getOperatorid();
+   }
+   public Integer getAssuedByTheUnit() {
+      return syUnits.getOperatorid();
+   }
+public Integer getOperatorUnit() {
+      return syUnits.getOperatorid();
+   }
+
    /** 领用时间
     * 
     * @pdOid 1215c1da-f430-496d-9f71-6ed3aca2017f */
@@ -38,13 +67,29 @@ public class PacPackagingMateriarOutBoundFrom {
    public long getId() {
       return id;
    }
-   
+
    /** @param newId
     * @pdOid e7791c8e-c484-41a1-a637-b13ba31b873b */
    public void setId(long newId) {
       id = newId;
    }
-   
+   public String getOperatorName() {
+      return syEmp.getEmpName();
+   }
+   public String getClienterName() {
+      return syEmp.getEmpName();
+   }
+
+   private SyEmp syEmp;
+
+   public SyEmp getSyEmp() {
+      return syEmp;
+   }
+
+   public void setSyEmp(SyEmp syEmp) {
+      this.syEmp = syEmp;
+   }
+
    /** @pdOid b7e3a560-c030-4ad6-b620-24473ed0cfb4 */
    public String getOutboundNumber() {
       return outboundNumber;
