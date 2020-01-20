@@ -27,8 +27,7 @@ public class BasBasicArchivesEntryServiceImpl implements BasBasicArchivesEntrySe
     public Object findBasBasicArchivesEntryByParentID(int parentID) {
         Map<String, List<Object>> maps=new ConcurrentHashMap<String, List<Object>>();
         maps.put("BasBasicArchivesEntry", Collections.singletonList(basBasicArchivesEntryMapper.findBasBasicArchivesEntryByParentID(parentID)));
-        redisUtil.set("com.xr.boot.controller.basicPackage.BasBasicArchivesEntryController.findBasBasicArchivesEntryByParentID", maps);
-        return redisUtil.get("com.xr.boot.controller.basicPackage.BasBasicArchivesEntryController.findBasBasicArchivesEntryByParentID");
+        return maps;
     }
     @Klock(leaseTime=Long.MAX_VALUE)
     @Transactional

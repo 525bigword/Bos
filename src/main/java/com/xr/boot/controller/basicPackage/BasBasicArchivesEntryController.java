@@ -28,10 +28,6 @@ public class BasBasicArchivesEntryController {
     @PostMapping("/findBasBasicArchivesEntryByParentID")
     public Object findBasBasicArchivesEntryByParentID(int parentID) {
         Object basBasBasicArchivesEntry = null;
-        if(redisUtil.hasKey("com.xr.boot.controller.basicPackage.BasBasicArchivesEntryController.findBasBasicArchivesEntryByParentID")){
-            log.debug("从redis中取出值");
-            return redisUtil.get("com.xr.boot.controller.basicPackage.BasBasicArchivesEntryController.findBasBasicArchivesEntryByParentID");
-        }else {
             try {
                 basBasBasicArchivesEntry = basBasicArchivesEntryService.findBasBasicArchivesEntryByParentID(parentID);
                 return basBasBasicArchivesEntry;
@@ -39,7 +35,7 @@ public class BasBasicArchivesEntryController {
                 log.info("获取数据库资源异常。。。。");
                 return null;
             }
-        }
+
     }
     @PostMapping("/upBasBasicArchivesEntryById")
     public int upBasBasicArchivesEntryById(BasBasicArchivesEntry basBasicArchivesEntry){

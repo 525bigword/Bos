@@ -34,4 +34,10 @@ public interface BasShuttleBusMapper {
             @Result(column = "OperationTime", property = "operationTime"),
     })
     List<BasShuttleBus> findBasShuttleBus(BasShuttleBus basShuttleBus);
+
+    @Update("update bas_shuttlebus set lineType=#{lineType},lineID=#{lineID},LicensePlateInt=#{licensePlateInt},Carrier=#{carrier},Models=#{models},Driver=#{driver},Telephone=#{telephone},Ton=#{ton},Remarks=#{remarks} where id=#{id}")
+    void upBasShuttleBusById(BasShuttleBus basShuttleBus);
+
+    @Delete("delete from bas_shuttlebus where id=#{id}")
+    void delBasShuttleBusById(BasShuttleBus basShuttleBus);
 }

@@ -6,6 +6,7 @@ import com.xr.boot.service.basicPackage.BasShuttleBusService;
 import com.xr.boot.util.RedisUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.klock.annotation.Klock;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -28,5 +29,22 @@ public class BasShuttleBusServiceImpl implements BasShuttleBusService {
         maps.put("BasShuttleBus", Collections.singletonList(basShuttleBusMapper.findBasShuttleBus(basShuttleBus)));
         redisUtil.set("com.xr.boot.controller.BasShuttleBusController.findBasShuttleBus", maps);
         return redisUtil.get("com.xr.boot.controller.BasShuttleBusController.findBasShuttleBus");
+    }
+    @Transactional
+    @Override
+    public List<BasShuttleBus> findBasShuttleBusByTerm(BasShuttleBus basShuttleBus) {
+        return basShuttleBusMapper.findBasShuttleBus(basShuttleBus);
+    }
+    @Klock(leaseTime=Long.MAX_VALUE)
+    @Transactional
+    @Override
+    public void delBasShuttleBusById(BasShuttleBus basShuttleBus) {
+        basShuttleBusMapper.delBasShuttleBusById(basShuttleBus);
+    }
+    @Klock(leaseTime=Long.MAX_VALUE)
+    @Transactional
+    @Override
+    public void upBasShuttleBusById(BasShuttleBus basShuttleBus) {
+        basShuttleBusMapper.upBasShuttleBusById(basShuttleBus);
     }
 }

@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/basShuttleBusController")
 @Slf4j
@@ -20,9 +22,10 @@ public class BasShuttleBusController {
     private BasShuttleBusService basShuttleBusService;
     @Autowired
     private RedisUtil redisUtil;
+
     @ApiOperation("班车设置")
     @PostMapping("/findBasShuttleBus")
-    public Object findBasShuttleBus(BasShuttleBus basShuttleBus){
+    public Object findBasShuttleBus() {
         Object fbasShuttleBus = null;
         if (redisUtil.hasKey("com.xr.boot.controller.BasShuttleBusController.findBasShuttleBus")) {
             log.debug("从redis中取出值");
@@ -37,4 +40,21 @@ public class BasShuttleBusController {
             }
         }
     }
+    @PostMapping("/findBasShuttleBusByTerm")
+    public List<BasShuttleBus> findBasBasicArchivesByTerm(BasShuttleBus basShuttleBus){
+        return basShuttleBusService.findBasShuttleBusByTerm(basShuttleBus);
+    }
+    @PostMapping("/delBasShuttleBusById")
+    public int delBasShuttleBusById(BasShuttleBus basShuttleBus){
+        basShuttleBusService.delBasShuttleBusById(basShuttleBus);
+        redisUtil.del("com.xr.boot.controller.BasShuttleBusController.findBasShuttleBus");
+        return 1;
+    }
+    @PostMapping("/upBasShuttleBusById")
+    public int upBasShuttleBusById(BasShuttleBus basShuttleBus){
+        basShuttleBusService.upBasShuttleBusById(basShuttleBus);
+        redisUtil.del("com.xr.boot.controller.BasShuttleBusController.findBasShuttleBus");
+        return 1;
+    }
 }
+
