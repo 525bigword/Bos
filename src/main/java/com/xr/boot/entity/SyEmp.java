@@ -79,22 +79,6 @@ public class SyEmp implements Serializable {
       this.syUnits = syUnits;
    }
 
-   @Override
-   public String toString() {
-      return "SyEmp{" +
-              "id=" + id +
-              ", empName='" + empName + '\'' +
-              ", empNo='" + empNo + '\'' +
-              ", pwd='" + pwd + '\'' +
-              ", queryPwd='" + queryPwd + '\'' +
-              ", roleid=" + roleid +
-              ", empunit=" + empunit +
-              ", remark='" + remark + '\'' +
-              ", disabled=" + disabled +
-              ", syRolesMenus=" + syRolesMenus +
-              '}';
-   }
-
    public Integer getRoleid() {
       return roleid;
    }
@@ -196,4 +180,23 @@ public class SyEmp implements Serializable {
       disabled = newDisabled;
    }
 
+
+   @Override
+   public String toString() {
+      return "SyEmp{" +
+              "id=" + id +
+              ", empName='" + empName + '\'' +
+              ", empNo='" + empNo + '\'' +
+              ", pwd='" + pwd + '\'' +
+              ", queryPwd='" + queryPwd + '\'' +
+              ", roleid=" + roleid +
+              ", empunit=" + empunit +
+              ", remark='" + remark + '\'' +
+              ", disabled=" + disabled +
+              ", syRolesMenus=" + syRolesMenus +
+              ", syUnits=" + syUnits +
+              ", syRoles=" + syRoles +
+              ", rolename='" + rolename + '\'' +
+              '}';
+   }
 }

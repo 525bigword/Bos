@@ -81,17 +81,6 @@ public class RedisUtil {
             }
         }
     }
-    /**
-     * 模糊删除缓存
-     *
-     * @param key 以key开头的将被删除
-     */
-    public void likeDel(String key) {
-        Set<String> keys = redisTemplate.keys("*" + key + "*");
-        redisTemplate.delete(keys);
-
-        log.info("{}, redis中用户收听历史被清空");
-    }
     // ============================String=============================
 
     /**

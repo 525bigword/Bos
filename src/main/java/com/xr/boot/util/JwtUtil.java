@@ -46,7 +46,7 @@ public class JwtUtil {
                 .setSubject(subject)//用户名
                 .setIssuedAt(now)//生成时间
                 .signWith(SignatureAlgorithm.HS256, key)//前面算法，这里采用HS256加密算法盐值是java
-                .setExpiration(new Date(new Date().getTime()+60000));//失效时间(毫秒为单位)这里是一分钟超过时间抛出io.jsonwebtoken
+                .setExpiration(new Date(new Date().getTime()+60000*30000));//失效时间(毫秒为单位)这里是一分钟超过时间抛出io.jsonwebtoken
         return builder.compact();
     }
 

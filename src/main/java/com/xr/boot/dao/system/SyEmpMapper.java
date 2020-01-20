@@ -11,6 +11,9 @@ import java.util.List;
 
 @Repository
 public interface SyEmpMapper {
+    //新增员工
+    @Insert("insert into sy_emp values(null,#{empName},#{empNo},#{pwd},#{queryPwd},#{roleid},#{empunit},#{remark},#{disabled})")
+    void saveSyEmp(SyEmp syEmp);
     //动态查询员工和员工得角色
     @SelectProvider(type = SyEmpSqlProvider.class,method = "findSyEmpByWhere")
     @Results({
