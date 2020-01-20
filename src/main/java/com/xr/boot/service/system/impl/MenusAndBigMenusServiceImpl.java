@@ -30,7 +30,8 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
     private MenusAndBigMenusMapper menusAndBigMenusMapper;
     @Autowired
     private RedisUtil redisUtil;
-
+    private List<String> Menus;
+    private List<String> BigMenus;
     @Override
     @Klock(leaseTime = Long.MAX_VALUE)
     @Transactional
@@ -38,7 +39,7 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
         List<SyMenus> syMenusAll = menusAndBigMenusMapper.findSyMenusAll(syMenus);
         System.out.println(syMenusAll.size());
         redisUtil.set("com.xr.boot.controller.loadMenues"+syMenus.getParentID()+syMenus.getText(), syMenusAll);
-
+        Menus.add("com.xr.boot.controller.loadMenues"+syMenus.getParentID()+syMenus.getText());
         return redisUtil.get("com.xr.boot.controller.loadMenues"+syMenus.getParentID()+syMenus.getText());
     }
 
@@ -61,6 +62,7 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
         Map<String, List<Object>> maps=new ConcurrentHashMap<String, List<Object>>();
         maps.put("bigmenus", Collections.singletonList(menusAndBigMenusMapper.findSyBigMenusAll()));
         redisUtil.set("com.xr.boot.controller.MenusAndBigMenusController.LoadOptions", maps);
+        BigMenus.add("com.xr.boot.controller.MenusAndBigMenusController.LoadOptions");
         return redisUtil.get("com.xr.boot.controller.MenusAndBigMenusController.LoadOptions");
     }
     @Klock(leaseTime=Long.MAX_VALUE)
@@ -90,7 +92,8 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
                 syMenus.setTip(++parentid);
                 menusAndBigMenusMapper.saveSyMenus(syMenus);
             }
-            redisUtil.likeDel("com.xr.boot.controller.loadMenues");
+            String[] key=new String[Menus.size()];
+            redisUtil.del(Menus.toArray(key));
         }catch (Exception e){
             throw new SQLException("获取排序错误");
         }
@@ -102,7 +105,8 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
     public void upSyMenus(SyMenus syMenus) throws Exception {
         try{
             menusAndBigMenusMapper.upSymenus(syMenus);
-            redisUtil.likeDel("com.xr.boot.controller.loadMenues");
+            String[] key=new String[Menus.size()];
+            redisUtil.del(Menus.toArray(key));
         }catch (Exception e){
             throw new Exception("com.xr.boot.service.system.impl.MenusAndBigMenusServiceImpl.upSymenus");
         }
@@ -115,7 +119,8 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
     public void delSyMenus(List<Integer> id) throws Exception {
         try{
             menusAndBigMenusMapper.delSyMenusById(id);
-            redisUtil.likeDel("com.xr.boot.controller.loadMenues");
+            String[] key=new String[Menus.size()];
+            redisUtil.del(Menus.toArray(key));
         }catch (Exception e){
             throw new Exception("com.xr.boot.service.system.impl.MenusAndBigMenusServiceImpl.delSyMenus");
         }

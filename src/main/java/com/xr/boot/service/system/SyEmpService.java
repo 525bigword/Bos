@@ -5,6 +5,8 @@ import com.xr.boot.entity.SyEmp;
 import java.util.Map;
 
 public interface SyEmpService {
+    //新增员工
+    void saveSyEmp(SyEmp syEmp);
     //动态查询员工
     Object findSyEmpByWhere(SyEmp syEmp);
 

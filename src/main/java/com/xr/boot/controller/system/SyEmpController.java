@@ -40,6 +40,18 @@ public class SyEmpController {
     @Autowired
     private MenusAndBigMenusService menusAndBigMenusService;
 
+    @ApiOperation("新增员工")
+    @PostMapping("/addemp")
+    public void addEmp(SyEmp syEmp){
+        try {
+            syEmp.setPwd(AES.encryptAES(syEmp.getPwd()));
+            syEmp.setQueryPwd(AES.encryptAES(syEmp.getQueryPwd()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        syEmpService.saveSyEmp(syEmp);
+    }
+
     @ApiOperation("动态查询SyEmp")
     @GetMapping("/getempall")
     public Object getEmpAll(SyEmp syEmp){

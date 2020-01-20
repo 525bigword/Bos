@@ -9,7 +9,9 @@ import com.xr.boot.service.system.SyEmpService;
 import com.xr.boot.util.AES;
 import com.xr.boot.util.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.klock.annotation.Klock;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -26,11 +28,14 @@ public class SyEmpServiceImpl implements SyEmpService {
     private SyEmpMapper syEmpMapper;
     @Autowired
     private MenusAndBigMenusMapper menusAndBigMenusMapper;
+    //存储SyEmp信息得key
+    private List<String> SyEmpkeys;
     /**
      * 登录业务
      * @param syEmp
      * @return
      */
+    @Klock(leaseTime = Long.MAX_VALUE)
     @Override
     public Map<String,Object> login(SyEmp syEmp) throws Exception {
         SyEmp syEmps=null;
@@ -76,6 +81,16 @@ public class SyEmpServiceImpl implements SyEmpService {
         String key="SyEmpController.getEmpAll"+syEmp.getEmpName()+syEmp.getDisabled();
         List<SyEmp> syEmpByWhere = syEmpMapper.findSyEmpByWhere(syEmp);
         redisUtil.set(key,syEmpByWhere);
+        SyEmpkeys.add(key);
         return redisUtil.get(key);
+    }
+    @Klock(leaseTime = Long.MAX_VALUE)
+    @Transactional
+    @Override
+    public void saveSyEmp(SyEmp syEmp) {
+        String key="SyEmpController.getEmpAll"+syEmp.getEmpName()+syEmp.getDisabled();
+        syEmpMapper.saveSyEmp(syEmp);
+        String[] keys=new String[SyEmpkeys.size()];
+        redisUtil.del(SyEmpkeys.toArray(keys));
     }
 }
