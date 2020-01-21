@@ -47,4 +47,10 @@ public class BasShuttleBusServiceImpl implements BasShuttleBusService {
     public void upBasShuttleBusById(BasShuttleBus basShuttleBus) {
         basShuttleBusMapper.upBasShuttleBusById(basShuttleBus);
     }
+    @Klock(leaseTime=Long.MAX_VALUE)
+    @Transactional
+    @Override
+    public void saveBasShuttleBus(BasShuttleBus basShuttleBus) {
+        basShuttleBusMapper.saveBasShuttleBus(basShuttleBus);
+    }
 }

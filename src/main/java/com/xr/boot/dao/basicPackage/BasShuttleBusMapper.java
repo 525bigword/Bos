@@ -40,4 +40,7 @@ public interface BasShuttleBusMapper {
 
     @Delete("delete from bas_shuttlebus where id=#{id}")
     void delBasShuttleBusById(BasShuttleBus basShuttleBus);
+
+    @Insert("insert into bas_shuttlebus(ID,LineType,lineID,LicensePlateInt,Carrier,Models,Driver,Telephone,Ton,Remarks,OperationUnitID,OperatorID,OperationTime) values(null,#{lineType},#{lineID},#{licensePlateInt},#{carrier},#{models},#{driver},#{telephone},#{ton},#{remarks},#{unitId},#{empId},NOW())")
+    void saveBasShuttleBus(BasShuttleBus basShuttleBus);
 }

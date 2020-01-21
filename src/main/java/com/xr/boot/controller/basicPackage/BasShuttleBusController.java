@@ -56,5 +56,11 @@ public class BasShuttleBusController {
         redisUtil.del("com.xr.boot.controller.BasShuttleBusController.findBasShuttleBus");
         return 1;
     }
+    @PostMapping("/saveBasShuttleBus")
+    public int saveBasShuttleBus(BasShuttleBus basShuttleBus){
+        basShuttleBusService.saveBasShuttleBus(basShuttleBus);
+        redisUtil.del("com.xr.boot.controller.BasShuttleBusController.findBasShuttleBus");
+        return 1;
+    }
 }
 

@@ -42,4 +42,22 @@ public interface BasBasicArchivesEntryMapper {
 
     @Insert("insert into bas_basicarchivesentry(id,`name`,parentID,MnemonicCode,Available,Remarks,OperatorID,OperationUnitID,OperationTime) VALUES(null,#{name},#{parentID},#{mnemonicCode},#{available},#{remarks},#{empId},#{unitId},NOW())")
     void saveBasBasicArchivesEntry(BasBasicArchivesEntry basBasicArchivesEntry);
+
+    @Select("select id,`name`,parentID,mnemonicCode,available,remarks,operatorid,operationunitid,operationtime from bas_basicarchivesentry where id=#{type}")
+    @Results({
+            @Result(id=true,column ="ID",property = "id"),
+            @Result(column ="Name",property = "name"),
+            @Result(column = "ParentID", property = "parentID"),
+            @Result(column = "MnemonicCode", property = "mnemonicCode"),
+            @Result(column = "Available", property = "available"),
+            @Result(column = "Remarks", property = "remarks"),
+            @Result(column = "OperatorID", property = "syEmp",
+                    one = @One(select = "com.xr.boot.dao.system.SyEmpMapper.findSyEmpById", fetchType = FetchType.DEFAULT)
+            ),
+            @Result(column = "OperationUnitID", property = "syUnits",
+                    one = @One(select = "com.xr.boot.dao.system.SyUnitsMapper.findSyUnitById", fetchType = FetchType.DEFAULT)
+            ),
+            @Result(column = "OperationTime", property = "operationTime")
+    })
+    BasBasicArchivesEntry findBasBasicArchivesEntryById(int type);
 }

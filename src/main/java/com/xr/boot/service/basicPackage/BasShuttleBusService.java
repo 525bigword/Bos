@@ -30,4 +30,10 @@ public interface BasShuttleBusService {
      * @param basShuttleBus
      */
     void upBasShuttleBusById(BasShuttleBus basShuttleBus);
+
+    /**
+     * 新增班车设置
+     * @param basShuttleBus
+     */
+    void saveBasShuttleBus(BasShuttleBus basShuttleBus);
 }
