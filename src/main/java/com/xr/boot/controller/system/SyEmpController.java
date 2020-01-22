@@ -214,4 +214,8 @@ public class SyEmpController {
             e.printStackTrace();
         }
     }
+    @PostMapping("/findSyEmp")
+    public List<SyEmp> findSyEmp(){
+        return syEmpService.findSyEmp();
+    }
 }

@@ -26,4 +26,10 @@ public interface SyEmpService {
      * @return
      */
     SyEmp findSyEmpById(int operatorid);
+
+    /**
+     * 查询工号和名称 mpy
+     * @return
+     */
+    List<SyEmp> findSyEmp();
 }

@@ -38,4 +38,10 @@ public interface BasSubstituteMapper {
 
     @Update("update bas_substitute set InvalidateMark=#{invalidateMark} where id=#{id}")
     void upBasSubstituteStateById(BasSubstitute basSubstitute);
+
+    @Update("update bas_substitute set EmpNo=#{empNo},EmpName=#{empName},MobileNo=#{mobileNo},Type=#{type},PDA=#{pda},StandardKg=#{standardKg},StandardLength=#{standardLength},Models=#{models},PlateInt=#{plateInt},InvalidateMark=#{invalidateMark} where ID=#{id}")
+    void upBasSubstituteById(BasSubstitute basSubstitute);
+
+    @Insert("INSERT into bas_substitute(ID,EmpNo,EmpName,MobileNo,Type,PDA,StandardKg,StandardLength,Models,PlateInt,InvalidateMark,OperatorID,OperationUnitID,OperationTime) VALUES(null,#{empNo},#{empName},#{mobileNo},#{type},#{pda},#{standardKg},#{standardLength},#{models},#{plateInt},#{invalidateMark},#{empId},#{unitId},NOW())")
+    void saveBasSubstitute(BasSubstitute basSubstitute);
 }

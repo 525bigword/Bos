@@ -49,4 +49,16 @@ public class BasSubstituteController {
         redisUtil.del("com.xr.boot.controller.BasSubstituteController.findBasSubstitutes");
         return 1;
     }
+    @PostMapping("/upBasSubstituteById")
+    public int  upBasSubstituteById(BasSubstitute basSubstitute){
+        basSubstituteService.upBasSubstituteById(basSubstitute);
+        redisUtil.del("com.xr.boot.controller.BasSubstituteController.findBasSubstitutes");
+        return 1;
+    }
+    @PostMapping("/saveBasSubstitute")
+    public int saveBasSubstitute(BasSubstitute basSubstitute){
+        basSubstituteService.saveBasSubstitute(basSubstitute);
+        redisUtil.del("com.xr.boot.controller.BasSubstituteController.findBasSubstitutes");
+        return 1;
+    }
 }

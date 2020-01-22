@@ -41,4 +41,14 @@ public class BasSubstituteServiceImpl implements BasSubstituteService {
     public void upBasSubstituteStateById(BasSubstitute basSubstitute) {
         basSubstituteMapper.upBasSubstituteStateById(basSubstitute);
     }
+
+    @Override
+    public void upBasSubstituteById(BasSubstitute basSubstitute) {
+        basSubstituteMapper.upBasSubstituteById(basSubstitute);
+    }
+
+    @Override
+    public void saveBasSubstitute(BasSubstitute basSubstitute) {
+        basSubstituteMapper.saveBasSubstitute(basSubstitute);
+    }
 }

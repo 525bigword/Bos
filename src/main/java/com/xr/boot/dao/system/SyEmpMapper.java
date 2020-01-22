@@ -89,7 +89,13 @@ public interface SyEmpMapper {
             @Result(column = "Disabled", property = "disabled")
     })
     SyEmp findSyEmpById(int operatorid);
-
+    //查询工号和名称  mpy
+    @Select("select EmpNo,EmpName from sy_emp where Disabled=0 order by empNo asc")
+    @Results({
+            @Result(column = "EmpNo",property = "empNo"),
+            @Result(column = "EmpName",property = "empName")
+    })
+    List<SyEmp> findSyEmp();
     //根据员工编号查询员工
     @Select("select id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled from sy_emp where empno=#{empNo}")
     @Results({

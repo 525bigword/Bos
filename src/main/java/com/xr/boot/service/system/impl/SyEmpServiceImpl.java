@@ -67,8 +67,12 @@ public class SyEmpServiceImpl implements SyEmpService {
 
     @Override
     public SyEmp findSyEmpById(int operatorid) {
+        return syEmpMapper.findSyEmpById(operatorid);
+    }
 
-        return null;
+    @Override
+    public List<SyEmp> findSyEmp() {
+        return syEmpMapper.findSyEmp();
     }
     @Override
     public Object findSyEmpByWhere(SyEmp syEmp) {

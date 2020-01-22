@@ -25,4 +25,16 @@ public interface BasSubstituteService {
      * @param basSubstitute
      */
     void upBasSubstituteStateById(BasSubstitute basSubstitute);
+
+    /**
+     * 修改取派设置 id
+     * @param basSubstitute
+     */
+    void upBasSubstituteById(BasSubstitute basSubstitute);
+
+    /**
+     * 新增
+     * @param basSubstitute
+     */
+    void saveBasSubstitute(BasSubstitute basSubstitute);
 }
