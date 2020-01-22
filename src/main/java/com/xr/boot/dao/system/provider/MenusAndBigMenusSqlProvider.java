@@ -16,13 +16,17 @@ public class MenusAndBigMenusSqlProvider {
      */
     public String delListSyMenus(List<Integer> ids){
         StringBuffer sb=new StringBuffer();
-        sb.append("DELETE from sy_menus  WHERE id IN (");
-        for (int i = 0; i < ids.size(); i++) {
-            sb.append("'").append(ids.get(i)).append("'");
-            if (i < ids.size() - 1)
-                sb.append(",");
+        if(ids.size()>1) {
+            sb.append("DELETE from sy_menus  WHERE id IN (");
+            for (int i = 0; i < ids.size(); i++) {
+                sb.append("'").append(ids.get(i)).append("'");
+                if (i < ids.size() - 1)
+                    sb.append(",");
+            }
+            sb.append(")");
+        }else{
+            sb.append("DELETE from sy_menus  WHERE id ="+ids.get(0));
         }
-        sb.append(")");
         return sb.toString();
     }
 

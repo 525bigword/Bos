@@ -14,8 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.SQLException;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static javafx.scene.input.KeyCode.L;
@@ -29,7 +28,7 @@ public class SyEmpServiceImpl implements SyEmpService {
     @Autowired
     private MenusAndBigMenusMapper menusAndBigMenusMapper;
     //存储SyEmp信息得key
-    private List<String> SyEmpkeys;
+    private Set<String> SyEmpkeys=new HashSet<>();
     /**
      * 登录业务
      * @param syEmp
@@ -59,14 +58,10 @@ public class SyEmpServiceImpl implements SyEmpService {
             throw new SQLException("sql查询出错");
         }
 
-
     }
 
-
-
-
     @Override
-    public void upSyEmpById(SyEmp syEmp) {
+    public void upSyEmpToPwdById(SyEmp syEmp) {
         syEmpMapper.upSyEmpById(syEmp);
     }
 
@@ -75,12 +70,12 @@ public class SyEmpServiceImpl implements SyEmpService {
 
         return null;
     }
-
     @Override
     public Object findSyEmpByWhere(SyEmp syEmp) {
         String key="SyEmpController.getEmpAll"+syEmp.getEmpName()+syEmp.getDisabled();
         List<SyEmp> syEmpByWhere = syEmpMapper.findSyEmpByWhere(syEmp);
         redisUtil.set(key,syEmpByWhere);
+        System.out.println(key);
         SyEmpkeys.add(key);
         return redisUtil.get(key);
     }
@@ -90,7 +85,34 @@ public class SyEmpServiceImpl implements SyEmpService {
     public void saveSyEmp(SyEmp syEmp) {
         String key="SyEmpController.getEmpAll"+syEmp.getEmpName()+syEmp.getDisabled();
         syEmpMapper.saveSyEmp(syEmp);
-        String[] keys=new String[SyEmpkeys.size()];
-        redisUtil.del(SyEmpkeys.toArray(keys));
+        //删除key
+        for (String s : SyEmpkeys) {
+            System.out.println(s);
+            redisUtil.del(s);
+        }
+    }
+    @Klock(leaseTime = Long.MAX_VALUE)
+    @Transactional
+    @Override
+    public void DelSyEmp(List<Integer> ids) {
+        for (String s : SyEmpkeys) {
+            redisUtil.del(s);
+        }
+        syEmpMapper.delSyEmps(ids);
+    }
+    @Klock
+    @Transactional
+    @Override
+    public void upSyEmpById(SyEmp syEmp) throws Exception {
+        try {
+            syEmp.setPwd(AES.encryptAES(syEmp.getPwd()));
+            syEmp.setQueryPwd(AES.encryptAES(syEmp.getQueryPwd()));
+            syEmpMapper.upSyEmpById(syEmp);
+            for (String s : SyEmpkeys) {
+                redisUtil.del(s);
+            }
+        } catch (Exception e) {
+           throw new Exception();
+        }
     }
 }
