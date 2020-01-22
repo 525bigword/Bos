@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("basDeliveryStandard")
+@RequestMapping("/basDeliveryStandard")
 @Slf4j
 @Api(tags = "收派接口")
 public class BasDeliveryStandardController {

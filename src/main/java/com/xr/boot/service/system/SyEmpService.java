@@ -2,6 +2,7 @@ package com.xr.boot.service.system;
 
 import com.xr.boot.entity.SyEmp;
 
+import java.util.List;
 import java.util.Map;
 
 public interface SyEmpService {
@@ -22,4 +23,10 @@ public interface SyEmpService {
      * @return
      */
     SyEmp findSyEmpById(int operatorid);
+
+    /**
+     * 查询工号和名称 mpy
+     * @return
+     */
+    List<SyEmp> findSyEmp();
 }

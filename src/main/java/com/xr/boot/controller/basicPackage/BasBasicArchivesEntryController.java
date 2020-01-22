@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("basBasicArchivesEntryController")
+@RequestMapping("/basBasicArchivesEntryController")
 @Slf4j
 @Api(tags = "基础档案条目")
 public class BasBasicArchivesEntryController {

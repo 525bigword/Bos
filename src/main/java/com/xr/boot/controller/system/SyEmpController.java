@@ -24,6 +24,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.ConcurrentMap;
@@ -192,5 +193,9 @@ public class SyEmpController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    @PostMapping("/findSyEmp")
+    public List<SyEmp> findSyEmp(){
+        return syEmpService.findSyEmp();
     }
 }
