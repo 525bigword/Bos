@@ -41,12 +41,14 @@ public class BasSubstituteServiceImpl implements BasSubstituteService {
     public void upBasSubstituteStateById(BasSubstitute basSubstitute) {
         basSubstituteMapper.upBasSubstituteStateById(basSubstitute);
     }
-
+    @Klock(leaseTime=Long.MAX_VALUE)
+    @Transactional
     @Override
     public void upBasSubstituteById(BasSubstitute basSubstitute) {
         basSubstituteMapper.upBasSubstituteById(basSubstitute);
     }
-
+    @Klock(leaseTime=Long.MAX_VALUE)
+    @Transactional
     @Override
     public void saveBasSubstitute(BasSubstitute basSubstitute) {
         basSubstituteMapper.saveBasSubstitute(basSubstitute);
