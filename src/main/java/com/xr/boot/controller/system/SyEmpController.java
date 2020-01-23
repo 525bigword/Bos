@@ -38,8 +38,28 @@ public class SyEmpController {
     private RedisUtil redisUtil;
     @Autowired
     private SyEmpService syEmpService;
-    @Autowired
-    private MenusAndBigMenusService menusAndBigMenusService;
+
+    @ApiOperation("修改员工信息")
+    @PostMapping("/upemp")
+    public void upSyEmp(SyEmp syEmp){
+        try {
+            syEmpService.upSyEmpById(syEmp);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+    @ApiOperation("根据id删除员工")
+    @PostMapping("/delemp")
+    public StausEnum delEmps(@RequestParam("ids[]") List<Integer> ids){
+        try {
+            syEmpService.DelSyEmp(ids);
+            return StausEnum.SUCCESS;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return StausEnum.NO;
+        }
+    }
 
     @ApiOperation("新增员工")
     @PostMapping("/addemp")
@@ -89,7 +109,7 @@ public class SyEmpController {
             e.printStackTrace();
         }
         syEmp.setEmpNo("007");
-        syEmpService.upSyEmpById(syEmp);
+        syEmpService.upSyEmpToPwdById(syEmp);
     }
 
 

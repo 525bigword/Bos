@@ -11,13 +11,23 @@ import java.util.List;
 
 @Repository
 public interface SyEmpMapper {
+    @Update("update sy_emp set empname=#{empName},pwd=#{pwd},queryPwd=#{queryPwd},roleid=#{roleid}," +
+            "disabled=#{disabled},empunit=#{empunit},remark=#{remark} where id=#{id}")
+    void upSyEmpById(SyEmp syEmp);
+    //删除员工
+    @DeleteProvider(type = SyEmpSqlProvider.class,method = "delListSyEmps")
+    void delSyEmps(@Param("ids")List<Integer> ids);
+
     //新增员工
     @Insert("insert into sy_emp values(null,#{empName},#{empNo},#{pwd},#{queryPwd},#{roleid},#{empunit},#{remark},#{disabled})")
     void saveSyEmp(SyEmp syEmp);
     //动态查询员工和员工得角色
     @SelectProvider(type = SyEmpSqlProvider.class,method = "findSyEmpByWhere")
     @Results({
+            @Result(id = true,column = "id",property = "id"),
             @Result(column = "empname",property = "empName"),
+            @Result(column = "roleid",property = "roleid"),
+            @Result(column = "remark",property = "remark"),
             @Result(column = "empno",property = "empNo"),
             @Result(column = "rolename",property = "rolename"),
             @Result(column = "disabled",property = "disabled"),
@@ -103,6 +113,6 @@ public interface SyEmpMapper {
 
     @Update("update sy_emp set pwd=#{pwd} where empno=#{empNo}")
     //修改密码
-    void upSyEmpById(SyEmp syEmp);
+    void upSyEmpToPwdById(SyEmp syEmp);
 
 }

@@ -75,6 +75,7 @@ public class RedisUtil {
     public void del(String... key) {
         if (key != null && key.length > 0) {
             if (key.length == 1) {
+                System.out.println("删除0"+key);
                 redisTemplate.delete(key[0]);
             } else {
                 redisTemplate.delete(CollectionUtils.arrayToList(key));

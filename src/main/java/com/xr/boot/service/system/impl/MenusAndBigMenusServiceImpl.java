@@ -15,9 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.SQLException;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static org.springframework.boot.autoconfigure.klock.model.LockTimeoutStrategy.KEEP_ACQUIRE;
@@ -30,8 +28,8 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
     private MenusAndBigMenusMapper menusAndBigMenusMapper;
     @Autowired
     private RedisUtil redisUtil;
-    private List<String> Menus;
-    private List<String> BigMenus;
+    private Set<String> Menus=new HashSet<>();
+    private Set<String> BigMenus =new HashSet<>();
     @Override
     @Klock(leaseTime = Long.MAX_VALUE)
     @Transactional
