@@ -11,7 +11,7 @@ import java.util.List;
 public interface SyRoleMapper {
     //批量删除角色
     @DeleteProvider(type = SyRoleSqlProvider.class,method = "delListSyRoles")
-    void delSyRole(List<Integer> ids);
+    void delSyRole(@Param("ids")List<Integer> ids);
     //动态查询角色
     @SelectProvider(type = SyRoleSqlProvider.class,method = "select")
     List<SyRoles> findSyRoleByWhere(SyRoles syRoles);

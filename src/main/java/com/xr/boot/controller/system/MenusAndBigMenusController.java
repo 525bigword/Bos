@@ -25,7 +25,18 @@ public class MenusAndBigMenusController {
     @Autowired
     private MenusAndBigMenusService menusAndBigMenusService;
 
-
+    @ApiOperation("权限树形菜单接口")
+    @GetMapping("/symenustree")
+    public Object syMenusTree(){
+        Object o=null;
+        String key="com.xr.boot.controller.system.MenusAndBigMenusController.syMenusTree";
+        if(redisUtil.hasKey(key)){
+           o = redisUtil.get(key);
+        }else{
+            o=menusAndBigMenusService.findSyMenusToTree();
+        }
+        return o;
+    }
 
     @ApiOperation("根据id删除栏目")
     @PostMapping("/delmenus")
@@ -102,9 +113,7 @@ public class MenusAndBigMenusController {
     @ApiOperation("新增模块")
     @PostMapping("/addsybigmenus")
     public Return addSyBigMenus(SyBigMenus syBigMenus) throws Exception {
-        System.out.println(syBigMenus.getBigmenus());
-            menusAndBigMenusService.saveSyBigMenus(syBigMenus);
-
+        menusAndBigMenusService.saveSyBigMenus(syBigMenus);
         return new Return(StausEnum.SUCCESS);
     }
     @ApiOperation("新增栏目")

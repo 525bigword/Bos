@@ -4,9 +4,9 @@ import com.xr.boot.entity.SyRoles;
 import com.xr.boot.ienum.StausEnum;
 import com.xr.boot.service.system.SyRoleService;
 import com.xr.boot.util.RedisUtil;
+import io.lettuce.core.dynamic.annotation.Param;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,7 +21,7 @@ public class SyRoleController {
     @Autowired
     private RedisUtil redisUtil;
     @ApiOperation("批量删除角色")
-    @DeleteMapping("/delrole")
+    @PostMapping("/delrole")
     public StausEnum delRole(@RequestParam("ids[]") List<Integer> ids){
         try {
             syRoleService.delSyRole(ids);

@@ -47,9 +47,25 @@ public class SyMenus implements Serializable {
    /**
     * 业务属性
     */
+   private String parentname;
    private SyBigMenus syBigMenus;
+   private List<SyMenus> syMenus;
 
+   public List<SyMenus> getSyMenus() {
+      return syMenus;
+   }
 
+   public void setSyMenus(List<SyMenus> syMenus) {
+      this.syMenus = syMenus;
+   }
+
+   public String getParentname() {
+      return parentname;
+   }
+
+   public void setParentname(String parentname) {
+      this.parentname = parentname;
+   }
 
    public Integer getBigmenus() {
       return bigmenus;

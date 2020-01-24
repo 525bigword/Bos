@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Map;
 
 public interface MenusAndBigMenusService {
+    //权限树形菜单业务
+    Object findSyMenusToTree();
     //查询所有栏目
     Object findAllSyMenus(SyMenus syMenus);
     //获取所有父级栏目

@@ -69,6 +69,9 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
     public void saveSyBigMenus(SyBigMenus syBigMenus) throws SQLException {
         try{
             menusAndBigMenusMapper.saveSyBigMenus(syBigMenus);
+            for (String s : Menus) {
+                redisUtil.del(s);
+            }
         }catch (Exception e){
             throw new SQLException("数据库新增错误");
         }
@@ -122,5 +125,14 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
         }catch (Exception e){
             throw new Exception("com.xr.boot.service.system.impl.MenusAndBigMenusServiceImpl.delSyMenus");
         }
+    }
+
+    @Override
+    public Object findSyMenusToTree() {
+        String key="com.xr.boot.controller.system.MenusAndBigMenusController.syMenusTree";
+        List<SyMenus> syMenusByParentidToZero = menusAndBigMenusMapper.findSyMenusByParentidToZero();
+        redisUtil.set(key,syMenusByParentidToZero);
+        Menus.add(key);
+        return redisUtil.get(key);
     }
 }
