@@ -161,9 +161,11 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
                 }
             }
         }
-        menusAndBigMenusMapper.saveSyRoleAndSyMenu(menuid,roleid);
-        for (String s : Menus) {
-            redisUtil.del(s);
+        if(menuid.size()>0) {
+            menusAndBigMenusMapper.saveSyRoleAndSyMenu(menuid, roleid);
+            for (String s : Menus) {
+                redisUtil.del(s);
+            }
         }
     }
 }

@@ -23,11 +23,7 @@ public interface MenusAndBigMenusMapper {
     @Select("select id,menuid from sy_rolesmenus where roleid=#{id}")
     @Results({
             @Result(id = true,column = "id",property = "id"),
-            @Result(column = "menuid",property = "syMenus",
-                one=@One(
-                        select = "findSyMenusById"
-                )
-            )
+            @Result(id = true,column = "menuid",property = "menuid")
     })
     List<SyRolesMenus> findSyMenusBySyRoles(SyRoles syRoles);
 

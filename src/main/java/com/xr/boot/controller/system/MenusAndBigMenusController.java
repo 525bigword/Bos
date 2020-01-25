@@ -31,7 +31,6 @@ public class MenusAndBigMenusController {
     @PostMapping("/assignrolepermissions")
     public void assignRolePermissions(@RequestParam("menuid[]") List<Integer> menuid,
                                         @RequestParam("roleid")Integer roleid){
-        System.out.println(roleid);
         menusAndBigMenusService.assignRolePermissions(menuid,roleid);
     }
 
