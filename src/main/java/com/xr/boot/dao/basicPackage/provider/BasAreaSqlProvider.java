@@ -9,7 +9,7 @@ public class BasAreaSqlProvider {
     public String findBasAreabyWhere(BasArea basArea){
         return new SQL(){
             {
-                SELECT("ID,Province,City,County,PostalCode,SimpleCode,CityCode,EntryUnitID,ComplementUnitID,Nature,TheArea,Stats");
+                SELECT("ID,Province,City,County,PostalCode,SimpleCode,CityCode,EntryUnitID,ComplementUnitID,Nature,TheArea,OperatorID,OperationTime");
                 FROM("bas_area");
                 String tj=" 1=1";
                try {
@@ -37,6 +37,6 @@ public class BasAreaSqlProvider {
                     WHERE(tj);
                 }
             }
-        }.toString()+" order by InvalidateMark asc,id desc";
+        }.toString()+" order by OperationTime desc";
     }
 }

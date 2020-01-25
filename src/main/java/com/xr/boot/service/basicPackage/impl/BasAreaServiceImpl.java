@@ -6,6 +6,7 @@ import com.xr.boot.service.basicPackage.BasAreaService;
 import com.xr.boot.util.RedisUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.klock.annotation.Klock;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -33,5 +34,17 @@ public class BasAreaServiceImpl implements BasAreaService {
     @Override
     public List<BasArea> findBasAreaByTerm(BasArea basArea) {
         return basAreaMapper.findBasAreas(basArea);
+    }
+    @Klock(leaseTime=Long.MAX_VALUE)
+    @Transactional
+    @Override
+    public void upBasAreaById(int id) {
+        basAreaMapper.upBasAreaById(id);
+    }
+    @Klock(leaseTime=Long.MAX_VALUE)
+    @Transactional
+    @Override
+    public void saveBasArea(BasArea basArea) {
+        basAreaMapper.saveBasArea(basArea);
     }
 }
