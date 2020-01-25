@@ -38,6 +38,16 @@ public class BasArea implements Serializable {
     * 
     * @pdOid cc01aeb1-b6a6-46ee-b06e-7d9227a60eea */
    private String cityCode;
+
+   public SyEmp getSyEmp() {
+      return syEmp;
+   }
+
+   public void setSyEmp(SyEmp syEmp) {
+      this.syEmp = syEmp;
+   }
+
+   private SyEmp syEmp;
    private SyUnits entryUnit;
    private SyUnits complementUnit;
    /** 性质	1.省级 2.市辖市 3.直辖市 
@@ -53,10 +63,13 @@ public class BasArea implements Serializable {
    /** 状态	0：正常，1：停用
     * 
     * @pdOid bc20f5dc-d562-4bb2-9344-1ac8cd3c80c1 */
-   private Integer stats;
+   private String operationTime;
    
    public BasArea(){}
    public long getentryUnitID(){return entryUnit.getId();}
+   public long getempId(){
+      return syEmp.getId();
+   }
    public long getcomplementUnitID(){return complementUnit.getId();}
    public long getId() {
       return id;
@@ -146,11 +159,11 @@ public class BasArea implements Serializable {
       this.theArea = theArea;
    }
 
-   public Integer getStats() {
-      return stats;
+   public String getOperationTime() {
+      return operationTime;
    }
 
-   public void setStats(Integer stats) {
-      this.stats = stats;
+   public void setOperationTime(String operationTime) {
+      this.operationTime = operationTime;
    }
 }
