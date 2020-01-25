@@ -15,4 +15,9 @@ public class PacPackagingMateriarOutBoundFromServiceImpl implements PacPackaging
     public List<PacPackagingMateriarOutBoundFrom> findAllPacOutBoundFrom() {
         return pacPackagingMateriarOutBoundFromMapper.findAllPacOutBoundFrom();
     }
+
+    @Override
+    public void insertPacPackagingOutFrom(PacPackagingMateriarOutBoundFrom pacPackagingMateriarOutBoundFrom) {
+        pacPackagingMateriarOutBoundFromMapper.insertPacPackagingOutFrom(pacPackagingMateriarOutBoundFrom);
+    }
 }
