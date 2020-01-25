@@ -4,13 +4,13 @@ import com.xr.boot.entity.SyRoles;
 import com.xr.boot.ienum.StausEnum;
 import com.xr.boot.service.system.SyRoleService;
 import com.xr.boot.util.RedisUtil;
+import io.lettuce.core.dynamic.annotation.Param;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @Api(tags = "权限用户相关接口")
@@ -20,11 +20,23 @@ public class SyRoleController {
     private SyRoleService syRoleService;
     @Autowired
     private RedisUtil redisUtil;
-    @ApiOperation("新增角色")
-    @PutMapping("/addrole")
-    public StausEnum addRole(SyRoles syRoles){
+    @ApiOperation("批量删除角色")
+    @PostMapping("/delrole")
+    public StausEnum delRole(@RequestParam("ids[]") List<Integer> ids){
         try {
-            syRoleService.saveSyRole(syRoles);
+            syRoleService.delSyRole(ids);
+            return StausEnum.SUCCESS;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return StausEnum.NO;
+        }
+    }
+
+    @ApiOperation("新增角色或者修改角色")
+    @PutMapping("/addOrUprole")
+    public StausEnum addRole(SyRoles syRoles,@Param("bj") Integer bj){
+        try {
+            syRoleService.saveOrUpSyRole(syRoles,bj);
             return StausEnum.SUCCESS;
         } catch (Exception e) {
             e.printStackTrace();

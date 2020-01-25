@@ -33,7 +33,9 @@ public class MenusAndBigMenusSqlProvider {
     public String findselect(SyMenus syMenus){
         //SELECT id,(select text from sy_menus where sy_menus.id=sym.parentid) parentid,type,text,sym.url,tip,bigmenus FROM  sy_menus as sym
         SQL sql=new SQL();
-        sql.SELECT("sym.id,sym.parentid,sym.type,sym.text,sym.url,sym.tip," +
+        sql.SELECT("sym.id,sym.parentid,(select text from sy_menus where sy_menus.id=sym.parentid) parentname,sym.type,sym.text," +
+                "sym.url,sym" +
+                ".tip," +
                 "sym.bigmenus,(select bigmenus from sy_bigmenus where id=sym.bigmenus) bigmenusname");
         sql.FROM("sy_menus sym");
         try{

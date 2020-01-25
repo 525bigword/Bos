@@ -13,6 +13,26 @@ import java.util.List;
 
 @Repository
 public interface MenusAndBigMenusMapper {
+    //查询所有父级功能模块即parentid为0的数据
+    @Select("select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=0")
+    @Results({
+            @Result(id=true,column="id",property="id"),
+            @Result(column="parentID",property="parentID"),
+            @Result(column="type",property="type"),
+            @Result(column="text",property="text"),
+            @Result(column = "url",property = "url"),
+            @Result(column = "icon",property = "icon"),
+            @Result(column="tip",property="tip"),
+            @Result(column="bigmenus",property="bigmenus"),
+            @Result(column="id",property="syMenus",
+                many =@Many(
+                        select="findSyMenusByParentId",
+                        fetchType = FetchType.DEFAULT
+                )
+            )
+    })
+    List<SyMenus> findSyMenusByParentidToZero();
+
     //删除sy_menus
     @DeleteProvider(type = MenusAndBigMenusSqlProvider.class,method ="delListSyMenus")
     void delSyMenusById(@Param("ids")List<Integer> ids);
@@ -26,7 +46,8 @@ public interface MenusAndBigMenusMapper {
     @SelectProvider(type = MenusAndBigMenusSqlProvider.class,method ="findselect" )
     @Results({
             @Result(id = true,column = "id",property = "id"),
-            @Result(column = "parentid",property = "parentID"),
+            @Result(column = "parentname",property = "parentname"),
+            @Result(column = "url",property = "url"),
             @Result(column = "type",property = "type"),
             @Result(column = "text",property = "text"),
             @Result(column = "url",property = "url"),
