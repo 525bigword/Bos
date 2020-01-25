@@ -44,5 +44,22 @@ public interface SyUnitsMapper {
             @Result(column = "Stats", property = "stats")
     })
     SyUnits findSyUnitAllById(@Param("operationUnitid") Integer operationUnitid);
+    /**
+     * 查询正常运作的所有单位
+     * @param stats
+     * @return
+     */
+    @Select("select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where " +
+            "stats=#{stats}")
+    @Results({
+            @Result(id = true, column = "ID", property = "id"),
+            @Result(column = "name", property = "name"),
+            @Result(column = "remarks", property = "remarks"),
+            @Result(column = "OperatorID",property = "operatorid"),
+            @Result(column = "OperationTime", property = "operationTime"),
+            @Result(column = "parentid",property = "parentid"),
+            @Result(column = "Stats", property = "stats")
+    })
+    List<SyUnits> findSyUnitAllByStats(@Param("stats") Integer stats);
 
 }

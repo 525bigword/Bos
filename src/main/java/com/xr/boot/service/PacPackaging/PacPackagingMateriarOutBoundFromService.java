@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface PacPackagingMateriarOutBoundFromService {
     List<PacPackagingMateriarOutBoundFrom> findAllPacOutBoundFrom();
+    public void insertPacPackagingOutFrom(PacPackagingMateriarOutBoundFrom pacPackagingMateriarOutBoundFrom);
 }
