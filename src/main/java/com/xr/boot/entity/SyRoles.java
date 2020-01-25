@@ -31,50 +31,46 @@ public class SyRoles implements Serializable {
    /**
     * 业务属性
     */
+   private SyMenus syMenus;
 
-   
-   /** @pdOid f300bf9b-31ef-402f-8d96-166c82b4f805 */
+   public SyMenus getSyMenus() {
+      return syMenus;
+   }
+
+   public void setSyMenus(SyMenus syMenus) {
+      this.syMenus = syMenus;
+   }
+
    public long getId() {
       return id;
    }
-   
-   /** @param newId
-    * @pdOid f58f39f3-15ac-42af-a210-ab35dca61ee0 */
-   public void setId(long newId) {
-      id = newId;
+
+   public void setId(long id) {
+      this.id = id;
    }
-   
-   /** @pdOid 979e714d-c986-4c22-a0f8-a0aad2c1bcd6 */
+
    public String getRoleName() {
       return roleName;
    }
-   
-   /** @param newRoleName
-    * @pdOid 2ba37f33-26c0-4784-aee6-b8db1a998755 */
-   public void setRoleName(String newRoleName) {
-      roleName = newRoleName;
+
+   public void setRoleName(String roleName) {
+      this.roleName = roleName;
    }
-   
-   /** @pdOid 86ff4f18-c61b-4b4e-a0af-4cf5a0df65c4 */
+
    public String getRoleDesc() {
       return roleDesc;
    }
-   
-   /** @param newRoleDesc
-    * @pdOid 0d625ae7-e81e-468c-b4fd-a1eaa796e3cd */
-   public void setRoleDesc(String newRoleDesc) {
-      roleDesc = newRoleDesc;
+
+   public void setRoleDesc(String roleDesc) {
+      this.roleDesc = roleDesc;
    }
-   
-   /** @pdOid 8284feb3-2e74-4196-8d3d-1bf70bfb208c */
+
    public Integer getDisabled() {
       return disabled;
    }
-   
-   /** @param newDisabled
-    * @pdOid 67246a3b-ca5f-4649-a181-5d4bb5b251dd */
-   public void setDisabled(Integer newDisabled) {
-      disabled = newDisabled;
+
+   public void setDisabled(Integer disabled) {
+      this.disabled = disabled;
    }
 
    @Override

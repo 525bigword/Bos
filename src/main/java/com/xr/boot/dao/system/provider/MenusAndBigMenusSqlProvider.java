@@ -1,6 +1,7 @@
 package com.xr.boot.dao.system.provider;
 
 import com.xr.boot.entity.SyMenus;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.jdbc.SQL;
 import org.springframework.stereotype.Component;
@@ -9,6 +10,24 @@ import java.util.List;
 
 @Component
 public class MenusAndBigMenusSqlProvider {
+    public String saveListSyRoleAndSyMenus(List<Integer> menus,Integer roleid){
+        StringBuffer sb=new StringBuffer();
+        if(menus.size()==1) {
+            Integer menuid=menus.get(0);
+            sb.append("insert into  sy_rolesmenus  values(null,#{roleid},#{"+menuid+"})");
+
+        }else{
+            sb.append("insert into  sy_rolesmenus values");
+            for(int i=0;i<menus.size();i++){
+                sb.append("(null,"+roleid+","+menus.get(i)+"),");
+            }
+           if(sb.charAt(sb.length()-1)==','){
+               sb.deleteCharAt(sb.length() - 1);
+           }
+        }
+        return sb.toString();
+    }
+
     /**
      * 批量删除sy_menus表
      * @param ids 需要删除的行

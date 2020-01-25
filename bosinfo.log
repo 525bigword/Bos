@@ -1,6 +1,0 @@
-2020-01-25 00:00:06.946  INFO 9008 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-01-25 00:00:06.952  INFO 9008 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-01-25 00:00:06.981  INFO 9008 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
-2020-01-25 00:00:09.157  INFO 9008 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2020-01-25 00:00:09.159  INFO 9008 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2020-01-25 00:00:10.913 DEBUG 9008 --- [http-nio-8080-exec-4] c.x.b.c.s.MenusAndBigMenusController     : 从redis中取出值

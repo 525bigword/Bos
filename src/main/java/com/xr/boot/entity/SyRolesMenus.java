@@ -18,10 +18,28 @@ public class SyRolesMenus implements Serializable {
    private long id;
    /** @pdOid d7cc9786-f9eb-4dd4-848e-3c0dc791244c */
    private Integer roleid;
+   private Integer menuid;
    private SyRoles roleNames;
    /** @pdOid 8f66f442-d059-4110-abbd-82597607a23e */
    private List<SyMenus> menuNames;
 
+   private SyMenus syMenus;
+
+   public Integer getMenuid() {
+      return menuid;
+   }
+
+   public void setMenuid(Integer menuid) {
+      this.menuid = menuid;
+   }
+
+   public SyMenus getSyMenus() {
+      return syMenus;
+   }
+
+   public void setSyMenus(SyMenus syMenus) {
+      this.syMenus = syMenus;
+   }
 
    public Integer getRoleid() {
       return roleid;
@@ -55,8 +73,7 @@ public class SyRolesMenus implements Serializable {
       return "SyRolesMenus{" +
               "id=" + id +
               ", roleid=" + roleid +
-              ", roleNames=" + roleNames +
-              ", menuNames=" + menuNames +
+              ", menuid=" + menuid +
               '}';
    }
 
