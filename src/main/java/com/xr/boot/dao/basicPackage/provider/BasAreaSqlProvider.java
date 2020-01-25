@@ -9,29 +9,33 @@ public class BasAreaSqlProvider {
     public String findBasAreabyWhere(BasArea basArea){
         return new SQL(){
             {
-                SELECT("ID,EmpNo,EmpName,MobileNo,Type,PDA,StandardKg,StandardLength,Models,PlateInt,InvalidateMark,OperatorID,OperationUnitID,OperationTime");
-                FROM("bas_substitute");
+                SELECT("ID,Province,City,County,PostalCode,SimpleCode,CityCode,EntryUnitID,ComplementUnitID,Nature,TheArea,Stats");
+                FROM("bas_area");
                 String tj=" 1=1";
-               /* try {
-                    if(basSubstitute.getEmpNo()!=null&&!basSubstitute.getEmpNo().equals("")){
-                        tj+=" and EmpNo=#{empNo}";
+               try {
+                    if(basArea.getProvince()!=null&&!basArea.getProvince().equals("")){
+                        tj+=" and Province=#{province}";
                     }
 
-                    if (basSubstitute.getEmpName()!=null&&!basSubstitute.getEmpName().equals("")){
-                        tj += " and EmpName Like CONCAT('%',#{empName},'%')";
-                    }
+                   if(basArea.getCity()!=null&&!basArea.getCity().equals("")){
+                       tj+=" and City=#{city}";
+                   }
 
-                    if(basSubstitute.getMobileNo()!=null&&!basSubstitute.getMobileNo().equals("")){
-                        tj+=" and MobileNo=#{mobileNo}";
-                    }
+                   if(basArea.getCounty()!=null&&!basArea.getCounty().equals("")){
+                       tj+=" and County=#{county}";
+                   }
 
-                    if(basSubstitute.getPda()!=null&&!basSubstitute.getPda().equals("")&&basSubstitute.getPda()!=3&&!basSubstitute.getPda().equals("3")){
-                        tj+=" and PDA=#{pda}";
-                    }
+                   if(basArea.getSimpleCode()!=null&&!basArea.getSimpleCode().equals("")){
+                       tj += " and SimpleCode Like CONCAT('%',#{simpleCode},'%')";
+                   }
+
+                   if(basArea.getCityCode()!=null&&!basArea.getCityCode().equals("")){
+                       tj+=" and CityCode=#{cityCode}";
+                   }
                     WHERE(tj);
                 }catch (Exception e){
                     WHERE(tj);
-                }*/
+                }
             }
         }.toString()+" order by InvalidateMark asc,id desc";
     }
