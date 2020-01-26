@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSON;
 import com.xr.boot.dao.system.MenusAndBigMenusMapper;
 import com.xr.boot.entity.SyBigMenus;
 import com.xr.boot.entity.SyMenus;
+import com.xr.boot.entity.SyRoles;
+import com.xr.boot.entity.SyRolesMenus;
 import com.xr.boot.service.system.MenusAndBigMenusService;
 import com.xr.boot.util.RedisUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -134,5 +136,36 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
         redisUtil.set(key,syMenusByParentidToZero);
         Menus.add(key);
         return redisUtil.get(key);
+    }
+    @Klock
+    @Override
+    public Object findSyMenusBySyRole(SyRoles syRoles) {
+        String key="com.xr.boot.controller.system.MenusAndBigMenusController.findSyMenusBySyRole"+syRoles.getId();
+        List<SyRolesMenus> syMenusBySyRoles = menusAndBigMenusMapper.findSyMenusBySyRoles(syRoles);
+        redisUtil.set(key,syMenusBySyRoles);
+        Menus.add(key);
+        return redisUtil.get(key);
+    }
+    @Transactional
+    @Klock
+    @Override
+    public void assignRolePermissions(List<Integer> menuid, Integer roleid) {
+        SyRoles syRoles=new SyRoles();
+        syRoles.setId(roleid);
+        List<SyRolesMenus> syMenusBySyRoles = menusAndBigMenusMapper.findSyMenusBySyRoles(syRoles);
+        for(int i=0;i<menuid.size();i++){
+            for(int j=0;j<syMenusBySyRoles.size();j++){
+                if(menuid.get(i)==syMenusBySyRoles.get(j).getMenuid()){
+                    menuid.remove(i);
+                    continue;
+                }
+            }
+        }
+        if(menuid.size()>0) {
+            menusAndBigMenusMapper.saveSyRoleAndSyMenu(menuid, roleid);
+            for (String s : Menus) {
+                redisUtil.del(s);
+            }
+        }
     }
 }

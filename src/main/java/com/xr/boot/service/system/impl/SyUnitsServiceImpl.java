@@ -32,4 +32,13 @@ public class SyUnitsServiceImpl implements SyUnitsService {
         redisUtil.set("com.xr.boot.controller.basicPackage.SyUnitsController.findSyUnits", maps);
         return redisUtil.get("com.xr.boot.controller.basicPackage.SyUnitsController.findSyUnits");
     }
+    /**
+     * 查询正常运作的所有单位 未修正
+     * @param stats
+     * @return
+     */
+    @Override
+    public List<SyUnits> findSyUnitAllByStats(Integer stats) {
+        return syUnitsMapper.findSyUnitAllByStats(stats);
+    }
 }

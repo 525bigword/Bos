@@ -4,6 +4,7 @@ import com.xr.boot.dao.basicPackage.provider.BasDeliveryStandardSqlProvider;
 import com.xr.boot.dao.system.provider.MenusAndBigMenusSqlProvider;
 import com.xr.boot.entity.SyBigMenus;
 import com.xr.boot.entity.SyMenus;
+import com.xr.boot.entity.SyRoles;
 import com.xr.boot.entity.SyRolesMenus;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.mapping.FetchType;
@@ -13,6 +14,19 @@ import java.util.List;
 
 @Repository
 public interface MenusAndBigMenusMapper {
+    //为角色循环新增多个权限
+    @InsertProvider(type = MenusAndBigMenusSqlProvider.class,method = "saveListSyRoleAndSyMenus")
+    void saveSyRoleAndSyMenu(List<Integer> menus,Integer roleid);
+
+
+    //根据角色id查询对应权限
+    @Select("select id,menuid from sy_rolesmenus where roleid=#{id}")
+    @Results({
+            @Result(id = true,column = "id",property = "id"),
+            @Result(id = true,column = "menuid",property = "menuid")
+    })
+    List<SyRolesMenus> findSyMenusBySyRoles(SyRoles syRoles);
+
     //查询所有父级功能模块即parentid为0的数据
     @Select("select id,parentid,type,text,url,tip,bigmenus from sy_menus where parentid=0")
     @Results({

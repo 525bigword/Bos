@@ -43,8 +43,6 @@ public class SyEmpServiceImpl implements SyEmpService {
             syEmps = syEmpMapper.findSyEmpByEmpNoAndPwd(syEmp);
             if(syEmps==null){
                 return null;
-            }else{
-                syEmps.setSyRolesMenus(syEmpMapper.findSyRolesMenusByroleId(syEmps.getRoleid()));
             }
             if(syEmps.getDisabled()==1){
                 throw new Exception("账号已经被冻结");

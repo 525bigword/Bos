@@ -63,7 +63,7 @@ public interface PacPackagingMapper {
    void addPacpackaging(PacPackaging pacPackaging);
     @Update("update PAC_Packaging set ItemCode=#{itemCode},ItemName=#{itemName},PlannedPrice=#{plannedPrice},Specifications=#{specifications},type=#{type},`Status`=#{status} where id=#{id};")//,OperatorID=#{operatorId},OperationUnitID=#{operationUnitid},OperationTime=#{operationTime}
     void updatePacpackaging(PacPackaging pacPackaging);
-    @Update("update PAC_Packaging set status=0 where id=#{id}")
+    @Update("update PAC_Packaging set status=1 where id=#{id}")
     void updatePaczuofei(PacPackaging pacPackaging);
     @Select("select id,empunit from sy_emp where empName=#{empName}")
     SyEmp selectIdbyname(String empName);

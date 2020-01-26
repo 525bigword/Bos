@@ -2,6 +2,7 @@ package com.xr.boot.service.system;
 
 import com.xr.boot.entity.SyBigMenus;
 import com.xr.boot.entity.SyMenus;
+import com.xr.boot.entity.SyRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,6 +10,10 @@ import java.util.List;
 import java.util.Map;
 
 public interface MenusAndBigMenusService {
+    //分配角色权限业务
+    void assignRolePermissions(List<Integer> menuid,Integer roleid);
+    //查询目标用户所拥有的权限
+    Object findSyMenusBySyRole(SyRoles syRoles);
     //权限树形菜单业务
     Object findSyMenusToTree();
     //查询所有栏目

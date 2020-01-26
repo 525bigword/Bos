@@ -3,6 +3,8 @@ package com.xr.boot.controller.system;
 import com.alibaba.fastjson.JSON;
 import com.xr.boot.entity.SyBigMenus;
 import com.xr.boot.entity.SyMenus;
+import com.xr.boot.entity.SyRoles;
+import com.xr.boot.entity.SyRolesMenus;
 import com.xr.boot.ienum.Return;
 import com.xr.boot.ienum.StausEnum;
 import com.xr.boot.service.system.MenusAndBigMenusService;
@@ -24,6 +26,26 @@ public class MenusAndBigMenusController {
     private RedisUtil redisUtil;
     @Autowired
     private MenusAndBigMenusService menusAndBigMenusService;
+
+    @ApiOperation("分配角色权限")
+    @PostMapping("/assignrolepermissions")
+    public void assignRolePermissions(@RequestParam("menuid[]") List<Integer> menuid,
+                                        @RequestParam("roleid")Integer roleid){
+        menusAndBigMenusService.assignRolePermissions(menuid,roleid);
+    }
+
+    @ApiOperation("查询目标角色的权限")
+    @GetMapping("/findmenubyrole")
+    public Object findSymenuBySyrole(SyRoles syRoles){
+        Object o=null;
+        String key="com.xr.boot.controller.system.MenusAndBigMenusController.findSyMenusBySyRole"+syRoles.getId();
+        if(redisUtil.hasKey(key)){
+            o = redisUtil.get(key);
+        }else{
+            o=menusAndBigMenusService.findSyMenusBySyRole(syRoles);
+        }
+        return o;
+    }
 
     @ApiOperation("权限树形菜单接口")
     @GetMapping("/symenustree")

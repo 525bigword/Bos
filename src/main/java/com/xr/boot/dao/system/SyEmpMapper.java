@@ -40,7 +40,7 @@ public interface SyEmpMapper {
             @Result(property = "roleid",column = "roleid"),
             @Result(column = "menuid",property = "menuNames",
                     many = @Many(
-                            select = "com.xr.boot.dao.system.MenusAndBigMenusMapper.findSyMenusById",
+                            select = "com.xr.boot.dao.system.MenusAndBigMenusMapper.findSyMenusByIdAndParentToZero",
                             fetchType = FetchType.EAGER
                     )
             )
