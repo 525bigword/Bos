@@ -35,7 +35,7 @@ public interface BasAreaMapper {
     })
     List<BasArea> findBasAreas(BasArea basArea);
     @Update("update bas_area set EntryUnitID=#{entryUnitID},Nature=#{nature},TheArea=#{theArea} where id=#{id}")
-    void upBasAreaById(int id);
+    void upBasAreaById(BasArea basArea);
 
 
     @Insert("insert into bas_area(ID,Province,City,County,PostalCode,SimpleCode,CityCode,EntryUnitID,ComplementUnitID,Nature,TheArea,OperatorID,OperationTime) VALUES(NULL,#{province},#{city},#{county},#{postalCode},#{simpleCode},#{cityCode},#{entryUnitID},#{complementUnitID},#{nature},#{theArea},#{empId},NOW())")

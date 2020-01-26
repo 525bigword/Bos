@@ -42,8 +42,8 @@ public class BasAreaController {
         return basAreaService.findBasAreaByTerm(basArea);
     }
     @PostMapping("/upBasAreaById")
-    public int upBasAreaById(int id) {
-        basAreaService.upBasAreaById(id);
+    public int upBasAreaById(BasArea basArea) {
+        basAreaService.upBasAreaById(basArea);
         redisUtil.del("com.xr.boot.controller.BasAreaController.findBasAreas");
         return 1;
     }

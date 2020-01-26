@@ -38,8 +38,8 @@ public class BasAreaServiceImpl implements BasAreaService {
     @Klock(leaseTime=Long.MAX_VALUE)
     @Transactional
     @Override
-    public void upBasAreaById(int id) {
-        basAreaMapper.upBasAreaById(id);
+    public void upBasAreaById(BasArea basArea) {
+        basAreaMapper.upBasAreaById(basArea);
     }
     @Klock(leaseTime=Long.MAX_VALUE)
     @Transactional

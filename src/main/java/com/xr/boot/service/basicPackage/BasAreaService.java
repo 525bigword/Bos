@@ -21,9 +21,9 @@ public interface BasAreaService {
 
     /**
      * 根据id修改区域设置
-     * @param id
+     * @param basArea
      */
-    void upBasAreaById(int id);
+    void upBasAreaById(BasArea basArea);
 
     /**
      * 新增区域设置
