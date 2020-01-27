@@ -4,12 +4,12 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class BasPartition
  ***********************************************************************/
 
-import java.util.*;
+import java.io.Serializable;
 
 /** 分区表
  * 
  * @pdOid 27ba0293-55c0-4619-bad5-7a1527f57904 */
-public class BasPartition {
+public class BasPartition implements Serializable {
    /** 编号	自增
     * 
     * @pdOid 1242bad9-3752-4d77-9bae-addca84a199f */
@@ -29,6 +29,7 @@ public class BasPartition {
    /** 定区编码   雪花算法二十五号中心
     * 
     * @pdOid c9925760-a16a-4948-91d4-3668718ca61a */
+   public String sortingCode;
    public String zoneCode;
    /** 关键字
     * 
@@ -50,5 +51,131 @@ public class BasPartition {
     * 
     * @pdOid fa29828e-ae1f-46c3-8f72-b9fca20e7b00 */
    public long stats;
+   private SyEmp syEmp;
+   private SyUnits syUnits;
+   /** 操作时间	当前操作时间
+    *
+    * @pdOid ff2acc1f-11d0-4703-a145-22200d30490b */
+   private String operationTime;
+   public long getempId(){
+      return syEmp.getId();
+   }
+   public  long getunitId(){
+      return syUnits.getId();
+   }
+   public BasPartition(){
 
+   }
+
+   public long getId() {
+      return id;
+   }
+
+   public void setId(long id) {
+      this.id = id;
+   }
+
+   public String getProvince() {
+      return province;
+   }
+
+   public void setProvince(String province) {
+      this.province = province;
+   }
+
+   public String getCity() {
+      return city;
+   }
+
+   public void setCity(String city) {
+      this.city = city;
+   }
+
+   public String getCounty() {
+      return county;
+   }
+
+   public void setCounty(String county) {
+      this.county = county;
+   }
+
+   public String getSortingCode() {
+      return sortingCode;
+   }
+
+   public void setSortingCode(String sortingCode) {
+      this.sortingCode = sortingCode;
+   }
+
+   public String getZoneCode() {
+      return zoneCode;
+   }
+
+   public void setZoneCode(String zoneCode) {
+      this.zoneCode = zoneCode;
+   }
+
+   public String getKeyword() {
+      return keyword;
+   }
+
+   public void setKeyword(String keyword) {
+      this.keyword = keyword;
+   }
+
+   public int getStartInt() {
+      return startInt;
+   }
+
+   public void setStartInt(int startInt) {
+      this.startInt = startInt;
+   }
+
+   public int getTerminateInt() {
+      return terminateInt;
+   }
+
+   public void setTerminateInt(int terminateInt) {
+      this.terminateInt = terminateInt;
+   }
+
+   public long getsDInt() {
+      return sDInt;
+   }
+
+   public void setsDInt(long sDInt) {
+      this.sDInt = sDInt;
+   }
+
+   public long getStats() {
+      return stats;
+   }
+
+   public void setStats(long stats) {
+      this.stats = stats;
+   }
+
+   public SyEmp getSyEmp() {
+      return syEmp;
+   }
+
+   public void setSyEmp(SyEmp syEmp) {
+      this.syEmp = syEmp;
+   }
+
+   public SyUnits getSyUnits() {
+      return syUnits;
+   }
+
+   public void setSyUnits(SyUnits syUnits) {
+      this.syUnits = syUnits;
+   }
+
+   public String getOperationTime() {
+      return operationTime;
+   }
+
+   public void setOperationTime(String operationTime) {
+      this.operationTime = operationTime;
+   }
 }

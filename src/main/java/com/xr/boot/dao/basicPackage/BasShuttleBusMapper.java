@@ -31,7 +31,7 @@ public interface BasShuttleBusMapper {
             @Result(column = "OperationUnitID", property = "syUnits",
                     one = @One(select = "com.xr.boot.dao.system.SyUnitsMapper.findSyUnitById", fetchType = FetchType.DEFAULT)
             ),
-            @Result(column = "OperationTime", property = "operationTime"),
+            @Result(column = "OperationTime", property = "operationTime")
     })
     List<BasShuttleBus> findBasShuttleBus(BasShuttleBus basShuttleBus);
 
