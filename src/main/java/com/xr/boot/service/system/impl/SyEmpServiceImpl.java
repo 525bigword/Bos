@@ -57,7 +57,10 @@ public class SyEmpServiceImpl implements SyEmpService {
         }
 
     }
-
+    @Override
+    public SyEmp findSyEmpByEmpNo(SyEmp syEmp) {
+        return syEmpMapper.findSyEmpByEmpNo(syEmp);
+    }
     @Override
     public void upSyEmpToPwdById(SyEmp syEmp) {
         syEmpMapper.upSyEmpById(syEmp);
