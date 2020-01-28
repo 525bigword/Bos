@@ -14,6 +14,19 @@ public class PacStockItem {
     * 
     * @pdOid e7b541ce-c4a7-408a-9980-bee0d6d90bfe */
    private int id;
+   /**
+    * 入库单号
+    */
+   private String warehouseNo;
+
+   public String getWarehouseNo() {
+      return warehouseNo;
+   }
+
+   public void setWarehouseNo(String warehouseNo) {
+      this.warehouseNo = warehouseNo;
+   }
+
    /** 货物编码	正常物品
     * 
     * @pdOid 4480eaf3-8935-4c66-93f3-4d89ac221d11 */
@@ -38,10 +51,19 @@ public class PacStockItem {
     * 
     * @pdOid f56fe831-983e-4932-883f-f1889551a2f0 */
    private String specifications;
-   /** 类型
+    /** 类型
     * 
     * @pdOid e5ee50e2-4159-4f5e-81ed-d92f6c0646a4 */
-   private long type;
+   private PacGetBoundType pacGetBoundType;
+
+   public PacGetBoundType getPacGetBoundType() {
+      return pacGetBoundType;
+   }
+
+   public void setPacGetBoundType(PacGetBoundType pacGetBoundType) {
+      this.pacGetBoundType = pacGetBoundType;
+   }
+
    /** 状态	1.正常、2.作废
     * 
     * @pdOid f7114960-52be-47a1-afa0-d3ff8d410126 */
@@ -126,14 +148,9 @@ public class PacStockItem {
    
    /** @pdOid 301a212e-d6f8-4b7b-b532-c28d3f33e31e */
    public long getType() {
-      return type;
+      return pacGetBoundType.getPacGetid();
    }
-   
-   /** @param newType
-    * @pdOid 612be107-5829-422e-8cee-0ef4513c8c29 */
-   public void setType(long newType) {
-      type = newType;
-   }
+
    
    /** @pdOid 77a887a3-0096-498a-ada4-735c45625845 */
    public long getStatus() {

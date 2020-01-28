@@ -48,7 +48,10 @@ public class PacPackagingMateriarOutBoundFrom {
       this.pacOutType = pacOutType;
    }
 //取出库类型
-   public Integer getOutboundType() {
+   public Integer setOutboundType(Integer outboundType){
+      return outboundType;
+   }
+  public Integer getOutboundType() {
       return pacOutType.getId();
    }
 
@@ -100,65 +103,93 @@ public class PacPackagingMateriarOutBoundFrom {
    /**
     * 所属单位
     */
-   private Integer affiliatedUnit;
+   private SyUnits saffiliatedUnit;
 
-   public Integer getAffiliatedUnit() {
-      return affiliatedUnit;
+   public SyUnits getSaffiliatedUnit() {
+      return saffiliatedUnit;
    }
 
-   public void setAffiliatedUnit(Integer affiliatedUnit) {
-      this.affiliatedUnit = affiliatedUnit;
+   public void setSaffiliatedUnit(SyUnits saffiliatedUnit) {
+      this.saffiliatedUnit = saffiliatedUnit;
+   }
+
+   public Integer getAffiliatedUnit() {
+
+      return (int)saffiliatedUnit.getId();
    }
 
    /**
     * 下发单位
     */
-   private Integer issuedByTheUnit;
+   private SyUnits sissuedByTheUnit;
+
+   public SyUnits getSissuedByTheUnit() {
+      return sissuedByTheUnit;
+   }
+
+   public void setSissuedByTheUnit(SyUnits sissuedByTheUnit) {
+      this.sissuedByTheUnit = sissuedByTheUnit;
+   }
 
    public Integer getIssuedByTheUnit() {
-      return issuedByTheUnit;
+
+      return (int)sissuedByTheUnit.getId();
    }
 
-   public void setIssuedByTheUnit(Integer issuedByTheUnit) {
-      this.issuedByTheUnit = issuedByTheUnit;
-   }
 
    /**
     * 经办人单位
     */
-   private Integer operatorUnit;
+   private SyUnits sosperatorUnit;
+
+   public SyUnits getSosperatorUnit() {
+      return sosperatorUnit;
+   }
+
+   public void setSosperatorUnit(SyUnits sosperatorUnit) {
+      this.sosperatorUnit = sosperatorUnit;
+   }
 
    public Integer getOperatorUnit() {
-      return operatorUnit;
+
+      return (int)sosperatorUnit.getId();
    }
 
-   public void setOperatorUnit(Integer operatorUnit) {
-      this.operatorUnit = operatorUnit;
-   }
    /**
     * 经办人工号
     */
-   private String operEmpNo;
+    private SyEmp syEmpno;
 
-   public String getOperEmpNo() {
-      return operEmpNo;
+    public SyEmp getSyEmpno() {
+        return syEmpno;
+    }
+
+    public void setSyEmpno(SyEmp syEmpno) {
+        this.syEmpno = syEmpno;
+    }
+
+    public String getOperEmpNo() {
+      return syEmpno.getEmpNo();
    }
 
-   public void setOperEmpNo(String operEmpNo) {
-      this.operEmpNo = operEmpNo;
-   }
+
 /**
  * 客户编号
  */
-private Integer clienterid;
+private SyEmp syEmpc;
 
-   public Integer getClienterid() {
-      return clienterid;
+    public SyEmp getSyEmpc() {
+        return syEmpc;
+    }
+
+    public void setSyEmpc(SyEmp syEmpc) {
+        this.syEmpc = syEmpc;
+    }
+
+    public Integer getClienterid() {
+      return (int)syEmpc.getId();
    }
 
-   public void setClienterid(Integer clienterid) {
-      this.clienterid = clienterid;
-   }
 /**
  * 领用人工号
  */
@@ -176,50 +207,58 @@ private String recipient;
    /** 领用时间
     * 
     * @pdOid 1215c1da-f430-496d-9f71-6ed3aca2017f */
-   private Date recipientsTime;
+   private String recipientsTime;
 
-   public Date getRecipientsTime() {
+   public String getRecipientsTime() {
       return recipientsTime;
    }
 
-   public void setRecipientsTime(Date recipientsTime) {
+   public void setRecipientsTime(String recipientsTime) {
       this.recipientsTime = recipientsTime;
    }
 /**
  * 开单人工号
  */
-private Integer single;
+private String single;
 
-   public Integer getSingle() {
+   public String getSingle() {
       return single;
    }
 
-   public void setSingle(Integer single) {
+   public void setSingle(String single) {
       this.single = single;
    }
 
    /** 开单时间
     * 
     * @pdOid cfc284fc-5135-4b2d-b558-3bceefa67a1b */
-   private Date orderTime;
+   private String orderTime;
 
-   public Date getOrderTime() {
+   public String getOrderTime() {
       return orderTime;
    }
 
-   public void setOrderTime(Date orderTime) {
+   public void setOrderTime(String orderTime) {
       this.orderTime = orderTime;
    }
 
-   private SyEmp syEmp;
-
-   public SyEmp getSyEmp() {
-      return syEmp;
-   }
-
-   public void setSyEmp(SyEmp syEmp) {
-      this.syEmp = syEmp;
-   }
-
-
+    @Override
+    public String toString() {
+        return "PacPackagingMateriarOutBoundFrom{" +
+                "id=" + id +
+                ", outboundNumber='" + outboundNumber + '\'' +
+                ", pacOutType=" + pacOutType +
+                ", transportSlip='" + transportSlip + '\'' +
+                ", syUnits=" + syUnits +
+                ", saffiliatedUnit=" + saffiliatedUnit +
+                ", sissuedByTheUnit=" + sissuedByTheUnit +
+                ", sosperatorUnit=" + sosperatorUnit +
+                ", syEmpno=" + syEmpno +
+                ", syEmpc=" + syEmpc +
+                ", recipient='" + recipient + '\'' +
+                ", recipientsTime=" + recipientsTime +
+                ", single='" + single + '\'' +
+                ", orderTime=" + orderTime +
+                '}';
+    }
 }
