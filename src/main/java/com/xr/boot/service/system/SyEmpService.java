@@ -32,4 +32,11 @@ public interface SyEmpService {
      * @return
      */
     List<SyEmp> findSyEmp();
+
+    /**
+     *  根据员工工号查询员工信息
+     * @param syEmp
+     * @return
+     */
+    SyEmp findSyEmpByEmpNo(SyEmp syEmp);
 }

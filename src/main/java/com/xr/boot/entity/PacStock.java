@@ -73,7 +73,7 @@ public class PacStock implements Serializable {
    /** 开单时间	服务器时间
     * 
     * @pdOid 493eddae-bf3f-4a6b-9e6d-899c79b2a054 */
-   private Date drawerTime;
+   private String drawerTime;
    /** 状态
     * 
     * @pdOid ac77c80f-5504-4705-8de4-a97f8c47821d */
@@ -156,13 +156,13 @@ public class PacStock implements Serializable {
    }
    
    /** @pdOid 199db523-72b6-41ee-9d4f-a4c950640cf8 */
-   public Date getDrawerTime() {
+   public String getDrawerTime() {
       return drawerTime;
    }
    
    /** @param newDrawerTime
     * @pdOid 7d66b6f7-75c8-4b7f-a2e8-acb0ce01b36b */
-   public void setDrawerTime(Date newDrawerTime) {
+   public void setDrawerTime(String newDrawerTime) {
       drawerTime = newDrawerTime;
    }
    

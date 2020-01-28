@@ -101,7 +101,7 @@ public interface SyEmpMapper {
     @Results({
             @Result(id = true,column = "id",property = "id"),
             @Result(column = "empname",property = "empName"),
-            @Result(column = "empno",property = "empno"),
+            @Result(column = "empno",property = "empNo"),
             @Result(column = "pwd",property ="pwd" ),
             @Result(column = "querypwd",property = "queryPwd"),
             @Result(column = "empunit",property = "empunit"),
