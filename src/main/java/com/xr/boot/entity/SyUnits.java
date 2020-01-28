@@ -21,7 +21,7 @@ public class SyUnits implements Serializable {
    /** 编号	自增
     *
     * @pdOid bc8c3015-7113-4a13-983e-25e87b613cb0 */
-   private long id;
+   private long id=0;
    /** 单位名称
     *
     * @pdOid 7e07b0ec-433f-4012-b8f1-d60d4bda25b2 */

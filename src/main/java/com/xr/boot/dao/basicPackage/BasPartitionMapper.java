@@ -39,4 +39,7 @@ public interface BasPartitionMapper {
 
     @Insert("insert into bas_partition(ID,Province,City,County,SortingCode,ZoneCode,Keyword,StartInt,TerminateInt,SDInt,Stats,OperatorID,OperationUnitID,OperationTime) VALUES(null,#{province},#{city},#{county},#{sortingCode},#{zoneCode},#{keyword},#{startInt},#{terminateInt},#{sDInt},0,#{empId},#{unitId},NOW())")
     void saveBasPartition(BasPartition basPartition);
+
+    @Delete("delete from bas_partition where ID=#{id}")
+    void delBasPartition(int id);
 }
