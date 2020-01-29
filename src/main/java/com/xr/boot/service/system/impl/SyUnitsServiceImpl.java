@@ -41,4 +41,13 @@ public class SyUnitsServiceImpl implements SyUnitsService {
     public List<SyUnits> findSyUnitAllByStats(Integer stats) {
         return syUnitsMapper.findSyUnitAllByStats(stats);
     }
+
+    @Override
+    public Object findSyUnitByParentId(SyUnits syUnits) {
+        String key=
+                "com.xr.boot.controller.basicPackage.SyUnitsController.findSyUnitsByParentid"+syUnits.getParentid()+syUnits.getName();
+        List<SyUnits> syUnitAllByParentId = syUnitsMapper.findSYUnitAllByParentId(syUnits);
+        redisUtil.set(key,syUnitAllByParentId);
+        return redisUtil.get(key);
+    }
 }

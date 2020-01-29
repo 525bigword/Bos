@@ -40,7 +40,17 @@ public class SyUnits implements Serializable {
     *
     * @pdOid 6dcd1ed3-c25f-4989-a9ac-3f6114989fe3 */
    private Integer stats;
+   private String operatorname;
    public  SyUnits(){}
+
+   public String getoperatorname() {
+      return operatorname;
+   }
+
+   public void setOperatorName(String operatorname) {
+      this.operatorname = operatorname;
+   }
+
    /** @pdRoleInfo migr=no name=PacPackagingMateriarOutBoundFrom assc=reference65 coll=java.util.Collection impl=java.util.HashSet mult=0..* */
    public Collection<PacPackagingMateriarOutBoundFrom> pacPackagingMateriarOutBoundFrom;
 

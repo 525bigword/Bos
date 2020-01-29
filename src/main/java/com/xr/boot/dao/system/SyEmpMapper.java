@@ -53,7 +53,7 @@ public interface SyEmpMapper {
             @Result(id = true,column = "id",property = "id"),
             @Result(column = "empname",property = "empName"),
             @Result(column = "empno",property = "empNo"),
-            @Result(column = "pwd",property ="pwd" ),
+            @Result(column = "empunit",property ="empunit" ),
             @Result(column = "querypwd",property = "queryPwd"),
             @Result(column = "remark",property = "remark"),
             @Result(column = "disabled",property = "disabled"),

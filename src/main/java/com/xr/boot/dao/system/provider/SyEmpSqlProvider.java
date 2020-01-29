@@ -40,6 +40,7 @@ public class SyEmpSqlProvider {
         if(syEmp.getDisabled()!=null){
             sql.WHERE("sy_emp.disabled=#{disabled}");
         }
+        sql.WHERE("empunit=#{empunit}");
         sql.FROM("sy_emp");
         return sql.toString();
     }

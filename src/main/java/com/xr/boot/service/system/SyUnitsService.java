@@ -7,7 +7,8 @@ import java.util.List;
 
 public interface SyUnitsService  {
     SyUnits findSyUnitById(Integer operationUnitid);
-
+    //查询本公司得子公司
+    Object findSyUnitByParentId(SyUnits syUnits);
     /**
      * 查询所有公司
      * @return

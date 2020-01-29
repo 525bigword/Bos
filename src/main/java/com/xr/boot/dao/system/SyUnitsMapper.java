@@ -1,5 +1,6 @@
 package com.xr.boot.dao.system;
 
+import com.xr.boot.dao.system.provider.SyUnitsSqlProvider;
 import com.xr.boot.entity.SyUnits;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
@@ -61,5 +62,15 @@ public interface SyUnitsMapper {
             @Result(column = "Stats", property = "stats")
     })
     List<SyUnits> findSyUnitAllByStats(@Param("stats") Integer stats);
-
+    @SelectProvider(type = SyUnitsSqlProvider.class,method = "select")
+    @Results({
+            @Result(id = true, column = "ID", property = "id"),
+            @Result(column = "name", property = "name"),
+            @Result(column = "remarks", property = "remarks"),
+            @Result(column = "operatorname",property = "operatorname"),
+            @Result(column = "OperationTime", property = "operationTime"),
+            @Result(column = "parentid",property = "parentid"),
+            @Result(column = "Stats", property = "stats")
+    })
+    List<SyUnits> findSYUnitAllByParentId(SyUnits syUnits);
 }
