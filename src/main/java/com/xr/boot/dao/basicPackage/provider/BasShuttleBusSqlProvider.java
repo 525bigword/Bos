@@ -21,7 +21,7 @@ public class BasShuttleBusSqlProvider {
                         tj += " and ll.lineName=#{logLogistics.lineName}";
                     }
 
-                    if (basShuttleBus.getLicensePlateInt()!=null&&basShuttleBus.getLicensePlateInt().equals("")){
+                    if (basShuttleBus.getLicensePlateInt()!=null&&!basShuttleBus.getLicensePlateInt().equals("")){
                         tj += " and bs.LicensePlateInt Like CONCAT('%',#{licensePlateInt},'%')";
                     }
 

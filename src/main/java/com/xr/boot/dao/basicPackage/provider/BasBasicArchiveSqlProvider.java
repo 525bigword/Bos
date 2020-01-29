@@ -19,7 +19,7 @@ public class BasBasicArchiveSqlProvider {
                     if (basBasicArchive.getName()!= null && !basBasicArchive.getName().equals("")) {
                         tj += " and bb.`Name` Like CONCAT('%',#{name},'%')";
                     }
-                    if (basBasicArchive.getSyEmp().getEmpName()!=null&&basBasicArchive.getSyEmp().getEmpName().equals("")){
+                    if (basBasicArchive.getSyEmp().getEmpName()!=null&&!basBasicArchive.getSyEmp().getEmpName().equals("")){
                         tj += " and se.EmpName Like CONCAT('%',#{syEmp.empName},'%')";
                     }
 

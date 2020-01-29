@@ -4,12 +4,12 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class BasZoneInfo
  ***********************************************************************/
 
-import java.util.*;
+import java.io.Serializable;
 
 /** 定区信息表
  * 
  * @pdOid 741a55bc-bcb6-492d-8cd8-fd4ccc5fddef */
-public class BasZoneInfo {
+public class BasZoneInfo implements Serializable {
    /** 定区名称
     * 
     * @pdOid a1bebce6-4a3a-4b62-9ba6-895e380cd59d */
@@ -22,6 +22,33 @@ public class BasZoneInfo {
     * 
     * @pdOid 2c3d7195-fec2-4887-9b7a-772db7986af4 */
    private String telPhone;
+   private SyEmp syEmp;
+   private SyUnits syUnits;
+
+   public long getempId(){
+      return syEmp.getId();
+   }
+   public  long getunitId(){
+      return syUnits.getId();
+   }
+   public SyEmp getSyEmp() {
+      return syEmp;
+   }
+
+   public void setSyEmp(SyEmp syEmp) {
+      this.syEmp = syEmp;
+   }
+   public BasZoneInfo(){
+
+   }
+   public SyUnits getSyUnits() {
+      return syUnits;
+   }
+
+   public void setSyUnits(SyUnits syUnits) {
+      this.syUnits = syUnits;
+   }
+
    /** 状态	0：正常，1：停用
     * 
     * @pdOid e6d558f6-19c4-4dee-9b11-ae30aea98461 */

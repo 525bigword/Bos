@@ -18,7 +18,7 @@ public class SyEmp implements Serializable {
    /** 编号 自增
     * 
     * @pdOid 813b9d26-d334-4a16-aecd-b9cd38a8112b */
-   private long id;
+   private long id=0;
    /** 员工姓名
     * 
     * @pdOid 0527082b-9426-4f34-bdb6-089082350ee4 */

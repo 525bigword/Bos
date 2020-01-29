@@ -19,4 +19,22 @@ public interface BasPartitionService {
      * @return
      */
     List<BasPartition> findBasPartitionByTerm(BasPartition basPartition);
+
+    /**
+     * 修改单个分区
+     * @param basPartition
+     */
+    void upBasPartitionById(BasPartition basPartition);
+
+    /**
+     * 新增单个分区
+     * @param basPartition
+     */
+    void saveBasPartition(BasPartition basPartition);
+
+    /**
+     * 删除单个分区
+     * @param id
+     */
+    void delBasPartition(int id);
 }

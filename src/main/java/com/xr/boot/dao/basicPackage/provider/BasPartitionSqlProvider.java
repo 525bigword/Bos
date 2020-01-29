@@ -29,7 +29,7 @@ public class BasPartitionSqlProvider {
                         tj += " and ZoneCode=#{zoneCode}";
                     }
 
-                    if (basPartition.getKeyword()!=null&&basPartition.getKeyword().equals("")){
+                    if (basPartition.getKeyword()!=null&&!basPartition.getKeyword().equals("")){
                         tj += " and Keyword Like CONCAT('%',#{keyword},'%')";
                     }
                     WHERE(tj);
