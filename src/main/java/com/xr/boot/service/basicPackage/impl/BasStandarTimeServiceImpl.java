@@ -55,8 +55,8 @@ public class BasStandarTimeServiceImpl implements BasStandarTimeService {
     }
     @Transactional
     @Override
-    public List<String> findBasStandarTimeByTimeName(String timeName) {
-        return basStandarTimeMapper.findBasStandarTimeByTimeName(timeName);
+    public List<String> findBasStandarTimeByTimeName(BasStandarTime basStandarTime) {
+        return basStandarTimeMapper.findBasStandarTimeByTimeName(basStandarTime);
     }
 
 }

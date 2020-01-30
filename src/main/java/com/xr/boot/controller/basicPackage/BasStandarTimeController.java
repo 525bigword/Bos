@@ -49,11 +49,17 @@ public class BasStandarTimeController {
     }
     @PostMapping("/saveBasStandarTime")
     public int saveBasStandarTime(BasStandarTime basStandarTime){
-        List<String> list = basStandarTimeService.findBasStandarTimeByTimeName(basStandarTime.getTimeName());
+        List<String> list = basStandarTimeService.findBasStandarTimeByTimeName(basStandarTime);
         if(list.size()!=0){
             return 0;
         }
         basStandarTimeService.saveBasStandarTime(basStandarTime);
+        redisUtil.del("com.xr.boot.controller.BasStandarTimeController.findBasStandarTimes");
+        return 1;
+    }
+    @PostMapping("/delBasStandarTime")
+    public int delBasStandarTime(int id){
+        basStandarTimeService.delBasStandarTime(id);
         redisUtil.del("com.xr.boot.controller.BasStandarTimeController.findBasStandarTimes");
         return 1;
     }

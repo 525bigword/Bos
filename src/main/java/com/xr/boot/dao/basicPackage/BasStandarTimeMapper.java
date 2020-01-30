@@ -37,9 +37,9 @@ public interface BasStandarTimeMapper {
     @Delete("DELETE from bas_standartime where ID=#{id}")
     void delBasStandarTime(int id);
 
-    @Select("select TimeName from bas_standartime where TimeName=#{timeName}")
+    @Select("select TimeName from bas_standartime where TimeName=#{timeName} and SubordinateUnit=#{unitId}")
     @Results({
             @Result(column = "TimeName", property = "timeName")
     })
-    List<String> findBasStandarTimeByTimeName(String timeName);
+    List<String> findBasStandarTimeByTimeName(BasStandarTime basStandarTime);
 }

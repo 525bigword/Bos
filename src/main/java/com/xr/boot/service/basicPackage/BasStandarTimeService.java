@@ -39,8 +39,8 @@ public interface BasStandarTimeService {
 
     /**
      * 查询名称是否重复
-     * @param timeName
+     * @param basStandarTime
      * @return
      */
-    List<String> findBasStandarTimeByTimeName(String timeName);
+    List<String> findBasStandarTimeByTimeName(BasStandarTime basStandarTime);
 }
