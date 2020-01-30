@@ -67,5 +67,26 @@ public interface PacPackagingMapper {
     void updatePaczuofei(PacPackaging pacPackaging);
     @Select("select id,empunit from sy_emp where empName=#{empName}")
     SyEmp selectIdbyname(String empName);
+    /**
+     * 根据物品编码查物品信息
+     */
+    @Select("select id,ItemCode,ItemName,PlannedPrice,Specifications,type,MeasurementUnit,`Status`,operatorId,operationTime from PAC_Packaging where itemCode=#{itemCode};")
+    @Results({
+            @Result(property = "id", column = "id"),
+            @Result(property = "itemCode", column = "itemCode"),
+            @Result(property = "itemName", column = "itemName"),
+            @Result(property = "plannedPrice", column = "plannedPrice"),
+            @Result(property = "specifications", column = "specifications"),
+            @Result(column = "type", property = "pacOutBoundType",
+                    one = @One(select = "com.xr.boot.dao.PacPackaging.PacOutBoundTypeMapper.findPacTypeById", fetchType = FetchType.DEFAULT)
+            ),
+            @Result(property = "operationTime", column = "operationTime"),
+            @Result(property = "measurementUnit", column = "measurementUnit"),
+            @Result(property = "status", column = "status"),
+            @Result(column = "operatorId", property = "syEmp",
+                    one = @One(select = "com.xr.boot.dao.system.SyEmpMapper.findSyEmpById", fetchType = FetchType.DEFAULT)
+            )
+    })
+    PacPackaging findPacPackagingByitemcode(String itemCode);
 
 }

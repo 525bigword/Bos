@@ -24,7 +24,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/pacpackaging")
 @Api(value="出库管理",description="出库管理管理的API")
-public class pacPackagingMateriarOutBoundFromController {
+public class PacPackagingMateriarOutBoundFromController {
 
     @Autowired
     private PacPackagingMateriarOutBoundFromService pacPackagingMateriarOutBoundFromService;

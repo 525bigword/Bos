@@ -65,4 +65,9 @@ pacPackagingMapper.updatePaczuofei(pacPackaging);
     public SyEmp selectIdbyname(String empName) {
         return pacPackagingMapper.selectIdbyname(empName);
     }
+
+    @Override
+    public PacPackaging findPacPackagingByitemcode(String itemCode) {
+        return pacPackagingMapper.findPacPackagingByitemcode(itemCode);
+    }
 }

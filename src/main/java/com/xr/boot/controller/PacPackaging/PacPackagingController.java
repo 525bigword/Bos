@@ -168,4 +168,10 @@ pacPackagingService.updatePacpackaging(packaging);
         return wherepacpackaging;
 
     }
+    @ApiOperation(value = "根据物品编码查询",notes="需要参数", httpMethod = "POST")
+    @RequestMapping("/pacpackaging/findPacPackagingByitemcode")
+  PacPackaging findPacPackagingByitemcode(String itemCode){
+        System.out.println("根据物品编码查询");
+    return  pacPackagingService.findPacPackagingByitemcode(itemCode);
+    }
 }
