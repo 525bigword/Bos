@@ -24,11 +24,11 @@ public class PacOutFromItem implements Serializable {
      *
      * @pdOid 26283138-a0f4-4615-89f3-5b538b23c653 */
     private String goodsName;
-    /** 入库数量
+    /** 出库数量
      *
      * @pdOid f8d2523a-a90c-4cab-90d9-403973442637 */
     private int storageNum;
-    /** 实际数量	默认与入库数量一致
+    /** 实际数量	默认与出库数量一致
      *
      * @pdOid c527f6ae-84af-42a2-8d1c-419843d61593 */
     private int actualNum;
@@ -43,28 +43,28 @@ public class PacOutFromItem implements Serializable {
     /** 类型
      *
      * @pdOid e5ee50e2-4159-4f5e-81ed-d92f6c0646a4 */
-    private PacGetBoundType pacGetBoundType;
+    private PacOutBoundType pacOutBoundType;
 
-    public PacGetBoundType getPacGetBoundType() {
-        return pacGetBoundType;
+    public PacOutBoundType getPacOutBoundType() {
+        return pacOutBoundType;
     }
 
-    public void setPacGetBoundType(PacGetBoundType pacGetBoundType) {
-        this.pacGetBoundType = pacGetBoundType;
+    public void setPacOutBoundType(PacOutBoundType pacOutBoundType) {
+        this.pacOutBoundType = pacOutBoundType;
     }
 
     /** 状态	1.正常、2.作废
      *
      * @pdOid f7114960-52be-47a1-afa0-d3ff8d410126 */
     private long status;
-private String OUnit;
+private String oUnit;
 
-    public String getOUnit() {
-        return OUnit;
+    public String getoUnit() {
+        return oUnit;
     }
 
-    public void setOUnit(String OUnit) {
-        this.OUnit = OUnit;
+    public void setoUnit(String oUnit) {
+        this.oUnit = oUnit;
     }
 
     private double oPrice;
@@ -164,7 +164,7 @@ private String OUnit;
 
     /** @pdOid 301a212e-d6f8-4b7b-b532-c28d3f33e31e */
     public long getType() {
-        return pacGetBoundType.getPacGetid();
+        return pacOutBoundType.getId();
     }
 
 
@@ -179,4 +179,21 @@ private String OUnit;
         status = newStatus;
     }
 
+    @Override
+    public String toString() {
+        return "PacOutFromItem{" +
+                "id=" + id +
+                ", outhouseNo='" + outhouseNo + '\'' +
+                ", goodsCode='" + goodsCode + '\'' +
+                ", goodsName='" + goodsName + '\'' +
+                ", storageNum=" + storageNum +
+                ", actualNum=" + actualNum +
+                ", plannedPrice=" + plannedPrice +
+                ", specifications='" + specifications + '\'' +
+                ", pacOutBoundType=" + pacOutBoundType +
+                ", status=" + status +
+                ", oUnit='" + oUnit + '\'' +
+                ", oPrice=" + oPrice +
+                '}';
+    }
 }

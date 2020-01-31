@@ -1,13 +1,20 @@
 package com.xr.boot.controller.basicPackage;
 
+import com.xr.boot.entity.BigLogLogisticsControlTable;
 import com.xr.boot.service.basicPackage.BigLogLogisticsControlTableService;
 import com.xr.boot.util.RedisUtil;
+import com.xr.boot.util.SnowflakeIdFactory;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/bigLogLogisticsControlTableController")
@@ -34,4 +41,40 @@ public class BigLogLogisticsControlTableController {
             }
         }
     }
+    @PostMapping("/findBigLogLogisticsControlTableByTerm")
+    public List<BigLogLogisticsControlTable> findBigLogLogisticsControlTableByTerm(BigLogLogisticsControlTable bigLogLogisticsControlTable) {
+        return bigLogLogisticsControlTableService.findBigLogLogisticsControlTableByTerm(bigLogLogisticsControlTable);
+    }
+    @PostMapping("/upBigLogLogisticsControlTableById")
+    public int upBigLogLogisticsControlTableById(BigLogLogisticsControlTable bigLogLogisticsControlTable) {
+        bigLogLogisticsControlTableService.upBigLogLogisticsControlTableById(bigLogLogisticsControlTable);
+        redisUtil.del("com.xr.boot.controller.BigLogLogisticsControlTableController.findBigLogLogisticsControlTables");
+        return 1;
+    }
+    @PostMapping("/delBigLogLogisticsControlTableByWorkSheetNo")
+    public int delBigLogLogisticsControlTableByWorkSheetNo(String workSheetNo) {
+        bigLogLogisticsControlTableService.delBigLogLogisticsControlTableByWorkSheetNo(workSheetNo);
+        redisUtil.del("com.xr.boot.controller.BigLogLogisticsControlTableController.findBigLogLogisticsControlTables");
+        return 1;
+    }
+    @PostMapping("/saveBigLogLogisticsControlTable")
+    public int saveBigLogLogisticsControlTable(BigLogLogisticsControlTable bigLogLogisticsControlTable) {
+        bigLogLogisticsControlTableService.saveBigLogLogisticsControlTable(bigLogLogisticsControlTable);
+        redisUtil.del("com.xr.boot.controller.BigLogLogisticsControlTableController.findBigLogLogisticsControlTables");
+        return 1;
+    }
+    @PostMapping("/findWorkSheetNoWaybillID")
+    public  List<Map<String,String>> findWorkSheetNoWaybillID(){
+        List<Map<String,String>> list=new ArrayList<>();
+        Map<String,String> map1=new HashMap<>();
+        SnowflakeIdFactory snowflakeIdFactory=new SnowflakeIdFactory(1,2);
+        String WorkSheetNo = snowflakeIdFactory.generateKey().toString();
+        map1.put("WorkSheetNo",WorkSheetNo);
+        SnowflakeIdFactory snowflakeIdFactory1=new SnowflakeIdFactory(27);
+        String WaybillID = snowflakeIdFactory1.generateKey().toString();
+        map1.put("WaybillID",WaybillID);
+        list.add(map1);
+        return list;
+    }
+
 }

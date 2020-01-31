@@ -22,8 +22,8 @@ public interface PacStockItemMapper {
             @Result(property = "actualNum", column = "actualNum"),
             @Result(property = "plannedPrice", column = "plannedPrice"),
             @Result(property = "specifications", column = "specifications"),
-            @Result(column = "type", property = "pacGetBoundType",
-                    one = @One(select = "com.xr.boot.dao.PacPackaging.PacGetBoundTypeMapper.findPacGetBoundTypeById", fetchType = FetchType.DEFAULT)
+            @Result(column = "type", property = "pacOutBoundType",
+                    one = @One(select = "com.xr.boot.dao.PacPackaging.PacOutBoundTypeMapper.findPacTypeById", fetchType = FetchType.DEFAULT)
             ),
             @Result(property = "status", column = "status")
     })

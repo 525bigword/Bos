@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface PacOutFromItemMapper {
     /*新增出库明细*/
-    @Insert("insert into pac_OutFromItem(outhouseNo,goodsCode,goodsName,storageNum,actualNum,plannedPrice,specifications,type,status,OUnit,oPrice) values(#{outhouseNo},#{goodsCode},#{goodsName},#{storageNum},#{actualNum},#{plannedPrice},#{specifications},#{type},#{status},#{OUnit},#{oPrice})")
+    @Insert("insert into pac_OutFromItem(outhouseNo,goodsCode,goodsName,storageNum,actualNum,plannedPrice,specifications,type,status,OUnit,oPrice) values(#{outhouseNo},#{goodsCode},#{goodsName},#{storageNum},#{actualNum},#{plannedPrice},#{specifications},#{type},#{status},#{oUnit},#{oPrice})")
     public void addPacOutFromItem(PacOutFromItem pacOutFromItem);
     /*根据出库单号查询入库明细*/
     @Select("select id,goodsCode,goodsName,storageNum,actualNum,plannedPrice,specifications,type,OUnit,oPrice from pac_OutFromItem where outhouseNo=#{outhouseNo}")
@@ -23,10 +23,10 @@ public interface PacOutFromItemMapper {
             @Result(property = "actualNum", column = "actualNum"),
             @Result(property = "plannedPrice", column = "plannedPrice"),
             @Result(property = "specifications", column = "specifications"),
-            @Result(column = "type", property = "pacGetBoundType",
-                    one = @One(select = "com.xr.boot.dao.PacPackaging.PacGetBoundTypeMapper.findPacGetBoundTypeById", fetchType = FetchType.DEFAULT)
+            @Result(column = "type", property = "pacOutBoundType",
+                    one = @One(select = "com.xr.boot.dao.PacPackaging.PacOutBoundTypeMapper.findPacTypeById", fetchType = FetchType.DEFAULT)
             ),
-            @Result(property = "OUnit", column = "OUnit"),
+            @Result(property = "oUnit", column = "oUnit"),
             @Result(property = "oPrice", column = "oPrice")
     })
     public List<PacOutFromItem> findAllPacOutFromItem(String outhouseNo);
