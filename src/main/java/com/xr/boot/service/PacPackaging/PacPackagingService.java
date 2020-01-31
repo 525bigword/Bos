@@ -40,4 +40,11 @@ public interface PacPackagingService {
      */
     void updatePaczuofei(PacPackaging pacPackaging);
     SyEmp selectIdbyname(String empName);
+
+    /**
+     * 根据物品编码查询物品信息
+     * @param itemCode
+     * @return
+     */
+   PacPackaging findPacPackagingByitemcode(String itemCode);
 }
