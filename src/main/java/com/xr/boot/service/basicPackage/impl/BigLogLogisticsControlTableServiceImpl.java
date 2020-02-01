@@ -50,7 +50,7 @@ public class BigLogLogisticsControlTableServiceImpl implements BigLogLogisticsCo
     @Klock(leaseTime=Long.MAX_VALUE)
     @Transactional
     @Override
-    public void delBigLogLogisticsControlTableByWorkSheetNo(String workSheetNo) {
-        bigLogLogisticsControlTableMapper.delBigLogLogisticsControlTableByWorkSheetNo(workSheetNo);
+    public void delBigLogLogisticsControlTableByWorkSheetNo(int id) {
+        bigLogLogisticsControlTableMapper.delBigLogLogisticsControlTableByWorkSheetNo(id);
     }
 }

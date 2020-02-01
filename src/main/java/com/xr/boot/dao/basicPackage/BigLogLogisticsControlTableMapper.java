@@ -37,7 +37,7 @@ public interface BigLogLogisticsControlTableMapper {
     void saveBigLogLogisticsControlTable(BigLogLogisticsControlTable bigLogLogisticsControlTable);
 
 
-    @Delete("DELETE from biglog_logisticscontroltable where WorkSheetNo=#{workSheetNo}")
-    void delBigLogLogisticsControlTableByWorkSheetNo(String workSheetNo);
+    @Delete("DELETE from biglog_logisticscontroltable where ID=#{id}")
+    void delBigLogLogisticsControlTableByWorkSheetNo(int id);
 
 }

@@ -29,6 +29,10 @@ public class BigLogLogisticsControlTableSqlProvider {
                         tj += " and se.EmpName Like CONCAT('%',#{empName},'%')";
                     }
 
+                    if (bigLogLogisticsControlTable.getcType()!=null&&!bigLogLogisticsControlTable.getcType().equals("")){
+                        tj += " and bl.CType Like CONCAT('%',#{cType},'%')";
+                    }
+
                     WHERE(tj);
                 }catch (Exception e){
                     WHERE(tj);

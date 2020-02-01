@@ -51,9 +51,9 @@ public class BigLogLogisticsControlTableController {
         redisUtil.del("com.xr.boot.controller.BigLogLogisticsControlTableController.findBigLogLogisticsControlTables");
         return 1;
     }
-    @PostMapping("/delBigLogLogisticsControlTableByWorkSheetNo")
-    public int delBigLogLogisticsControlTableByWorkSheetNo(String workSheetNo) {
-        bigLogLogisticsControlTableService.delBigLogLogisticsControlTableByWorkSheetNo(workSheetNo);
+    @PostMapping("/delBigLogLogisticsControlTableByid")
+    public int delBigLogLogisticsControlTableByid(int id) {
+        bigLogLogisticsControlTableService.delBigLogLogisticsControlTableByWorkSheetNo(id);
         redisUtil.del("com.xr.boot.controller.BigLogLogisticsControlTableController.findBigLogLogisticsControlTables");
         return 1;
     }

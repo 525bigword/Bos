@@ -32,8 +32,8 @@ public interface BigLogLogisticsControlTableService {
     void saveBigLogLogisticsControlTable(BigLogLogisticsControlTable bigLogLogisticsControlTable);
 
     /**
-     * 按工号删除大物流对照
-     * @param workSheetNo
+     * 按id删除大物流对照
+     * @param id
      */
-    void delBigLogLogisticsControlTableByWorkSheetNo(String workSheetNo);
+    void delBigLogLogisticsControlTableByWorkSheetNo(int id);
 }

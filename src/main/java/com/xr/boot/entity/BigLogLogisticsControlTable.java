@@ -4,10 +4,12 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class BigLogLogisticsControlTable
  ***********************************************************************/
 
+import java.io.Serializable;
+
 /** 物流对照表
  * 
  * @pdOid 9555913f-89eb-465b-8eb0-75ebf3c24fb9 */
-public class BigLogLogisticsControlTable {
+public class BigLogLogisticsControlTable implements Serializable {
    /** 编号	自增
     * 
     * @pdOid 99251da2-e319-423a-9e6c-839f31b847a8 */
