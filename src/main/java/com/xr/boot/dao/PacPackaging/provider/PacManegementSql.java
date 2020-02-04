@@ -7,28 +7,25 @@ import org.springframework.stereotype.Component;
 public class PacManegementSql {
     public String findPacManegeMentWhere(PacManegement pacManegement) {
         System.out.println(pacManegement.getGoodsCode());
-        StringBuffer sql=new StringBuffer("select id,goodscode,storagenum,gunit from pac_manegement where 1=1");
-    /*    if (pacPackaging.getItemCode() != null && !pacPackaging.getItemCode().equals("")) {
-            sql.append( " and ItemCode =#{itemCode}");
+        StringBuffer sql=new StringBuffer("select pm.id,pm.goodscode,pm.storagenum,pm.gunit from pac_manegement pm,pac_packaging ppag where ppag.Itemcode=pm.goodscode ");
+        if (pacManegement.getGcode().getItemCode() != null && !pacManegement.getGcode().getItemCode().equals("")) {
+            sql.append( " and pm.GoodsCode =#{goodscode}");
         }
-        if (pacPackaging.getStatus() != null) {
-            sql.append(" and `Status`=#{status}");
+        if (pacManegement.getGunitss().getId() !=0) {
+            sql.append( " and pm.gunit =#{gunitss.gunit}");
         }
-        if (pacPackaging.getItemName()!= null &&! pacPackaging.getItemName().equals("")) {
-            sql.append(" and ItemName Like CONCAT('%',#{itemName},'%')");
+        if (pacManegement.getGcode().getSpecifications() !=null&& pacManegement.getGcode().getSpecifications().equals("")) {
+            sql.append( " and  ppag.Specifications =#{gcode.specifications}");
         }
-        if (pacPackaging.getPlannedPrice()!=0.0) {
-            sql.append(" and PlannedPrice=#{plannedPrice}");
+        if (pacManegement.getGcode().getType() !=0) {
+            sql.append( " and ppag.type =#{gcode.type }");
         }
-        if (pacPackaging.getSpecifications() != null && !pacPackaging.getSpecifications().equals("")) {
-            sql.append(" and Specifications Like #{specifications}");
+        if (pacManegement.getStorageNum() !=0) {
+            sql.append( " and pm.StorageNum #{storageNum }");
         }
-        if (pacPackaging.getPacOutBoundType()!= null) {
-            sql.append(" and type=#{type}");
+        if (pacManegement.getGcode().getType() !=0) {
+            sql.append( " and ppag.PlannedPrice*pm.StorageNum #{zje}");
         }
-        if (pacPackaging.getStatus()!=null) {
-            sql.append(" and status=#{status}");
-        }*/
 
         sql.append(" order by id desc");
 

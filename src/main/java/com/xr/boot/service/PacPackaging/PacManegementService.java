@@ -29,5 +29,9 @@ public interface PacManegementService {
     /**
      * 根据物品编码出库
      */
-    void updatePacNum(int storageNum,String goodsCode);
+    void updatePacNum(int storageNum, String goodsCode);
+    /**
+     * 多条件查询包装材料库存管理
+     */
+    List<PacManegement> findWherePacManegement(PacManegement pacManegement);
 }

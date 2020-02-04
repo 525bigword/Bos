@@ -31,4 +31,11 @@ public class PacStockServiceImpl implements PacStockService {
     public void updatePacStock(PacStock pacStock) {
         pacStockMapper.updatePacStock(pacStock);
     }
+    /**
+     * 多条件查询包装材料入库记录
+     */
+    @Override
+    public List<PacStock> findWherePacStock(PacStock pacStock) {
+        return pacStockMapper.findWherePacStock(pacStock);
+    }
 }

@@ -29,4 +29,8 @@ public interface PacStockService {
      * @param pacStock
      */
     void updatePacStock(PacStock pacStock);
+    /**
+     * 多条件查询包装材料入库记录
+     */
+    List<PacStock> findWherePacStock(PacStock pacStock);
 }

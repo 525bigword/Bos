@@ -17,6 +17,15 @@ public class PacManegement implements Serializable {
     private Integer storageNum;
     private SyUnits gunitss;
     //private Integer gunit;
+    private String zje;
+
+    public String getZje() {
+        return zje;
+    }
+
+    public void setZje(String zje) {
+        this.zje = zje;
+    }
 
     public Long getGunit() {
         return gunitss.getId();

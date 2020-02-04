@@ -60,4 +60,11 @@ private SyUnits syUnits;
     public String findNumBygoodsCode(String goodsCode) {
         return pacManegementService.findNumBygoodsCode(goodsCode);
     }
+    /**
+     * 多条件查询包装材料库存管理
+     */
+    @RequestMapping("/findWherePacManegement")
+    public List<PacManegement> findWherePacManegement(PacManegement pacManegement) {
+        return pacManegementService.findWherePacManegement(pacManegement);
+    }
 }
