@@ -132,6 +132,7 @@ pacPackagingService.updatePacpackaging(packaging);
             pacPackagingService.updatePaczuofei(pacPackaging);
 
         }}
+
         //清理缓存
         redisUtil.del("com.xr.boot.controller.PacPackagingController.queryAllpacpackaging");
         System.out.println("清理缓存");

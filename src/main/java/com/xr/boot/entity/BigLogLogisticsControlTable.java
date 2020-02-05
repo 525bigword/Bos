@@ -4,12 +4,12 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class BigLogLogisticsControlTable
  ***********************************************************************/
 
-import java.util.*;
+import java.io.Serializable;
 
 /** 物流对照表
  * 
  * @pdOid 9555913f-89eb-465b-8eb0-75ebf3c24fb9 */
-public class BigLogLogisticsControlTable {
+public class BigLogLogisticsControlTable implements Serializable {
    /** 编号	自增
     * 
     * @pdOid 99251da2-e319-423a-9e6c-839f31b847a8 */
@@ -21,7 +21,7 @@ public class BigLogLogisticsControlTable {
    /** 类型
     * 
     * @pdOid 6f7e5ee7-40ae-463c-8163-2f231aedf099 */
-   private long cType;
+   private String cType;
    /** 代理公司
     * 
     * @pdOid 792af467-611e-4b45-8202-4b8d6ad35703 */
@@ -37,98 +37,99 @@ public class BigLogLogisticsControlTable {
    /** 录入时间
     * 
     * @pdOid 69a30c81-d32f-4b9d-ada9-cf60b2f56265 */
-   private Date inputDate;
+   private String inputDate;
    /** 状态	0：正常，1：停用
     * 
     * @pdOid 5f9523c2-2ba2-46d5-af7c-455c8c40fa29 */
    private long stats;
-   
-   /** @pdOid 5b599e95-113a-40d0-b73f-d290bc9a8dd9 */
+   private SyEmp syEmp;
+   private SyUnits syUnits;
+   public long getempId(){
+      return syEmp.getId();
+   }
+   public  long getunitId(){
+      return syUnits.getId();
+   }
+   public String getempName(){return syEmp.getEmpName();}
+   public BigLogLogisticsControlTable(){}
+
    public int getId() {
       return id;
    }
-   
-   /** @param newId
-    * @pdOid 624776cb-44a4-42be-9407-706fccfb9d8b */
-   public void setId(int newId) {
-      id = newId;
+
+   public void setId(int id) {
+      this.id = id;
    }
-   
-   /** @pdOid 2ab6be1a-6a3c-4613-97ea-01f86549e83c */
+
    public String getWorkSheetNo() {
       return workSheetNo;
    }
-   
-   /** @param newWorkSheetNo
-    * @pdOid ab030de3-2073-47a0-8b23-fd364926e622 */
-   public void setWorkSheetNo(String newWorkSheetNo) {
-      workSheetNo = newWorkSheetNo;
+
+   public void setWorkSheetNo(String workSheetNo) {
+      this.workSheetNo = workSheetNo;
    }
-   
-   /** @pdOid 11c3118f-797e-49df-a2c1-b985a5de40ed */
-   public long getCType() {
+
+   public String getcType() {
       return cType;
    }
-   
-   /** @param newCType
-    * @pdOid 9a64dace-ee73-4bd1-b897-b7920e9c9b1c */
-   public void setCType(long newCType) {
-      cType = newCType;
+
+   public void setcType(String cType) {
+      this.cType = cType;
    }
-   
-   /** @pdOid 96d4d203-a1a8-4419-8c6f-a377be88ec62 */
+
    public String getCorporation() {
       return corporation;
    }
-   
-   /** @param newCorporation
-    * @pdOid f4c23e44-585e-4d80-a2db-880bd22c59d1 */
-   public void setCorporation(String newCorporation) {
-      corporation = newCorporation;
+
+   public void setCorporation(String corporation) {
+      this.corporation = corporation;
    }
-   
-   /** @pdOid 34ed80ee-d717-4f8b-a246-4838619eada4 */
+
    public String getWaybillID() {
       return waybillID;
    }
-   
-   /** @param newWaybillID
-    * @pdOid dee5ba74-1f2f-4e7d-ba13-a98b3c6ef1b6 */
-   public void setWaybillID(String newWaybillID) {
-      waybillID = newWaybillID;
+
+   public void setWaybillID(String waybillID) {
+      this.waybillID = waybillID;
    }
-   
-   /** @pdOid 3f641273-9662-4d82-814e-9352ef21efee */
+
    public String getRemarks() {
       return remarks;
    }
-   
-   /** @param newRemarks
-    * @pdOid 4ddc56f5-801f-448c-afbe-7d2d7e29b0a4 */
-   public void setRemarks(String newRemarks) {
-      remarks = newRemarks;
+
+   public void setRemarks(String remarks) {
+      this.remarks = remarks;
    }
-   
-   /** @pdOid eb53a984-49fa-40b6-87ad-11759dc29618 */
-   public Date getInputDate() {
+
+   public String getInputDate() {
       return inputDate;
    }
-   
-   /** @param newInputDate
-    * @pdOid 1f0dd09d-5ade-4bcb-a31a-288bad245146 */
-   public void setInputDate(Date newInputDate) {
-      inputDate = newInputDate;
+
+   public void setInputDate(String inputDate) {
+      this.inputDate = inputDate;
    }
-   
-   /** @pdOid c610e9ae-a496-43ef-bb99-51df762cb36d */
+
    public long getStats() {
       return stats;
    }
-   
-   /** @param newStats
-    * @pdOid 64d78f69-784e-481d-b3a7-d96465d04465 */
-   public void setStats(long newStats) {
-      stats = newStats;
+
+   public void setStats(long stats) {
+      this.stats = stats;
    }
 
+   public SyEmp getSyEmp() {
+      return syEmp;
+   }
+
+   public void setSyEmp(SyEmp syEmp) {
+      this.syEmp = syEmp;
+   }
+
+   public SyUnits getSyUnits() {
+      return syUnits;
+   }
+
+   public void setSyUnits(SyUnits syUnits) {
+      this.syUnits = syUnits;
+   }
 }

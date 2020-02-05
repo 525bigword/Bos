@@ -54,14 +54,14 @@ public class PacStockItem {
     /** 类型
     * 
     * @pdOid e5ee50e2-4159-4f5e-81ed-d92f6c0646a4 */
-   private PacGetBoundType pacGetBoundType;
+   private PacOutBoundType pacOutBoundType;
 
-   public PacGetBoundType getPacGetBoundType() {
-      return pacGetBoundType;
+   public PacOutBoundType getPacOutBoundType() {
+      return pacOutBoundType;
    }
 
-   public void setPacGetBoundType(PacGetBoundType pacGetBoundType) {
-      this.pacGetBoundType = pacGetBoundType;
+   public void setPacOutBoundType(PacOutBoundType pacOutBoundType) {
+      this.pacOutBoundType = pacOutBoundType;
    }
 
    /** 状态	1.正常、2.作废
@@ -148,7 +148,7 @@ public class PacStockItem {
    
    /** @pdOid 301a212e-d6f8-4b7b-b532-c28d3f33e31e */
    public long getType() {
-      return pacGetBoundType.getPacGetid();
+      return  pacOutBoundType.getId();
    }
 
    
@@ -163,4 +163,19 @@ public class PacStockItem {
       status = newStatus;
    }
 
+   @Override
+   public String toString() {
+      return "PacStockItem{" +
+              "id=" + id +
+              ", warehouseNo='" + warehouseNo + '\'' +
+              ", goodsCode='" + goodsCode + '\'' +
+              ", goodsName='" + goodsName + '\'' +
+              ", storageNum=" + storageNum +
+              ", actualNum=" + actualNum +
+              ", plannedPrice=" + plannedPrice +
+              ", specifications='" + specifications + '\'' +
+              ", pacOutBoundType=" + pacOutBoundType +
+              ", status=" + status +
+              '}';
+   }
 }

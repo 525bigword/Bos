@@ -1,5 +1,6 @@
 package com.xr.boot.dao.PacPackaging;
 
+import com.xr.boot.dao.PacPackaging.provider.PacStockSql;
 import com.xr.boot.entity.PacStock;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.mapping.FetchType;
@@ -50,5 +51,25 @@ public interface PacStockMapper {
     void addpacStock(PacStock pacStock);
     @Update("update pac_stock set reservoirType=#{reservoirType},Transport=#{transport},SubordinateUnit=#{subordinateUnit},DrawerNo=#{drawerNo},DrawerName=#{drawerName},DrawerTime=#{drawerTime},Remark=#{remark} where id=#{id}")
     void updatePacStock(PacStock pacStock);
+    /**
+     * 多条件查询包装材料入库记录
+     */
+    @SelectProvider(type = PacStockSql.class,method = "findPacStockWhere")
+    @Results({
+            @Result(property = "id", column = "id"),
+            @Result(property = "warehouseNo", column = "warehouseNo"),
+            @Result(column = "reservoirType", property = "pacGetBoundType",
+                    one = @One(select = "com.xr.boot.dao.PacPackaging.PacGetBoundTypeMapper.findPacGetBoundTypeById", fetchType = FetchType.DEFAULT)
+            ),
+            @Result(property = "transport", column = "transport"),
+            @Result(column = "subordinateUnit", property = "syUnits",
+                    one = @One(select = "com.xr.boot.dao.system.SyUnitsMapper.findSyUnitById", fetchType = FetchType.DEFAULT)
+            ),
+            @Result(property = "drawerNo", column = "drawerNo"),
+            @Result(property = "drawerName", column = "drawerName"),
 
+            @Result(property = "stats", column = "stats"),
+            @Result(property = "remark", column = "remark")
+    })
+    List<PacStock> findWherePacStock(PacStock pacStock);
 }
