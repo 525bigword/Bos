@@ -1,5 +1,6 @@
 package com.xr.boot.dao.PacPackaging;
 
+import com.xr.boot.dao.PacPackaging.provider.PacManegementSql;
 import com.xr.boot.entity.PacManegement;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.mapping.FetchType;
@@ -51,5 +52,21 @@ public interface PacManegementMapper {
      * 根据物品编码出库
      */
     @Update("update pac_manegement set storageNum=storageNum-#{storageNum} where goodsCode=#{goodsCode} ")
-    void updatePacNum(int storageNum,String goodsCode);
+    void updatePacNum(int storageNum, String goodsCode);
+    /**
+     * 多条件查询包装材料库存管理
+     */
+    @SelectProvider(type = PacManegementSql.class,method = "findPacManegeMentWhere")
+    @Results({
+            @Result(property = "id", column = "id"),
+            @Result(column = "goodsCode", property = "gcode",
+                    one = @One(select = "com.xr.boot.dao.PacPackaging.PacPackagingMapper.findPacPackagingByitemcode", fetchType = FetchType.DEFAULT)
+            ),
+            @Result(property = "storageNum", column = "storageNum"),
+            @Result(column = "gunit", property = "gunitss",
+                    one = @One(select = "com.xr.boot.dao.system.SyUnitsMapper.findSyUnitById", fetchType = FetchType.DEFAULT)
+            )
+    })
+    List<PacManegement> findWherePacManegement(PacManegement pacManegement);
+
 }

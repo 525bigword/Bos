@@ -50,4 +50,11 @@ pacManegementMapper.addPacManegement(pacManegement);
     public void updatePacNum(int storageNum,String goodsCode) {
         pacManegementMapper.updatePacNum(storageNum,goodsCode);
     }
+    /**
+     * 多条件查询包装材料库存管理
+     */
+    @Override
+    public List<PacManegement> findWherePacManegement(PacManegement pacManegement) {
+        return pacManegementMapper.findWherePacManegement(pacManegement);
+    }
 }

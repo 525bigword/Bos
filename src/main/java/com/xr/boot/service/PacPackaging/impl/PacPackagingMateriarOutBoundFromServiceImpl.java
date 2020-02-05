@@ -20,4 +20,11 @@ public class PacPackagingMateriarOutBoundFromServiceImpl implements PacPackaging
     public void insertPacPackagingOutFrom(PacPackagingMateriarOutBoundFrom pacPackagingMateriarOutBoundFrom) {
         pacPackagingMateriarOutBoundFromMapper.insertPacPackagingOutFrom(pacPackagingMateriarOutBoundFrom);
     }
+    /**
+     * 多条件查询包装材料出库记录
+     */
+    @Override
+    public List<PacPackagingMateriarOutBoundFrom> findWherePacagingMateriar(PacPackagingMateriarOutBoundFrom pacPackagingMateriarOutBoundFrom) {
+        return pacPackagingMateriarOutBoundFromMapper.findWherePacagingMateriar(pacPackagingMateriarOutBoundFrom);
+    }
 }

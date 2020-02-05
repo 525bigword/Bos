@@ -58,4 +58,11 @@ public class PacStockController {
         pacStock.setPacGetBoundType(new PacGetBoundType(Integer.parseInt(reservoirType),""));
         pacStockService.updatePacStock(pacStock);
     }
+    /**
+     * 多条件查询包装材料入库记录
+     */
+    @RequestMapping("/findWherePacStock")
+    public List<PacStock> findWherePacStock(PacStock pacStock) {
+        return pacStockService.findWherePacStock(pacStock);
+    }
 }

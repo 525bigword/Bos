@@ -103,5 +103,12 @@ public class PacPackagingMateriarOutBoundFromController {
         System.out.println(pacPackagingMateriarOutBoundFrom);
         pacPackagingMateriarOutBoundFromService.insertPacPackagingOutFrom(pacPackagingMateriarOutBoundFrom);
     }
+    /**
+     * 多条件查询包装材料出库记录
+     */
+    @RequestMapping("/findWherePacagingMateriar")
+    public List<PacPackagingMateriarOutBoundFrom> findWherePacagingMateriar(PacPackagingMateriarOutBoundFrom pacPackagingMateriarOutBoundFrom) {
+        return pacPackagingMateriarOutBoundFromService.findWherePacagingMateriar(pacPackagingMateriarOutBoundFrom);
+    }
 
 }
