@@ -107,7 +107,27 @@ public class PacPackagingMateriarOutBoundFromController {
      * 多条件查询包装材料出库记录
      */
     @RequestMapping("/findWherePacagingMateriar")
-    public List<PacPackagingMateriarOutBoundFrom> findWherePacagingMateriar(PacPackagingMateriarOutBoundFrom pacPackagingMateriarOutBoundFrom) {
+    public List<PacPackagingMateriarOutBoundFrom> findWherePacagingMateriar(PacPackagingMateriarOutBoundFrom pacPackagingMateriarOutBoundFrom,String type,String dw,String xfdw,String khid,String khname,String lyrgh,String lyrname) {
+if(!("".equals(type))&&type!=null){
+        pacOutType.setId(Integer.parseInt(type));
+        pacPackagingMateriarOutBoundFrom.setPacOutType(pacOutType);}
+        if(!dw.equals("")&& dw!=null){
+        SyUnits syUnits1 = new SyUnits();
+        syUnits1.setId(Integer.parseInt(dw));
+        pacPackagingMateriarOutBoundFrom.setSaffiliatedUnit(syUnits1);//设置所属单位
+             }
+            if(!xfdw.equals("")&& xfdw!=null){
+        SyUnits syUnits2 = new SyUnits();
+        syUnits2.setId(Integer.parseInt(xfdw));
+        pacPackagingMateriarOutBoundFrom.setSissuedByTheUnit(syUnits2);//设置下发单位
+                 }
+        SyEmp syEmp1 = new SyEmp();
+            syEmp1.setEmpName(khname);
+pacPackagingMateriarOutBoundFrom.setSyEmpc(syEmp1);//设置客户编号
+   /*     SyEmp syEmp2 = new SyEmp();
+        syEmp2.setEmpName(lyrname);
+        pacPackagingMateriarOutBoundFrom.setRecipient();*/
+        System.out.println(pacPackagingMateriarOutBoundFrom);
         return pacPackagingMateriarOutBoundFromService.findWherePacagingMateriar(pacPackagingMateriarOutBoundFrom);
     }
 

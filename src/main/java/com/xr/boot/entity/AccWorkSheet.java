@@ -4,11 +4,14 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class AccWorkSheet
  ***********************************************************************/
 
+import org.springframework.stereotype.Component;
+
 import java.util.*;
 
 /** 工作单表
  * 
  * @pdOid 32423179-6120-4a44-9818-6bd5dc6b4acf */
+@Component
 public class AccWorkSheet {
    /** 编号
     * 
@@ -26,6 +29,20 @@ public class AccWorkSheet {
     * 
     * @pdOid a3479df6-045d-4b9b-88c1-e64edd8ccc94 */
    private String productTime;
+   private AccProductList chanpings;
+
+   public AccProductList getChanpings() {
+      return chanpings;
+   }
+
+   public void setChanpings(AccProductList chanpings) {
+      this.chanpings = chanpings;
+   }
+
+   public Long getProduct() {
+      return chanpings.getId();
+   }
+
    /** 总件数
     * 
     * @pdOid 354522cb-aa9e-4419-a327-746278b29d9f */
@@ -42,7 +59,26 @@ public class AccWorkSheet {
     * 
     * @pdOid 14cce49a-8e48-4263-8521-9fe9ec4c25c4 */
    private Date subordinateDate;
-   
+
+   private int documentsStateId;
+
+   public int getDocumentsStateId() {
+      return documentsStateId;
+   }
+
+   public void setDocumentsStateId(int documentsStateId) {
+      this.documentsStateId = documentsStateId;
+   }
+   private int dataStateId;
+
+   public int getDataStateId() {
+      return dataStateId;
+   }
+
+   public void setDataStateId(int dataStateId) {
+      this.dataStateId = dataStateId;
+   }
+
    /** @pdOid cc8fb8ba-aa92-4d90-aa32-73c7b3c1f666 */
    public int getId() {
       return id;

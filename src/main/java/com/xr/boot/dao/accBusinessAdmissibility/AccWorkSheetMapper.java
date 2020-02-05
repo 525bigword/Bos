@@ -15,12 +15,12 @@ public interface AccWorkSheetMapper {
      * 快速录入工作单
      * @param accWorkSheet
      */
-    @Insert("insert into Acc_WorkSheet(WorkSheetNo,Destination,Product,Total,Weight,StowageRequirements) values(#{workSheetNo},#{destination},#{product},#{total},#{weight},#{stowageRequirements})")
+    @Insert("insert into Acc_WorkSheet(WorkSheetNo,Destination,Product,Total,Weight,StowageRequirements,ProductTime) values(#{workSheetNo},#{destination},#{product},#{total},#{weight},#{stowageRequirements},now())")
     void addAccWorkSheet(AccWorkSheet accWorkSheet);
     /**
      * 工作单查询
      */
-    @Select("select id,workSheetNo, from Acc_workSheet")
+    @Select("select id,workSheetNo from Acc_workSheet")
     List<AccWorkSheet> findAllAccworkSheet();
 
     /**

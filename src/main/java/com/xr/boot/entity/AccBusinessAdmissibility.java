@@ -5,12 +5,15 @@ package com.xr.boot.entity;
  * Purpose: Defines the Class AccBusinessAdmissibility
  ***********************************************************************/
 
+import org.springframework.stereotype.Component;
+
 import java.io.Serializable;
 import java.util.*;
 
 /** 业务受理表
  * 
  * @pdOid 0d116458-3e8f-4061-b3c0-b5703e8acee8 */
+@Component
 public class AccBusinessAdmissibility implements Serializable {
    /** 预约收件时间
     * 

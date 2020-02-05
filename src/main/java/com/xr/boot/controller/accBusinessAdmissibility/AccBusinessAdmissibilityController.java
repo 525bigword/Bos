@@ -21,6 +21,7 @@ public class AccBusinessAdmissibilityController {
      * 业务受理
      * @param accBusinessAdmissibility
      */
+    @RequestMapping("/saveAccBusinessAdmissibility")
     public void addAccBusinessAdmissibility(AccBusinessAdmissibility accBusinessAdmissibility) {
         accBusinessAdmissibilityService.addAccBusinessAdmissibility(accBusinessAdmissibility);
     }
@@ -28,6 +29,7 @@ public class AccBusinessAdmissibilityController {
      * 业务受理查询
      * @return
      */
+    @RequestMapping("/findAllAccBusinessAdmissibility")
     public List<AccBusinessAdmissibility> findAllAccBusinessAdmissibility() {
         return accBusinessAdmissibilityService.findAllAccBusinessAdmissibility();
     }
@@ -36,6 +38,7 @@ public class AccBusinessAdmissibilityController {
      * @param accBusinessAdmissibility
      * @return
      */
+    @RequestMapping("/findAllWhereAccBusinessAdmissibility")
     public List<AccBusinessAdmissibility> findAllWhereAccBusinessAdmissibility(AccBusinessAdmissibility accBusinessAdmissibility) {
         return accBusinessAdmissibilityService.findAllWhereAccBusinessAdmissibility(accBusinessAdmissibility);
     }
