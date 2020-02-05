@@ -1,7 +1,8 @@
 package com.xr.boot.service.accBusinessAdmissibility;
 
 import com.xr.boot.entity.AccBusinessAdmissibility;
-import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 public interface AccBusinessAdmissibilityService {
     /**
@@ -9,4 +10,16 @@ public interface AccBusinessAdmissibilityService {
      * @param accBusinessAdmissibility
      */
     void addAccBusinessAdmissibility(AccBusinessAdmissibility accBusinessAdmissibility);
+    /**
+     * 业务受理查询
+     * @return
+     */
+    List<AccBusinessAdmissibility> findAllAccBusinessAdmissibility();
+
+    /**
+     * 业务受理多条件查询
+     * @param accBusinessAdmissibility
+     * @return
+     */
+    List<AccBusinessAdmissibility> findAllWhereAccBusinessAdmissibility(AccBusinessAdmissibility accBusinessAdmissibility);
 }

@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @Controller
 @Api(value="业务受理",description="关于业务受理信息的API")
@@ -21,5 +23,20 @@ public class AccBusinessAdmissibilityController {
      */
     public void addAccBusinessAdmissibility(AccBusinessAdmissibility accBusinessAdmissibility) {
         accBusinessAdmissibilityService.addAccBusinessAdmissibility(accBusinessAdmissibility);
+    }
+    /**
+     * 业务受理查询
+     * @return
+     */
+    public List<AccBusinessAdmissibility> findAllAccBusinessAdmissibility() {
+        return accBusinessAdmissibilityService.findAllAccBusinessAdmissibility();
+    }
+    /**
+     * 业务受理多条件查询
+     * @param accBusinessAdmissibility
+     * @return
+     */
+    public List<AccBusinessAdmissibility> findAllWhereAccBusinessAdmissibility(AccBusinessAdmissibility accBusinessAdmissibility) {
+        return accBusinessAdmissibilityService.findAllWhereAccBusinessAdmissibility(accBusinessAdmissibility);
     }
 }
