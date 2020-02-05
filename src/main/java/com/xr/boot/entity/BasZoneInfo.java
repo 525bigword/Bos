@@ -31,6 +31,7 @@ public class BasZoneInfo implements Serializable {
    public  long getunitId(){
       return syUnits.getId();
    }
+   public String getempNo(){return syEmp.getEmpNo();}
    public SyEmp getSyEmp() {
       return syEmp;
    }
