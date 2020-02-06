@@ -95,6 +95,7 @@ public class SyEmpServiceImpl implements SyEmpService {
             System.out.println(s);
             redisUtil.del(s);
         }
+        SyEmpkeys.clear();
     }
     @Klock(leaseTime = Long.MAX_VALUE)
     @Transactional
@@ -103,6 +104,7 @@ public class SyEmpServiceImpl implements SyEmpService {
         for (String s : SyEmpkeys) {
             redisUtil.del(s);
         }
+        SyEmpkeys.clear();
         syEmpMapper.delSyEmps(ids);
     }
     @Klock
@@ -116,6 +118,7 @@ public class SyEmpServiceImpl implements SyEmpService {
             for (String s : SyEmpkeys) {
                 redisUtil.del(s);
             }
+            SyEmpkeys.clear();
         } catch (Exception e) {
            throw new Exception();
         }

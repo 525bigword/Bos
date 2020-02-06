@@ -28,6 +28,7 @@ public class SyUnits implements Serializable {
       private String name;
    private Integer operatorid;
    private Integer parentid;
+
    /** 备注
     *
     * @pdOid 2e216151-f182-4c9b-bb4a-3b58c05116ee */
@@ -125,6 +126,20 @@ public class SyUnits implements Serializable {
       stats = newStats;
    }
 
+   @Override
+   public String toString() {
+      return "SyUnits{" +
+              "id=" + id +
+              ", name='" + name + '\'' +
+              ", operatorid=" + operatorid +
+              ", parentid=" + parentid +
+              ", remarks='" + remarks + '\'' +
+              ", operationTime='" + operationTime + '\'' +
+              ", stats=" + stats +
+              ", operatorname='" + operatorname + '\'' +
+              ", pacPackagingMateriarOutBoundFrom=" + pacPackagingMateriarOutBoundFrom +
+              '}';
+   }
 
    /** @pdGenerated default getter */
    public Collection<PacPackagingMateriarOutBoundFrom> getPacPackagingMateriarOutBoundFrom() {

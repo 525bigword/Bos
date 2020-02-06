@@ -54,6 +54,16 @@ public class SyEmp implements Serializable {
    private SyUnits syUnits;
    private SyRoles syRoles;
    private String rolename;
+   private String unitname;
+
+   public String getUnitname() {
+      return unitname;
+   }
+
+   public void setUnitname(String unitname) {
+      this.unitname = unitname;
+   }
+
    public SyRoles getSyRoles() {
       return syRoles;
    }

@@ -31,6 +31,7 @@ public interface SyEmpMapper {
             @Result(column = "empno",property = "empNo"),
             @Result(column = "rolename",property = "rolename"),
             @Result(column = "disabled",property = "disabled"),
+            @Result(column = "unitname",property = "unitname"),
     })
     List<SyEmp> findSyEmpByWhere(SyEmp syEmp);
     //根据roleid查询sy_rolesmenus

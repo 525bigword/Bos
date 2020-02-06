@@ -36,6 +36,7 @@ public class SyRoleServiceImpl implements SyRoleService {
             for (String s : syrolekeys) {
                 redisUtil.del(s);
             }
+            syrolekeys.clear();
         }catch (Exception e){
             log.debug("com.xr.boot.service.service.impl.SyRoleServiceImpl查询数据库错误");
             throw new SQLException("com.xr.boot.service.service.impl.SyRoleServiceImpl查询数据库错误");
@@ -60,5 +61,6 @@ public class SyRoleServiceImpl implements SyRoleService {
         for (String s : syrolekeys) {
             redisUtil.del(s);
         }
+        syrolekeys.clear();
     }
 }

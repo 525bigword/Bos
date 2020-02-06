@@ -32,7 +32,12 @@ public class SyEmpSqlProvider {
 
     public String findSyEmpByWhere(SyEmp syEmp){
         SQL sql=new SQL();
-        sql.SELECT("id,empname,empno,(select rolename from sy_roles where sy_roles.id=sy_emp.roleid) rolename," +
+        sql.SELECT("id,(select name from sy_units where sy_units.id=sy_emp.empunit) unitname,empunit,empname," +
+                "empno,(select " +
+                "rolename from" +
+                " sy_roles " +
+                "where sy_roles" +
+                ".id=sy_emp.roleid) rolename," +
                 "disabled,roleid,remark");
         if(!"".equals(syEmp.getEmpName())){
             sql.WHERE("sy_emp.empname=#{empName}");
@@ -42,6 +47,7 @@ public class SyEmpSqlProvider {
         }
         sql.WHERE("empunit=#{empunit}");
         sql.FROM("sy_emp");
+        System.out.println(sql.toString());
         return sql.toString();
     }
 }

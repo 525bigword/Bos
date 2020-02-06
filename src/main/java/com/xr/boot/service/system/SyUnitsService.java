@@ -1,5 +1,6 @@
 package com.xr.boot.service.system;
 
+import com.xr.boot.entity.SyEmp;
 import com.xr.boot.entity.SyUnits;
 import org.apache.ibatis.annotations.Param;
 
@@ -15,4 +16,6 @@ public interface SyUnitsService  {
      */
    Object findSyUnits();
     List<SyUnits> findSyUnitAllByStats(@Param("stats") Integer stats);
+    /**新增单位*/
+    void saveSyUnit(SyUnits syUnits) throws Exception;
 }

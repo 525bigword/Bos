@@ -1,6 +1,7 @@
 package com.xr.boot.dao.system;
 
 import com.xr.boot.dao.system.provider.SyUnitsSqlProvider;
+import com.xr.boot.entity.SyEmp;
 import com.xr.boot.entity.SyUnits;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
@@ -9,6 +10,10 @@ import java.util.List;
 
 @Repository
 public interface SyUnitsMapper {
+    /**新增单位*/
+    @Insert("insert into sy_units values(null,#{name},#{remarks},#{operatorid},#{parentid},#{operationTime},#{stats})")
+    void saveSyUnit(SyUnits syUnits);
+
 
     @Select("select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=#{operationUnitid}")
     @Results({
