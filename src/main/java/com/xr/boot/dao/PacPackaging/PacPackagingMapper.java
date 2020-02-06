@@ -1,6 +1,6 @@
 package com.xr.boot.dao.PacPackaging;
 
-import com.xr.boot.dao.PacPackaging.provider.PacPackSql;
+import com.xr.boot.dao.PacPackaging.provider.PacPackSqll;
 import com.xr.boot.entity.PacPackaging;
 import com.xr.boot.entity.SyEmp;
 import org.apache.ibatis.annotations.*;
@@ -44,7 +44,7 @@ public interface PacPackagingMapper {
             )
     })
     PacPackaging findOnebyid(int id);
-    @SelectProvider(type = PacPackSql.class,method = "findPacPackWhere")
+    @SelectProvider(type = PacPackSqll.class,method = "findPacPackWhere")
     @Results({
             @Result(property = "id", column = "id"),
             @Result(property = "itemCode", column = "itemCode"),

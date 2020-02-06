@@ -4,7 +4,7 @@ import com.xr.boot.entity.PacPackaging;
 import org.springframework.stereotype.Component;
 
 @Component
-public class PacPackSql {
+public class PacPackSqll {
     public String findPacPackWhere(PacPackaging pacPackaging) {
         System.out.println(pacPackaging.getItemName());
         StringBuffer sql=new StringBuffer("select id,ItemCode,ItemName,PlannedPrice,Specifications,type,MeasurementUnit,`Status`,operatorId from PAC_Packaging where 1=1");
