@@ -31,6 +31,7 @@ public interface SyEmpMapper {
             @Result(column = "empno",property = "empNo"),
             @Result(column = "rolename",property = "rolename"),
             @Result(column = "disabled",property = "disabled"),
+            @Result(column = "unitname",property = "unitname"),
     })
     List<SyEmp> findSyEmpByWhere(SyEmp syEmp);
     //根据roleid查询sy_rolesmenus
@@ -53,7 +54,7 @@ public interface SyEmpMapper {
             @Result(id = true,column = "id",property = "id"),
             @Result(column = "empname",property = "empName"),
             @Result(column = "empno",property = "empNo"),
-            @Result(column = "pwd",property ="pwd" ),
+            @Result(column = "empunit",property ="empunit" ),
             @Result(column = "querypwd",property = "queryPwd"),
             @Result(column = "remark",property = "remark"),
             @Result(column = "disabled",property = "disabled"),
@@ -115,4 +116,11 @@ public interface SyEmpMapper {
     //修改密码
     void upSyEmpToPwdById(SyEmp syEmp);
 
+    /**
+     * 根据姓名查询是否有该员工
+     * @param empName
+     * @return
+     */
+    @Select("select id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled from sy_emp where empname=#{empName} ")
+    SyEmp findByempName(String empName);
 }

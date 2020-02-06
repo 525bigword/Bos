@@ -4,12 +4,17 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class AccProductList
  ***********************************************************************/
 
+import org.springframework.stereotype.Component;
+
+import java.io.Serializable;
 import java.util.*;
 
 /** 产品表
  * 
  * @pdOid 882f4f89-7cdf-4cd0-accc-e4b3f86cc9de */
-public class AccProductList {
+@Component
+public class AccProductList implements Serializable {
+   private static final long serialVersionUID = -3505780775954957586L;
    /** 主键序列
     * 
     * @pdOid 7477350d-733e-4d2b-9eeb-b65628bf5b49 */

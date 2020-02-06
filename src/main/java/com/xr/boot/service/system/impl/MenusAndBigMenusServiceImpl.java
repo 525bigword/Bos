@@ -74,6 +74,7 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
             for (String s : Menus) {
                 redisUtil.del(s);
             }
+            Menus.clear();
         }catch (Exception e){
             throw new SQLException("数据库新增错误");
         }
@@ -166,6 +167,7 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
             for (String s : Menus) {
                 redisUtil.del(s);
             }
+            Menus.clear();
         }
     }
 }

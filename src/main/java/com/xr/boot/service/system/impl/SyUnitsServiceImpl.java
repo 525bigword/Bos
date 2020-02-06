@@ -1,6 +1,7 @@
 package com.xr.boot.service.system.impl;
 
 import com.xr.boot.dao.system.SyUnitsMapper;
+import com.xr.boot.entity.SyEmp;
 import com.xr.boot.entity.SyUnits;
 import com.xr.boot.service.system.SyUnitsService;
 import com.xr.boot.util.RedisUtil;
@@ -9,9 +10,7 @@ import org.springframework.boot.autoconfigure.klock.annotation.Klock;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
@@ -20,6 +19,8 @@ public class SyUnitsServiceImpl implements SyUnitsService {
     private SyUnitsMapper syUnitsMapper;
     @Autowired
     private RedisUtil redisUtil;
+    private Set syunitkey=new HashSet();
+
     @Override
     public SyUnits findSyUnitById(Integer operationUnitid) {
         return syUnitsMapper.findSyUnitById(operationUnitid);
@@ -40,5 +41,27 @@ public class SyUnitsServiceImpl implements SyUnitsService {
     @Override
     public List<SyUnits> findSyUnitAllByStats(Integer stats) {
         return syUnitsMapper.findSyUnitAllByStats(stats);
+    }
+
+    @Override
+    @Transactional
+    @Klock
+    public void saveSyUnit(SyUnits syUnits) throws Exception {
+        syUnitsMapper.saveSyUnit(syUnits);
+        for (Object  o: syunitkey) {
+            redisUtil.del(o.toString());
+        }
+        syunitkey.clear();
+    }
+
+
+    @Override
+    public Object findSyUnitByParentId(SyUnits syUnits) {
+        String key=
+                "com.xr.boot.controller.basicPackage.SyUnitsController.findSyUnitsByParentid"+syUnits.getParentid()+syUnits.getName();
+        List<SyUnits> syUnitAllByParentId = syUnitsMapper.findSYUnitAllByParentId(syUnits);
+        redisUtil.set(key,syUnitAllByParentId);
+        syunitkey.add(key);
+        return redisUtil.get(key);
     }
 }

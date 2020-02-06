@@ -28,6 +28,7 @@ public class SyUnits implements Serializable {
       private String name;
    private Integer operatorid;
    private Integer parentid;
+
    /** 备注
     *
     * @pdOid 2e216151-f182-4c9b-bb4a-3b58c05116ee */
@@ -40,7 +41,17 @@ public class SyUnits implements Serializable {
     *
     * @pdOid 6dcd1ed3-c25f-4989-a9ac-3f6114989fe3 */
    private Integer stats;
+   private String operatorname;
    public  SyUnits(){}
+
+   public String getoperatorname() {
+      return operatorname;
+   }
+
+   public void setOperatorName(String operatorname) {
+      this.operatorname = operatorname;
+   }
+
    /** @pdRoleInfo migr=no name=PacPackagingMateriarOutBoundFrom assc=reference65 coll=java.util.Collection impl=java.util.HashSet mult=0..* */
    public Collection<PacPackagingMateriarOutBoundFrom> pacPackagingMateriarOutBoundFrom;
 
@@ -115,6 +126,20 @@ public class SyUnits implements Serializable {
       stats = newStats;
    }
 
+   @Override
+   public String toString() {
+      return "SyUnits{" +
+              "id=" + id +
+              ", name='" + name + '\'' +
+              ", operatorid=" + operatorid +
+              ", parentid=" + parentid +
+              ", remarks='" + remarks + '\'' +
+              ", operationTime='" + operationTime + '\'' +
+              ", stats=" + stats +
+              ", operatorname='" + operatorname + '\'' +
+              ", pacPackagingMateriarOutBoundFrom=" + pacPackagingMateriarOutBoundFrom +
+              '}';
+   }
 
    /** @pdGenerated default getter */
    public Collection<PacPackagingMateriarOutBoundFrom> getPacPackagingMateriarOutBoundFrom() {

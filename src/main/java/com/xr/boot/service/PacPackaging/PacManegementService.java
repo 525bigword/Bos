@@ -1,6 +1,8 @@
 package com.xr.boot.service.PacPackaging;
 
 import com.xr.boot.entity.PacManegement;
+import com.xr.boot.entity.SyEmp;
+
 import java.util.List;
 
 public interface PacManegementService {
@@ -34,4 +36,5 @@ public interface PacManegementService {
      * 多条件查询包装材料库存管理
      */
     List<PacManegement> findWherePacManegement(PacManegement pacManegement);
+
 }

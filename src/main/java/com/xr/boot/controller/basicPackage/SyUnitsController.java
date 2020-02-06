@@ -1,10 +1,15 @@
 package com.xr.boot.controller.basicPackage;
 
+import com.xr.boot.entity.SyEmp;
+import com.xr.boot.entity.SyUnits;
 import com.xr.boot.service.system.SyUnitsService;
+import com.xr.boot.util.DateUtil;
 import com.xr.boot.util.RedisUtil;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,4 +39,24 @@ public class SyUnitsController {
             }
         }
     }
+    @GetMapping("/findsyunitsbyparentid")
+    public Object findSyUnitsByparentid(SyUnits syUnits) {
+        System.out.println(syUnits);
+        String key="com.xr.boot.controller.basicPackage.SyUnitsController.findSyUnitsByParentid"+syUnits.getParentid()+syUnits.getName();
+        if(redisUtil.hasKey(key)){
+            return redisUtil.get(key);
+        }
+        return syUnitsService.findSyUnitByParentId(syUnits);
+
+    }
+    @PostMapping("/add")
+    public void saveSyUnit(SyUnits syUnits) {
+        syUnits.setOperationTime(DateUtil.getTime());
+        try {
+            syUnitsService.saveSyUnit(syUnits);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
