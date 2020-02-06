@@ -1,7 +1,9 @@
 package com.xr.boot.service.PacPackaging.impl;
 
 import com.xr.boot.dao.PacPackaging.PacManegementMapper;
+import com.xr.boot.dao.system.SyEmpMapper;
 import com.xr.boot.entity.PacManegement;
+import com.xr.boot.entity.SyEmp;
 import com.xr.boot.service.PacPackaging.PacManegementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,6 +14,8 @@ import java.util.List;
 public class PacManegementServiceImpl implements PacManegementService {
     @Autowired
     private PacManegementMapper pacManegementMapper;
+    @Autowired
+    private SyEmpMapper syEmpMapper;
     /**
      * 包装材料库存管理新增
      */
@@ -57,4 +61,5 @@ pacManegementMapper.addPacManegement(pacManegement);
     public List<PacManegement> findWherePacManegement(PacManegement pacManegement) {
         return pacManegementMapper.findWherePacManegement(pacManegement);
     }
+
 }

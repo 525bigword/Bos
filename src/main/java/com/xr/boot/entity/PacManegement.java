@@ -18,6 +18,15 @@ public class PacManegement implements Serializable {
     private SyUnits gunitss;
     //private Integer gunit;
     private String zje;
+    private String storageNums;
+
+    public String getStorageNums() {
+        return storageNums;
+    }
+
+    public void setStorageNums(String storageNums) {
+        this.storageNums = storageNums;
+    }
 
     public String getZje() {
         return zje;
@@ -70,6 +79,8 @@ public class PacManegement implements Serializable {
                 ", gcode=" + gcode +
                 ", storageNum=" + storageNum +
                 ", gunitss=" + gunitss +
+                ", zje='" + zje + '\'' +
+                ", storageNums='" + storageNums + '\'' +
                 '}';
     }
 }

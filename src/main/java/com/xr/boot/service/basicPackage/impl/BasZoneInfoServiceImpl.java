@@ -29,4 +29,9 @@ public class BasZoneInfoServiceImpl implements BasZoneInfoService {
         redisUtil.set("com.xr.boot.controller.BasZoneInfoController.findBasZoneInfos", maps);
         return redisUtil.get("com.xr.boot.controller.BasZoneInfoController.findBasZoneInfos");
     }
+
+    @Override
+    public List<BasZoneInfo> findBasZoneInfoTrem(BasZoneInfo basZoneInfo) {
+        return basZoneInfoMapper.findBasZoneInfos(basZoneInfo);
+    }
 }

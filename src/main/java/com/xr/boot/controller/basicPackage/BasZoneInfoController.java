@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/basZoneInfoController")
 @Slf4j
@@ -34,5 +36,9 @@ public class BasZoneInfoController {
                 return null;
             }
         }
+    }
+    @PostMapping("/findBasZoneInfoTrem")
+    public List<BasZoneInfo> findBasZoneInfoTrem(BasZoneInfo basZoneInfo) {
+        return basZoneInfoService.findBasZoneInfoTrem(basZoneInfo);
     }
 }

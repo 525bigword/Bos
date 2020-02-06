@@ -41,6 +41,7 @@ public class PacPackaging implements Serializable {
     * @pdOid c78210cd-64c9-43ed-8cb7-14ac5d7a45a9 */
  /*  private Integer type;*/
    private PacOutBoundType pacOutBoundType;
+
    /** 计量单位	张、箱、大箱、小箱、个、包、袋等
     *
     * @pdOid 88c19e53-b511-4313-be43-ed1bc508f294 */
@@ -236,8 +237,10 @@ private Integer operationUnitid;
               ", itemName='" + itemName + '\'' +
               ", plannedPrice=" + plannedPrice +
               ", specifications='" + specifications + '\'' +
+              ", pacOutBoundType=" + pacOutBoundType +
               ", measurementUnit='" + measurementUnit + '\'' +
               ", status=" + status +
+              ", syEmp=" + syEmp +
               ", operationUnitid=" + operationUnitid +
               ", operationTime=" + operationTime +
               ", invalidateJobInt=" + invalidateJobInt +

@@ -62,7 +62,14 @@ public class PacStockController {
      * 多条件查询包装材料入库记录
      */
     @RequestMapping("/findWherePacStock")
-    public List<PacStock> findWherePacStock(PacStock pacStock) {
-        return pacStockService.findWherePacStock(pacStock);
+    public List<PacStock> findWherePacStock(PacStock pacStock,String rklx,String dw) {
+        System.out.println(pacStock+".."+rklx+".."+dw+"..");
+if(!("".equals(dw))){
+        syUnits.setId(Long.parseLong(dw));
+        pacStock.setSyUnits(syUnits);
+}
+if(!("".equals(rklx))){
+        pacStock.setPacGetBoundType(new PacGetBoundType(Integer.parseInt(rklx),""));}
+       return pacStockService.findWherePacStock(pacStock);
     }
 }

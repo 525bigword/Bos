@@ -115,4 +115,11 @@ public interface SyEmpMapper {
     //修改密码
     void upSyEmpToPwdById(SyEmp syEmp);
 
+    /**
+     * 根据姓名查询是否有该员工
+     * @param empName
+     * @return
+     */
+    @Select("select id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled from sy_emp where empname=#{empName} ")
+    SyEmp findByempName(String empName);
 }
