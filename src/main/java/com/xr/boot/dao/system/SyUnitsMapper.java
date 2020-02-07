@@ -13,8 +13,13 @@ public interface SyUnitsMapper {
     /**新增单位*/
     @Insert("insert into sy_units values(null,#{name},#{remarks},#{operatorid},#{parentid},#{operationTime},#{stats})")
     void saveSyUnit(SyUnits syUnits);
-
-
+    /**修改单位*/
+    @Update("update sy_units set name=#{name},remarks=#{remarks},OperatorID=#{operatorid},OperationTime=#{operationTime}," +
+            "Stats=#{stats} where id=#{id}")
+    void upSyUnit(SyUnits syUnits);
+    /**删除单位*/
+    @Delete("delete from sy_units where id=#{id}")
+    void delSyUnit(@Param("id")Integer id);
     @Select("select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=#{operationUnitid}")
     @Results({
             @Result(id = true, column = "ID", property = "id"),

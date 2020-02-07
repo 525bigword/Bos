@@ -54,6 +54,29 @@ public class SyUnitsServiceImpl implements SyUnitsService {
         syunitkey.clear();
     }
 
+    @Override
+    @Transactional
+    @Klock
+    public void upSyUnit(SyUnits syUnits) throws Exception {
+        syUnitsMapper.upSyUnit(syUnits);
+        for (Object  o: syunitkey) {
+            redisUtil.del(o.toString());
+        }
+        syunitkey.clear();
+    }
+    @Transactional
+    @Klock
+    @Override
+    public void delSyUnit(List<Integer> ids) throws Exception {
+        for (Integer id : ids) {
+            syUnitsMapper.delSyUnit(id);
+        }
+        for (Object  o: syunitkey) {
+            redisUtil.del(o.toString());
+        }
+        syunitkey.clear();
+    }
+
 
     @Override
     public Object findSyUnitByParentId(SyUnits syUnits) {
