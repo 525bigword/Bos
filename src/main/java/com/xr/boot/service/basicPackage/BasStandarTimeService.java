@@ -1,6 +1,7 @@
 package com.xr.boot.service.basicPackage;
 
 import com.xr.boot.entity.BasStandarTime;
+import com.xr.boot.entity.SyUnits;
 
 import java.util.List;
 
@@ -43,4 +44,11 @@ public interface BasStandarTimeService {
      * @return
      */
     List<String> findBasStandarTimeByTimeName(BasStandarTime basStandarTime);
+
+    /**
+     * 根据公司找时间
+     * @param unit
+     * @return
+     */
+    List<BasStandarTime> findBasAssociateMemberByUId(SyUnits syUnits);
 }

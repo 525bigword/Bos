@@ -16,7 +16,6 @@ public class BasStandarTimeSqlProvider {
                     if(basStandarTime.getSyUnits().getId()!=0){
                         tj+=" and SubordinateUnit=#{unitId}";
                     }
-
                     if (basStandarTime.getTimeName()!=null&&!basStandarTime.getTimeName().equals("")){
                         tj += " and TimeName Like CONCAT('%',#{timeName},'%')";
                     }

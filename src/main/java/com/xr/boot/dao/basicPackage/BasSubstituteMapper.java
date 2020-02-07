@@ -44,4 +44,10 @@ public interface BasSubstituteMapper {
 
     @Insert("INSERT into bas_substitute(ID,EmpNo,EmpName,MobileNo,Type,PDA,StandardKg,StandardLength,Models,PlateInt,InvalidateMark,OperatorID,OperationUnitID,OperationTime) VALUES(null,#{empNo},#{empName},#{mobileNo},#{type},#{pda},#{standardKg},#{standardLength},#{models},#{plateInt},#{invalidateMark},#{empId},#{unitId},NOW())")
     void saveBasSubstitute(BasSubstitute basSubstitute);
+
+    @Select("select EmpNo from bas_substitute where empNo=#{empNo}")
+    @Results({
+            @Result(column = "EmpNo", property = "empNo")
+    })
+    List<String> findBasSubstituteByEmpNo(BasSubstitute basSubstitute);
 }

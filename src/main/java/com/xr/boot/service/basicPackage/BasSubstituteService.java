@@ -37,4 +37,11 @@ public interface BasSubstituteService {
      * @param basSubstitute
      */
     void saveBasSubstitute(BasSubstitute basSubstitute);
+
+    /**
+     * 查找取派人是否重复
+     * @param basSubstitute
+     * @return
+     */
+    List<String> findBasSubstituteByEmpNo(BasSubstitute basSubstitute);
 }

@@ -1,6 +1,7 @@
 package com.xr.boot.controller.basicPackage;
 
 import com.xr.boot.entity.BasStandarTime;
+import com.xr.boot.entity.SyUnits;
 import com.xr.boot.service.basicPackage.BasStandarTimeService;
 import com.xr.boot.util.RedisUtil;
 import io.swagger.annotations.Api;
@@ -62,5 +63,9 @@ public class BasStandarTimeController {
         basStandarTimeService.delBasStandarTime(id);
         redisUtil.del("com.xr.boot.controller.BasStandarTimeController.findBasStandarTimes");
         return 1;
+    }
+    @PostMapping("/findBasAssociateMemberByUId")
+    public List<BasStandarTime> findBasAssociateMemberByUId(SyUnits syUnits) {
+        return basStandarTimeService.findBasAssociateMemberByUId(syUnits);
     }
 }

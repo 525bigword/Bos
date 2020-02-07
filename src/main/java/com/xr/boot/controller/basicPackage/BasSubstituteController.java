@@ -57,6 +57,10 @@ public class BasSubstituteController {
     }
     @PostMapping("/saveBasSubstitute")
     public int saveBasSubstitute(BasSubstitute basSubstitute){
+        List<String> l = basSubstituteService.findBasSubstituteByEmpNo(basSubstitute);
+        if(l.size()>0){
+            return 0;
+        }
         basSubstituteService.saveBasSubstitute(basSubstitute);
         redisUtil.del("com.xr.boot.controller.BasSubstituteController.findBasSubstitutes");
         return 1;

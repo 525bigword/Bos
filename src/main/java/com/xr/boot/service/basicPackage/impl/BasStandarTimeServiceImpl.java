@@ -2,6 +2,7 @@ package com.xr.boot.service.basicPackage.impl;
 
 import com.xr.boot.dao.basicPackage.BasStandarTimeMapper;
 import com.xr.boot.entity.BasStandarTime;
+import com.xr.boot.entity.SyUnits;
 import com.xr.boot.service.basicPackage.BasStandarTimeService;
 import com.xr.boot.util.RedisUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -57,6 +58,11 @@ public class BasStandarTimeServiceImpl implements BasStandarTimeService {
     @Override
     public List<String> findBasStandarTimeByTimeName(BasStandarTime basStandarTime) {
         return basStandarTimeMapper.findBasStandarTimeByTimeName(basStandarTime);
+    }
+
+    @Override
+    public List<BasStandarTime> findBasAssociateMemberByUId(SyUnits syUnits) {
+        return basStandarTimeMapper.findBasAssociateMemberByUId(syUnits);
     }
 
 }

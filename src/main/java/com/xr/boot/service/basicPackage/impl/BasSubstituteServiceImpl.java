@@ -53,4 +53,10 @@ public class BasSubstituteServiceImpl implements BasSubstituteService {
     public void saveBasSubstitute(BasSubstitute basSubstitute) {
         basSubstituteMapper.saveBasSubstitute(basSubstitute);
     }
+
+    @Transactional
+    @Override
+    public List<String> findBasSubstituteByEmpNo(BasSubstitute basSubstitute) {
+        return basSubstituteMapper.findBasSubstituteByEmpNo(basSubstitute);
+    }
 }
