@@ -18,4 +18,8 @@ public interface SyUnitsService  {
     List<SyUnits> findSyUnitAllByStats(@Param("stats") Integer stats);
     /**新增单位*/
     void saveSyUnit(SyUnits syUnits) throws Exception;
+    /**修改单位*/
+    void upSyUnit(SyUnits syUnits) throws Exception;
+    /**删除单位*/
+    void delSyUnit(List<Integer> ids) throws Exception;
 }

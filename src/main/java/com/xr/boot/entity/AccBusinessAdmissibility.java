@@ -15,10 +15,33 @@ import java.util.*;
  * @pdOid 0d116458-3e8f-4061-b3c0-b5703e8acee8 */
 @Component
 public class AccBusinessAdmissibility implements Serializable {
+   private Integer id;
+
+   public Integer getId() {
+      return id;
+   }
+
+   public void setId(Integer id) {
+      this.id = id;
+   }
+
+   private AccProductList pro;
+
+   public AccProductList getPro() {
+      return pro;
+   }
+
+   public void setPro(AccProductList pro) {
+      this.pro = pro;
+   }
+   public Long getProcueId() {
+      return pro.getId();
+   }
+
    /** 预约收件时间
     * 
     * @pdOid 0429c69d-3f7f-4cb0-8b33-6db8810a02d7 */
-   private Date reservationTime;
+   private String reservationTime;
    /** 客户名称
     * 
     * @pdOid d3081630-de9b-489b-9759-ac39586e4136 */
@@ -113,13 +136,13 @@ public class AccBusinessAdmissibility implements Serializable {
    }
    
    /** @pdOid 7d45ce42-cb61-42a0-9e97-4984ca3d9880 */
-   public Date getReservationTime() {
+   public String getReservationTime() {
       return reservationTime;
    }
    
    /** @param newReservationTime
     * @pdOid 11561ff9-1e2e-41dc-a37a-773a234cbdbd */
-   public void setReservationTime(Date newReservationTime) {
+   public void setReservationTime(String newReservationTime) {
       reservationTime = newReservationTime;
    }
    
@@ -332,4 +355,31 @@ public class AccBusinessAdmissibility implements Serializable {
       comment = newComment;
    }
 
+   @Override
+   public String toString() {
+      return "AccBusinessAdmissibility{" +
+              "pro=" + pro +
+              ", reservationTime=" + reservationTime +
+              ", customName='" + customName + '\'' +
+              ", pickupAddress='" + pickupAddress + '\'' +
+              ", customCode='" + customCode + '\'' +
+              ", linkman='" + linkman + '\'' +
+              ", telPhone='" + telPhone + '\'' +
+              ", weight=" + weight +
+              ", volume=" + volume +
+              ", importantHints='" + importantHints + '\'' +
+              ", arriveCity='" + arriveCity + '\'' +
+              ", sendAddress='" + sendAddress + '\'' +
+              ", notificationSource=" + notificationSource +
+              ", customNoModifyFlag=" + customNoModifyFlag +
+              ", singleType='" + singleType + '\'' +
+              ", packagesNum=" + packagesNum +
+              ", actualWeight=" + actualWeight +
+              ", billingWeight=" + billingWeight +
+              ", packingFee=" + packingFee +
+              ", actualPacking=" + actualPacking +
+              ", comment='" + comment + '\'' +
+              ", businessNoticeNo='" + businessNoticeNo + '\'' +
+              '}';
+   }
 }

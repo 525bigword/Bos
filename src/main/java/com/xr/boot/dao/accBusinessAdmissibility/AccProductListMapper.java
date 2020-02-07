@@ -13,4 +13,9 @@ public interface AccProductListMapper {
      */
     @Select("select id,produceName from acc_productList")
     List<AccProductList> findAllAccProductlist();
+    /**
+     * 根据id查产品信息
+     */
+    @Select("select id,produceName from acc_productList where id=#{id}")
+    AccProductList findAccProListByid(int id);
 }

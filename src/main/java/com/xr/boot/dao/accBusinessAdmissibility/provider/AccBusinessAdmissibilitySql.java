@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class AccBusinessAdmissibilitySql {
         public String findAccBusinessAdmissibilityWhere(AccBusinessAdmissibility accBusinessAdmissibility) {
-        StringBuffer sql=new StringBuffer("select id, BusinessNoticeNo,CustomCode,CustomName,Linkman,TelPhone,PickupAddress,ArriveCity,ProcueId,ReservationTime from Acc_BusinessAdmissibility where 1=1");
+        StringBuffer sql=new StringBuffer("select id, BusinessNoticeNo,CustomCode,CustomName,Linkman,TelPhone,PickupAddress,ArriveCity,ProcueId,ReservationTime from acc_businessadmissibility where 1=1");
         if (accBusinessAdmissibility.getCustomCode() != null && !accBusinessAdmissibility.getCustomCode().equals("")) {
             sql.append( " and CustomCode =#{customCode}");
         }

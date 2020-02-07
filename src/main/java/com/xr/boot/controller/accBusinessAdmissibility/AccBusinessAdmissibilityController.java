@@ -1,6 +1,7 @@
 package com.xr.boot.controller.accBusinessAdmissibility;
 
 import com.xr.boot.entity.AccBusinessAdmissibility;
+import com.xr.boot.entity.AccProductList;
 import com.xr.boot.service.accBusinessAdmissibility.AccBusinessAdmissibilityService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,12 +18,18 @@ import java.util.List;
 public class AccBusinessAdmissibilityController {
     @Autowired
     private AccBusinessAdmissibilityService accBusinessAdmissibilityService;
+    @Autowired
+    private AccProductList accProductList;
     /**
      * 业务受理
      * @param accBusinessAdmissibility
      */
     @RequestMapping("/saveAccBusinessAdmissibility")
-    public void addAccBusinessAdmissibility(AccBusinessAdmissibility accBusinessAdmissibility) {
+    public void addAccBusinessAdmissibility(AccBusinessAdmissibility accBusinessAdmissibility,String chanping) {
+        System.out.println(accBusinessAdmissibility);
+        accProductList.setId(Long.parseLong(chanping));
+        accBusinessAdmissibility.setPro(accProductList);
+        System.out.println(accBusinessAdmissibility);
         accBusinessAdmissibilityService.addAccBusinessAdmissibility(accBusinessAdmissibility);
     }
     /**
@@ -40,6 +47,7 @@ public class AccBusinessAdmissibilityController {
      */
     @RequestMapping("/findAllWhereAccBusinessAdmissibility")
     public List<AccBusinessAdmissibility> findAllWhereAccBusinessAdmissibility(AccBusinessAdmissibility accBusinessAdmissibility) {
+
         return accBusinessAdmissibilityService.findAllWhereAccBusinessAdmissibility(accBusinessAdmissibility);
     }
 }
