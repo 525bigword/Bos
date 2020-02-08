@@ -15,7 +15,7 @@ public interface BasAssociatememberMapper {
             @Result(id=true,column = "ID",property = "id"),
             @Result(column = "EmpNo",property = "empNo"),
             @Result(column = "EmpName",property = "empName"),
-            @Result(column = "ZoneCode",property = "mobileNo"),
+            @Result(column = "ZoneCode",property = "zoneCode"),
             @Result(column = "StandardKg",property = "standardKg"),
             @Result(column = "StandardLength",property = "standardLength"),
             @Result(column = "StandardTimeId", property = "basStandardTime",

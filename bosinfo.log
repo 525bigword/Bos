@@ -1,600 +1,244 @@
-2020-02-07 14:38:38.826  INFO 17136 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 17136 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
-2020-02-07 14:38:38.840 DEBUG 17136 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-02-07 14:38:38.844  INFO 17136 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
-2020-02-07 14:38:43.125  INFO 17136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-02-07 14:38:43.132  INFO 17136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-02-07 14:38:43.264  INFO 17136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94ms. Found 0 repository interfaces.
-2020-02-07 14:38:44.073  INFO 17136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-02-07 14:38:45.423  INFO 17136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-02-07 14:38:45.449  INFO 17136 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-02-07 14:38:45.450  INFO 17136 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2020-02-07 14:38:45.698  INFO 17136 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-02-07 14:38:45.699  INFO 17136 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6139 ms
-2020-02-07 14:38:45.780 DEBUG 17136 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
-2020-02-07 14:38:46.659  INFO 17136 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-02-07 14:38:49.123  INFO 17136 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2020-02-07 14:38:51.127  INFO 17136 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+2020-02-09 00:02:35.718  INFO 15796 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on E53WRL7JY0MW6H1 with PID 15796 (H:\working\Bos\target\classes started by Administrator in H:\working\Bos)
+2020-02-09 00:02:35.748 DEBUG 15796 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-02-09 00:02:35.750  INFO 15796 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-02-09 00:02:44.174  INFO 15796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-02-09 00:02:44.184  INFO 15796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-09 00:02:44.446  INFO 15796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 211ms. Found 0 repository interfaces.
+2020-02-09 00:02:46.203  INFO 15796 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-09 00:02:49.984  INFO 15796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-09 00:02:50.065  INFO 15796 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-09 00:02:50.066  INFO 15796 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-02-09 00:02:50.070  INFO 15796 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.21] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-02-09 00:02:50.072  INFO 15796 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-02-09 00:02:50.073  INFO 15796 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-02-09 00:02:50.083  INFO 15796 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-02-09 00:02:50.090  INFO 15796 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-02-09 00:02:50.544  INFO 15796 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-09 00:02:50.555  INFO 15796 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 13782 ms
+2020-02-09 00:02:50.701 DEBUG 15796 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-02-09 00:02:52.798  INFO 15796 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-02-09 00:02:55.557  INFO 15796 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-02-09 00:02:57.644  INFO 15796 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
 loadBalanceAlgorithmType: round_robin
 masterDataSourceName: ds0
 name: dataSource
 slaveDataSourceNames:
 - ds1
 
-2020-02-07 14:38:51.128  INFO 17136 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+2020-02-09 00:02:57.650  INFO 15796 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
 {}
 
-2020-02-07 14:38:54.973  INFO 17136 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-02-07 14:38:55.888  INFO 17136 --- [main] org.redisson.Version                     : Redisson 3.2.0
-2020-02-07 14:38:57.049  INFO 17136 --- [nioEventLoopGroup-4-4] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
-2020-02-07 14:38:57.050  INFO 17136 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
-2020-02-07 14:38:57.174  INFO 17136 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-02-07 14:38:57.214  INFO 17136 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-02-07 14:38:57.309  INFO 17136 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-02-07 14:38:57.388  INFO 17136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-02-07 14:38:57.393  INFO 17136 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 20.443 seconds (JVM running for 33.937)
-2020-02-07 14:39:03.722  INFO 17136 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-02-07 14:39:03.722  INFO 17136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-02-07 14:39:03.770  INFO 17136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 45 ms
-2020-02-07 14:39:15.049 DEBUG 17136 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyEmpByEmpNoAndPwd       : ==>  Preparing: select id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled from sy_emp where empno=? and ? 
-2020-02-07 14:39:16.830 DEBUG 17136 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyEmpByEmpNoAndPwd       : ==> Parameters: 007(String), 36E205C05D8FF28AAD410CF5CABD16ED(String)
-2020-02-07 14:39:16.975 DEBUG 17136 --- [http-nio-8080-exec-3] c.x.b.d.s.SyRoleMapper.findSyRolesById   : ====>  Preparing: select id,rolename,roledesc,disabled from sy_roles where id=? 
-2020-02-07 14:39:16.994 DEBUG 17136 --- [http-nio-8080-exec-3] c.x.b.d.s.SyRoleMapper.findSyRolesById   : ====> Parameters: 1(Integer)
-2020-02-07 14:39:17.126 DEBUG 17136 --- [http-nio-8080-exec-3] c.x.b.d.s.SyRoleMapper.findSyRolesById   : <====      Total: 1
-2020-02-07 14:39:17.129 DEBUG 17136 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyUnitAllById            : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
-2020-02-07 14:39:17.153 DEBUG 17136 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyUnitAllById            : ====> Parameters: 2(Integer)
-2020-02-07 14:39:18.042 DEBUG 17136 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyUnitAllById            : <====      Total: 1
-2020-02-07 14:39:18.043 DEBUG 17136 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyEmpByEmpNoAndPwd       : <==      Total: 1
-2020-02-07 14:39:18.049 DEBUG 17136 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyBigMenusAll            : ==>  Preparing: select id,bigmenus,url,icon from sy_bigmenus 
-2020-02-07 14:39:18.061 DEBUG 17136 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyBigMenusAll            : ==> Parameters: 
-2020-02-07 14:39:18.099 DEBUG 17136 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyBigMenusAll            : <==      Total: 8
-2020-02-07 14:39:18.962  WARN 17136 --- [http-nio-8080-exec-3] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.system.impl.SyEmpServiceImpl.login)
-2020-02-07 14:39:32.031  INFO 17136 --- [http-nio-8080-exec-6] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2020-02-07 14:39:32.034  INFO 17136 --- [http-nio-8080-exec-6] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2020-02-07 14:39:47.960 DEBUG 17136 --- [http-nio-8080-exec-9] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==>  Preparing: insert into sy_units values(null,?,?,?,?,?,?) 
-2020-02-07 14:39:48.031 DEBUG 17136 --- [http-nio-8080-exec-9] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==> Parameters: 123(String), 123(String), 1(Integer), 2(Integer), 2020/2/7 14:39:47(String), 0(Integer)
-2020-02-07 14:39:48.095 DEBUG 17136 --- [http-nio-8080-exec-9] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : <==    Updates: 1
-2020-02-07 14:41:00.955 DEBUG 17136 --- [http-nio-8080-exec-2] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==>  Preparing: insert into sy_units values(null,?,?,?,?,?,?) 
-2020-02-07 14:41:01.035 DEBUG 17136 --- [http-nio-8080-exec-2] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==> Parameters: 123(String), 123(String), 1(Integer), 2(Integer), 2020/2/7 14:41:0(String), 0(Integer)
-2020-02-07 14:41:01.102 DEBUG 17136 --- [http-nio-8080-exec-2] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : <==    Updates: 1
-2020-02-07 14:41:21.939 DEBUG 17136 --- [http-nio-8080-exec-8] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==>  Preparing: insert into sy_units values(null,?,?,?,?,?,?) 
-2020-02-07 14:41:21.973 DEBUG 17136 --- [http-nio-8080-exec-8] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==> Parameters: 123(String), 123(String), 1(Integer), 2(Integer), 2020/2/7 14:41:21(String), 0(Integer)
-2020-02-07 14:41:22.046 DEBUG 17136 --- [http-nio-8080-exec-8] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : <==    Updates: 1
-2020-02-07 15:08:34.801 ERROR 17136 --- [nioEventLoopGroup-4-2] o.redisson.client.handler.CommandsQueue  : Exception occured. Channel: [id: 0xb0f2a650, L:/192.168.0.100:50520 - R:/47.100.39.234:6378]
-
-java.io.IOException: 远程主机强迫关闭了一个现有的连接。
-	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:247) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1147) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
-
-2020-02-07 15:08:34.802 ERROR 17136 --- [nioEventLoopGroup-4-5] o.redisson.client.handler.CommandsQueue  : Exception occured. Channel: [id: 0x174d9732, L:/192.168.0.100:50522 - R:/47.100.39.234:6378]
-
-java.io.IOException: 远程主机强迫关闭了一个现有的连接。
-	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:247) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1147) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
-
-2020-02-07 15:08:34.801 ERROR 17136 --- [nioEventLoopGroup-4-4] o.redisson.client.handler.CommandsQueue  : Exception occured. Channel: [id: 0x7f2bb65a, L:/192.168.0.100:50525 - R:/47.100.39.234:6378]
-
-java.io.IOException: 远程主机强迫关闭了一个现有的连接。
-	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:247) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1147) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
-
-2020-02-07 15:08:34.802 ERROR 17136 --- [nioEventLoopGroup-4-7] o.redisson.client.handler.CommandsQueue  : Exception occured. Channel: [id: 0xfcb77250, L:/192.168.0.100:50521 - R:/47.100.39.234:6378]
-
-java.io.IOException: 远程主机强迫关闭了一个现有的连接。
-	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:247) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1147) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
-
-2020-02-07 15:08:34.802 ERROR 17136 --- [nioEventLoopGroup-4-3] o.redisson.client.handler.CommandsQueue  : Exception occured. Channel: [id: 0x9e995845, L:/192.168.0.100:50523 - R:/47.100.39.234:6378]
-
-java.io.IOException: 远程主机强迫关闭了一个现有的连接。
-	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:247) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1147) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
-
-2020-02-07 15:08:34.802 ERROR 17136 --- [nioEventLoopGroup-4-6] o.redisson.client.handler.CommandsQueue  : Exception occured. Channel: [id: 0x3f53e0d2, L:/192.168.0.100:50524 - R:/47.100.39.234:6378]
-
-java.io.IOException: 远程主机强迫关闭了一个现有的连接。
-	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:247) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1147) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
-
-2020-02-07 15:08:34.803  INFO 17136 --- [lettuce-nioEventLoop-6-1] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
-
-java.io.IOException: 远程主机强迫关闭了一个现有的连接。
-	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_211]
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_211]
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_211]
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_211]
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_211]
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:247) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1147) ~[netty-buffer-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:700) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) [netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
-
-2020-02-07 15:08:35.130  INFO 17136 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was /47.100.39.234:6378
-2020-02-07 15:08:35.232  WARN 17136 --- [lettuce-nioEventLoop-6-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [47.100.39.234:6378]: Network is unreachable: no further information: /47.100.39.234:6378
-
-io.netty.channel.AbstractChannel$AnnotatedSocketException: Network is unreachable: no further information: /47.100.39.234:6378
-Caused by: java.net.SocketException: Network is unreachable: no further information
-	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_211]
-	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_211]
-	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:688) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:635) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:552) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:514) ~[netty-transport-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1050) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.43.Final.jar:4.1.43.Final]
-	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_211]
-
-2020-02-07 15:08:35.951  INFO 17136 --- [lettuce-nioEventLoop-6-4] i.l.core.protocol.ReconnectionHandler    : Reconnected to 47.100.39.234:6378
-2020-02-07 15:09:56.988 DEBUG 17136 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSYUnitAllByParentId      : ==>  Preparing: SELECT ID,`Name`,Remarks,OperatorID,(select EmpName from sy_emp where id=sy_units.operatorid)operatorname,parentid,OperationTime,Stats FROM sy_units WHERE (parentid=?) 
-2020-02-07 15:10:02.964 DEBUG 17136 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSYUnitAllByParentId      : ==> Parameters: 2(Integer)
-2020-02-07 15:10:03.088 DEBUG 17136 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSYUnitAllByParentId      : <==      Total: 5
-2020-02-07 15:10:12.048 DEBUG 17136 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpByWhere   : ==>  Preparing: SELECT id,(select name from sy_units where sy_units.id=sy_emp.empunit) unitname,empunit,empname,empno,(select rolename from sy_roles where sy_roles.id=sy_emp.roleid) rolename,disabled,roleid,remark FROM sy_emp WHERE (sy_emp.disabled=? AND empunit=?) 
-2020-02-07 15:10:12.206 DEBUG 17136 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpByWhere   : ==> Parameters: 0(Integer), 2(Integer)
-2020-02-07 15:10:12.950 DEBUG 17136 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpByWhere   : <==      Total: 6
-2020-02-07 15:10:53.981 DEBUG 17136 --- [http-nio-8080-exec-4] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==>  Preparing: insert into sy_units values(null,?,?,?,?,?,?) 
-2020-02-07 15:11:00.093 DEBUG 17136 --- [http-nio-8080-exec-4] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==> Parameters: 123(String), 123(String), 1(Integer), 2(Integer), 2020/2/7 15:10:53(String), 0(Integer)
-2020-02-07 15:11:01.083 DEBUG 17136 --- [http-nio-8080-exec-4] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : <==    Updates: 1
-2020-02-07 15:11:15.148 DEBUG 17136 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSYUnitAllByParentId      : ==>  Preparing: SELECT ID,`Name`,Remarks,OperatorID,(select EmpName from sy_emp where id=sy_units.operatorid)operatorname,parentid,OperationTime,Stats FROM sy_units WHERE (parentid=?) 
-2020-02-07 15:11:15.942 DEBUG 17136 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSYUnitAllByParentId      : ==> Parameters: 2(Integer)
-2020-02-07 15:11:16.037 DEBUG 17136 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSYUnitAllByParentId      : <==      Total: 6
-2020-02-07 15:16:03.309  INFO 16816 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 16816 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
-2020-02-07 15:16:03.317 DEBUG 16816 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-02-07 15:16:03.318  INFO 16816 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
-2020-02-07 15:16:06.586  INFO 16816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-02-07 15:16:06.590  INFO 16816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-02-07 15:16:06.733  INFO 16816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115ms. Found 0 repository interfaces.
-2020-02-07 15:16:07.640  INFO 16816 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-02-07 15:16:08.871  INFO 16816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-02-07 15:16:08.897  INFO 16816 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-02-07 15:16:08.897  INFO 16816 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2020-02-07 15:16:09.155  INFO 16816 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-02-07 15:16:09.155  INFO 16816 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5305 ms
-2020-02-07 15:16:09.236 DEBUG 16816 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
-2020-02-07 15:16:10.125  INFO 16816 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-02-07 15:16:20.129  INFO 16816 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2020-02-07 15:16:24.216  INFO 16816 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+2020-02-09 00:03:03.538  INFO 15796 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-02-09 00:03:05.203  INFO 15796 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-02-09 00:03:07.528  INFO 15796 --- [nioEventLoopGroup-4-3] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-02-09 00:03:07.529  INFO 15796 --- [nioEventLoopGroup-4-2] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-02-09 00:03:07.776  INFO 15796 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-02-09 00:03:07.870  INFO 15796 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-02-09 00:03:08.015  INFO 15796 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-02-09 00:03:08.154  INFO 15796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-09 00:03:08.160  INFO 15796 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 34.737 seconds (JVM running for 37.135)
+2020-02-09 00:03:13.994  INFO 15796 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-09 00:03:13.996  INFO 15796 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-09 00:03:14.201  INFO 15796 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 204 ms
+2020-02-09 00:03:19.278  INFO 15796 --- [http-nio-8080-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-02-09 00:03:19.284  INFO 15796 --- [http-nio-8080-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-02-09 00:03:19.476 DEBUG 15796 --- [http-nio-8080-exec-2] c.x.b.c.basicPackage.SyUnitsController   : 从redis中取出值
+2020-02-09 00:03:20.399 DEBUG 15796 --- [http-nio-8080-exec-3] c.x.b.c.b.BasZoneInfoController          : 从redis中取出值
+2020-02-09 00:03:23.333 DEBUG 15796 --- [http-nio-8080-exec-4] .b.d.b.B.findBasZoneCustomInfoByZoneCode : ==>  Preparing: select CustomCode,CustomName,MobileNo,CityName,CstomAddress,ZoneCode,OperatorID,OperationUnitID,OperationTime from bas_zonecustominfo where ZoneCode=? order by OperationTime desc 
+2020-02-09 00:03:25.436 DEBUG 15796 --- [http-nio-8080-exec-4] .b.d.b.B.findBasZoneCustomInfoByZoneCode : ==> Parameters: 123243654338983511(String)
+2020-02-09 00:03:25.499 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:03:25.583 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 1(Integer)
+2020-02-09 00:03:26.402 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:03:26.404 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-02-09 00:03:26.453 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-02-09 00:03:26.496 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-02-09 00:03:26.497 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:03:26.498 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 17(Integer)
+2020-02-09 00:03:26.537 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:03:26.539 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:03:26.541 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 20(Integer)
+2020-02-09 00:03:26.583 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:03:26.584 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:03:26.585 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 2(Integer)
+2020-02-09 00:03:27.398 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:03:27.400 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-02-09 00:03:27.401 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 3(Integer)
+2020-02-09 00:03:27.446 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-02-09 00:03:27.447 DEBUG 15796 --- [http-nio-8080-exec-4] .b.d.b.B.findBasZoneCustomInfoByZoneCode : <==      Total: 5
+2020-02-09 00:04:25.578 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.c.basicPackage.SyUnitsController   : 从redis中取出值
+2020-02-09 00:04:26.472 DEBUG 15796 --- [http-nio-8080-exec-7] c.x.b.c.b.BasZoneInfoController          : 从redis中取出值
+2020-02-09 00:04:29.220 DEBUG 15796 --- [http-nio-8080-exec-8] .b.d.b.B.findBasZoneCustomInfoByZoneCode : ==>  Preparing: select CustomCode,CustomName,MobileNo,CityName,CstomAddress,ZoneCode,OperatorID,OperationUnitID,OperationTime from bas_zonecustominfo where ZoneCode=? order by OperationTime desc 
+2020-02-09 00:04:29.437 DEBUG 15796 --- [http-nio-8080-exec-8] .b.d.b.B.findBasZoneCustomInfoByZoneCode : ==> Parameters: 123243654338983511(String)
+2020-02-09 00:04:29.481 DEBUG 15796 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:04:29.482 DEBUG 15796 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 1(Integer)
+2020-02-09 00:04:29.531 DEBUG 15796 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:04:29.532 DEBUG 15796 --- [http-nio-8080-exec-8] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-02-09 00:04:29.533 DEBUG 15796 --- [http-nio-8080-exec-8] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-02-09 00:04:29.582 DEBUG 15796 --- [http-nio-8080-exec-8] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-02-09 00:04:29.583 DEBUG 15796 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:04:29.584 DEBUG 15796 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 17(Integer)
+2020-02-09 00:04:30.399 DEBUG 15796 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:04:30.401 DEBUG 15796 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:04:30.402 DEBUG 15796 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 20(Integer)
+2020-02-09 00:04:30.449 DEBUG 15796 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:04:30.450 DEBUG 15796 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:04:30.450 DEBUG 15796 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 2(Integer)
+2020-02-09 00:04:30.500 DEBUG 15796 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:04:30.501 DEBUG 15796 --- [http-nio-8080-exec-8] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-02-09 00:04:30.501 DEBUG 15796 --- [http-nio-8080-exec-8] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 3(Integer)
+2020-02-09 00:04:30.550 DEBUG 15796 --- [http-nio-8080-exec-8] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-02-09 00:04:30.551 DEBUG 15796 --- [http-nio-8080-exec-8] .b.d.b.B.findBasZoneCustomInfoByZoneCode : <==      Total: 5
+2020-02-09 00:05:46.396 DEBUG 15796 --- [http-nio-8080-exec-10] c.x.b.c.basicPackage.SyUnitsController   : 从redis中取出值
+2020-02-09 00:05:46.505 DEBUG 15796 --- [http-nio-8080-exec-1] c.x.b.c.b.BasZoneInfoController          : 从redis中取出值
+2020-02-09 00:05:49.124 DEBUG 15796 --- [http-nio-8080-exec-2] .b.d.b.B.findBasZoneCustomInfoByZoneCode : ==>  Preparing: select CustomCode,CustomName,MobileNo,CityName,CstomAddress,ZoneCode,OperatorID,OperationUnitID,OperationTime from bas_zonecustominfo where ZoneCode=? order by OperationTime desc 
+2020-02-09 00:05:49.439 DEBUG 15796 --- [http-nio-8080-exec-2] .b.d.b.B.findBasZoneCustomInfoByZoneCode : ==> Parameters: 123243654338983511(String)
+2020-02-09 00:05:49.478 DEBUG 15796 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:05:49.480 DEBUG 15796 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 1(Integer)
+2020-02-09 00:05:49.527 DEBUG 15796 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:05:49.528 DEBUG 15796 --- [http-nio-8080-exec-2] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-02-09 00:05:49.528 DEBUG 15796 --- [http-nio-8080-exec-2] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-02-09 00:05:49.574 DEBUG 15796 --- [http-nio-8080-exec-2] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-02-09 00:05:49.576 DEBUG 15796 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:05:49.577 DEBUG 15796 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 17(Integer)
+2020-02-09 00:05:50.396 DEBUG 15796 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:05:50.398 DEBUG 15796 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:05:50.399 DEBUG 15796 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 20(Integer)
+2020-02-09 00:05:50.439 DEBUG 15796 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:05:50.441 DEBUG 15796 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:05:50.442 DEBUG 15796 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 2(Integer)
+2020-02-09 00:05:50.489 DEBUG 15796 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:05:50.489 DEBUG 15796 --- [http-nio-8080-exec-2] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-02-09 00:05:50.490 DEBUG 15796 --- [http-nio-8080-exec-2] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 3(Integer)
+2020-02-09 00:05:50.535 DEBUG 15796 --- [http-nio-8080-exec-2] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-02-09 00:05:50.537 DEBUG 15796 --- [http-nio-8080-exec-2] .b.d.b.B.findBasZoneCustomInfoByZoneCode : <==      Total: 5
+2020-02-09 00:06:23.396 DEBUG 15796 --- [http-nio-8080-exec-4] c.x.b.c.basicPackage.SyUnitsController   : 从redis中取出值
+2020-02-09 00:06:23.501 DEBUG 15796 --- [http-nio-8080-exec-5] c.x.b.c.b.BasZoneInfoController          : 从redis中取出值
+2020-02-09 00:06:25.615 DEBUG 15796 --- [http-nio-8080-exec-6] .b.d.b.B.findBasZoneCustomInfoByZoneCode : ==>  Preparing: select CustomCode,CustomName,MobileNo,CityName,CstomAddress,ZoneCode,OperatorID,OperationUnitID,OperationTime from bas_zonecustominfo where ZoneCode=? order by OperationTime desc 
+2020-02-09 00:06:26.416 DEBUG 15796 --- [http-nio-8080-exec-6] .b.d.b.B.findBasZoneCustomInfoByZoneCode : ==> Parameters: 123243654338983511(String)
+2020-02-09 00:06:26.468 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:06:26.470 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 1(Integer)
+2020-02-09 00:06:26.516 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:06:26.518 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-02-09 00:06:26.519 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-02-09 00:06:26.563 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-02-09 00:06:26.566 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:06:26.566 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 17(Integer)
+2020-02-09 00:06:26.614 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:06:26.615 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:06:26.616 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 20(Integer)
+2020-02-09 00:06:27.397 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:06:27.415 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:06:27.416 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 2(Integer)
+2020-02-09 00:06:27.469 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:06:27.471 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-02-09 00:06:27.473 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 3(Integer)
+2020-02-09 00:06:27.520 DEBUG 15796 --- [http-nio-8080-exec-6] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-02-09 00:06:27.521 DEBUG 15796 --- [http-nio-8080-exec-6] .b.d.b.B.findBasZoneCustomInfoByZoneCode : <==      Total: 5
+2020-02-09 00:06:59.532 DEBUG 15796 --- [http-nio-8080-exec-7] c.x.b.c.basicPackage.SyUnitsController   : 从redis中取出值
+2020-02-09 00:07:00.396 DEBUG 15796 --- [http-nio-8080-exec-8] c.x.b.c.b.BasZoneInfoController          : 从redis中取出值
+2020-02-09 00:08:25.717  INFO 2948 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on E53WRL7JY0MW6H1 with PID 2948 (H:\working\Bos\target\classes started by Administrator in H:\working\Bos)
+2020-02-09 00:08:25.747 DEBUG 2948 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-02-09 00:08:25.749  INFO 2948 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-02-09 00:08:34.764  INFO 2948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-02-09 00:08:34.772  INFO 2948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-09 00:08:34.887  INFO 2948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83ms. Found 0 repository interfaces.
+2020-02-09 00:08:36.661  INFO 2948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-09 00:08:39.285  INFO 2948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-09 00:08:39.320  INFO 2948 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-09 00:08:39.322  INFO 2948 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-02-09 00:08:39.326  INFO 2948 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.21] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-02-09 00:08:39.327  INFO 2948 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2020-02-09 00:08:39.328  INFO 2948 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-02-09 00:08:39.330  INFO 2948 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-02-09 00:08:39.338  INFO 2948 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2020-02-09 00:08:39.953  INFO 2948 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-09 00:08:39.956  INFO 2948 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 12464 ms
+2020-02-09 00:08:40.066 DEBUG 2948 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-02-09 00:08:41.354  INFO 2948 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-02-09 00:08:44.550  INFO 2948 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-02-09 00:08:46.648  INFO 2948 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
 loadBalanceAlgorithmType: round_robin
 masterDataSourceName: ds0
 name: dataSource
 slaveDataSourceNames:
 - ds1
 
-2020-02-07 15:16:24.217  INFO 16816 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+2020-02-09 00:08:46.651  INFO 2948 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
 {}
 
-2020-02-07 15:16:27.709  INFO 16816 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-02-07 15:16:28.920  INFO 16816 --- [main] org.redisson.Version                     : Redisson 3.2.0
-2020-02-07 15:16:30.186  INFO 16816 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
-2020-02-07 15:16:30.943  INFO 16816 --- [nioEventLoopGroup-4-6] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
-2020-02-07 15:16:31.068  INFO 16816 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-02-07 15:16:31.144  INFO 16816 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-02-07 15:16:31.235  INFO 16816 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-02-07 15:16:31.313  INFO 16816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-02-07 15:16:31.320  INFO 16816 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 29.585 seconds (JVM running for 44.718)
-2020-02-07 15:16:42.955  INFO 16816 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-02-07 15:16:42.955  INFO 16816 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-02-07 15:16:42.978  INFO 16816 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
-2020-02-07 15:17:00.218  INFO 16816 --- [http-nio-8080-exec-3] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2020-02-07 15:17:00.221  INFO 16816 --- [http-nio-8080-exec-3] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2020-02-07 15:31:00.195 DEBUG 16816 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSYUnitAllByParentId      : ==>  Preparing: SELECT ID,`Name`,Remarks,OperatorID,(select EmpName from sy_emp where id=sy_units.operatorid)operatorname,parentid,OperationTime,Stats FROM sy_units WHERE (parentid=?) 
-2020-02-07 15:31:06.040 DEBUG 16816 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpByWhere   : ==>  Preparing: SELECT id,(select name from sy_units where sy_units.id=sy_emp.empunit) unitname,empunit,empname,empno,(select rolename from sy_roles where sy_roles.id=sy_emp.roleid) rolename,disabled,roleid,remark FROM sy_emp WHERE (sy_emp.disabled=? AND empunit=?) 
-2020-02-07 15:31:22.467 DEBUG 16816 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSYUnitAllByParentId      : ==> Parameters: 2(Integer)
-2020-02-07 15:31:23.681 DEBUG 16816 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSYUnitAllByParentId      : <==      Total: 6
-2020-02-07 15:31:23.695 DEBUG 16816 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpByWhere   : ==> Parameters: 0(Integer), 2(Integer)
-2020-02-07 15:31:24.165 DEBUG 16816 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpByWhere   : <==      Total: 6
-2020-02-07 15:55:19.590  INFO 16816 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-02-07 15:55:19.677  INFO 16816 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86ms. Found 0 repository interfaces.
-2020-02-07 15:55:20.505  INFO 16816 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-02-07 15:55:20.506  INFO 16816 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-02-07 15:55:20.658  INFO 16816 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 151ms. Found 0 repository interfaces.
-2020-02-07 15:55:20.998  INFO 16816 --- [http-nio-8080-exec-2] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-02-07 16:01:50.995 DEBUG 16816 --- [http-nio-8080-exec-9] c.x.b.dao.system.SyUnitsMapper.upSyUnit  : ==>  Preparing: update sy_units set name=?,remarks=?,OperatorID=?,OperationTime=?,Stats=? where id=? 
-2020-02-07 16:01:56.986 DEBUG 16816 --- [http-nio-8080-exec-9] c.x.b.dao.system.SyUnitsMapper.upSyUnit  : ==> Parameters: 12344(String), 123(String), 1(Integer), 2020/2/7 16:1:50(String), 0(Integer), 0(Long)
-2020-02-07 16:01:57.963 DEBUG 16816 --- [http-nio-8080-exec-9] c.x.b.dao.system.SyUnitsMapper.upSyUnit  : <==    Updates: 0
-2020-02-07 16:05:51.972 DEBUG 16816 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSYUnitAllByParentId      : ==>  Preparing: SELECT ID,`Name`,Remarks,OperatorID,(select EmpName from sy_emp where id=sy_units.operatorid)operatorname,parentid,OperationTime,Stats FROM sy_units WHERE (parentid=?) 
-2020-02-07 16:05:56.000 DEBUG 16816 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSYUnitAllByParentId      : ==> Parameters: 2(Integer)
-2020-02-07 16:05:56.130 DEBUG 16816 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSYUnitAllByParentId      : <==      Total: 6
-2020-02-07 16:06:06.272 DEBUG 16816 --- [http-nio-8080-exec-2] c.x.b.dao.system.SyUnitsMapper.upSyUnit  : ==>  Preparing: update sy_units set name=?,remarks=?,OperatorID=?,OperationTime=?,Stats=? where id=? 
-2020-02-07 16:06:07.006 DEBUG 16816 --- [http-nio-8080-exec-2] c.x.b.dao.system.SyUnitsMapper.upSyUnit  : ==> Parameters: 123(String), 123(String), 1(Integer), 2020/2/7 16:6:6(String), 0(Integer), 0(Long)
-2020-02-07 16:06:08.199 DEBUG 16816 --- [http-nio-8080-exec-2] c.x.b.dao.system.SyUnitsMapper.upSyUnit  : <==    Updates: 0
-2020-02-07 16:06:21.929 DEBUG 16816 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSYUnitAllByParentId      : ==>  Preparing: SELECT ID,`Name`,Remarks,OperatorID,(select EmpName from sy_emp where id=sy_units.operatorid)operatorname,parentid,OperationTime,Stats FROM sy_units WHERE (parentid=?) 
-2020-02-07 16:06:21.931 DEBUG 16816 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSYUnitAllByParentId      : ==> Parameters: 2(Integer)
-2020-02-07 16:06:22.039 DEBUG 16816 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSYUnitAllByParentId      : <==      Total: 6
-2020-02-07 16:06:39.145 DEBUG 16816 --- [http-nio-8080-exec-5] c.x.b.dao.system.SyUnitsMapper.upSyUnit  : ==>  Preparing: update sy_units set name=?,remarks=?,OperatorID=?,OperationTime=?,Stats=? where id=? 
-2020-02-07 16:06:39.148 DEBUG 16816 --- [http-nio-8080-exec-5] c.x.b.dao.system.SyUnitsMapper.upSyUnit  : ==> Parameters: 1234(String), 1234(String), 1(Integer), 2020/2/7 16:6:39(String), 0(Integer), 10(Long)
-2020-02-07 16:06:41.173 DEBUG 16816 --- [http-nio-8080-exec-5] c.x.b.dao.system.SyUnitsMapper.upSyUnit  : <==    Updates: 1
-2020-02-07 16:06:45.972 DEBUG 16816 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSYUnitAllByParentId      : ==>  Preparing: SELECT ID,`Name`,Remarks,OperatorID,(select EmpName from sy_emp where id=sy_units.operatorid)operatorname,parentid,OperationTime,Stats FROM sy_units WHERE (parentid=?) 
-2020-02-07 16:06:45.973 DEBUG 16816 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSYUnitAllByParentId      : ==> Parameters: 2(Integer)
-2020-02-07 16:06:46.061 DEBUG 16816 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSYUnitAllByParentId      : <==      Total: 6
-2020-02-07 16:19:58.917  INFO 16816 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-02-07 16:19:59.140  INFO 16816 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 222ms. Found 0 repository interfaces.
-2020-02-07 16:19:59.900  INFO 16816 --- [http-nio-8080-exec-2] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-02-07 16:20:48.899 DEBUG 16816 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==>  Preparing: delete from sy_units where id=? 
-2020-02-07 16:21:00.992 ERROR 16816 --- [Druid-ConnectionPool-Create-297785169] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://47.100.39.234:3307/bos?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true, errorCode 0, state 08S01
-
-com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
-
-The last packet successfully received from the server was 1 milliseconds ago.  The last packet sent successfully to the server was 1 milliseconds ago.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_211]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_211]
-	at sun.reflect.DelegatingConstructorAccessorImpl.__newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_211]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45009) ~[na:1.8.0_211]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45012) ~[na:1.8.0_211]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_211]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3562) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3462) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3905) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:871) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1714) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1224) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2199) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_211]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_211]
-	at sun.reflect.DelegatingConstructorAccessorImpl.__newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_211]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45009) ~[na:1.8.0_211]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45012) ~[na:1.8.0_211]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_211]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1596) ~[druid-1.1.18.jar:1.1.18]
-	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1662) ~[druid-1.1.18.jar:1.1.18]
-	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2697) ~[druid-1.1.18.jar:1.1.18]
-Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
-	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3014) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3472) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	... 22 common frames omitted
-
-2020-02-07 16:21:35.001  INFO 5940 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 5940 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
-2020-02-07 16:21:35.007 DEBUG 5940 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-02-07 16:21:35.008  INFO 5940 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
-2020-02-07 16:21:37.791  INFO 5940 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-02-07 16:21:37.803  INFO 5940 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-02-07 16:21:38.045  INFO 5940 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 170ms. Found 0 repository interfaces.
-2020-02-07 16:21:38.991  INFO 5940 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-02-07 16:21:40.222  INFO 5940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-02-07 16:21:40.248  INFO 5940 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-02-07 16:21:40.248  INFO 5940 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2020-02-07 16:21:40.473  INFO 5940 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-02-07 16:21:40.473  INFO 5940 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4982 ms
-2020-02-07 16:21:40.549 DEBUG 5940 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
-2020-02-07 16:21:41.297  INFO 5940 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-02-07 16:22:09.917  INFO 5940 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2020-02-07 16:22:13.133  INFO 5940 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
-loadBalanceAlgorithmType: round_robin
-masterDataSourceName: ds0
-name: dataSource
-slaveDataSourceNames:
-- ds1
-
-2020-02-07 16:22:13.137  INFO 5940 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
-{}
-
-2020-02-07 16:22:17.306  INFO 5940 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-02-07 16:22:18.902  INFO 5940 --- [main] org.redisson.Version                     : Redisson 3.2.0
-2020-02-07 16:22:21.939  INFO 5940 --- [nioEventLoopGroup-4-2] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
-2020-02-07 16:22:21.940  INFO 5940 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
-2020-02-07 16:22:22.199  INFO 5940 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-02-07 16:22:22.258  INFO 5940 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-02-07 16:22:22.464  INFO 5940 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-02-07 16:22:22.594  INFO 5940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-02-07 16:22:22.604  INFO 5940 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 48.936 seconds (JVM running for 62.335)
-2020-02-07 16:23:16.967  INFO 5940 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-02-07 16:23:16.967  INFO 5940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-02-07 16:23:16.986  INFO 5940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
-2020-02-07 16:23:17.841  INFO 5940 --- [http-nio-8080-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2020-02-07 16:23:17.846  INFO 5940 --- [http-nio-8080-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2020-02-07 16:23:38.146 DEBUG 5940 --- [http-nio-8080-exec-3] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==>  Preparing: delete from sy_units where id=? 
-2020-02-07 16:23:41.077 DEBUG 5940 --- [http-nio-8080-exec-3] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==> Parameters: 10(Integer)
-2020-02-07 16:23:42.028 DEBUG 5940 --- [http-nio-8080-exec-3] c.x.b.d.system.SyUnitsMapper.delSyUnit   : <==    Updates: 1
-2020-02-07 16:24:20.994 DEBUG 5940 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==>  Preparing: delete from sy_units where id=? 
-2020-02-07 16:24:21.903 DEBUG 5940 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==> Parameters: 9(Integer)
-2020-02-07 16:24:22.908 DEBUG 5940 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : <==    Updates: 1
-2020-02-07 16:24:22.909 DEBUG 5940 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==>  Preparing: delete from sy_units where id=? 
-2020-02-07 16:24:22.913 DEBUG 5940 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==> Parameters: 10(Integer)
-2020-02-07 16:24:24.518 DEBUG 5940 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : <==    Updates: 0
-2020-02-07 16:24:49.903 DEBUG 5940 --- [http-nio-8080-exec-9] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==>  Preparing: delete from sy_units where id=? 
-2020-02-07 16:24:49.983 DEBUG 5940 --- [http-nio-8080-exec-9] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==> Parameters: 10(Integer)
-2020-02-07 16:24:50.907 DEBUG 5940 --- [http-nio-8080-exec-9] c.x.b.d.system.SyUnitsMapper.delSyUnit   : <==    Updates: 0
-2020-02-07 16:25:02.980 DEBUG 5940 --- [http-nio-8080-exec-2] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==>  Preparing: delete from sy_units where id=? 
-2020-02-07 16:25:03.060 DEBUG 5940 --- [http-nio-8080-exec-2] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==> Parameters: 9(Integer)
-2020-02-07 16:25:03.989 DEBUG 5940 --- [http-nio-8080-exec-2] c.x.b.d.system.SyUnitsMapper.delSyUnit   : <==    Updates: 0
-2020-02-07 16:25:03.990 DEBUG 5940 --- [http-nio-8080-exec-2] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==>  Preparing: delete from sy_units where id=? 
-2020-02-07 16:25:03.991 DEBUG 5940 --- [http-nio-8080-exec-2] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==> Parameters: 10(Integer)
-2020-02-07 16:25:05.060 DEBUG 5940 --- [http-nio-8080-exec-2] c.x.b.d.system.SyUnitsMapper.delSyUnit   : <==    Updates: 0
-2020-02-07 16:27:38.945 DEBUG 5940 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSYUnitAllByParentId      : ==>  Preparing: SELECT ID,`Name`,Remarks,OperatorID,(select EmpName from sy_emp where id=sy_units.operatorid)operatorname,parentid,OperationTime,Stats FROM sy_units WHERE (parentid=?) 
-2020-02-07 16:27:39.923 DEBUG 5940 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSYUnitAllByParentId      : ==> Parameters: 2(Integer)
-2020-02-07 16:27:40.091 DEBUG 5940 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSYUnitAllByParentId      : <==      Total: 4
-2020-02-07 16:27:50.965  WARN 5940 --- [nioEventLoopGroup-4-3] o.r.client.handler.CommandDecoder        : response has been skipped due to timeout! channel: [id: 0xda6c4a23, L:/172.20.10.3:58511 - R:/47.100.39.234:6378], command: CommandData [promise=org.redisson.misc.RedissonPromise@79f70fa9[Completed exceptionally], command=(EVAL), params=[if (redis.call('exists', KEYS[1]) == 0) then redis.call('hset', KEYS[1], ARGV[2], 1); redis.call('pe..., 1, lock.com.xr.boot.service.system.impl.SyUnitsServiceImpl.delSyUnit, 60000, 6a04f29b-8335-478f-8a02-8e21cfdc471c:85], codec=org.redisson.client.codec.LongCodec@3214fd2f], result: null
-2020-02-07 16:28:17.707  INFO 10876 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 10876 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
-2020-02-07 16:28:17.714 DEBUG 10876 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-02-07 16:28:17.716  INFO 10876 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
-2020-02-07 16:28:20.705  INFO 10876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-02-07 16:28:20.709  INFO 10876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-02-07 16:28:20.844  INFO 10876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102ms. Found 0 repository interfaces.
-2020-02-07 16:28:21.720  INFO 10876 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-02-07 16:28:23.348  INFO 10876 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-02-07 16:28:23.386  INFO 10876 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-02-07 16:28:23.387  INFO 10876 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2020-02-07 16:28:23.785  INFO 10876 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-02-07 16:28:23.786  INFO 10876 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5503 ms
-2020-02-07 16:28:23.864 DEBUG 10876 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
-2020-02-07 16:28:24.904  INFO 10876 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-02-07 16:28:33.019  INFO 10876 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2020-02-07 16:28:38.001  INFO 10876 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
-loadBalanceAlgorithmType: round_robin
-masterDataSourceName: ds0
-name: dataSource
-slaveDataSourceNames:
-- ds1
-
-2020-02-07 16:28:38.003  INFO 10876 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
-{}
-
-2020-02-07 16:28:43.196  INFO 10876 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-02-07 16:28:44.465  INFO 10876 --- [main] org.redisson.Version                     : Redisson 3.2.0
-2020-02-07 16:28:47.079  INFO 10876 --- [nioEventLoopGroup-4-2] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
-2020-02-07 16:28:47.079  INFO 10876 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
-2020-02-07 16:28:47.213  INFO 10876 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-02-07 16:28:47.257  INFO 10876 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-02-07 16:28:47.347  INFO 10876 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-02-07 16:28:47.424  INFO 10876 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-02-07 16:28:47.432  INFO 10876 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 31.463 seconds (JVM running for 48.498)
-2020-02-07 16:29:29.980  INFO 10876 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-02-07 16:29:29.980  INFO 10876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-02-07 16:29:30.000  INFO 10876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
-2020-02-07 16:29:30.905  INFO 10876 --- [http-nio-8080-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2020-02-07 16:29:30.910  INFO 10876 --- [http-nio-8080-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2020-02-07 16:29:36.021 DEBUG 10876 --- [http-nio-8080-exec-3] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==>  Preparing: delete from sy_units where id=? 
-2020-02-07 16:29:40.216 DEBUG 10876 --- [http-nio-8080-exec-3] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==> Parameters: 8(Integer)
-2020-02-07 16:29:41.024 DEBUG 10876 --- [http-nio-8080-exec-3] c.x.b.d.system.SyUnitsMapper.delSyUnit   : <==    Updates: 1
-2020-02-07 16:31:34.292  INFO 1548 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 1548 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
-2020-02-07 16:31:34.301 DEBUG 1548 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-02-07 16:31:34.303  INFO 1548 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
-2020-02-07 16:31:37.863  INFO 1548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-02-07 16:31:37.870  INFO 1548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-02-07 16:31:38.001  INFO 1548 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101ms. Found 0 repository interfaces.
-2020-02-07 16:31:38.912  INFO 1548 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-02-07 16:31:40.338  INFO 1548 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-02-07 16:31:40.362  INFO 1548 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-02-07 16:31:40.362  INFO 1548 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2020-02-07 16:31:40.593  INFO 1548 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-02-07 16:31:40.594  INFO 1548 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5615 ms
-2020-02-07 16:31:40.677 DEBUG 1548 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
-2020-02-07 16:31:41.763  INFO 1548 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-02-07 16:31:45.109  INFO 1548 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2020-02-07 16:31:51.122  INFO 1548 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
-loadBalanceAlgorithmType: round_robin
-masterDataSourceName: ds0
-name: dataSource
-slaveDataSourceNames:
-- ds1
-
-2020-02-07 16:31:51.123  INFO 1548 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
-{}
-
-2020-02-07 16:31:55.142  INFO 1548 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-02-07 16:31:55.913  INFO 1548 --- [main] org.redisson.Version                     : Redisson 3.2.0
-2020-02-07 16:31:58.037  INFO 1548 --- [nioEventLoopGroup-4-3] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
-2020-02-07 16:31:58.037  INFO 1548 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
-2020-02-07 16:31:58.175  INFO 1548 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-02-07 16:31:58.208  INFO 1548 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-02-07 16:31:58.299  INFO 1548 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-02-07 16:31:58.372  INFO 1548 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-02-07 16:31:58.378  INFO 1548 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 25.341 seconds (JVM running for 38.939)
-2020-02-07 16:32:16.231  INFO 1548 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-02-07 16:32:16.232  INFO 1548 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-02-07 16:32:16.258  INFO 1548 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 26 ms
-2020-02-07 16:32:17.015  INFO 1548 --- [http-nio-8080-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2020-02-07 16:32:17.018  INFO 1548 --- [http-nio-8080-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2020-02-07 16:32:18.153 DEBUG 1548 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSYUnitAllByParentId      : ==>  Preparing: SELECT ID,`Name`,Remarks,OperatorID,(select EmpName from sy_emp where id=sy_units.operatorid)operatorname,parentid,OperationTime,Stats FROM sy_units WHERE (parentid=?) 
-2020-02-07 16:32:19.867 DEBUG 1548 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSYUnitAllByParentId      : ==> Parameters: 2(Integer)
-2020-02-07 16:32:20.229 DEBUG 1548 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSYUnitAllByParentId      : <==      Total: 3
-2020-02-07 16:32:25.962 DEBUG 1548 --- [http-nio-8080-exec-3] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==>  Preparing: delete from sy_units where id=? 
-2020-02-07 16:32:26.057 DEBUG 1548 --- [http-nio-8080-exec-3] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==> Parameters: 7(Integer)
-2020-02-07 16:32:27.005 DEBUG 1548 --- [http-nio-8080-exec-3] c.x.b.d.system.SyUnitsMapper.delSyUnit   : <==    Updates: 1
-2020-02-07 16:32:48.888 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSYUnitAllByParentId      : ==>  Preparing: SELECT ID,`Name`,Remarks,OperatorID,(select EmpName from sy_emp where id=sy_units.operatorid)operatorname,parentid,OperationTime,Stats FROM sy_units WHERE (parentid=?) 
-2020-02-07 16:32:48.889 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSYUnitAllByParentId      : ==> Parameters: 2(Integer)
-2020-02-07 16:32:48.994 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSYUnitAllByParentId      : <==      Total: 2
-2020-02-07 16:34:25.963  INFO 1548 --- [http-nio-8080-exec-9] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-02-07 16:34:26.030  INFO 1548 --- [http-nio-8080-exec-9] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66ms. Found 0 repository interfaces.
-2020-02-07 16:34:26.278  WARN 1548 --- [http-nio-8080-exec-9] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
-2020-02-07 16:34:26.924 DEBUG 1548 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpByWhere   : ==>  Preparing: SELECT id,(select name from sy_units where sy_units.id=sy_emp.empunit) unitname,empunit,empname,empno,(select rolename from sy_roles where sy_roles.id=sy_emp.roleid) rolename,disabled,roleid,remark FROM sy_emp WHERE (sy_emp.disabled=? AND empunit=?) 
-2020-02-07 16:34:27.891 DEBUG 1548 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpByWhere   : ==> Parameters: 0(Integer), 2(Integer)
-2020-02-07 16:34:27.979 DEBUG 1548 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpByWhere   : <==      Total: 6
-2020-02-07 16:34:36.113 DEBUG 1548 --- [http-nio-8080-exec-4] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==>  Preparing: insert into sy_units values(null,?,?,?,?,?,?) 
-2020-02-07 16:34:37.084 DEBUG 1548 --- [http-nio-8080-exec-4] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==> Parameters: 123(String), 123(String), 1(Integer), 2(Integer), 2020/2/7 16:34:35(String), 0(Integer)
-2020-02-07 16:34:38.060 DEBUG 1548 --- [http-nio-8080-exec-4] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : <==    Updates: 1
-2020-02-07 16:35:09.256  INFO 1548 --- [http-nio-8080-exec-6] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-02-07 16:35:09.383  INFO 1548 --- [http-nio-8080-exec-6] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127ms. Found 0 repository interfaces.
-2020-02-07 16:35:09.496  WARN 1548 --- [http-nio-8080-exec-6] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
-2020-02-07 16:35:10.085  INFO 1548 --- [http-nio-8080-exec-6] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-02-07 16:35:10.086  INFO 1548 --- [http-nio-8080-exec-6] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-02-07 16:35:10.449  INFO 1548 --- [http-nio-8080-exec-6] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 362ms. Found 0 repository interfaces.
-2020-02-07 16:35:10.971  INFO 1548 --- [http-nio-8080-exec-6] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-02-07 16:35:11.908 DEBUG 1548 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSYUnitAllByParentId      : ==>  Preparing: SELECT ID,`Name`,Remarks,OperatorID,(select EmpName from sy_emp where id=sy_units.operatorid)operatorname,parentid,OperationTime,Stats FROM sy_units WHERE (parentid=?) 
-2020-02-07 16:35:11.909 DEBUG 1548 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSYUnitAllByParentId      : ==> Parameters: 2(Integer)
-2020-02-07 16:35:11.999 DEBUG 1548 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSYUnitAllByParentId      : <==      Total: 3
-2020-02-07 16:44:59.704  INFO 1548 --- [http-nio-8080-exec-8] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-02-07 16:44:59.755  INFO 1548 --- [http-nio-8080-exec-8] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50ms. Found 0 repository interfaces.
-2020-02-07 16:44:59.826  WARN 1548 --- [http-nio-8080-exec-8] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
-2020-02-07 16:45:00.023  INFO 1548 --- [http-nio-8080-exec-8] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-02-07 16:45:04.894 DEBUG 1548 --- [http-nio-8080-exec-5] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==>  Preparing: insert into sy_units values(null,?,?,?,?,?,?) 
-2020-02-07 16:45:05.062 DEBUG 1548 --- [http-nio-8080-exec-5] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==> Parameters: 123(String), 123(String), 1(Integer), 2(Integer), 2020/2/7 16:45:4(String), 0(Integer)
-2020-02-07 16:45:05.980 DEBUG 1548 --- [http-nio-8080-exec-5] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : <==    Updates: 1
-2020-02-07 16:45:11.933 DEBUG 1548 --- [http-nio-8080-exec-9] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==>  Preparing: insert into sy_units values(null,?,?,?,?,?,?) 
-2020-02-07 16:45:11.933 DEBUG 1548 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSYUnitAllByParentId      : ==>  Preparing: SELECT ID,`Name`,Remarks,OperatorID,(select EmpName from sy_emp where id=sy_units.operatorid)operatorname,parentid,OperationTime,Stats FROM sy_units WHERE (parentid=?) 
-2020-02-07 16:45:12.013 DEBUG 1548 --- [http-nio-8080-exec-9] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==> Parameters: 123(String), 123(String), 1(Integer), 2(Integer), 2020/2/7 16:45:10(String), 0(Integer)
-2020-02-07 16:45:12.022 DEBUG 1548 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSYUnitAllByParentId      : ==> Parameters: 2(Integer)
-2020-02-07 16:45:13.062 DEBUG 1548 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSYUnitAllByParentId      : <==      Total: 4
-2020-02-07 16:45:14.133 DEBUG 1548 --- [http-nio-8080-exec-9] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : <==    Updates: 1
-2020-02-07 16:45:41.235 DEBUG 1548 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSYUnitAllByParentId      : ==>  Preparing: SELECT ID,`Name`,Remarks,OperatorID,(select EmpName from sy_emp where id=sy_units.operatorid)operatorname,parentid,OperationTime,Stats FROM sy_units WHERE (parentid=?) 
-2020-02-07 16:45:41.236 DEBUG 1548 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSYUnitAllByParentId      : ==> Parameters: 2(Integer)
-2020-02-07 16:45:42.244 DEBUG 1548 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSYUnitAllByParentId      : <==      Total: 5
-2020-02-07 16:46:20.974 DEBUG 1548 --- [http-nio-8080-exec-1] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==>  Preparing: insert into sy_units values(null,?,?,?,?,?,?) 
-2020-02-07 16:46:21.935 DEBUG 1548 --- [http-nio-8080-exec-1] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==> Parameters: 123(String), 123(String), 1(Integer), 2(Integer), 2020/2/7 16:46:20(String), 0(Integer)
-2020-02-07 16:46:22.887 DEBUG 1548 --- [http-nio-8080-exec-1] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : <==    Updates: 1
-2020-02-07 16:47:10.984 DEBUG 1548 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSYUnitAllByParentId      : ==>  Preparing: SELECT ID,`Name`,Remarks,OperatorID,(select EmpName from sy_emp where id=sy_units.operatorid)operatorname,parentid,OperationTime,Stats FROM sy_units WHERE (parentid=?) 
-2020-02-07 16:47:11.175 DEBUG 1548 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSYUnitAllByParentId      : ==> Parameters: 2(Integer)
-2020-02-07 16:47:12.555 DEBUG 1548 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSYUnitAllByParentId      : <==      Total: 6
-2020-02-07 16:48:26.893 DEBUG 1548 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpByWhere   : ==>  Preparing: SELECT id,(select name from sy_units where sy_units.id=sy_emp.empunit) unitname,empunit,empname,empno,(select rolename from sy_roles where sy_roles.id=sy_emp.roleid) rolename,disabled,roleid,remark FROM sy_emp WHERE (empunit=?) 
-2020-02-07 16:48:27.897 DEBUG 1548 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpByWhere   : ==> Parameters: 2(Integer)
-2020-02-07 16:48:28.013 DEBUG 1548 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpByWhere   : <==      Total: 6
-2020-02-07 16:48:43.894 DEBUG 1548 --- [http-nio-8080-exec-10] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==>  Preparing: insert into sy_units values(null,?,?,?,?,?,?) 
-2020-02-07 16:48:45.043 DEBUG 1548 --- [http-nio-8080-exec-10] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==> Parameters: 123(String), 123(String), 1(Integer), 2(Integer), 2020/2/7 16:48:43(String), 0(Integer)
-2020-02-07 16:48:45.971 DEBUG 1548 --- [http-nio-8080-exec-10] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : <==    Updates: 1
-2020-02-07 16:49:03.078 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSYUnitAllByParentId      : ==>  Preparing: SELECT ID,`Name`,Remarks,OperatorID,(select EmpName from sy_emp where id=sy_units.operatorid)operatorname,parentid,OperationTime,Stats FROM sy_units WHERE (parentid=?) 
-2020-02-07 16:49:03.079 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSYUnitAllByParentId      : ==> Parameters: 2(Integer)
-2020-02-07 16:49:03.893 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSYUnitAllByParentId      : <==      Total: 7
-2020-02-07 16:49:09.891 DEBUG 1548 --- [http-nio-8080-exec-9] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==>  Preparing: insert into sy_units values(null,?,?,?,?,?,?) 
-2020-02-07 16:49:09.991 DEBUG 1548 --- [http-nio-8080-exec-9] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==> Parameters: 123(String), 123(String), 1(Integer), 2(Integer), 2020/2/7 16:49:9(String), 0(Integer)
-2020-02-07 16:49:10.972 DEBUG 1548 --- [http-nio-8080-exec-9] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : <==    Updates: 1
-2020-02-07 16:50:08.441  INFO 1548 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-02-07 16:50:08.510  INFO 1548 --- [http-nio-8080-exec-2] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68ms. Found 0 repository interfaces.
-2020-02-07 16:50:08.583  WARN 1548 --- [http-nio-8080-exec-2] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
-2020-02-07 16:50:08.766  INFO 1548 --- [http-nio-8080-exec-2] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-02-07 16:50:08.948 DEBUG 1548 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSYUnitAllByParentId      : ==>  Preparing: SELECT ID,`Name`,Remarks,OperatorID,(select EmpName from sy_emp where id=sy_units.operatorid)operatorname,parentid,OperationTime,Stats FROM sy_units WHERE (parentid=?) 
-2020-02-07 16:50:09.039 DEBUG 1548 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSYUnitAllByParentId      : ==> Parameters: 2(Integer)
-2020-02-07 16:50:09.889 DEBUG 1548 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSYUnitAllByParentId      : <==      Total: 8
-2020-02-07 16:50:11.892 DEBUG 1548 --- [http-nio-8080-exec-10] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==>  Preparing: insert into sy_units values(null,?,?,?,?,?,?) 
-2020-02-07 16:50:11.967 DEBUG 1548 --- [http-nio-8080-exec-10] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==> Parameters: 123(String), 123(String), 1(Integer), 2(Integer), 2020/2/7 16:50:11(String), 0(Integer)
-2020-02-07 16:50:12.921 DEBUG 1548 --- [http-nio-8080-exec-10] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : <==    Updates: 1
-2020-02-07 16:50:22.900 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSYUnitAllByParentId      : ==>  Preparing: SELECT ID,`Name`,Remarks,OperatorID,(select EmpName from sy_emp where id=sy_units.operatorid)operatorname,parentid,OperationTime,Stats FROM sy_units WHERE (parentid=?) 
-2020-02-07 16:50:22.901 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSYUnitAllByParentId      : ==> Parameters: 2(Integer)
-2020-02-07 16:50:23.001 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSYUnitAllByParentId      : <==      Total: 9
-2020-02-07 16:50:38.021 DEBUG 1548 --- [http-nio-8080-exec-7] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==>  Preparing: insert into sy_units values(null,?,?,?,?,?,?) 
-2020-02-07 16:50:38.899 DEBUG 1548 --- [http-nio-8080-exec-7] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==> Parameters: 123(String), 123(String), 1(Integer), 2(Integer), 2020/2/7 16:50:37(String), 0(Integer)
-2020-02-07 16:50:39.889 DEBUG 1548 --- [http-nio-8080-exec-7] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : <==    Updates: 1
-2020-02-07 16:50:55.909 DEBUG 1548 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSYUnitAllByParentId      : ==>  Preparing: SELECT ID,`Name`,Remarks,OperatorID,(select EmpName from sy_emp where id=sy_units.operatorid)operatorname,parentid,OperationTime,Stats FROM sy_units WHERE (parentid=?) 
-2020-02-07 16:50:55.910 DEBUG 1548 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSYUnitAllByParentId      : ==> Parameters: 2(Integer)
-2020-02-07 16:50:56.464 DEBUG 1548 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSYUnitAllByParentId      : <==      Total: 10
-2020-02-07 16:51:03.933 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==>  Preparing: delete from sy_units where id=? 
-2020-02-07 16:51:04.012 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==> Parameters: 14(Integer)
-2020-02-07 16:51:04.973 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : <==    Updates: 1
-2020-02-07 16:51:04.975 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==>  Preparing: delete from sy_units where id=? 
-2020-02-07 16:51:04.979 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==> Parameters: 15(Integer)
-2020-02-07 16:51:06.161 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : <==    Updates: 1
-2020-02-07 16:51:06.162 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==>  Preparing: delete from sy_units where id=? 
-2020-02-07 16:51:06.162 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==> Parameters: 16(Integer)
-2020-02-07 16:51:06.966 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : <==    Updates: 1
-2020-02-07 16:51:06.967 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==>  Preparing: delete from sy_units where id=? 
-2020-02-07 16:51:06.968 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==> Parameters: 17(Integer)
-2020-02-07 16:51:07.881 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : <==    Updates: 1
-2020-02-07 16:51:07.882 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==>  Preparing: delete from sy_units where id=? 
-2020-02-07 16:51:07.883 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : ==> Parameters: 18(Integer)
-2020-02-07 16:51:08.054 DEBUG 1548 --- [http-nio-8080-exec-6] c.x.b.d.system.SyUnitsMapper.delSyUnit   : <==    Updates: 1
-2020-02-07 16:51:14.882 DEBUG 1548 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSYUnitAllByParentId      : ==>  Preparing: SELECT ID,`Name`,Remarks,OperatorID,(select EmpName from sy_emp where id=sy_units.operatorid)operatorname,parentid,OperationTime,Stats FROM sy_units WHERE (parentid=?) 
-2020-02-07 16:51:14.883 DEBUG 1548 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSYUnitAllByParentId      : ==> Parameters: 2(Integer)
-2020-02-07 16:51:14.965 DEBUG 1548 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSYUnitAllByParentId      : <==      Total: 5
-2020-02-07 16:51:20.885 DEBUG 1548 --- [http-nio-8080-exec-7] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==>  Preparing: insert into sy_units values(null,?,?,?,?,?,?) 
-2020-02-07 16:51:20.973 DEBUG 1548 --- [http-nio-8080-exec-7] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : ==> Parameters: 123(String), 123(String), 1(Integer), 2(Integer), 2020/2/7 16:51:20(String), 0(Integer)
-2020-02-07 16:51:22.173 DEBUG 1548 --- [http-nio-8080-exec-7] c.x.b.d.system.SyUnitsMapper.saveSyUnit  : <==    Updates: 1
-2020-02-07 16:51:27.069 DEBUG 1548 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSYUnitAllByParentId      : ==>  Preparing: SELECT ID,`Name`,Remarks,OperatorID,(select EmpName from sy_emp where id=sy_units.operatorid)operatorname,parentid,OperationTime,Stats FROM sy_units WHERE (parentid=?) 
-2020-02-07 16:51:27.070 DEBUG 1548 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSYUnitAllByParentId      : ==> Parameters: 2(Integer)
-2020-02-07 16:51:27.889 DEBUG 1548 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSYUnitAllByParentId      : <==      Total: 6
+2020-02-09 00:08:51.620  INFO 2948 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-02-09 00:08:52.839  INFO 2948 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-02-09 00:08:55.565  INFO 2948 --- [nioEventLoopGroup-4-2] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-02-09 00:08:55.566  INFO 2948 --- [nioEventLoopGroup-4-3] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-02-09 00:08:55.743  INFO 2948 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-02-09 00:08:55.802  INFO 2948 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-02-09 00:08:55.918  INFO 2948 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-02-09 00:08:56.024  INFO 2948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-09 00:08:56.030  INFO 2948 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 32.888 seconds (JVM running for 35.194)
+2020-02-09 00:09:02.502  INFO 2948 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-09 00:09:02.503  INFO 2948 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-09 00:09:02.572  INFO 2948 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 68 ms
+2020-02-09 00:09:07.087  INFO 2948 --- [http-nio-8080-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-02-09 00:09:07.090  INFO 2948 --- [http-nio-8080-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-02-09 00:09:07.511 DEBUG 2948 --- [http-nio-8080-exec-2] c.x.b.c.basicPackage.SyUnitsController   : 从redis中取出值
+2020-02-09 00:09:08.395 DEBUG 2948 --- [http-nio-8080-exec-3] c.x.b.c.b.BasZoneInfoController          : 从redis中取出值
+2020-02-09 00:09:14.519 DEBUG 2948 --- [http-nio-8080-exec-4] c.x.b.d.b.B.findBasPartitions            : ==>  Preparing: SELECT ID,Province,City,County,SortingCode,ZoneCode,Keyword,StartInt,TerminateInt,SDInt,Stats,OperatorID,OperationUnitID,OperationTime FROM bas_partition WHERE ( 1=1) order by operationTime desc 
+2020-02-09 00:09:16.507 DEBUG 2948 --- [http-nio-8080-exec-4] c.x.b.d.b.B.findBasPartitions            : ==> Parameters: 
+2020-02-09 00:09:16.580 DEBUG 2948 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:09:16.671 DEBUG 2948 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 1(Integer)
+2020-02-09 00:09:17.400 DEBUG 2948 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:09:17.402 DEBUG 2948 --- [http-nio-8080-exec-4] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-02-09 00:09:17.446 DEBUG 2948 --- [http-nio-8080-exec-4] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-02-09 00:09:17.495 DEBUG 2948 --- [http-nio-8080-exec-4] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-02-09 00:09:17.500 DEBUG 2948 --- [http-nio-8080-exec-4] c.x.b.d.b.B.findBasPartitions            : <==      Total: 5
+2020-02-09 00:09:18.579 DEBUG 2948 --- [http-nio-8080-exec-5] c.x.b.d.b.CityMapper.findCities          : ==>  Preparing: select * from city where leveltype=? 
+2020-02-09 00:09:18.599 DEBUG 2948 --- [http-nio-8080-exec-5] c.x.b.d.b.CityMapper.findCities          : ==> Parameters: 1(Integer)
+2020-02-09 00:09:19.418 DEBUG 2948 --- [http-nio-8080-exec-5] c.x.b.d.b.CityMapper.findCities          : <==      Total: 35
+2020-02-09 00:09:19.420 DEBUG 2948 --- [http-nio-8080-exec-5] c.x.b.d.b.CityMapper.findCities          : ==>  Preparing: select * from city where leveltype=? 
+2020-02-09 00:09:19.421 DEBUG 2948 --- [http-nio-8080-exec-5] c.x.b.d.b.CityMapper.findCities          : ==> Parameters: 2(Integer)
+2020-02-09 00:09:20.446 DEBUG 2948 --- [http-nio-8080-exec-5] c.x.b.d.b.CityMapper.findCities          : <==      Total: 373
+2020-02-09 00:09:20.447 DEBUG 2948 --- [http-nio-8080-exec-5] c.x.b.d.b.CityMapper.findCities          : ==>  Preparing: select * from city where leveltype=? 
+2020-02-09 00:09:20.448 DEBUG 2948 --- [http-nio-8080-exec-5] c.x.b.d.b.CityMapper.findCities          : ==> Parameters: 3(Integer)
+2020-02-09 00:09:25.488 DEBUG 2948 --- [http-nio-8080-exec-5] c.x.b.d.b.CityMapper.findCities          : <==      Total: 3341
+2020-02-09 00:09:44.410 DEBUG 2948 --- [http-nio-8080-exec-6] c.x.b.d.b.BasAreaMapper.findBasAreas     : ==>  Preparing: SELECT ID,Province,City,County,PostalCode,SimpleCode,CityCode,EntryUnitID,ComplementUnitID,Nature,TheArea,OperatorID,OperationTime FROM bas_area WHERE ( 1=1) order by OperationTime desc 
+2020-02-09 00:09:44.561 DEBUG 2948 --- [http-nio-8080-exec-6] c.x.b.d.b.BasAreaMapper.findBasAreas     : ==> Parameters: 
+2020-02-09 00:09:45.420 DEBUG 2948 --- [http-nio-8080-exec-6] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-02-09 00:09:45.421 DEBUG 2948 --- [http-nio-8080-exec-6] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 3(Integer)
+2020-02-09 00:09:45.471 DEBUG 2948 --- [http-nio-8080-exec-6] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-02-09 00:09:45.472 DEBUG 2948 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:09:45.473 DEBUG 2948 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 1(Integer)
+2020-02-09 00:09:45.525 DEBUG 2948 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:09:45.528 DEBUG 2948 --- [http-nio-8080-exec-6] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-02-09 00:09:45.529 DEBUG 2948 --- [http-nio-8080-exec-6] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ====> Parameters: 2(Integer)
+2020-02-09 00:09:45.572 DEBUG 2948 --- [http-nio-8080-exec-6] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <====      Total: 1
+2020-02-09 00:09:45.573 DEBUG 2948 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:09:45.574 DEBUG 2948 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 3(Integer)
+2020-02-09 00:09:46.416 DEBUG 2948 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:09:46.418 DEBUG 2948 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====>  Preparing: select ID,EmpName,EmpNo,Pwd,QueryPwd,RoleID,EmpUnit,Remark,Disabled from sy_emp where ID=? 
+2020-02-09 00:09:46.418 DEBUG 2948 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : ====> Parameters: 5(Integer)
+2020-02-09 00:09:46.463 DEBUG 2948 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpById      : <====      Total: 1
+2020-02-09 00:09:46.470 DEBUG 2948 --- [http-nio-8080-exec-6] c.x.b.d.b.BasAreaMapper.findBasAreas     : <==      Total: 7
+2020-02-09 00:09:47.517 DEBUG 2948 --- [http-nio-8080-exec-7] c.x.b.c.basicPackage.CityController      : 从redis中取出值
+2020-02-09 00:10:00.416 DEBUG 2948 --- [http-nio-8080-exec-8] c.x.b.c.basicPackage.SyUnitsController   : 从redis中取出值
+2020-02-09 00:10:00.518 DEBUG 2948 --- [http-nio-8080-exec-9] c.x.b.c.b.BasZoneInfoController          : 从redis中取出值
+2020-02-09 00:10:03.423 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.b.B.findBasAssociateMember       : ==>  Preparing: select ID,ZoneCode,EmpNo,EmpName,StandardKg,StandardLength,StandardTimeId,SubordinateUnit,type from bas_associatemember ORDER BY ID desc 
+2020-02-09 00:10:03.518 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.b.B.findBasAssociateMember       : ==> Parameters: 
+2020-02-09 00:10:03.561 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.b.B.findBasAssociateMemberById   : ====>  Preparing: SELECT ID,TimeName,SubordinateUnit,WorkingTime,ClosingTime,SaturdayWorkingTime,SaturdayClosingTime,SundayWorkingTime,SundayClosingTime,Stats from bas_standartime where ID=? 
+2020-02-09 00:10:03.597 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.b.B.findBasAssociateMemberById   : ====> Parameters: 6(Integer)
+2020-02-09 00:10:04.418 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ======>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-02-09 00:10:04.419 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ======> Parameters: 4(Integer)
+2020-02-09 00:10:04.478 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <======      Total: 1
+2020-02-09 00:10:04.479 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.b.B.findBasAssociateMemberById   : <====      Total: 1
+2020-02-09 00:10:04.481 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.b.B.findBasAssociateMemberById   : ====>  Preparing: SELECT ID,TimeName,SubordinateUnit,WorkingTime,ClosingTime,SaturdayWorkingTime,SaturdayClosingTime,SundayWorkingTime,SundayClosingTime,Stats from bas_standartime where ID=? 
+2020-02-09 00:10:04.483 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.b.B.findBasAssociateMemberById   : ====> Parameters: 1(Integer)
+2020-02-09 00:10:04.529 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ======>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-02-09 00:10:04.530 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ======> Parameters: 3(Integer)
+2020-02-09 00:10:04.571 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <======      Total: 1
+2020-02-09 00:10:04.572 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.b.B.findBasAssociateMemberById   : <====      Total: 1
+2020-02-09 00:10:04.575 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.b.B.findBasAssociateMemberById   : ====>  Preparing: SELECT ID,TimeName,SubordinateUnit,WorkingTime,ClosingTime,SaturdayWorkingTime,SaturdayClosingTime,SundayWorkingTime,SundayClosingTime,Stats from bas_standartime where ID=? 
+2020-02-09 00:10:04.576 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.b.B.findBasAssociateMemberById   : ====> Parameters: 3(Integer)
+2020-02-09 00:10:05.416 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ======>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-02-09 00:10:05.417 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : ======> Parameters: 2(Integer)
+2020-02-09 00:10:05.462 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.s.SyUnitsMapper.findSyUnitById   : <======      Total: 1
+2020-02-09 00:10:05.463 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.b.B.findBasAssociateMemberById   : <====      Total: 1
+2020-02-09 00:10:05.463 DEBUG 2948 --- [http-nio-8080-exec-10] c.x.b.d.b.B.findBasAssociateMember       : <==      Total: 5

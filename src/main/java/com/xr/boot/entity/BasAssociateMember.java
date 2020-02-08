@@ -13,6 +13,7 @@ import java.io.Serializable;
  * @pdOid 4883f6b8-3431-4cb9-84d6-7b2e601c6c3a */
 @Component
 public class BasAssociateMember implements Serializable {
+    private static final long serialVersionUID = -471551649162378578L;
     /** @pdOid 3f133139-df02-43e1-a233-60732eded09d */
     private long id;
     /** 取派人工号	对应员工表员工工号

@@ -4,12 +4,13 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class BasZoneCustomInfo
  ***********************************************************************/
 
+import java.io.Serializable;
 import java.util.*;
 
 /** 定区客户信息表
  * 
  * @pdOid 51e3a79c-5221-4813-bd70-b4a981227b30 */
-public class BasZoneCustomInfo {
+public class BasZoneCustomInfo implements Serializable {
    /** 客户编号	自增
     * 
     * @pdOid 9d338b8a-a466-4b3a-a30b-24ef56045251 */
@@ -21,7 +22,7 @@ public class BasZoneCustomInfo {
    /** 手机号码
     * 
     * @pdOid 428bf320-058f-4f1d-82ed-61e675045656 */
-   private int mobileNo;
+   private String mobileNo;
    /** 城市
     * 
     * @pdOid b8a48c8e-1f36-4990-bfa5-07316707291b */
@@ -31,59 +32,85 @@ public class BasZoneCustomInfo {
     * @pdOid 49b0f777-053a-4a0f-98a8-6960c67a2d68 */
    private String cstomAddress;
    
-   /** @pdOid 43cf1cb8-9462-48aa-bc75-0b1a450765f5 */
+   private String zoneCode;
+   private SyEmp syEmp;
+   private SyUnits syUnits;
+   /** 操作时间	当前操作时间
+    *
+    * @pdOid 78b2e29d-4081-4b13-a3cd-8684b40e2b96 */
+   private String operationTime;
+   public long getunitId(){return syUnits.getId();}
+   public long getempId(){return syEmp.getId();}
+
    public long getCustomCode() {
       return customCode;
    }
-   
-   /** @param newCustomCode
-    * @pdOid 3cb450ca-2307-4c07-aa33-5d615de5eb30 */
-   public void setCustomCode(long newCustomCode) {
-      customCode = newCustomCode;
+
+   public void setCustomCode(long customCode) {
+      this.customCode = customCode;
    }
-   
-   /** @pdOid b6e763c5-dc74-42db-bf19-0be468076ea8 */
+
    public String getCustomName() {
       return customName;
    }
-   
-   /** @param newCustomName
-    * @pdOid 1874b853-fe0d-41a1-9b28-f500895e4db9 */
-   public void setCustomName(String newCustomName) {
-      customName = newCustomName;
+
+   public void setCustomName(String customName) {
+      this.customName = customName;
    }
-   
-   /** @pdOid 4313898f-c64a-4932-a8e5-a520648f386b */
-   public int getMobileNo() {
+
+   public String getMobileNo() {
       return mobileNo;
    }
-   
-   /** @param newMobileNo
-    * @pdOid 04e854a5-82af-4efc-b54e-ac6f7830eb51 */
-   public void setMobileNo(int newMobileNo) {
-      mobileNo = newMobileNo;
+
+   public void setMobileNo(String mobileNo) {
+      this.mobileNo = mobileNo;
    }
-   
-   /** @pdOid fe537942-78ed-41cf-9a31-b5a64491fdbe */
+
    public String getCityName() {
       return cityName;
    }
-   
-   /** @param newCityName
-    * @pdOid 4e453055-3b1b-4788-92c2-488e18b7373a */
-   public void setCityName(String newCityName) {
-      cityName = newCityName;
+
+   public void setCityName(String cityName) {
+      this.cityName = cityName;
    }
-   
-   /** @pdOid 3f37b3b3-d9af-4089-983f-ddbdd30da962 */
+
    public String getCstomAddress() {
       return cstomAddress;
    }
-   
-   /** @param newCstomAddress
-    * @pdOid bafabbfd-d1b1-439c-aa90-554137f2776e */
-   public void setCstomAddress(String newCstomAddress) {
-      cstomAddress = newCstomAddress;
+
+   public void setCstomAddress(String cstomAddress) {
+      this.cstomAddress = cstomAddress;
    }
 
+   public String getZoneCode() {
+      return zoneCode;
+   }
+
+   public void setZoneCode(String zoneCode) {
+      this.zoneCode = zoneCode;
+   }
+
+   public SyEmp getSyEmp() {
+      return syEmp;
+   }
+
+   public void setSyEmp(SyEmp syEmp) {
+      this.syEmp = syEmp;
+   }
+
+   public SyUnits getSyUnits() {
+      return syUnits;
+   }
+
+   public void setSyUnits(SyUnits syUnits) {
+      this.syUnits = syUnits;
+   }
+
+   public String getOperationTime() {
+      return operationTime;
+   }
+
+   public void setOperationTime(String operationTime) {
+      this.operationTime = operationTime;
+   }
 }
