@@ -11,4 +11,11 @@ public interface CityService {
      * @return
      */
     List<City> findCities(Integer leveltype);
+
+    /**
+     * 查市下面的区
+     * @param name
+     * @return
+     */
+    Object findCitiesByName(String name);
 }

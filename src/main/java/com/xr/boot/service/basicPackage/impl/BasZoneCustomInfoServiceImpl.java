@@ -45,8 +45,6 @@ public class BasZoneCustomInfoServiceImpl implements BasZoneCustomInfoService {
         basZoneCustomInfoMapper.saveBasZoneCustomInfo(basZoneCustomInfo);
     }
 
-    @Klock(leaseTime=Long.MAX_VALUE)
-    @Transactional
     @Override
     public List<String> findBasSubstituteByCustomName(BasZoneCustomInfo basZoneCustomInfo) {
         return basZoneCustomInfoMapper.findBasSubstituteByCustomName(basZoneCustomInfo);

@@ -20,4 +20,14 @@ public interface CityMapper {
             @Result(column = "pinyin",property = "pinyin")
     })
     List<City> findCities(Integer leveltype);
+    @Select("select * from city where parentid=(select id from city where `name`=#{name})")
+    @Results({
+            @Result(id=true,column = "id",property = "id"),
+            @Result(column = "name",property = "name"),
+            @Result(column = "parentid",property = "parentid"),
+            @Result(column = "citycode",property = "citycode"),
+            @Result(column = "zipcode",property = "zipcode"),
+            @Result(column = "pinyin",property = "pinyin")
+    })
+    List<City> findCitiesByName(String name);
 }

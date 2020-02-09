@@ -63,4 +63,20 @@ public class CityController {
 }
         return list;
     }
+    @PostMapping("/findCitiesByName")
+    public Object findCitiesByName(String name) {
+        Object findCitiesByName = null;
+        if (redisUtil.hasKey("com.xr.boot.controller.CityController.findCitiesByName")) {
+            log.debug("从redis中取出值");
+            return redisUtil.get("com.xr.boot.controller.CityController.findCitiesByName");
+        } else {
+            try {
+                findCitiesByName= cityService.findCitiesByName(name);
+                return findCitiesByName;
+            } catch (Exception e) {
+                log.info("获取数据库资源异常。。。。");
+                return null;
+            }
+        }
+    }
 }

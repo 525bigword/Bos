@@ -31,10 +31,10 @@ public interface BasZoneCustomInfoMapper {
     @Delete("DELETE from bas_zonecustominfo where CustomCode=#{customCode}")
     void delBasZoneCustomInfoById(long customCode);
 
-    @Update("update bas_zonecustominfo set CustomName=#{customName},MobileNo=#{mobileNo},CityName=#{cityName},CstomAddress=#{cstomAddress} where CustomCode=#{customCode}")
+    @Update("update bas_zonecustominfo set CustomName=#{customName},MobileNo=#{mobileNo},CstomAddress=#{cstomAddress} where CustomCode=#{customCode}")
     void upBasZoneCustomInfoById(BasZoneCustomInfo basZoneCustomInfo);
 
-    @Insert("insert into bas_zonecustominfo(CustomCode,CustomName,MobileNo,CityName,CstomAddress,OperatorID,OperationUnitID,OperationTime) values(null,#{customName},#{mobileNo},#{cityName},#{cstomAddress},#{empId},#{unitId},NOW())")
+    @Insert("insert into bas_zonecustominfo(CustomCode,CustomName,MobileNo,CityName,CstomAddress,ZoneCode,OperatorID,OperationUnitID,OperationTime) values(null,#{customName},#{mobileNo},#{cityName},#{cstomAddress},#{zoneCode},#{empId},#{unitId},NOW())")
     void saveBasZoneCustomInfo(BasZoneCustomInfo basZoneCustomInfo);
 
     @Select("select CustomName from bas_zonecustominfo where CustomName=#{customName}")

@@ -34,9 +34,11 @@ public class BasZoneCustomInfoController {
     }
     @PostMapping("/upBasZoneCustomInfoById")
     public int upBasZoneCustomInfoById(BasZoneCustomInfo basZoneCustomInfo){
-        List<String> customName = basZoneCustomInfoService.findBasSubstituteByCustomName(basZoneCustomInfo);
-        if(customName.size()>0){
-            return 0;
+        if(!basZoneCustomInfo.getCustomName1().equals(basZoneCustomInfo.getCustomName())){
+            List<String> customName = basZoneCustomInfoService.findBasSubstituteByCustomName(basZoneCustomInfo);
+            if(customName.size()>0){
+                return 0;
+            }
         }
         basZoneCustomInfoService.upBasZoneCustomInfoById(basZoneCustomInfo);
         return 1;

@@ -19,6 +19,16 @@ public class BasZoneCustomInfo implements Serializable {
     * 
     * @pdOid c818b2d6-20f2-46c2-98f1-92af8cc6e4a5 */
    private String customName;
+   private String customName1="";
+
+   public String getCustomName1() {
+      return customName1;
+   }
+
+   public void setCustomName1(String customName1) {
+      this.customName1 = customName1;
+   }
+
    /** 手机号码
     * 
     * @pdOid 428bf320-058f-4f1d-82ed-61e675045656 */
