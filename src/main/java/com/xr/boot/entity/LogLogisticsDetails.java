@@ -4,11 +4,14 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class LogLogisticsDetails
  ***********************************************************************/
 
+import org.springframework.stereotype.Component;
+
 import java.util.*;
 
 /** 物流详情表
  * 
  * @pdOid 43fe0fbc-185b-41c2-8693-2d2333d8c6b1 */
+@Component
 public class LogLogisticsDetails {
    /** 编号
     * 
@@ -25,19 +28,19 @@ public class LogLogisticsDetails {
    /** 预计到达时间
     * 
     * @pdOid 838e8dee-0fda-4d0e-b3a2-cdc77eab64fa */
-   private Date expectArrivalDate;
+   private String expectArrivalDate;
    /** 实际到达时间
     * 
     * @pdOid a521a57d-dd55-40cd-8308-118abcf9774e */
-   private Date actualArrivalDate;
+   private String actualArrivalDate;
    /** 预计离开时间
     * 
     * @pdOid 4340cf26-8f47-47bb-8882-8c66fa6ba941 */
-   private Date expectDepartureDate;
+   private String expectDepartureDate;
    /** 实际离开时间
     * 
     * @pdOid f44c2b29-fd85-4d6d-a256-cb04869ccfe4 */
-   private Date actualDepartureDate;
+   private String actualDepartureDate;
    /** 操作人
     * 
     * @pdOid 522f5754-f2c8-4dab-85d6-162e6fb3c190 */
@@ -81,46 +84,46 @@ public class LogLogisticsDetails {
    }
    
    /** @pdOid 6068068e-6f7e-42b1-8015-4c141e7dfbbd */
-   public Date getExpectArrivalDate() {
+   public String getExpectArrivalDate() {
       return expectArrivalDate;
    }
    
    /** @param newExpectArrivalDate
     * @pdOid 861db09f-550e-48bc-8994-587e50340037 */
-   public void setExpectArrivalDate(Date newExpectArrivalDate) {
+   public void setExpectArrivalDate(String newExpectArrivalDate) {
       expectArrivalDate = newExpectArrivalDate;
    }
    
    /** @pdOid ff39d065-edc1-43ed-9f8f-6352cf9ce745 */
-   public Date getActualArrivalDate() {
+   public String getActualArrivalDate() {
       return actualArrivalDate;
    }
    
    /** @param newActualArrivalDate
     * @pdOid dc9362d8-3a37-49b8-9034-a151329ef5b7 */
-   public void setActualArrivalDate(Date newActualArrivalDate) {
+   public void setActualArrivalDate(String newActualArrivalDate) {
       actualArrivalDate = newActualArrivalDate;
    }
    
    /** @pdOid 5b5960fa-f2b5-46e8-ac18-815c099eef39 */
-   public Date getExpectDepartureDate() {
+   public String getExpectDepartureDate() {
       return expectDepartureDate;
    }
    
    /** @param newExpectDepartureDate
     * @pdOid 593b16a8-f0ed-4046-b299-2c3d0878668e */
-   public void setExpectDepartureDate(Date newExpectDepartureDate) {
+   public void setExpectDepartureDate(String newExpectDepartureDate) {
       expectDepartureDate = newExpectDepartureDate;
    }
    
    /** @pdOid 76ecfed0-1a62-442b-8f04-0ec2fe5bb964 */
-   public Date getActualDepartureDate() {
+   public String getActualDepartureDate() {
       return actualDepartureDate;
    }
    
    /** @param newActualDepartureDate
     * @pdOid 75431494-dcc4-4d17-9128-189bf1dd5ef8 */
-   public void setActualDepartureDate(Date newActualDepartureDate) {
+   public void setActualDepartureDate(String newActualDepartureDate) {
       actualDepartureDate = newActualDepartureDate;
    }
    

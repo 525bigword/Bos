@@ -4,12 +4,15 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class LogLogistics
  ***********************************************************************/
 
+import org.springframework.stereotype.Component;
+
 import java.io.Serializable;
 import java.util.*;
 
 /** 物流详情表
  * 
  * @pdOid 2a84d12c-e036-49d7-be00-aec5e09af4bc */
+@Component
 public class LogLogistics implements Serializable {
    /** 编号
     * 
