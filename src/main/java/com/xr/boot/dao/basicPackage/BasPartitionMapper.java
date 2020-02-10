@@ -34,7 +34,7 @@ public interface BasPartitionMapper {
     })
     List<BasPartition> findBasPartitions(BasPartition basPartition);
 
-    @Update("update bas_partition set Province=#{province},City=#{city},County=#{county},Keyword=#{keyword},StartInt=#{startInt},TerminateInt=#{terminateInt},SDInt=#{sDInt} where ID=#{id}")
+    @Update("update bas_partition set Province=#{province},City=#{city},ZoneCode=#{zoneCode},County=#{county},Keyword=#{keyword},StartInt=#{startInt},TerminateInt=#{terminateInt},SDInt=#{sDInt} where ID=#{id}")
     void upBasPartitionById(BasPartition basPartition);
 
     @Insert("insert into bas_partition(ID,Province,City,County,SortingCode,ZoneCode,Keyword,StartInt,TerminateInt,SDInt,Stats,OperatorID,OperationUnitID,OperationTime) VALUES(null,#{province},#{city},#{county},#{sortingCode},#{zoneCode},#{keyword},#{startInt},#{terminateInt},#{sDInt},0,#{empId},#{unitId},NOW())")

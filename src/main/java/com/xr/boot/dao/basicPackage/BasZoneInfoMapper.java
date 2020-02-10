@@ -25,4 +25,19 @@ public interface BasZoneInfoMapper {
             )
     })
     List<BasZoneInfo> findBasZoneInfos(BasZoneInfo basZoneInfo);
+
+    @Update("update bas_zoneinfo set ZonePeople=#{empId},TelPhone=#{telPhone},SubordinateUnit=#{unitId} where ZoneCode=#{zoneCode}")
+    void upBasZoneInfoByID(BasZoneInfo basZoneInfo);
+
+    @Insert("insert into bas_zoneinfo(ZoneName,ZoneCode,ZonePeople,TelPhone,SubordinateUnit,Stats) VALUES(#{zoneName},#{zoneCode},#{empId},#{telPhone},#{unitId},0)")
+    void saveBasZoneInfo(BasZoneInfo basZoneInfo);
+
+    @Update("update bas_zoneinfo set Stats=#{stats} where ZoneCode=#{zoneCode}")
+    void upBasZoneInfoByStats(long stats);
+
+    @Select("select ZoneName from bas_zoneinfo where ZoneName=#{zoneName}")
+    @Results({
+            @Result(column = "ZoneName", property = "zoneName")
+    })
+    List<String> findBasZoneInfoByZoneName(BasZoneInfo basZoneInfo);
 }

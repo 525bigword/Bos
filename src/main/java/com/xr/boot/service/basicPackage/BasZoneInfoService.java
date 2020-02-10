@@ -17,4 +17,29 @@ public interface BasZoneInfoService {
      * @return
      */
     List<BasZoneInfo> findBasZoneInfoTrem(BasZoneInfo basZoneInfo);
+
+    /**
+     * 修改定区
+     * @param basZoneInfo
+     */
+    void upBasZoneInfoByID(BasZoneInfo basZoneInfo);
+
+    /**
+     * 新增定区
+     * @param basZoneInfo
+     */
+    void saveBasZoneInfo(BasZoneInfo basZoneInfo);
+
+    /**
+     * 修改定区状态
+     * @param stats
+     */
+    void upBasZoneInfoByStats(long stats);
+
+    /**
+     * 查定区名称是否重复
+     * @param basZoneInfo
+     * @return
+     */
+    List<String> findBasZoneInfoByZoneName(BasZoneInfo basZoneInfo);
 }

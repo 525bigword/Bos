@@ -18,4 +18,11 @@ public interface CityService {
      * @return
      */
     Object findCitiesByName(String name);
+
+    /**
+     * 查询所有的市
+     * @param name
+     * @return
+     */
+    List<City> findCitiesByCity(String name);
 }

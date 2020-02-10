@@ -31,5 +31,10 @@ public class CityServiceImpl implements CityService {
         return redisUtil.get("com.xr.boot.controller.CityController.findCitiesByName");
     }
 
+    @Override
+    public List<City> findCitiesByCity(String name) {
+        return cityMapper.findCitiesByCity(name);
+    }
+
 
 }

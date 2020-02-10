@@ -1,7 +1,10 @@
 package com.xr.boot.controller.basicPackage;
 
 import com.xr.boot.entity.BasZoneInfo;
+import com.xr.boot.entity.City;
 import com.xr.boot.service.basicPackage.BasZoneInfoService;
+import com.xr.boot.service.basicPackage.CityService;
+import com.xr.boot.service.basicPackage.impl.CityServiceImpl;
 import com.xr.boot.util.RedisUtil;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
@@ -19,6 +22,8 @@ import java.util.List;
 public class BasZoneInfoController {
     @Autowired
     private BasZoneInfoService basZoneInfoService;
+    @Autowired
+    private CityService cityService;
     @Autowired
     private RedisUtil redisUtil;
     @PostMapping("/findBasZoneInfos")
@@ -40,5 +45,31 @@ public class BasZoneInfoController {
     @PostMapping("/findBasZoneInfoTrem")
     public List<BasZoneInfo> findBasZoneInfoTrem(BasZoneInfo basZoneInfo) {
         return basZoneInfoService.findBasZoneInfoTrem(basZoneInfo);
+    }
+    @PostMapping("/upBasZoneInfoByID")
+    public int upBasZoneInfoByID(BasZoneInfo basZoneInfo){
+        basZoneInfoService.upBasZoneInfoByID(basZoneInfo);
+        redisUtil.del("com.xr.boot.controller.BasZoneInfoController.findBasZoneInfos");
+        return 1;
+    }
+    @PostMapping("/saveBasZoneInfo")
+    public int saveBasZoneInfo(BasZoneInfo basZoneInfo){
+        List<City> city = cityService.findCitiesByCity(basZoneInfo.getZoneName());
+        if(city.size()==0){
+            return 0;
+        }
+        List<String> zoneName = basZoneInfoService.findBasZoneInfoByZoneName(basZoneInfo);
+        if(zoneName.size()>0){
+            return 2;
+        }
+        basZoneInfoService.saveBasZoneInfo(basZoneInfo);
+        redisUtil.del("com.xr.boot.controller.BasZoneInfoController.findBasZoneInfos");
+        return 1;
+    }
+    @PostMapping("/upBasZoneInfoByStats")
+    public int upBasZoneInfoByStats(long stats){
+        basZoneInfoService.upBasZoneInfoByStats(stats);
+        redisUtil.del("com.xr.boot.controller.BasZoneInfoController.findBasZoneInfos");
+        return 1;
     }
 }
