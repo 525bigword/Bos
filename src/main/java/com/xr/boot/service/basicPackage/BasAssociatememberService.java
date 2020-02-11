@@ -38,4 +38,17 @@ public interface BasAssociatememberService {
      * @return
      */
     List<String> findBasAssociateMemberByEmpNo(BasAssociateMember basAssociateMember);
+
+    /**
+     * 根据定区编码查找小件员
+     * @param zoneCode
+     * @return
+     */
+    List<BasAssociateMember> findBasAssociateMemberByZoneCode(String zoneCode);
+
+    /**
+     * 修改小件员所属定区
+     * @param basAssociateMember
+     */
+    void upBasAssociateMemberByZoneCode(BasAssociateMember basAssociateMember);
 }

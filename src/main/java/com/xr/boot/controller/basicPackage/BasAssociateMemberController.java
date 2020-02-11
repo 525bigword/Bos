@@ -57,4 +57,9 @@ public class BasAssociateMemberController {
         redisUtil.del("com.xr.boot.controller.BasAssociateMemberController.findBasAssociateMember");
         return 1;
     }
+
+    @PostMapping("/findBasAssociateMemberByZoneCode")
+    public List<BasAssociateMember> findBasAssociateMemberByZoneCode(String zoneCode){
+        return basAssociatememberService.findBasAssociateMemberByZoneCode(zoneCode);
+    }
 }

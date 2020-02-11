@@ -53,4 +53,15 @@ public class BasAssociatememberServiceImpl implements BasAssociatememberService 
     public List<String> findBasAssociateMemberByEmpNo(BasAssociateMember basAssociateMember) {
         return basAssociatememberMapper.findBasAssociateMemberByEmpNo(basAssociateMember);
     }
+
+    @Override
+    public List<BasAssociateMember> findBasAssociateMemberByZoneCode(String zoneCode) {
+        return basAssociatememberMapper.findBasAssociateMemberByZoneCode(zoneCode);
+    }
+    @Klock(leaseTime=Long.MAX_VALUE)
+    @Transactional
+    @Override
+    public void upBasAssociateMemberByZoneCode(BasAssociateMember basAssociateMember) {
+        basAssociatememberMapper.upBasAssociateMemberByZoneCode(basAssociateMember);
+    }
 }
