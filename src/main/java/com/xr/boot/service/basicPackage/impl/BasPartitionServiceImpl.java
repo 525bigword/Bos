@@ -53,4 +53,10 @@ public class BasPartitionServiceImpl implements BasPartitionService {
     public void delBasPartition(int id) {
         basPartitionMapper.delBasPartition(id);
     }
+    @Klock(leaseTime=Long.MAX_VALUE)
+    @Transactional
+    @Override
+    public void upBasPartitionByZoneCode(BasPartition basPartition) {
+        basPartitionMapper.upBasPartitionByZoneCode(basPartition);
+    }
 }

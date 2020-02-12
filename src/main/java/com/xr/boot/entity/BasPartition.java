@@ -4,11 +4,14 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class BasPartition
  ***********************************************************************/
 
+import org.springframework.stereotype.Component;
+
 import java.io.Serializable;
 
 /** 分区表
  * 
  * @pdOid 27ba0293-55c0-4619-bad5-7a1527f57904 */
+@Component
 public class BasPartition implements Serializable {
    /** 编号	自增
     * 

@@ -91,8 +91,9 @@ public interface SyEmpMapper {
     })
     SyEmp findSyEmpById(int operatorid);
     //查询工号和名称  mpy
-    @Select("select EmpNo,EmpName from sy_emp where Disabled=0 order by empNo asc")
+    @Select("select ID,EmpNo,EmpName from sy_emp where Disabled=0 order by empNo asc")
     @Results({
+            @Result(column = "ID",property = "id"),
             @Result(column = "EmpNo",property = "empNo"),
             @Result(column = "EmpName",property = "empName")
     })

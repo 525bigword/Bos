@@ -37,4 +37,10 @@ public interface BasPartitionService {
      * @param id
      */
     void delBasPartition(int id);
+
+    /**
+     * 修改所属区域
+     * @param basPartition
+     */
+    void upBasPartitionByZoneCode(BasPartition basPartition);
 }

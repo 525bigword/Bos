@@ -10,6 +10,7 @@ import java.io.Serializable;
  * 
  * @pdOid 741a55bc-bcb6-492d-8cd8-fd4ccc5fddef */
 public class BasZoneInfo implements Serializable {
+   private static final long serialVersionUID = 5789684102856234008L;
    /** 定区名称
     * 
     * @pdOid a1bebce6-4a3a-4b62-9ba6-895e380cd59d */
@@ -24,6 +25,42 @@ public class BasZoneInfo implements Serializable {
    private String telPhone;
    private SyEmp syEmp;
    private SyUnits syUnits;
+   private String delxjy;
+   private String deldz;
+   private String addxjy;
+   private String adddz;
+
+   public String getDelxjy() {
+      return delxjy;
+   }
+
+   public void setDelxjy(String delxjy) {
+      this.delxjy = delxjy;
+   }
+
+   public String getDeldz() {
+      return deldz;
+   }
+
+   public void setDeldz(String deldz) {
+      this.deldz = deldz;
+   }
+
+   public String getAddxjy() {
+      return addxjy;
+   }
+
+   public void setAddxjy(String addxjy) {
+      this.addxjy = addxjy;
+   }
+
+   public String getAdddz() {
+      return adddz;
+   }
+
+   public void setAdddz(String adddz) {
+      this.adddz = adddz;
+   }
 
    public long getempId(){
       return syEmp.getId();

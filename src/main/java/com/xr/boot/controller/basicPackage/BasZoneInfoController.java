@@ -1,7 +1,11 @@
 package com.xr.boot.controller.basicPackage;
 
+import com.xr.boot.entity.BasAssociateMember;
+import com.xr.boot.entity.BasPartition;
 import com.xr.boot.entity.BasZoneInfo;
 import com.xr.boot.entity.City;
+import com.xr.boot.service.basicPackage.BasAssociatememberService;
+import com.xr.boot.service.basicPackage.BasPartitionService;
 import com.xr.boot.service.basicPackage.BasZoneInfoService;
 import com.xr.boot.service.basicPackage.CityService;
 import com.xr.boot.service.basicPackage.impl.CityServiceImpl;
@@ -21,9 +25,17 @@ import java.util.List;
 @Api(tags = "管理定区接口")
 public class BasZoneInfoController {
     @Autowired
+    private BasPartitionService basPartitionService;
+    @Autowired
+    private BasPartition basPartition;
+    @Autowired
+    private BasAssociatememberService basAssociatememberService;
+    @Autowired
     private BasZoneInfoService basZoneInfoService;
     @Autowired
     private CityService cityService;
+    @Autowired
+    private BasAssociateMember basAssociateMember;
     @Autowired
     private RedisUtil redisUtil;
     @PostMapping("/findBasZoneInfos")
@@ -48,6 +60,46 @@ public class BasZoneInfoController {
     }
     @PostMapping("/upBasZoneInfoByID")
     public int upBasZoneInfoByID(BasZoneInfo basZoneInfo){
+        String delxjy=basZoneInfo.getDelxjy();
+        String deldz=basZoneInfo.getDeldz();
+        String addxjy=basZoneInfo.getAddxjy();
+        String adddz=basZoneInfo.getAdddz();
+        if(!delxjy.equals("")){
+            int[] xjy=turnStr(delxjy);
+            for (int i:xjy ) {
+                basAssociateMember.setId(i);
+                basAssociatememberService.upBasAssociateMemberByZoneCode(basAssociateMember);
+            }
+            redisUtil.del("com.xr.boot.controller.BasAssociateMemberController.findBasAssociateMember");
+        }
+        if(!deldz.equals("")){
+            int[] dz=turnStr(deldz);
+            for (int i:dz ) {
+                basPartition.setId(i);
+                basPartitionService.upBasPartitionByZoneCode(basPartition);
+            }
+            redisUtil.del("com.xr.boot.controller.BasPartitionController.findBasPartitions");
+        }
+
+        if(!addxjy.equals("")){
+            int[] xjy=turnStr(addxjy);
+            for (int i:xjy ) {
+                basAssociateMember.setId(i);
+                basAssociateMember.setZoneCode(basZoneInfo.getZoneCode());
+                basAssociatememberService.upBasAssociateMemberByZoneCode(basAssociateMember);
+            }
+            redisUtil.del("com.xr.boot.controller.BasAssociateMemberController.findBasAssociateMember");
+        }
+
+       if(!adddz.equals("")){
+               int[] xjy=turnStr(adddz);
+               for (int i:xjy ) {
+                   basPartition.setId(i);
+                   basPartition.setZoneCode(basZoneInfo.getZoneCode());
+                   basPartitionService.upBasPartitionByZoneCode(basPartition);
+               }
+           redisUtil.del("com.xr.boot.controller.BasPartitionController.findBasPartitions");
+       }
         basZoneInfoService.upBasZoneInfoByID(basZoneInfo);
         redisUtil.del("com.xr.boot.controller.BasZoneInfoController.findBasZoneInfos");
         return 1;
@@ -71,5 +123,14 @@ public class BasZoneInfoController {
         basZoneInfoService.upBasZoneInfoByStats(stats);
         redisUtil.del("com.xr.boot.controller.BasZoneInfoController.findBasZoneInfos");
         return 1;
+    }
+
+    private int[] turnStr(String str){
+        String[] tmp = str.split(",");
+        int[] arr = new int[tmp.length];
+        for (int i = 0; i < tmp.length; i++) {
+            arr[i] = Integer.valueOf(tmp[i]);
+        }
+        return arr;
     }
 }
