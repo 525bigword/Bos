@@ -17,6 +17,8 @@ public interface MenusAndBigMenusMapper {
     //为角色循环新增多个权限
     @InsertProvider(type = MenusAndBigMenusSqlProvider.class,method = "saveListSyRoleAndSyMenus")
     void saveSyRoleAndSyMenu(List<Integer> menus,Integer roleid);
+    @Insert("insert into sy_rolesmenus values(null,#{roleid},#{menusid})")
+    void saveSyRoleAndSyMenud(@Param("menusid") Integer menusid,Integer roleid);
 
 
     //根据角色id查询对应权限
@@ -50,6 +52,9 @@ public interface MenusAndBigMenusMapper {
     //删除sy_menus
     @DeleteProvider(type = MenusAndBigMenusSqlProvider.class,method ="delListSyMenus")
     void delSyMenusById(@Param("ids")List<Integer> ids);
+    //删除sy_menus
+    @Delete("delete from sy_rolesmenus where roleid=#{roleid}")
+    void delSyMenusByRoleId(@Param("roleid")Integer roleid);
     //修改sy_menus信息
     @Update("update sy_menus set parentid=#{parentID},type=#{type},text=#{text},url=#{url},bigmenus=#{bigmenus} where" +
             " id=#{id}")
