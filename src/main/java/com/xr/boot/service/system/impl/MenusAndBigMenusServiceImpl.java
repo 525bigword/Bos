@@ -153,17 +153,11 @@ public class MenusAndBigMenusServiceImpl implements MenusAndBigMenusService {
     public void assignRolePermissions(List<Integer> menuid, Integer roleid) {
         SyRoles syRoles=new SyRoles();
         syRoles.setId(roleid);
-        List<SyRolesMenus> syMenusBySyRoles = menusAndBigMenusMapper.findSyMenusBySyRoles(syRoles);
-        for(int i=0;i<menuid.size();i++){
-            for(int j=0;j<syMenusBySyRoles.size();j++){
-                if(menuid.get(i)==syMenusBySyRoles.get(j).getMenuid()){
-                    menuid.remove(i);
-                    continue;
-                }
-            }
+        menusAndBigMenusMapper.delSyMenusByRoleId(roleid);
+        for (Integer i : menuid) {
+            menusAndBigMenusMapper.saveSyRoleAndSyMenud(i,roleid);
         }
         if(menuid.size()>0) {
-            menusAndBigMenusMapper.saveSyRoleAndSyMenu(menuid, roleid);
             for (String s : Menus) {
                 redisUtil.del(s);
             }
