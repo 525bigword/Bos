@@ -4,12 +4,14 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class SorStorage
  ***********************************************************************/
 
+import java.io.Serializable;
 import java.util.*;
 
 /** 入库表
  * 
  * @pdOid b3d6ad1e-5ef0-41d3-8bd5-e36175177a3d */
-public class SorStorage {
+public class SorStorage implements Serializable {
+   private static final long serialVersionUID = -8370764339183510206L;
    /** 入库交接单号,雪花算法九号数据中心
     * 
     * @pdOid 8001da4b-2eff-41ea-85ae-baa5809b683d */
@@ -18,6 +20,9 @@ public class SorStorage {
     * 
     * @pdOid b379d304-bdfa-44cb-b7a1-203fd19171f3 */
    private Date acceptDate;
+   /**接货人*/
+   private Integer acceptperson;
+   /**发货人*/
    /** 接收单位
     * 
     * @pdOid 66b893c4-c884-4aaa-9949-87aa786cd43c */
@@ -86,4 +91,11 @@ public class SorStorage {
       packageID = newPackageID;
    }
 
+   public Integer getAcceptperson() {
+      return acceptperson;
+   }
+
+   public void setAcceptperson(Integer acceptperson) {
+      this.acceptperson = acceptperson;
+   }
 }
