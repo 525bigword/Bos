@@ -45,4 +45,10 @@ public interface BasPartitionMapper {
 
     @Delete("delete from bas_partition where ID=#{id}")
     void delBasPartition(int id);
+
+    @Select("select County from bas_partition where County=#{county}")
+    @Results({
+            @Result(column = "County", property = "county")
+    })
+    List<String> findBasPartitionBycounty(BasPartition basPartition);
 }

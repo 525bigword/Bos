@@ -32,9 +32,9 @@ public interface BasZoneInfoService {
 
     /**
      * 修改定区状态
-     * @param stats
+     * @param basZoneInfo
      */
-    void upBasZoneInfoByStats(long stats);
+    void upBasZoneInfoByStats(BasZoneInfo basZoneInfo);
 
     /**
      * 查定区名称是否重复

@@ -33,7 +33,7 @@ public interface BasZoneInfoMapper {
     void saveBasZoneInfo(BasZoneInfo basZoneInfo);
 
     @Update("update bas_zoneinfo set Stats=#{stats} where ZoneCode=#{zoneCode}")
-    void upBasZoneInfoByStats(long stats);
+    void upBasZoneInfoByStats(BasZoneInfo basZoneInfo);
 
     @Select("select ZoneName from bas_zoneinfo where ZoneName=#{zoneName}")
     @Results({

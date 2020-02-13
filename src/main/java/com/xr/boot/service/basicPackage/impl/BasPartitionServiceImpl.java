@@ -59,4 +59,9 @@ public class BasPartitionServiceImpl implements BasPartitionService {
     public void upBasPartitionByZoneCode(BasPartition basPartition) {
         basPartitionMapper.upBasPartitionByZoneCode(basPartition);
     }
+
+    @Override
+    public List<String> findBasPartitionBycounty(BasPartition basPartition) {
+        return basPartitionMapper.findBasPartitionBycounty(basPartition);
+    }
 }

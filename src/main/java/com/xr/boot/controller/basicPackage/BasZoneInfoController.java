@@ -10,6 +10,7 @@ import com.xr.boot.service.basicPackage.BasZoneInfoService;
 import com.xr.boot.service.basicPackage.CityService;
 import com.xr.boot.service.basicPackage.impl.CityServiceImpl;
 import com.xr.boot.util.RedisUtil;
+import com.xr.boot.util.SnowflakeIdFactory;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,8 +63,6 @@ public class BasZoneInfoController {
     public int upBasZoneInfoByID(BasZoneInfo basZoneInfo){
         String delxjy=basZoneInfo.getDelxjy();
         String deldz=basZoneInfo.getDeldz();
-        String addxjy=basZoneInfo.getAddxjy();
-        String adddz=basZoneInfo.getAdddz();
         if(!delxjy.equals("")){
             int[] xjy=turnStr(delxjy);
             for (int i:xjy ) {
@@ -80,26 +79,7 @@ public class BasZoneInfoController {
             }
             redisUtil.del("com.xr.boot.controller.BasPartitionController.findBasPartitions");
         }
-
-        if(!addxjy.equals("")){
-            int[] xjy=turnStr(addxjy);
-            for (int i:xjy ) {
-                basAssociateMember.setId(i);
-                basAssociateMember.setZoneCode(basZoneInfo.getZoneCode());
-                basAssociatememberService.upBasAssociateMemberByZoneCode(basAssociateMember);
-            }
-            redisUtil.del("com.xr.boot.controller.BasAssociateMemberController.findBasAssociateMember");
-        }
-
-       if(!adddz.equals("")){
-               int[] xjy=turnStr(adddz);
-               for (int i:xjy ) {
-                   basPartition.setId(i);
-                   basPartition.setZoneCode(basZoneInfo.getZoneCode());
-                   basPartitionService.upBasPartitionByZoneCode(basPartition);
-               }
-           redisUtil.del("com.xr.boot.controller.BasPartitionController.findBasPartitions");
-       }
+        adddx(basZoneInfo);
         basZoneInfoService.upBasZoneInfoByID(basZoneInfo);
         redisUtil.del("com.xr.boot.controller.BasZoneInfoController.findBasZoneInfos");
         return 1;
@@ -114,17 +94,48 @@ public class BasZoneInfoController {
         if(zoneName.size()>0){
             return 2;
         }
+        adddx(basZoneInfo);
         basZoneInfoService.saveBasZoneInfo(basZoneInfo);
         redisUtil.del("com.xr.boot.controller.BasZoneInfoController.findBasZoneInfos");
         return 1;
     }
     @PostMapping("/upBasZoneInfoByStats")
-    public int upBasZoneInfoByStats(long stats){
-        basZoneInfoService.upBasZoneInfoByStats(stats);
+    public int upBasZoneInfoByStats(BasZoneInfo basZoneInfo){
+        basZoneInfoService.upBasZoneInfoByStats(basZoneInfo);
         redisUtil.del("com.xr.boot.controller.BasZoneInfoController.findBasZoneInfos");
         return 1;
     }
 
+    @PostMapping("/findCode")
+    public String findCode(){
+        SnowflakeIdFactory snow=new SnowflakeIdFactory(25);
+        String sortingCode = snow.generateKey().toString();
+        return sortingCode;
+    }
+
+    private void adddx(BasZoneInfo basZoneInfo){
+        String addxjy=basZoneInfo.getAddxjy();
+        String adddz=basZoneInfo.getAdddz();
+        if(!addxjy.equals("")){
+            int[] xjy=turnStr(addxjy);
+            for (int i:xjy ) {
+                basAssociateMember.setId(i);
+                basAssociateMember.setZoneCode(basZoneInfo.getZoneCode());
+                basAssociatememberService.upBasAssociateMemberByZoneCode(basAssociateMember);
+            }
+            redisUtil.del("com.xr.boot.controller.BasAssociateMemberController.findBasAssociateMember");
+        }
+
+        if(!adddz.equals("")){
+            int[] xjy=turnStr(adddz);
+            for (int i:xjy ) {
+                basPartition.setId(i);
+                basPartition.setZoneCode(basZoneInfo.getZoneCode());
+                basPartitionService.upBasPartitionByZoneCode(basPartition);
+            }
+            redisUtil.del("com.xr.boot.controller.BasPartitionController.findBasPartitions");
+        }
+    }
     private int[] turnStr(String str){
         String[] tmp = str.split(",");
         int[] arr = new int[tmp.length];

@@ -53,6 +53,10 @@ public class BasPartitionController {
     }
     @PostMapping("/saveBasPartition")
     public int saveBasPartition(BasPartition basPartition) {
+        List<String> bycounty = basPartitionService.findBasPartitionBycounty(basPartition);
+        if(bycounty.size()>0){
+            return 0;
+        }
         basPartitionService.saveBasPartition(basPartition);
         redisUtil.del("com.xr.boot.controller.BasPartitionController.findBasPartitions");
         return 1;

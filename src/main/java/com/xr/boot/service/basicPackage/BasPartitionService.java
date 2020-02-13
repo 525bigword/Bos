@@ -43,4 +43,11 @@ public interface BasPartitionService {
      * @param basPartition
      */
     void upBasPartitionByZoneCode(BasPartition basPartition);
+
+ /**
+  * 查区是否重复
+  * @param basPartition
+  * @return
+  */
+ List<String> findBasPartitionBycounty(BasPartition basPartition);
 }

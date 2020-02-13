@@ -46,7 +46,7 @@ public interface BasAssociatememberMapper {
     })
     List<String> findBasAssociateMemberByEmpNo(BasAssociateMember basAssociateMember);
 
-    @Select("select ID,ZoneCode,EmpNo,EmpName,StandardKg,StandardLength,StandardTimeId,SubordinateUnit,type from bas_associatemember where ZoneCode is NULL or ZoneCode=#{zoneCode}")
+    @Select("select ID,ZoneCode,EmpNo,EmpName,StandardKg,StandardLength,StandardTimeId,SubordinateUnit,type from bas_associatemember where ZoneCode='' or ZoneCode is NULL or ZoneCode=#{zoneCode}")
     @Results({
             @Result(id=true,column = "ID",property = "id"),
             @Result(column = "EmpNo",property = "empNo"),

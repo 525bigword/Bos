@@ -51,8 +51,8 @@ public class BasZoneInfoServiceImpl implements BasZoneInfoService {
     @Klock(leaseTime=Long.MAX_VALUE)
     @Transactional
     @Override
-    public void upBasZoneInfoByStats(long stats) {
-        basZoneInfoMapper.upBasZoneInfoByStats(stats);
+    public void upBasZoneInfoByStats(BasZoneInfo basZoneInfo) {
+        basZoneInfoMapper.upBasZoneInfoByStats(basZoneInfo);
     }
 
     @Transactional
