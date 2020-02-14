@@ -61,7 +61,6 @@ public class BasZoneInfoController {
     }
     @PostMapping("/upBasZoneInfoByID")
     public int upBasZoneInfoByID(BasZoneInfo basZoneInfo){
-        System.out.println("sfdsf");
         String delxjy=basZoneInfo.getDelxjy();
         String deldz=basZoneInfo.getDeldz();
         if(!delxjy.equals("")){
