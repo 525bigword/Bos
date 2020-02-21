@@ -22,15 +22,10 @@ public class SorStorage implements Serializable {
    private Date acceptDate;
    /**接货人*/
    private Integer acceptperson;
-   /**发货人*/
    /** 接收单位
     * 
     * @pdOid 66b893c4-c884-4aaa-9949-87aa786cd43c */
    private String acceptCompany;
-   /** 发货单位
-    * 
-    * @pdOid 6e6d9803-001c-4ca4-890c-fc276f95bebd */
-   private String deliveryCompany;
    /** 合包号   接入合包表
     * 
     * @pdOid 14c3760a-0924-442f-abcf-e1325840974d */
@@ -68,18 +63,7 @@ public class SorStorage implements Serializable {
    public void setAcceptCompany(String newAcceptCompany) {
       acceptCompany = newAcceptCompany;
    }
-   
-   /** @pdOid e30d8050-7d83-481d-a0b9-bc427858b09c */
-   public String getDeliveryCompany() {
-      return deliveryCompany;
-   }
-   
-   /** @param newDeliveryCompany
-    * @pdOid e289a6d9-3d08-44cb-ad08-533cebe65775 */
-   public void setDeliveryCompany(String newDeliveryCompany) {
-      deliveryCompany = newDeliveryCompany;
-   }
-   
+
    /** @pdOid cde396c4-cb29-4015-9c39-6f38538d7be8 */
    public String getPackageID() {
       return packageID;

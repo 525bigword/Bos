@@ -62,7 +62,26 @@ public class SorPackageDetails {
     * 
     * @pdOid 6f85bbb5-efcc-41a8-a786-46fcc4c422c3 */
    private String packging;
-   
+
+   @Override
+   public String toString() {
+      return "SorPackageDetails{" +
+              "id='" + id + '\'' +
+              ", wareName=" + wareName +
+              ", destination='" + destination + '\'' +
+              ", ticket=" + ticket +
+              ", actualCargoInt=" + actualCargoInt +
+              ", cargoInt=" + cargoInt +
+              ", weight=" + weight +
+              ", volume=" + volume +
+              ", service=" + service +
+              ", importantHints='" + importantHints + '\'' +
+              ", ask='" + ask + '\'' +
+              ", inputType='" + inputType + '\'' +
+              ", packging='" + packging + '\'' +
+              '}';
+   }
+
    /** @pdOid 308ee207-487e-424d-aa85-4b4ea56e39f8 */
    public String getId() {
       return id;

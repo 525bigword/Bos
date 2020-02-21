@@ -4,16 +4,22 @@ package com.xr.boot.entity; /***************************************************
  * Purpose: Defines the Class SorPackage
  ***********************************************************************/
 
+import java.io.Serializable;
 import java.util.*;
 
 /** 合包表
  * 
  * @pdOid ba1338c4-202a-4622-9f8a-ca5e251eb266 */
-public class SorPackage {
+public class SorPackage implements Serializable {
+   private static final long serialVersionUID = 6777621691364389743L;
    /** 合包号,雪花算法十七号数据中心
     * 
     * @pdOid 32bfb25f-509e-44fc-a5a1-23e5ea33834f */
    private String id;
+   /**
+    * 合包人
+    * */
+   private Integer packageperson;
    /** 封签号（原设备号）   雪花算法十八号数据中心
     * 
     * @pdOid c65d2afc-b9a7-4237-8c78-c5d29ba42374 */
@@ -49,23 +55,48 @@ public class SorPackage {
    /** 状态
     * 
     * @pdOid 264959b9-c53c-4c42-9618-77397e1128cd */
-   private long state;
+   private String state;
    /** 配载要求
     * 
     * @pdOid 5254eeaf-36a0-4052-a8ec-b5dd32aac3cd */
-   private long ask;
-   
+   private String ask;
+
+   @Override
+   public String toString() {
+      return "SorPackage{" +
+              "id='" + id + '\'' +
+              ", sealInt='" + sealInt + '\'' +
+              ", destination='" + destination + '\'' +
+              ", reckonDes='" + reckonDes + '\'' +
+              ", timeLimit=" + timeLimit +
+              ", ticketSum=" + ticketSum +
+              ", cargoSum=" + cargoSum +
+              ", weightSum=" + weightSum +
+              ", volumeSum=" + volumeSum +
+              ", state=" + state +
+              ", ask=" + ask +
+              '}';
+   }
+
    /** @pdOid f7ffbc78-b68e-43ab-9f1e-3768bde36f1a */
-   public long getAsk() {
+   public String getAsk() {
       return ask;
    }
    
    /** @param newAsk
     * @pdOid 435832be-c090-4d99-adc7-72d53efc45f7 */
-   public void setAsk(long newAsk) {
+   public void setAsk(String newAsk) {
       ask = newAsk;
    }
-   
+
+   public Integer getPackageperson() {
+      return packageperson;
+   }
+
+   public void setPackageperson(Integer packageperson) {
+      this.packageperson = packageperson;
+   }
+
    /** @pdOid ec9ad752-230c-4531-b5c5-24eed5292292 */
    public String getId() {
       return id;
@@ -166,13 +197,13 @@ public class SorPackage {
    }
    
    /** @pdOid f2f07bad-4095-451a-ad8f-252c3e2f3ee9 */
-   public long getState() {
+   public String getState() {
       return state;
    }
-   
+
    /** @param newState
     * @pdOid 8152d59a-f1f6-4747-810e-7fe1277e3670 */
-   public void setState(long newState) {
+   public void setState(String newState) {
       state = newState;
    }
 
