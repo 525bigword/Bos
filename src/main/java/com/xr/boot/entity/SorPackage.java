@@ -35,7 +35,7 @@ public class SorPackage implements Serializable {
    /** 送达时限
     * 
     * @pdOid e42aa33d-d6dc-4c72-9fc1-776eb741bfeb */
-   private Date timeLimit;
+   private String timeLimit;
    /** 总票数
     * 
     * @pdOid d4a545f5-44c3-4230-a1b3-3608bb4a2ea8 */
@@ -78,15 +78,12 @@ public class SorPackage implements Serializable {
               '}';
    }
 
-   /** @pdOid f7ffbc78-b68e-43ab-9f1e-3768bde36f1a */
-   public String getAsk() {
-      return ask;
+   public String getId() {
+      return id;
    }
-   
-   /** @param newAsk
-    * @pdOid 435832be-c090-4d99-adc7-72d53efc45f7 */
-   public void setAsk(String newAsk) {
-      ask = newAsk;
+
+   public void setId(String id) {
+      this.id = id;
    }
 
    public Integer getPackageperson() {
@@ -97,114 +94,83 @@ public class SorPackage implements Serializable {
       this.packageperson = packageperson;
    }
 
-   /** @pdOid ec9ad752-230c-4531-b5c5-24eed5292292 */
-   public String getId() {
-      return id;
-   }
-   
-   /** @param newId
-    * @pdOid 1bf3be11-327e-4c68-a1bd-dfec131c624c */
-   public void setId(String newId) {
-      id = newId;
-   }
-   
-   /** @pdOid 885fa2df-4e9b-4297-87a0-dce037326e44 */
    public String getSealInt() {
       return sealInt;
    }
-   
-   /** @param newSealInt
-    * @pdOid 189e5d0c-8a5f-41de-ba09-211b41b92987 */
-   public void setSealInt(String newSealInt) {
-      sealInt = newSealInt;
+
+   public void setSealInt(String sealInt) {
+      this.sealInt = sealInt;
    }
-   
-   /** @pdOid 2b78977a-bc07-487f-baca-93b8b0abd1f6 */
+
    public String getDestination() {
       return destination;
    }
-   
-   /** @param newDestination
-    * @pdOid a1b8a237-831e-400f-9f0b-e116a8f9975b */
-   public void setDestination(String newDestination) {
-      destination = newDestination;
+
+   public void setDestination(String destination) {
+      this.destination = destination;
    }
-   
-   /** @pdOid 73a4b2f0-d08f-4223-8dbe-e6818d66ff73 */
+
    public String getReckonDes() {
       return reckonDes;
    }
-   
-   /** @param newReckonDes
-    * @pdOid beeafa92-0a06-4fbc-965c-5838b56c9ee5 */
-   public void setReckonDes(String newReckonDes) {
-      reckonDes = newReckonDes;
+
+   public void setReckonDes(String reckonDes) {
+      this.reckonDes = reckonDes;
    }
-   
-   /** @pdOid 575d0d92-7b58-4341-8a24-3adc5a21628d */
-   public Date getTimeLimit() {
+
+   public String getTimeLimit() {
       return timeLimit;
    }
-   
-   /** @param newTimeLimit
-    * @pdOid 3e4f8501-9c80-45f2-b84a-ccc382edd776 */
-   public void setTimeLimit(Date newTimeLimit) {
-      timeLimit = newTimeLimit;
+
+   public void setTimeLimit(String timeLimit) {
+      this.timeLimit = timeLimit;
    }
-   
-   /** @pdOid 4fb6a246-320d-4d3c-9fd0-be7e917d0ab4 */
+
    public int getTicketSum() {
       return ticketSum;
    }
-   
-   /** @param newTicketSum
-    * @pdOid 5ee88d99-ed18-490e-afd0-46aeb676136d */
-   public void setTicketSum(int newTicketSum) {
-      ticketSum = newTicketSum;
+
+   public void setTicketSum(int ticketSum) {
+      this.ticketSum = ticketSum;
    }
-   
-   /** @pdOid fa8bbf88-43b8-4b60-a2a9-c830b799e86a */
+
    public int getCargoSum() {
       return cargoSum;
    }
-   
-   /** @param newCargoSum
-    * @pdOid 6edf3e48-25d6-4ca6-99c6-aaac6821751b */
-   public void setCargoSum(int newCargoSum) {
-      cargoSum = newCargoSum;
+
+   public void setCargoSum(int cargoSum) {
+      this.cargoSum = cargoSum;
    }
-   
-   /** @pdOid 581df8f8-abcc-48c4-8342-45bf2ee1525f */
+
    public double getWeightSum() {
       return weightSum;
    }
-   
-   /** @param newWeightSum
-    * @pdOid 9c93555c-80a8-4056-9c2c-00641b89e46f */
-   public void setWeightSum(double newWeightSum) {
-      weightSum = newWeightSum;
+
+   public void setWeightSum(double weightSum) {
+      this.weightSum = weightSum;
    }
-   
-   /** @pdOid 4d1ca817-e75d-4608-9c30-c4460efabbac */
+
    public double getVolumeSum() {
       return volumeSum;
    }
-   
-   /** @param newVolumeSum
-    * @pdOid 1d87a6dc-2b68-4c12-8fe0-76387d5e1b74 */
-   public void setVolumeSum(double newVolumeSum) {
-      volumeSum = newVolumeSum;
+
+   public void setVolumeSum(double volumeSum) {
+      this.volumeSum = volumeSum;
    }
-   
-   /** @pdOid f2f07bad-4095-451a-ad8f-252c3e2f3ee9 */
+
    public String getState() {
       return state;
    }
 
-   /** @param newState
-    * @pdOid 8152d59a-f1f6-4747-810e-7fe1277e3670 */
-   public void setState(String newState) {
-      state = newState;
+   public void setState(String state) {
+      this.state = state;
    }
 
+   public String getAsk() {
+      return ask;
+   }
+
+   public void setAsk(String ask) {
+      this.ask = ask;
+   }
 }

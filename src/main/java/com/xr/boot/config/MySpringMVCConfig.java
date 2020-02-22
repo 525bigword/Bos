@@ -25,8 +25,9 @@ public class MySpringMVCConfig extends WebMvcConfigurationSupport {
 
   @Override
   public void addInterceptors(InterceptorRegistry registry) {
-    registry.addInterceptor(interceptor).addPathPatterns("/**").excludePathPatterns("/swagger")
-    .excludePathPatterns("/jurisdiction/login").excludePathPatterns("/jurisdiction/ImageCode").excludePathPatterns("/jurisdiction/getCode");
+  //  registry.addInterceptor(interceptor).addPathPatterns("/**").excludePathPatterns("/swagger")
+   // .excludePathPatterns("/jurisdiction/login").excludePathPatterns("/jurisdiction/ImageCode").excludePathPatterns(
+     //      "/jurisdiction/getCode");
     //WebMvcConfigurer.super.addInterceptors(registry);
   }
     @Override
