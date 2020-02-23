@@ -61,23 +61,6 @@ public class SorPackage implements Serializable {
     * @pdOid 5254eeaf-36a0-4052-a8ec-b5dd32aac3cd */
    private String ask;
 
-   @Override
-   public String toString() {
-      return "SorPackage{" +
-              "id='" + id + '\'' +
-              ", sealInt='" + sealInt + '\'' +
-              ", destination='" + destination + '\'' +
-              ", reckonDes='" + reckonDes + '\'' +
-              ", timeLimit=" + timeLimit +
-              ", ticketSum=" + ticketSum +
-              ", cargoSum=" + cargoSum +
-              ", weightSum=" + weightSum +
-              ", volumeSum=" + volumeSum +
-              ", state=" + state +
-              ", ask=" + ask +
-              '}';
-   }
-
    public String getId() {
       return id;
    }

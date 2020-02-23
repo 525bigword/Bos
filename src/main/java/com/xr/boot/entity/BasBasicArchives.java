@@ -37,8 +37,11 @@ public class BasBasicArchives implements Serializable {
     * 
     * @pdOid f506033f-36fc-4c96-805a-8148cff09a43 */
    private String operationTime;
-   
-   public BasBasicArchives(){}
+
+   public BasBasicArchives(){
+
+   }
+
    public long getempId(){
       return syEmp.getId();
    }
