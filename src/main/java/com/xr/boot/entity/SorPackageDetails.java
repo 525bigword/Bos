@@ -19,7 +19,7 @@ public class SorPackageDetails implements Serializable {
    /** 商品名
     * 
     * @pdOid bf379d62-2469-47d2-9651-bfc5ba3d13c8 */
-   private int wareName;
+   private String wareName;
    /** 到达地
     * 
     * @pdOid 724c6e81-423a-44af-a5df-4e4f6e6effbe */
@@ -92,11 +92,11 @@ public class SorPackageDetails implements Serializable {
       this.id = id;
    }
 
-   public int getWareName() {
+   public String getWareName() {
       return wareName;
    }
 
-   public void setWareName(int wareName) {
+   public void setWareName(String wareName) {
       this.wareName = wareName;
    }
 
