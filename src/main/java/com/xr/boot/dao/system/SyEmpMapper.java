@@ -124,4 +124,6 @@ public interface SyEmpMapper {
      */
     @Select("select id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled from sy_emp where empname=#{empName} ")
     SyEmp findByempName(String empName);
+    @Select("select empname from sy_emp where id=#{id}")
+    String findSyEmpNameById(@Param("id") Integer id);
 }

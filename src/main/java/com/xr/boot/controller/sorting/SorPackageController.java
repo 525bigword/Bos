@@ -32,4 +32,15 @@ public class SorPackageController {
         }
         return new ResponseEntity(HttpStatus.OK,HttpStatus.OK);
     }
+    @GetMapping("/query")
+    public ResponseEntity<List<SorPackage>> query(SorPackage sorPackage){
+        List<SorPackage> SorPackages=null;
+        try {
+            SorPackages = sorPackageService.findSorPackageByWhere(sorPackage);
+            return new ResponseEntity<List<SorPackage>>(SorPackages,HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<List<SorPackage>>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }

@@ -60,6 +60,16 @@ public class SorPackage implements Serializable {
     * 
     * @pdOid 5254eeaf-36a0-4052-a8ec-b5dd32aac3cd */
    private String ask;
+   /**业务属性*/
+   private String packagepersonname;
+
+   public String getPackagepersonname() {
+      return packagepersonname;
+   }
+
+   public void setPackagepersonname(String packagepersonname) {
+      this.packagepersonname = packagepersonname;
+   }
 
    public String getId() {
       return id;

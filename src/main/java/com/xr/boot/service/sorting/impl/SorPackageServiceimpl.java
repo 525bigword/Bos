@@ -46,4 +46,10 @@ public class SorPackageServiceimpl implements SorPackageService {
         System.out.println(sorPackage);
         sorPackageDetails.forEach(System.out::println);
     }
+
+    @Override
+    public List<SorPackage> findSorPackageByWhere(SorPackage sorPackage)throws Exception {
+        List<SorPackage> sorPackages = sorPackageMapper.findSorPackage(sorPackage);
+        return sorPackages;
+    }
 }
