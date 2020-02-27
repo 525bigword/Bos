@@ -17,4 +17,10 @@ public class SorPackageDetailsServiceimpl implements SorPackageDetailsService {
         List<SorPackageDetails> sorPackageDetailNoPack = sorPackageDetailMapper.findSorPackageDetailNoPack(sorPackageDetails);
         return sorPackageDetailNoPack;
     }
+
+    @Override
+    public List<SorPackageDetails> findSorPackageDetailsByPackage(String packaging) throws Exception {
+        List<SorPackageDetails> sorPackageDetailByPackage = sorPackageDetailMapper.findSorPackageDetailByPackage(packaging);
+        return sorPackageDetailByPackage;
+    }
 }

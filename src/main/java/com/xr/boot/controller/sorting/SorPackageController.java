@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.xr.boot.entity.SorPackage;
 import com.xr.boot.entity.SorPackageDetails;
 import com.xr.boot.service.sorting.SorPackageService;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -42,5 +43,10 @@ public class SorPackageController {
             e.printStackTrace();
             return new ResponseEntity<List<SorPackage>>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
+    }
+    @ApiOperation("拆包接口")
+    @PostMapping("unpacking/{package}")
+    public ResponseEntity unpacking(@PathVariable String packaging){
+       return null;
     }
 }
