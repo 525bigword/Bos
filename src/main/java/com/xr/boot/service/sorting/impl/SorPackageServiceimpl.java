@@ -28,20 +28,19 @@ public class SorPackageServiceimpl implements SorPackageService {
         SnowflakeIdFactory PackageIdFactory=new SnowflakeIdFactory(17);
         //封签号数据中心18号
         SnowflakeIdFactory PackageSealIntFactory=new SnowflakeIdFactory(18);
-        //封签号数据中心18号
-        SnowflakeIdFactory PackageDetailIdFactory=new SnowflakeIdFactory(19);
+        //封签号数据中心19号
+        //SnowflakeIdFactory PackageDetailIdFactory=new SnowflakeIdFactory(19);
         sorPackage.setId(PackageIdFactory.generateKey().toString());
         sorPackage.setSealInt(PackageSealIntFactory.generateKey().toString());
         //sorPackageDetails.stream().forEach(e -> e.setId(PackageDetailIdFactory.generateKey().toString()));
         for(int i=0;i<sorPackageDetails.size();i++){
             SorPackageDetails sorPackageDetail = sorPackageDetails.get(i);
-            sorPackageDetail.setId(PackageDetailIdFactory.generateKey().toString());
             sorPackageDetail.setPackging(sorPackage.getId());
             sorPackageDetails.set(i,sorPackageDetail);
         }
         sorPackageMapper.saveSorPackage(sorPackage);
         for (SorPackageDetails sorPackageDetail : sorPackageDetails) {
-            sorPackageDetailMapper.saveSorPackageDetail(sorPackageDetail);
+            sorPackageDetailMapper.upSorPackageDetail(sorPackageDetail);
         }
         System.out.println(sorPackage);
         sorPackageDetails.forEach(System.out::println);
@@ -51,5 +50,15 @@ public class SorPackageServiceimpl implements SorPackageService {
     public List<SorPackage> findSorPackageByWhere(SorPackage sorPackage)throws Exception {
         List<SorPackage> sorPackages = sorPackageMapper.findSorPackage(sorPackage);
         return sorPackages;
+    }
+
+    @Override
+    @Transactional
+    @Klock
+    public void unpacking(String[] packing) throws Exception {
+        for (String s : packing) {
+            sorPackageMapper.upSorPackageStateById(s);
+            sorPackageDetailMapper.upSorPackageDetailPackingNull(s);
+        }
     }
 }

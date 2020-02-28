@@ -35,4 +35,7 @@ public interface SorPackageMapper {
 
     })
     List<SorPackage> findSorPackage(SorPackage sorPackage);
+    /**根据单号将状态改为已拆*/
+    @Update("update sor_package set `State`='已拆包' where ID=#{packing}")
+    void upSorPackageStateById(@Param("packing") String packing);
 }

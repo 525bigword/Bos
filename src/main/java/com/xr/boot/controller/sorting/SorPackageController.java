@@ -20,17 +20,17 @@ import java.util.List;
 public class SorPackageController {
     @Autowired
     private SorPackageService sorPackageService;
-
     @PostMapping("/add")
     public ResponseEntity add(@RequestBody JSONObject json){
         SorPackage sorPackage = json.getObject("sorPackage", SorPackage.class);
         JSONArray jsonSorPackageDetails = json.getJSONArray("sorPackageDetails");
         List<SorPackageDetails> sorPackageDetails = JSONObject.parseArray(jsonSorPackageDetails.toJSONString(), SorPackageDetails.class);
-        try {
+        sorPackageDetails.forEach(System.out::println);
+        /*try {
             sorPackageService.savePackageAndPackageDetail(sorPackage,sorPackageDetails);
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
         return new ResponseEntity(HttpStatus.OK,HttpStatus.OK);
     }
     @GetMapping("/query")
@@ -45,8 +45,16 @@ public class SorPackageController {
         }
     }
     @ApiOperation("拆包接口")
-    @PostMapping("unpacking/{package}")
-    public ResponseEntity unpacking(@PathVariable String packaging){
-       return null;
+    @PostMapping("/unpacking")
+    public ResponseEntity unpacking(@RequestParam("packaging[]") String[] packaging){
+        System.out.println(packaging);
+        try {
+            sorPackageService.unpacking(packaging);
+            return new ResponseEntity("0",HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity("1",HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
     }
 }
