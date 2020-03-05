@@ -10,10 +10,7 @@ import java.util.List;
 @Repository
 public interface SorPackageDetailMapper {
     /**修改SorPackageDetail*/
-    @Update("update sor_packagedetails set WareName=#{wareName},Destination=#{destination},Ticket=#{ticket}," +
-            "ActualCargoInt=#{actualCargoInt},CargoInt=#{cargoInt},Weight=#{weight},Volume=#{volume}," +
-            "Service=#{service},ImportantHints=#{importantHints},Ask=#{ask},InputType=#{inputType}," +
-            "Packging=#{packging} where ID=#{id}")
+    @Update("update sor_packagedetails set Packging=#{packging} where ID=#{id}")
     void upSorPackageDetail(SorPackageDetails sorPackageDetails);
     /**动态查询所有没有合包得SorPackageDetail*/
     @SelectProvider(type = SorPackageDetailProviderSql.class,method = "findWhere")

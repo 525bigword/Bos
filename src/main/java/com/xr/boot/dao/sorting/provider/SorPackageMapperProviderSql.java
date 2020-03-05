@@ -21,4 +21,19 @@ public class SorPackageMapperProviderSql {
         sql.WHERE(" State='未拆包'");
         return sql.toString();
     }
+
+    public String findSorPackageByIdAndState(SorPackage sorPackage){
+        SQL sql=new SQL();
+        sql.SELECT("ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum," +
+                "State,Ask");
+        sql.FROM("sor_package");
+
+        if(StringUtil.isNotEmpty(sorPackage.getId())){
+            sql.WHERE("ID="+sorPackage.getId());
+        }
+        if(!"全部".equals(sorPackage.getState())){
+            sql.WHERE("State="+sorPackage.getState());
+        }
+        return sql.toString();
+    }
 }

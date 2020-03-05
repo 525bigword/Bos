@@ -11,5 +11,7 @@ public interface SorPackageService {
     /**查询所有合包业务*/
     List<SorPackage> findSorPackageByWhere(SorPackage sorPackage) throws Exception;
     /**拆包业务*/
-    void unpacking(String[] packing) throws Exception;
+    void unpacking(String[] packing,Integer personid) throws Exception;
+    /**按照id和状态查询合包*/
+    List<SorPackage> findSorPackageByIdAndState(SorPackage sorPackage) throws Exception;
 }

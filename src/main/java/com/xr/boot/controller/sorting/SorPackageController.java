@@ -26,11 +26,11 @@ public class SorPackageController {
         JSONArray jsonSorPackageDetails = json.getJSONArray("sorPackageDetails");
         List<SorPackageDetails> sorPackageDetails = JSONObject.parseArray(jsonSorPackageDetails.toJSONString(), SorPackageDetails.class);
         sorPackageDetails.forEach(System.out::println);
-        /*try {
+        try {
             sorPackageService.savePackageAndPackageDetail(sorPackage,sorPackageDetails);
         } catch (Exception e) {
             e.printStackTrace();
-        }*/
+        }
         return new ResponseEntity(HttpStatus.OK,HttpStatus.OK);
     }
     @GetMapping("/query")
@@ -44,12 +44,24 @@ public class SorPackageController {
             return new ResponseEntity<List<SorPackage>>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+    @ApiOperation("合包查询接口")
+    @GetMapping("/queryAll")
+    public ResponseEntity<List<SorPackage>> queryAll(SorPackage sorPackage){
+        List<SorPackage> SorPackages=null;
+        try {
+            SorPackages = sorPackageService.findSorPackageByIdAndState(sorPackage);
+            return new ResponseEntity<List<SorPackage>>(SorPackages,HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<List<SorPackage>>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
     @ApiOperation("拆包接口")
     @PostMapping("/unpacking")
-    public ResponseEntity unpacking(@RequestParam("packaging[]") String[] packaging){
+    public ResponseEntity unpacking(@RequestParam("packaging[]") String[] packaging,Integer personid){
         System.out.println(packaging);
         try {
-            sorPackageService.unpacking(packaging);
+            sorPackageService.unpacking(packaging,personid);
             return new ResponseEntity("0",HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();

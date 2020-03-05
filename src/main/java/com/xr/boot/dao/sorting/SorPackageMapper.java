@@ -36,6 +36,28 @@ public interface SorPackageMapper {
     })
     List<SorPackage> findSorPackage(SorPackage sorPackage);
     /**根据单号将状态改为已拆*/
-    @Update("update sor_package set `State`='已拆包' where ID=#{packing}")
-    void upSorPackageStateById(@Param("packing") String packing);
+    @Update("update sor_package set PackagePerson=#{packageperson}  `State`='已拆包' where ID=#{packing}")
+    void upSorPackageStateById(@Param("packing") String packing,@Param("packageperson") Integer packageperson);
+    /**动态查询所有合包或者按拆包查询*/
+    @SelectProvider(type = SorPackageMapperProviderSql.class,method = "findSorPackageByIdAndState")
+    @Results({
+            @Result(id = true,column = "id",property = "id"),
+            @Result(column = "PackagePerson",property = "packagepersonname",
+                    one=@One(
+                            select = "com.xr.boot.dao.system.SyEmpMapper.findSyEmpNameById"
+                    )
+            ),
+            @Result(column = "SealInt",property = "sealInt"),
+            @Result(column = "Destination",property = "destination"),
+            @Result(column = "ReckonDes",property = "reckonDes"),
+            @Result(column = "TimeLimit",property = "timeLimit"),
+            @Result(column = "TicketSum",property = "ticketSum"),
+            @Result(column = "CargoSum",property = "cargoSum"),
+            @Result(column = "WeightSum",property = "weightSum"),
+            @Result(column = "VolumeSum",property = "volumeSum"),
+            @Result(column = "State",property = "state"),
+            @Result(column = "Ask",property = "ask"),
+
+    })
+    List<SorPackage> findSorPackageByIdAndState(SorPackage sorPackage);
 }

@@ -55,10 +55,16 @@ public class SorPackageServiceimpl implements SorPackageService {
     @Override
     @Transactional
     @Klock
-    public void unpacking(String[] packing) throws Exception {
+    public void unpacking(String[] packing,Integer personid) throws Exception {
         for (String s : packing) {
-            sorPackageMapper.upSorPackageStateById(s);
+            sorPackageMapper.upSorPackageStateById(s,personid);
             sorPackageDetailMapper.upSorPackageDetailPackingNull(s);
         }
+    }
+
+    @Override
+    public List<SorPackage> findSorPackageByIdAndState(SorPackage sorPackage) throws Exception {
+        List<SorPackage> sorPackageByIdAndState = sorPackageMapper.findSorPackageByIdAndState(sorPackage);
+        return sorPackageByIdAndState;
     }
 }
