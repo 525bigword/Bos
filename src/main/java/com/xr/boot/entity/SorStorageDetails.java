@@ -22,11 +22,17 @@ public class SorStorageDetails {
     * 
     * @pdOid f92e6e2d-4821-4222-b36c-ed8dac1ab6fe */
    private double weight;
-   /** 状态
-    * 
-    * @pdOid e8a949e8-3f6f-45ac-8012-98a34ff30734 */
-   private long state;
-   
+   /**关联出库表*/
+   private String outboundid;
+
+   public String getOutboundid() {
+      return outboundid;
+   }
+
+   public void setOutboundid(String outboundid) {
+      this.outboundid = outboundid;
+   }
+
    /** @pdOid 936cf5b6-6631-44f2-990f-4dcc4e2cdf57 */
    public String getId() {
       return id;
@@ -59,16 +65,11 @@ public class SorStorageDetails {
    public void setWeight(double newWeight) {
       weight = newWeight;
    }
-   
-   /** @pdOid fb1cb03f-b665-4e7f-b8fe-d0724a80f6a7 */
-   public long getState() {
-      return state;
+   public SorStorageDetails(){}
+   public SorStorageDetails(String id, String packageID, double weight) {
+      this.id = id;
+      this.packageID = packageID;
+      this.weight = weight;
+      this.outboundid = outboundid;
    }
-   
-   /** @param newState
-    * @pdOid e5ba97b3-ccb4-47c7-8962-dc19838e60d7 */
-   public void setState(long newState) {
-      state = newState;
-   }
-
 }

@@ -93,7 +93,7 @@ public class SyEmpController {
         String authorization = request.getHeader("Authorization");
         String token=authorization.substring(3);
         Claims claims = JwtUtil.parseJWT(token);
-        Object map = claims.get("map");
+         Object map = claims.get("map");
         return new Return(StausEnum.SUCCESS,map);
     }
 

@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SorStorageDetailMapper {
-    @Insert("insert into sor_storagedetails values(#{id},#{packageID},#{weight})")
+    @Insert("insert into sor_storagedetails values(#{id},#{packageID},#{weight},Null)")
     void saveSorStorageDetails(SorStorageDetails sorStorageDetails);
 }

@@ -12,6 +12,10 @@ public interface SorPackageDetailMapper {
     /**修改SorPackageDetail*/
     @Update("update sor_packagedetails set Packging=#{packging} where ID=#{id}")
     void upSorPackageDetail(SorPackageDetails sorPackageDetails);
+    /**新增SorPackageDetail*/
+    @Insert("insert into sor_packagedetails values(#{id},#{wareName},#{destination},#{ticket},#{actualCargoInt}," +
+            "#{cargoInt},#{weight},#{volume},#{service},#{importantHints},#{ask},'手动',#{packging})")
+    void saveSorPackageDetail(SorPackageDetails sorPackageDetails);
     /**动态查询所有没有合包得SorPackageDetail*/
     @SelectProvider(type = SorPackageDetailProviderSql.class,method = "findWhere")
     List<SorPackageDetails> findSorPackageDetailNoPack(SorPackageDetails sorPackageDetails);

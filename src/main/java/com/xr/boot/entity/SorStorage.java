@@ -19,9 +19,11 @@ public class SorStorage implements Serializable {
    /** 接货时间
     * 
     * @pdOid b379d304-bdfa-44cb-b7a1-203fd19171f3 */
-   private Date acceptDate;
+   private String acceptDate;
    /**接货人*/
    private Integer acceptperson;
+   /**接货人名字*/
+   private String acceptpersonname;
    /** 接收单位
     * 
     * @pdOid 66b893c4-c884-4aaa-9949-87aa786cd43c */
@@ -41,27 +43,32 @@ public class SorStorage implements Serializable {
    public void setId(String newId) {
       id = newId;
    }
-   
+
+   public String getAcceptpersonname() {
+      return acceptpersonname;
+   }
+
+   public void setAcceptpersonname(String acceptpersonname) {
+      this.acceptpersonname = acceptpersonname;
+   }
+
    /** @pdOid 592c3e07-8c4c-4deb-b276-91deb155c739 */
-   public Date getAcceptDate() {
+   public String getAcceptDate() {
       return acceptDate;
    }
    
    /** @param newAcceptDate
     * @pdOid a48fbaa9-5c25-4524-b49a-d56c33d9f175 */
-   public void setAcceptDate(Date newAcceptDate) {
+   public void setAcceptDate(String newAcceptDate) {
       acceptDate = newAcceptDate;
    }
-   
-   /** @pdOid 398c5946-b4a9-4bd9-9e4e-0919acd7bf9f */
+
    public String getAcceptCompany() {
       return acceptCompany;
    }
-   
-   /** @param newAcceptCompany
-    * @pdOid 98168154-b18b-4b77-bf8a-06c402cff3b4 */
-   public void setAcceptCompany(String newAcceptCompany) {
-      acceptCompany = newAcceptCompany;
+
+   public void setAcceptCompany(String acceptCompany) {
+      this.acceptCompany = acceptCompany;
    }
 
    /** @pdOid cde396c4-cb29-4015-9c39-6f38538d7be8 */
@@ -81,5 +88,13 @@ public class SorStorage implements Serializable {
 
    public void setAcceptperson(Integer acceptperson) {
       this.acceptperson = acceptperson;
+   }
+
+   public SorStorage(String id, String acceptDate, Integer acceptperson, String acceptCompany, String packageID) {
+      this.id = id;
+      this.acceptDate = acceptDate;
+      this.acceptperson = acceptperson;
+      this.acceptCompany = acceptCompany;
+      this.packageID = packageID;
    }
 }
