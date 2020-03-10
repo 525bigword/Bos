@@ -12,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -45,6 +46,16 @@ public class SorStorageController {
         } catch (Exception e) {
             e.printStackTrace();
             return new ResponseEntity<List<SorStorage>>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+    @GetMapping("/queryDetail")
+    public ResponseEntity<List<SorPackageDetails>> queryDetail(String packageing){
+        try {
+            List<SorPackageDetails> sorStorAgeDetailByPacking = sorStorAgeService.findSorStorAgeDetailByPacking(packageing.substring(1,packageing.length()-1));
+            return new ResponseEntity<List<SorPackageDetails>>(sorStorAgeDetailByPacking,HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<List<SorPackageDetails>>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }

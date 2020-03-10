@@ -18,6 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.validation.constraints.Null;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class SorStorAgeServiceImpl implements SorStorAgeService {
@@ -71,5 +72,11 @@ public class SorStorAgeServiceImpl implements SorStorAgeService {
     public List<SorStorage> findSOrStorAgeByIdAndDate(SorStorage sorStorage) throws Exception {
         List<SorStorage> sorStorageByWhere = sorStorageMapper.findSorStorageByWhere(sorStorage);
         return sorStorageByWhere;
+    }
+
+    @Override
+    public List<SorPackageDetails> findSorStorAgeDetailByPacking(String Packing) throws Exception {
+        List<SorPackageDetails> sorPackageDetailByPackage = sorPackageDetailMapper.findSorPackageDetailByPackage(Packing);
+        return sorPackageDetailByPackage;
     }
 }
