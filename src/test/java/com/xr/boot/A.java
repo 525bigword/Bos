@@ -2,16 +2,19 @@ package com.xr.boot;
 
 import org.junit.Test;
 
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.TimeUnit;
+
 public class A {
+    /**TODO permits 令牌数量*/
+    private Semaphore semaphore=new Semaphore(50);
     @Test
     public void a(){
-        int a=1;
-        int b=2;
-        b(a,b);
-        System.out.println(b);
-}
-    public int b(int a,int b){
+        try {
+            semaphore.tryAcquire(5, TimeUnit.SECONDS);
 
-       return a+b;
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -37,7 +37,9 @@ public class SorStorage implements Serializable {
    public String getId() {
       return id;
    }
-   
+   /**业务属性*/
+
+
    /** @param newId
     * @pdOid 77e43078-29e0-4f53-a023-54f0a2034e30 */
    public void setId(String newId) {
