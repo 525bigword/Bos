@@ -3,7 +3,9 @@ package com.xr.boot.dao.sorting;
 import com.xr.boot.dao.sorting.provider.SorAbnormalProviderSql;
 import com.xr.boot.entity.SorAbnormal;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.SelectProvider;
+import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -16,4 +18,7 @@ public interface SorAbnormalMapper {
     /**按条件动态查询异常监控表sor_abnormal*/
     @SelectProvider(type = SorAbnormalProviderSql.class,method = "findSorAbnormal")
     List<SorAbnormal> findSorAbnormal(SorAbnormal sorAbnormal);
+    /**根据id修改异常处理状态*/
+    @Update("update sor_abnormal set AboState='已处理' where id=#{Id}")
+    void upSorAbnormalAboStateById(@Param("Id") String id);
 }

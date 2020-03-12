@@ -9,4 +9,6 @@ public interface SorAbnormalService {
     void saveSorAbnormal(SorAbnormal sorAbnormal) throws Exception;
     /**按条件查询异常单*/
     List<SorAbnormal> findSorAbnormalByWhere(SorAbnormal sorAbnormal) throws Exception;
+    /**修改异常单状态业务*/
+    void upSorAbnormalAboStateById(String[] ids) throws Exception;
 }

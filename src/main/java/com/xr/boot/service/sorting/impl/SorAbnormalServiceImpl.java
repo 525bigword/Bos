@@ -33,4 +33,11 @@ public class SorAbnormalServiceImpl implements SorAbnormalService {
         List<SorAbnormal> sorAbnormals = sorAbnormalMapper.findSorAbnormal(sorAbnormal);
         return sorAbnormals;
     }
+    @Transactional
+    @Override
+    public void upSorAbnormalAboStateById(String[] ids) throws Exception {
+        for (String id : ids) {
+            sorAbnormalMapper.upSorAbnormalAboStateById(id);
+        }
+    }
 }
