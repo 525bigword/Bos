@@ -1,634 +1,703 @@
-2020-03-12 12:56:57.248  INFO 11928 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 11928 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
-2020-03-12 12:56:57.276 DEBUG 11928 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-03-12 12:56:57.277  INFO 11928 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
-2020-03-12 12:57:01.428  INFO 11928 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-03-12 12:57:01.435  INFO 11928 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 12:57:01.581  INFO 11928 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105ms. Found 0 repository interfaces.
-2020-03-12 12:57:02.374  INFO 11928 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-03-12 12:57:03.679  INFO 11928 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-03-12 12:57:03.722  INFO 11928 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-03-12 12:57:03.722  INFO 11928 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2020-03-12 12:57:04.037  INFO 11928 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-03-12 12:57:04.037  INFO 11928 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6001 ms
-2020-03-12 12:57:04.141 DEBUG 11928 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
-2020-03-12 12:57:05.186  INFO 11928 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-03-12 12:57:12.386  INFO 11928 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2020-03-12 12:57:16.239  INFO 11928 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+2020-03-13 11:56:05.362  INFO 12700 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 12700 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
+2020-03-13 11:56:05.383 DEBUG 12700 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-03-13 11:56:05.385  INFO 12700 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-03-13 11:56:09.509  INFO 12700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-13 11:56:09.516  INFO 12700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-13 11:56:09.691  INFO 12700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115ms. Found 0 repository interfaces.
+2020-03-13 11:56:11.618  INFO 12700 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 11:56:14.026  INFO 12700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-13 11:56:14.105  INFO 12700 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 11:56:14.107  INFO 12700 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-03-13 11:56:14.623  INFO 12700 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 11:56:14.623  INFO 12700 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8346 ms
+2020-03-13 11:56:14.709 DEBUG 12700 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-03-13 11:56:15.844  INFO 12700 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-03-13 11:56:20.854  INFO 12700 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-03-13 11:56:22.922  INFO 12700 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
 loadBalanceAlgorithmType: round_robin
 masterDataSourceName: ds0
 name: dataSource
 slaveDataSourceNames:
 - ds1
 
-2020-03-12 12:57:16.241  INFO 11928 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+2020-03-13 11:56:22.924  INFO 12700 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
 {}
 
-2020-03-12 12:57:19.069  INFO 11928 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-12 12:57:19.916  INFO 11928 --- [main] org.redisson.Version                     : Redisson 3.2.0
-2020-03-12 12:57:24.291  INFO 11928 --- [nioEventLoopGroup-4-5] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
-2020-03-12 12:57:24.291  INFO 11928 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
-2020-03-12 12:57:24.406  INFO 11928 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-03-12 12:57:24.440  INFO 11928 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-03-12 12:57:24.523  INFO 11928 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-03-12 12:57:24.649  INFO 11928 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-03-12 12:57:24.654  INFO 11928 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 29.139 seconds (JVM running for 49.415)
-2020-03-12 13:05:39.445  INFO 11928 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-03-12 13:05:39.445  INFO 11928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-03-12 13:05:39.475  INFO 11928 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 29 ms
-2020-03-12 13:06:37.245  INFO 10900 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 10900 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
-2020-03-12 13:06:37.283 DEBUG 10900 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-03-12 13:06:37.286  INFO 10900 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
-2020-03-12 13:06:42.055  INFO 10900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-03-12 13:06:42.065  INFO 10900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 13:06:42.362  INFO 10900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 250ms. Found 0 repository interfaces.
-2020-03-12 13:06:44.135  INFO 10900 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-03-12 13:06:45.854  INFO 10900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-03-12 13:06:45.887  INFO 10900 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-03-12 13:06:45.888  INFO 10900 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2020-03-12 13:06:46.195  INFO 10900 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-03-12 13:06:46.196  INFO 10900 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8055 ms
-2020-03-12 13:06:46.289 DEBUG 10900 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
-2020-03-12 13:06:47.070  INFO 10900 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-03-12 13:06:50.352  INFO 10900 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2020-03-12 13:06:54.272  INFO 10900 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+2020-03-13 11:56:28.944  INFO 12700 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-03-13 11:56:33.009  INFO 12700 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-03-13 11:56:43.842  INFO 12700 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-03-13 11:56:43.844  INFO 12700 --- [nioEventLoopGroup-4-4] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-03-13 11:56:44.824  INFO 12700 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-03-13 11:56:44.970  INFO 12700 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-03-13 11:56:45.286  INFO 12700 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-03-13 11:56:45.582  INFO 12700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-13 11:56:45.654  INFO 12700 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 44.508 seconds (JVM running for 64.188)
+2020-03-13 11:57:13.924  INFO 12700 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 11:57:13.925  INFO 12700 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-13 11:57:13.948  INFO 12700 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2020-03-13 11:57:21.761 DEBUG 12700 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyEmpByEmpNoAndPwd       : ==>  Preparing: select id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled from sy_emp where empno=? and ? 
+2020-03-13 11:57:23.723 DEBUG 12700 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyEmpByEmpNoAndPwd       : ==> Parameters: 007(String), 36E205C05D8FF28AAD410CF5CABD16ED(String)
+2020-03-13 11:57:23.808 DEBUG 12700 --- [http-nio-8080-exec-3] c.x.b.d.s.SyRoleMapper.findSyRolesById   : ====>  Preparing: select id,rolename,roledesc,disabled from sy_roles where id=? 
+2020-03-13 11:57:23.827 DEBUG 12700 --- [http-nio-8080-exec-3] c.x.b.d.s.SyRoleMapper.findSyRolesById   : ====> Parameters: 1(Integer)
+2020-03-13 11:57:24.674 DEBUG 12700 --- [http-nio-8080-exec-3] c.x.b.d.s.SyRoleMapper.findSyRolesById   : <====      Total: 1
+2020-03-13 11:57:24.680 DEBUG 12700 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyUnitAllById            : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-03-13 11:57:24.723 DEBUG 12700 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyUnitAllById            : ====> Parameters: 2(Integer)
+2020-03-13 11:57:24.762 DEBUG 12700 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyUnitAllById            : <====      Total: 1
+2020-03-13 11:57:24.763 DEBUG 12700 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyEmpByEmpNoAndPwd       : <==      Total: 1
+2020-03-13 11:57:24.774 DEBUG 12700 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyBigMenusAll            : ==>  Preparing: select id,bigmenus,url,icon from sy_bigmenus 
+2020-03-13 11:57:24.796 DEBUG 12700 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyBigMenusAll            : ==> Parameters: 
+2020-03-13 11:57:24.830 DEBUG 12700 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyBigMenusAll            : <==      Total: 8
+2020-03-13 11:57:24.865  WARN 12700 --- [http-nio-8080-exec-3] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.system.impl.SyEmpServiceImpl.login)
+2020-03-13 11:57:45.279 DEBUG 12700 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackage               : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE ( State='未拆包') 
+2020-03-13 11:57:45.334 DEBUG 12700 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackage               : ==> Parameters: 
+2020-03-13 11:57:45.851 DEBUG 12700 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 11:57:45.859 DEBUG 12700 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 11:57:46.798 DEBUG 12700 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 11:57:46.804 DEBUG 12700 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackage               : <==      Total: 3
+2020-03-13 11:58:45.614 DEBUG 12700 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
+2020-03-13 11:58:45.644 DEBUG 12700 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
+2020-03-13 11:58:45.775 DEBUG 12700 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
+2020-03-13 12:14:01.015 DEBUG 12700 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==>  Preparing: SELECT ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging FROM sor_packagedetails WHERE (Packging is NULL) 
+2020-03-13 12:14:04.756 DEBUG 12700 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==> Parameters: 
+2020-03-13 12:14:04.796 DEBUG 12700 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageDetailNoPack   : <==      Total: 0
+2020-03-13 12:14:06.453 DEBUG 12700 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorStorageByWhere        : ==>  Preparing: SELECT ID,AcceptDate,AcceptPerson,AcceptCompany,PackageID FROM sor_storage 
+2020-03-13 12:14:06.470 DEBUG 12700 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorStorageByWhere        : ==> Parameters: 
+2020-03-13 12:14:06.661 DEBUG 12700 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 12:14:06.662 DEBUG 12700 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 12:14:06.914 DEBUG 12700 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 12:14:06.915 DEBUG 12700 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorStorageByWhere        : <==      Total: 1
+2020-03-13 12:16:34.884 DEBUG 12700 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==>  Preparing: SELECT ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging FROM sor_packagedetails WHERE (Packging is NULL) 
+2020-03-13 12:16:35.724 DEBUG 12700 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==> Parameters: 
+2020-03-13 12:16:35.760 DEBUG 12700 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorPackageDetailNoPack   : <==      Total: 0
+2020-03-13 12:35:16.397  INFO 12700 --- [http-nio-8080-exec-1] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-13 12:35:16.668  INFO 12700 --- [http-nio-8080-exec-1] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 269ms. Found 0 repository interfaces.
+2020-03-13 12:35:16.784  WARN 12700 --- [http-nio-8080-exec-1] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-03-13 12:35:17.946  INFO 12700 --- [http-nio-8080-exec-1] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-13 12:35:17.947  INFO 12700 --- [http-nio-8080-exec-1] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-13 12:35:18.750  INFO 12700 --- [http-nio-8080-exec-1] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 801ms. Found 0 repository interfaces.
+2020-03-13 12:35:19.558  INFO 12700 --- [http-nio-8080-exec-2] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-03-13 12:35:19.921 DEBUG 12700 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorStorageByWhere        : ==>  Preparing: SELECT ID,AcceptDate,AcceptPerson,AcceptCompany,PackageID FROM sor_storage 
+2020-03-13 12:35:24.802 DEBUG 12700 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorStorageByWhere        : ==> Parameters: 
+2020-03-13 12:35:25.663 DEBUG 12700 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 12:35:25.665 DEBUG 12700 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 12:35:25.719 DEBUG 12700 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 12:35:25.720 DEBUG 12700 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorStorageByWhere        : <==      Total: 1
+2020-03-13 12:35:25.798 DEBUG 12700 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=已拆包) 
+2020-03-13 12:36:49.935  INFO 9360 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 9360 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
+2020-03-13 12:36:49.944 DEBUG 9360 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-03-13 12:36:49.945  INFO 9360 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-03-13 12:36:53.028  INFO 9360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-13 12:36:53.032  INFO 9360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-13 12:36:53.168  INFO 9360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108ms. Found 0 repository interfaces.
+2020-03-13 12:36:53.978  INFO 9360 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 12:36:55.042  INFO 9360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-13 12:36:55.064  INFO 9360 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 12:36:55.065  INFO 9360 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-03-13 12:36:55.335  INFO 9360 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 12:36:55.336  INFO 9360 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4801 ms
+2020-03-13 12:36:55.603 DEBUG 9360 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-03-13 12:36:56.978  INFO 9360 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-03-13 12:37:01.761  INFO 9360 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-03-13 12:37:03.854  INFO 9360 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
 loadBalanceAlgorithmType: round_robin
 masterDataSourceName: ds0
 name: dataSource
 slaveDataSourceNames:
 - ds1
 
-2020-03-12 13:06:54.275  INFO 10900 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+2020-03-13 12:37:03.856  INFO 9360 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
 {}
 
-2020-03-12 13:06:58.995  INFO 10900 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-12 13:06:59.915  INFO 10900 --- [main] org.redisson.Version                     : Redisson 3.2.0
-2020-03-12 13:07:05.346  INFO 10900 --- [nioEventLoopGroup-4-3] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
-2020-03-12 13:07:05.347  INFO 10900 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
-2020-03-12 13:07:05.833  INFO 10900 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-03-12 13:07:05.907  INFO 10900 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-03-12 13:07:06.019  INFO 10900 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-03-12 13:07:06.112  INFO 10900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-03-12 13:07:06.118  INFO 10900 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 31.246 seconds (JVM running for 47.741)
-2020-03-12 13:07:34.317  INFO 10900 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-03-12 13:07:34.318  INFO 10900 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-03-12 13:07:34.337  INFO 10900 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
-2020-03-12 13:07:35.237 DEBUG 10900 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSyEmpByEmpNoAndPwd       : ==>  Preparing: select id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled from sy_emp where empno=? and ? 
-2020-03-12 13:07:36.995 DEBUG 10900 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSyEmpByEmpNoAndPwd       : ==> Parameters: 007(String), 36E205C05D8FF28AAD410CF5CABD16ED(String)
-2020-03-12 13:07:37.193 DEBUG 10900 --- [http-nio-8080-exec-1] c.x.b.d.s.SyRoleMapper.findSyRolesById   : ====>  Preparing: select id,rolename,roledesc,disabled from sy_roles where id=? 
-2020-03-12 13:07:37.217 DEBUG 10900 --- [http-nio-8080-exec-1] c.x.b.d.s.SyRoleMapper.findSyRolesById   : ====> Parameters: 1(Integer)
-2020-03-12 13:07:37.256 DEBUG 10900 --- [http-nio-8080-exec-1] c.x.b.d.s.SyRoleMapper.findSyRolesById   : <====      Total: 1
-2020-03-12 13:07:37.260 DEBUG 10900 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSyUnitAllById            : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
-2020-03-12 13:07:37.286 DEBUG 10900 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSyUnitAllById            : ====> Parameters: 2(Integer)
-2020-03-12 13:07:37.500 DEBUG 10900 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSyUnitAllById            : <====      Total: 1
-2020-03-12 13:07:37.501 DEBUG 10900 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSyEmpByEmpNoAndPwd       : <==      Total: 1
-2020-03-12 13:07:37.510 DEBUG 10900 --- [http-nio-8080-exec-1] c.x.b.d.s.M.findSyBigMenusAll            : ==>  Preparing: select id,bigmenus,url,icon from sy_bigmenus 
-2020-03-12 13:07:37.524 DEBUG 10900 --- [http-nio-8080-exec-1] c.x.b.d.s.M.findSyBigMenusAll            : ==> Parameters: 
-2020-03-12 13:07:38.363 DEBUG 10900 --- [http-nio-8080-exec-1] c.x.b.d.s.M.findSyBigMenusAll            : <==      Total: 8
-2020-03-12 13:07:39.278  WARN 10900 --- [http-nio-8080-exec-1] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.system.impl.SyEmpServiceImpl.login)
-2020-03-12 13:07:44.984 DEBUG 10900 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorStorageByWhere        : ==>  Preparing: SELECT ID,AcceptDate,AcceptPerson,AcceptCompany,PackageID FROM sor_storage 
-2020-03-12 13:07:45.009 DEBUG 10900 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorStorageByWhere        : ==> Parameters: 
-2020-03-12 13:07:45.150 DEBUG 10900 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
-2020-03-12 13:07:45.159 DEBUG 10900 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
-2020-03-12 13:07:45.228 DEBUG 10900 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
-2020-03-12 13:07:45.229 DEBUG 10900 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorStorageByWhere        : <==      Total: 1
-2020-03-12 13:07:46.211 DEBUG 10900 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:07:46.277 DEBUG 10900 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:07:46.315 DEBUG 10900 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:11:27.497 DEBUG 10900 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:11:28.150 DEBUG 10900 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:11:28.194 DEBUG 10900 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:12:09.080 DEBUG 10900 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:12:09.081 DEBUG 10900 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:12:09.144 DEBUG 10900 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:14:31.974 DEBUG 10900 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:14:32.161 DEBUG 10900 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:14:33.164 DEBUG 10900 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:20:23.428  WARN 10900 --- [http-nio-8080-exec-9] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
-2020-03-12 13:20:23.430  INFO 10900 --- [http-nio-8080-exec-9] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 13:20:23.583  INFO 10900 --- [http-nio-8080-exec-9] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 152ms. Found 0 repository interfaces.
-2020-03-12 13:20:24.583  INFO 10900 --- [http-nio-8080-exec-9] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-03-12 13:20:24.584  INFO 10900 --- [http-nio-8080-exec-9] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 13:20:24.950  INFO 10900 --- [http-nio-8080-exec-9] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 365ms. Found 0 repository interfaces.
-2020-03-12 13:20:25.362  INFO 10900 --- [http-nio-8080-exec-9] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-12 13:20:25.559 DEBUG 10900 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:20:29.213 DEBUG 10900 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:20:29.271 DEBUG 10900 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:22:40.068 DEBUG 10900 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:22:40.136 DEBUG 10900 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:22:40.176 DEBUG 10900 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:23:57.454  WARN 10900 --- [http-nio-8080-exec-3] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
-2020-03-12 13:23:57.456  INFO 10900 --- [http-nio-8080-exec-3] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 13:23:57.712  INFO 10900 --- [http-nio-8080-exec-3] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 253ms. Found 0 repository interfaces.
-2020-03-12 13:24:02.008 DEBUG 10900 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:24:02.166 DEBUG 10900 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:24:02.206 DEBUG 10900 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:24:46.385  WARN 10900 --- [http-nio-8080-exec-5] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
-2020-03-12 13:24:46.386  INFO 10900 --- [http-nio-8080-exec-5] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 13:24:46.634  INFO 10900 --- [http-nio-8080-exec-5] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 248ms. Found 0 repository interfaces.
-2020-03-12 13:24:47.517  INFO 10900 --- [http-nio-8080-exec-5] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-12 13:24:53.176 DEBUG 10900 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:24:53.177 DEBUG 10900 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:24:53.215 DEBUG 10900 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:26:08.716 DEBUG 10900 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:26:09.153 DEBUG 10900 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:26:09.188 DEBUG 10900 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:27:55.908 DEBUG 10900 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:27:56.135 DEBUG 10900 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:27:56.178 DEBUG 10900 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:29:33.056 DEBUG 10900 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:29:33.154 DEBUG 10900 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:29:33.208 DEBUG 10900 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:30:16.439  INFO 11132 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 11132 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
-2020-03-12 13:30:16.447 DEBUG 11132 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-03-12 13:30:16.449  INFO 11132 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
-2020-03-12 13:30:21.288  INFO 11132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-03-12 13:30:21.295  INFO 11132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 13:30:21.503  INFO 11132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 169ms. Found 0 repository interfaces.
-2020-03-12 13:30:22.559  INFO 11132 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-03-12 13:30:24.335  INFO 11132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-03-12 13:30:24.372  INFO 11132 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-03-12 13:30:24.374  INFO 11132 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2020-03-12 13:30:25.104  INFO 11132 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-03-12 13:30:25.105  INFO 11132 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7837 ms
-2020-03-12 13:30:25.445 DEBUG 11132 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
-2020-03-12 13:30:28.832  INFO 11132 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-03-12 13:30:31.263  INFO 11132 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2020-03-12 13:30:33.416  INFO 11132 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+2020-03-13 12:37:07.291  INFO 9360 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-03-13 12:37:08.379  INFO 9360 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-03-13 12:37:13.640  INFO 9360 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-03-13 12:37:13.639  INFO 9360 --- [nioEventLoopGroup-4-3] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-03-13 12:37:13.774  INFO 9360 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-03-13 12:37:13.801  INFO 9360 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-03-13 12:37:13.880  INFO 9360 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-03-13 12:37:13.963  INFO 9360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-13 12:37:13.968  INFO 9360 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 26.76 seconds (JVM running for 42.625)
+2020-03-13 12:37:56.616  INFO 9360 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 12:37:56.617  INFO 9360 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-13 12:37:56.639  INFO 9360 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2020-03-13 12:37:57.101 DEBUG 9360 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorStorageByWhere        : ==>  Preparing: SELECT ID,AcceptDate,AcceptPerson,AcceptCompany,PackageID FROM sor_storage 
+2020-03-13 12:38:01.430 DEBUG 9360 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorStorageByWhere        : ==> Parameters: 
+2020-03-13 12:38:01.749 DEBUG 9360 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 12:38:01.893 DEBUG 9360 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 12:38:02.623 DEBUG 9360 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 12:38:02.630 DEBUG 9360 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorStorageByWhere        : <==      Total: 1
+2020-03-13 12:38:11.037 DEBUG 9360 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=‘?‘) 
+2020-03-13 12:38:11.128 DEBUG 9360 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 12:39:24.552  INFO 7188 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 7188 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
+2020-03-13 12:39:24.559 DEBUG 7188 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-03-13 12:39:24.560  INFO 7188 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-03-13 12:39:27.664  INFO 7188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-13 12:39:27.670  INFO 7188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-13 12:39:27.908  INFO 7188 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 194ms. Found 0 repository interfaces.
+2020-03-13 12:39:29.336  INFO 7188 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 12:39:32.190  INFO 7188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-13 12:39:32.219  INFO 7188 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 12:39:32.220  INFO 7188 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-03-13 12:39:32.450  INFO 7188 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 12:39:32.451  INFO 7188 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7442 ms
+2020-03-13 12:39:32.541 DEBUG 7188 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-03-13 12:39:33.373  INFO 7188 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-03-13 12:39:39.652  INFO 7188 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-03-13 12:39:41.687  INFO 7188 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
 loadBalanceAlgorithmType: round_robin
 masterDataSourceName: ds0
 name: dataSource
 slaveDataSourceNames:
 - ds1
 
-2020-03-12 13:30:33.420  INFO 11132 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+2020-03-13 12:39:41.689  INFO 7188 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
 {}
 
-2020-03-12 13:30:37.562  INFO 11132 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-12 13:30:39.044  INFO 11132 --- [main] org.redisson.Version                     : Redisson 3.2.0
-2020-03-12 13:30:44.195  INFO 11132 --- [nioEventLoopGroup-4-3] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
-2020-03-12 13:30:44.195  INFO 11132 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
-2020-03-12 13:30:44.345  INFO 11132 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-03-12 13:30:44.385  INFO 11132 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-03-12 13:30:44.500  INFO 11132 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-03-12 13:30:44.597  INFO 11132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-03-12 13:30:44.603  INFO 11132 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 30.509 seconds (JVM running for 53.013)
-2020-03-12 13:31:34.272  INFO 11132 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-03-12 13:31:34.272  INFO 11132 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-03-12 13:31:34.332  INFO 11132 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 60 ms
-2020-03-12 13:32:05.128 DEBUG 11132 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:32:07.453 DEBUG 11132 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:32:08.310 DEBUG 11132 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:33:05.404 DEBUG 11132 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:33:05.405 DEBUG 11132 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:33:06.155 DEBUG 11132 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:40:54.120 DEBUG 11132 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:40:57.275 DEBUG 11132 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:40:57.324 DEBUG 11132 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:47:46.672 DEBUG 11132 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:47:52.302 DEBUG 11132 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:47:53.150 DEBUG 11132 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:49:54.542 DEBUG 11132 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package 
-2020-03-12 13:49:55.123 DEBUG 11132 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 
-2020-03-12 13:49:55.161 DEBUG 11132 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:49:55.385 DEBUG 11132 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
-2020-03-12 13:49:55.473 DEBUG 11132 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
-2020-03-12 13:49:56.343 DEBUG 11132 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
-2020-03-12 13:49:56.348 DEBUG 11132 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 3
-2020-03-12 13:49:56.350 DEBUG 11132 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:49:57.122 DEBUG 11132 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:50:20.437 DEBUG 11132 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package 
-2020-03-12 13:50:20.439 DEBUG 11132 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 
-2020-03-12 13:50:20.800 DEBUG 11132 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:50:20.801 DEBUG 11132 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:50:21.134 DEBUG 11132 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
-2020-03-12 13:50:21.135 DEBUG 11132 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
-2020-03-12 13:50:21.142 DEBUG 11132 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:50:21.171 DEBUG 11132 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
-2020-03-12 13:50:21.176 DEBUG 11132 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 3
-2020-03-12 13:50:55.635 DEBUG 11132 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:50:55.637 DEBUG 11132 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:50:56.143 DEBUG 11132 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:50:59.631  WARN 11132 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2020-03-12 13:51:33.138  WARN 11132 --- [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2020-03-12 13:51:43.451  WARN 11132 --- [http-nio-8080-exec-8] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
-2020-03-12 13:51:44.357  INFO 11132 --- [http-nio-8080-exec-8] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 13:51:45.203  INFO 11132 --- [http-nio-8080-exec-8] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 843ms. Found 0 repository interfaces.
-2020-03-12 13:51:45.223  WARN 11132 --- [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2020-03-12 13:51:49.700  WARN 11132 --- [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2020-03-12 13:51:59.360  WARN 11132 --- [http-nio-8080-exec-10] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
-2020-03-12 13:52:00.384  INFO 11132 --- [http-nio-8080-exec-10] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 13:52:00.713  INFO 11132 --- [http-nio-8080-exec-10] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 327ms. Found 0 repository interfaces.
-2020-03-12 13:52:01.621  INFO 11132 --- [http-nio-8080-exec-10] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-03-12 13:52:01.622  INFO 11132 --- [http-nio-8080-exec-10] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 13:52:02.271  INFO 11132 --- [http-nio-8080-exec-10] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 648ms. Found 0 repository interfaces.
-2020-03-12 13:52:03.238  INFO 11132 --- [http-nio-8080-exec-10] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-12 13:52:03.804  WARN 11132 --- [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2020-03-12 13:52:08.816  WARN 11132 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2020-03-12 13:52:24.430 DEBUG 11132 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:52:25.127 DEBUG 11132 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:52:25.163 DEBUG 11132 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:53:00.744  WARN 11132 --- [http-nio-8080-exec-4] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
-2020-03-12 13:53:01.055  INFO 11132 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 13:53:01.199  INFO 11132 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 143ms. Found 0 repository interfaces.
-2020-03-12 13:53:01.807  INFO 11132 --- [http-nio-8080-exec-5] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-12 13:53:02.090 DEBUG 11132 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:53:02.091 DEBUG 11132 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:53:02.142 DEBUG 11132 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:54:47.422  INFO 12648 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 12648 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
-2020-03-12 13:54:47.439 DEBUG 12648 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-03-12 13:54:47.440  INFO 12648 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
-2020-03-12 13:54:51.183  INFO 12648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-03-12 13:54:51.192  INFO 12648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 13:54:51.714  INFO 12648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 453ms. Found 0 repository interfaces.
-2020-03-12 13:54:53.516  INFO 12648 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-03-12 13:54:55.667  INFO 12648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-03-12 13:54:55.720  INFO 12648 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-03-12 13:54:55.720  INFO 12648 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2020-03-12 13:54:56.249  INFO 12648 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-03-12 13:54:56.249  INFO 12648 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8162 ms
-2020-03-12 13:54:56.362 DEBUG 12648 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
-2020-03-12 13:54:58.057  INFO 12648 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-03-12 13:55:01.204  INFO 12648 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2020-03-12 13:55:03.402  INFO 12648 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+2020-03-13 12:39:46.806  INFO 7188 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-03-13 12:39:48.091  INFO 7188 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-03-13 12:39:53.736  INFO 7188 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-03-13 12:39:53.736  INFO 7188 --- [nioEventLoopGroup-4-4] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-03-13 12:39:53.876  INFO 7188 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-03-13 12:39:53.923  INFO 7188 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-03-13 12:39:54.013  INFO 7188 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-03-13 12:39:54.103  INFO 7188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-13 12:39:54.109  INFO 7188 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 32.3 seconds (JVM running for 51.001)
+2020-03-13 12:40:31.346  INFO 7188 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 12:40:31.347  INFO 7188 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-13 12:40:31.429  INFO 7188 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 81 ms
+2020-03-13 12:40:31.830 DEBUG 7188 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 12:40:34.915 DEBUG 7188 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 12:40:40.498 DEBUG 7188 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 0
+2020-03-13 12:40:55.005 DEBUG 7188 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackage               : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE ( State='未拆包') 
+2020-03-13 12:40:55.071 DEBUG 7188 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackage               : ==> Parameters: 
+2020-03-13 12:40:55.652 DEBUG 7188 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 12:40:55.668 DEBUG 7188 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 12:40:55.793 DEBUG 7188 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 12:40:55.798 DEBUG 7188 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackage               : <==      Total: 3
+2020-03-13 12:40:59.747 DEBUG 7188 --- [http-nio-8080-exec-5] .x.b.d.s.S.findSorPackageDetailByPackage : ==>  Preparing: select ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging from sor_packagedetails where Packging=? 
+2020-03-13 12:40:59.864 DEBUG 7188 --- [http-nio-8080-exec-5] .x.b.d.s.S.findSorPackageDetailByPackage : ==> Parameters: 685136112462725124(String)
+2020-03-13 12:41:00.648 DEBUG 7188 --- [http-nio-8080-exec-5] .x.b.d.s.S.findSorPackageDetailByPackage : <==      Total: 0
+2020-03-13 12:41:01.848 DEBUG 7188 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackage               : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE ( State='未拆包') 
+2020-03-13 12:41:01.850 DEBUG 7188 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackage               : ==> Parameters: 
+2020-03-13 12:41:02.642 DEBUG 7188 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 12:41:02.643 DEBUG 7188 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 12:41:02.680 DEBUG 7188 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 12:41:02.683 DEBUG 7188 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackage               : <==      Total: 3
+2020-03-13 12:41:04.475 DEBUG 7188 --- [http-nio-8080-exec-7] .x.b.d.s.S.findSorPackageDetailByPackage : ==>  Preparing: select ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging from sor_packagedetails where Packging=? 
+2020-03-13 12:41:04.477 DEBUG 7188 --- [http-nio-8080-exec-7] .x.b.d.s.S.findSorPackageDetailByPackage : ==> Parameters: 686609047086039040(String)
+2020-03-13 12:41:04.653 DEBUG 7188 --- [http-nio-8080-exec-7] .x.b.d.s.S.findSorPackageDetailByPackage : <==      Total: 1
+2020-03-13 12:41:06.117 DEBUG 7188 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackage               : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE ( State='未拆包') 
+2020-03-13 12:41:06.118 DEBUG 7188 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackage               : ==> Parameters: 
+2020-03-13 12:41:06.625 DEBUG 7188 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 12:41:06.626 DEBUG 7188 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 12:41:06.665 DEBUG 7188 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 12:41:06.668 DEBUG 7188 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackage               : <==      Total: 3
+2020-03-13 12:41:32.019 DEBUG 7188 --- [http-nio-8080-exec-9] .x.b.d.s.S.findSorPackageDetailByPackage : ==>  Preparing: select ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging from sor_packagedetails where Packging=? 
+2020-03-13 12:41:32.024 DEBUG 7188 --- [http-nio-8080-exec-9] .x.b.d.s.S.findSorPackageDetailByPackage : ==> Parameters: 685138436392353800(String)
+2020-03-13 12:41:32.645 DEBUG 7188 --- [http-nio-8080-exec-9] .x.b.d.s.S.findSorPackageDetailByPackage : <==      Total: 3
+2020-03-13 12:41:33.562 DEBUG 7188 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackage               : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE ( State='未拆包') 
+2020-03-13 12:41:33.564 DEBUG 7188 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackage               : ==> Parameters: 
+2020-03-13 12:41:34.636 DEBUG 7188 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 12:41:34.637 DEBUG 7188 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 12:41:35.621 DEBUG 7188 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 12:41:35.623 DEBUG 7188 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackage               : <==      Total: 3
+2020-03-13 12:41:38.656 DEBUG 7188 --- [http-nio-8080-exec-2] c.x.b.d.s.S.upSorPackageStateById        : ==>  Preparing: update sor_package set PackagePerson=? `State`='已拆包' where ID=? 
+2020-03-13 12:41:39.656 DEBUG 7188 --- [http-nio-8080-exec-2] c.x.b.d.s.S.upSorPackageStateById        : ==> Parameters: null, 686609047086039040(String)
+2020-03-13 12:41:51.133 DEBUG 7188 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackage               : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE ( State='未拆包') 
+2020-03-13 12:41:51.135 DEBUG 7188 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackage               : ==> Parameters: 
+2020-03-13 12:41:51.645 DEBUG 7188 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 12:41:51.646 DEBUG 7188 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 12:41:51.794 DEBUG 7188 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 12:41:51.796 DEBUG 7188 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackage               : <==      Total: 3
+2020-03-13 12:42:11.202 DEBUG 7188 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackage               : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE ( State='未拆包') 
+2020-03-13 12:42:11.204 DEBUG 7188 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackage               : ==> Parameters: 
+2020-03-13 12:42:11.720 DEBUG 7188 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 12:42:11.720 DEBUG 7188 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 12:42:11.766 DEBUG 7188 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 12:42:11.770 DEBUG 7188 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackage               : <==      Total: 3
+2020-03-13 12:45:43.101 DEBUG 7188 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackage               : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE ( State='未拆包') 
+2020-03-13 12:45:43.620 DEBUG 7188 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackage               : ==> Parameters: 
+2020-03-13 12:45:43.680 DEBUG 7188 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 12:45:43.681 DEBUG 7188 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 12:45:43.723 DEBUG 7188 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 12:45:43.724 DEBUG 7188 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackage               : <==      Total: 2
+2020-03-13 12:46:18.521  INFO 12576 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 12576 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
+2020-03-13 12:46:18.529 DEBUG 12576 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-03-13 12:46:18.531  INFO 12576 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-03-13 12:46:21.833  INFO 12576 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-13 12:46:21.848  INFO 12576 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-13 12:46:22.035  INFO 12576 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 148ms. Found 0 repository interfaces.
+2020-03-13 12:46:23.040  INFO 12576 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 12:46:24.240  INFO 12576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-13 12:46:24.263  INFO 12576 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 12:46:24.263  INFO 12576 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-03-13 12:46:24.818  INFO 12576 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 12:46:24.819  INFO 12576 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5352 ms
+2020-03-13 12:46:25.001 DEBUG 12576 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-03-13 12:46:26.279  INFO 12576 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-03-13 12:46:28.719  INFO 12576 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-03-13 12:46:30.737  INFO 12576 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
 loadBalanceAlgorithmType: round_robin
 masterDataSourceName: ds0
 name: dataSource
 slaveDataSourceNames:
 - ds1
 
-2020-03-12 13:55:03.404  INFO 12648 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+2020-03-13 12:46:30.739  INFO 12576 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
 {}
 
-2020-03-12 13:55:10.136  INFO 12648 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-12 13:55:11.872  INFO 12648 --- [main] org.redisson.Version                     : Redisson 3.2.0
-2020-03-12 13:55:17.138  INFO 12648 --- [nioEventLoopGroup-4-4] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
-2020-03-12 13:55:17.138  INFO 12648 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
-2020-03-12 13:55:17.303  INFO 12648 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-03-12 13:55:17.350  INFO 12648 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-03-12 13:55:17.470  INFO 12648 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-03-12 13:55:17.835  INFO 12648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-03-12 13:55:17.864  INFO 12648 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 33.03 seconds (JVM running for 51.118)
-2020-03-12 13:56:27.235  INFO 12648 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-03-12 13:56:27.235  INFO 12648 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-03-12 13:56:27.266  INFO 12648 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 30 ms
-2020-03-12 13:56:31.655 DEBUG 12648 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:56:34.191 DEBUG 12648 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:56:34.351 DEBUG 12648 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:57:31.581 DEBUG 12648 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 13:57:31.583 DEBUG 12648 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 13:57:32.125 DEBUG 12648 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 13:57:33.290  WARN 12648 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String[] parameter 'ids[]' is not present]
-2020-03-12 13:58:24.266  INFO 7812 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 7812 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
-2020-03-12 13:58:24.274 DEBUG 7812 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-03-12 13:58:24.275  INFO 7812 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
-2020-03-12 13:58:28.720  INFO 7812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-03-12 13:58:28.725  INFO 7812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 13:58:28.910  INFO 7812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149ms. Found 0 repository interfaces.
-2020-03-12 13:58:29.911  INFO 7812 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-03-12 13:58:32.208  INFO 7812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-03-12 13:58:32.254  INFO 7812 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-03-12 13:58:32.255  INFO 7812 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2020-03-12 13:58:32.517  INFO 7812 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-03-12 13:58:32.518  INFO 7812 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7353 ms
-2020-03-12 13:58:32.603 DEBUG 7812 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
-2020-03-12 13:58:33.527  INFO 7812 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-03-12 13:58:36.229  INFO 7812 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2020-03-12 13:58:39.300  INFO 7812 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+2020-03-13 12:46:34.598  INFO 12576 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-03-13 12:46:35.549  INFO 12576 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-03-13 12:46:40.633  INFO 12576 --- [nioEventLoopGroup-4-5] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-03-13 12:46:40.633  INFO 12576 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-03-13 12:46:40.763  INFO 12576 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-03-13 12:46:40.793  INFO 12576 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-03-13 12:46:40.879  INFO 12576 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-03-13 12:46:40.965  INFO 12576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-13 12:46:40.971  INFO 12576 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 25.021 seconds (JVM running for 41.594)
+2020-03-13 12:47:08.472  INFO 12576 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 12:47:08.473  INFO 12576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-13 12:47:08.492  INFO 12576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2020-03-13 12:47:08.814 DEBUG 12576 --- [http-nio-8080-exec-1] c.x.b.d.s.S.upSorPackageStateById        : ==>  Preparing: update sor_package set PackagePerson=? `State`='已拆包' where ID=? 
+2020-03-13 12:47:10.668 DEBUG 12576 --- [http-nio-8080-exec-1] c.x.b.d.s.S.upSorPackageStateById        : ==> Parameters: null, 686609047086039040(String)
+2020-03-13 12:47:30.626 DEBUG 12576 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackage               : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE ( State='未拆包') 
+2020-03-13 12:47:30.824 DEBUG 12576 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackage               : ==> Parameters: 
+2020-03-13 12:47:31.727 DEBUG 12576 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 12:47:31.771 DEBUG 12576 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 12:47:31.807 DEBUG 12576 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 12:47:31.812 DEBUG 12576 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackage               : <==      Total: 2
+2020-03-13 12:47:35.636 DEBUG 12576 --- [http-nio-8080-exec-5] c.x.b.d.s.S.upSorPackageStateById        : ==>  Preparing: update sor_package set PackagePerson=? `State`='已拆包' where ID=? 
+2020-03-13 12:47:35.674 DEBUG 12576 --- [http-nio-8080-exec-5] c.x.b.d.s.S.upSorPackageStateById        : ==> Parameters: null, 686609047086039040(String)
+2020-03-13 12:48:01.161 DEBUG 12576 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackage               : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE ( State='未拆包') 
+2020-03-13 12:48:01.165 DEBUG 12576 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackage               : ==> Parameters: 
+2020-03-13 12:48:01.620 DEBUG 12576 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 12:48:01.621 DEBUG 12576 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 12:48:01.654 DEBUG 12576 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 12:48:01.657 DEBUG 12576 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackage               : <==      Total: 2
+2020-03-13 12:48:04.619 DEBUG 12576 --- [http-nio-8080-exec-9] c.x.b.d.s.S.upSorPackageStateById        : ==>  Preparing: update sor_package set PackagePerson=? `State`='已拆包' where ID=? 
+2020-03-13 12:48:04.650 DEBUG 12576 --- [http-nio-8080-exec-9] c.x.b.d.s.S.upSorPackageStateById        : ==> Parameters: 1(Integer), 686609047086039040(String)
+2020-03-13 12:55:57.306  INFO 2088 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 2088 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
+2020-03-13 12:55:57.314 DEBUG 2088 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-03-13 12:55:57.316  INFO 2088 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-03-13 12:56:00.135  INFO 2088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-13 12:56:00.140  INFO 2088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-13 12:56:00.293  INFO 2088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 122ms. Found 0 repository interfaces.
+2020-03-13 12:56:01.256  INFO 2088 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 12:56:02.749  INFO 2088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-13 12:56:02.801  INFO 2088 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 12:56:02.802  INFO 2088 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-03-13 12:56:03.348  INFO 2088 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 12:56:03.350  INFO 2088 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5420 ms
+2020-03-13 12:56:03.524 DEBUG 2088 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-03-13 12:56:04.668  INFO 2088 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-03-13 12:56:07.665  INFO 2088 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-03-13 12:56:09.720  INFO 2088 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
 loadBalanceAlgorithmType: round_robin
 masterDataSourceName: ds0
 name: dataSource
 slaveDataSourceNames:
 - ds1
 
-2020-03-12 13:58:39.303  INFO 7812 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+2020-03-13 12:56:09.727  INFO 2088 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
 {}
 
-2020-03-12 13:58:44.360  INFO 7812 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-12 13:58:45.520  INFO 7812 --- [main] org.redisson.Version                     : Redisson 3.2.0
-2020-03-12 13:58:50.311  INFO 7812 --- [nioEventLoopGroup-4-6] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
-2020-03-12 13:58:50.311  INFO 7812 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
-2020-03-12 13:58:50.722  INFO 7812 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-03-12 13:58:50.762  INFO 7812 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-03-12 13:58:50.898  INFO 7812 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-03-12 13:58:51.006  INFO 7812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-03-12 13:58:51.016  INFO 7812 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 29.225 seconds (JVM running for 48.547)
-2020-03-12 14:00:00.982  INFO 7812 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-03-12 14:00:00.983  INFO 7812 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-03-12 14:00:01.024  INFO 7812 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 41 ms
-2020-03-12 14:00:02.478 DEBUG 7812 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 14:00:05.275 DEBUG 7812 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 14:00:06.156 DEBUG 7812 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 14:00:07.917  WARN 7812 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String[] parameter 'age[]' is not present]
-2020-03-12 14:01:34.322  INFO 7812 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 14:01:34.419  INFO 7812 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95ms. Found 0 repository interfaces.
-2020-03-12 14:01:34.524  WARN 7812 --- [http-nio-8080-exec-4] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
-2020-03-12 14:01:36.080  INFO 7812 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-03-12 14:01:36.082  INFO 7812 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 14:01:36.827  INFO 7812 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 745ms. Found 0 repository interfaces.
-2020-03-12 14:01:37.688  INFO 7812 --- [http-nio-8080-exec-4] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-12 14:01:38.128 ERROR 7812 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
-
-java.lang.NullPointerException: null
-	at com.xr.boot.controller.sorting.SorAbnormalController.offExport(SorAbnormalController.java:38) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_211]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_211]
-	at sun.reflect.DelegatingMethodAccessorImpl.__invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_211]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:45009) ~[na:1.8.0_211]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:45012) ~[na:1.8.0_211]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_211]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:113) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:41002) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_211]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_211]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
-
-2020-03-12 14:02:15.896 DEBUG 7812 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 14:02:16.110 DEBUG 7812 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 14:02:16.149 DEBUG 7812 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 14:06:47.682 DEBUG 7812 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package 
-2020-03-12 14:06:47.854 DEBUG 7812 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 14:06:50.118 DEBUG 7812 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 
-2020-03-12 14:06:50.163 DEBUG 7812 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
-2020-03-12 14:06:50.344 DEBUG 7812 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
-2020-03-12 14:06:51.128 DEBUG 7812 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
-2020-03-12 14:06:51.138 DEBUG 7812 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 3
-2020-03-12 14:06:51.148 DEBUG 7812 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 14:06:51.234 DEBUG 7812 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 14:07:23.369 DEBUG 7812 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 14:07:23.372 DEBUG 7812 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 14:07:24.118 DEBUG 7812 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 14:07:34.821 DEBUG 7812 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 14:07:34.822 DEBUG 7812 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 14:07:35.136 DEBUG 7812 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 14:08:42.381 DEBUG 7812 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 14:08:43.307 DEBUG 7812 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 14:08:44.117 DEBUG 7812 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 14:09:23.920 DEBUG 7812 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 14:09:23.921 DEBUG 7812 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 14:09:24.153 DEBUG 7812 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 14:09:49.435 DEBUG 7812 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 14:09:49.436 DEBUG 7812 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 14:09:50.361 DEBUG 7812 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 14:10:01.872 DEBUG 7812 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 14:10:01.873 DEBUG 7812 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 14:10:02.108 DEBUG 7812 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 14:10:42.962  INFO 7812 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2020-03-12 14:10:42.969  INFO 7812 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2020-03-12 14:10:43.274 DEBUG 7812 --- [http-nio-8080-exec-1] c.x.b.c.basicPackage.SyUnitsController   : 从redis中取出值
-2020-03-12 14:10:44.224 DEBUG 7812 --- [http-nio-8080-exec-2] c.x.b.c.b.BasStandarTimeController       : 从redis中取出值
-2020-03-12 14:10:46.055 DEBUG 7812 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 14:10:46.056 DEBUG 7812 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 14:10:46.109 DEBUG 7812 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 14:10:47.630 ERROR 7812 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
-
-java.lang.NullPointerException: null
-	at com.xr.boot.controller.sorting.SorAbnormalController.offExport(SorAbnormalController.java:38) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_211]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_211]
-	at sun.reflect.DelegatingMethodAccessorImpl.__invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_211]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:45009) ~[na:1.8.0_211]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:45012) ~[na:1.8.0_211]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_211]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:113) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:41002) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_211]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_211]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.27.jar:9.0.27]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
-
-2020-03-12 14:11:48.165  INFO 13216 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 13216 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
-2020-03-12 14:11:48.173 DEBUG 13216 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-03-12 14:11:48.175  INFO 13216 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
-2020-03-12 14:11:56.742  INFO 13216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-03-12 14:11:56.751  INFO 13216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 14:11:57.378  INFO 13216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 495ms. Found 0 repository interfaces.
-2020-03-12 14:11:59.122  INFO 13216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-03-12 14:12:01.855  INFO 13216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-03-12 14:12:02.070  INFO 13216 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-03-12 14:12:02.072  INFO 13216 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2020-03-12 14:12:02.825  INFO 13216 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-03-12 14:12:02.826  INFO 13216 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 13247 ms
-2020-03-12 14:12:03.160 DEBUG 13216 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
-2020-03-12 14:12:07.558  INFO 13216 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-03-12 14:12:10.264  INFO 13216 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2020-03-12 14:12:14.212  INFO 13216 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+2020-03-13 12:56:13.191  INFO 2088 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-03-13 12:56:14.030  INFO 2088 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-03-13 12:56:19.616  INFO 2088 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-03-13 12:56:19.616  INFO 2088 --- [nioEventLoopGroup-4-4] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-03-13 12:56:19.753  INFO 2088 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-03-13 12:56:19.783  INFO 2088 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-03-13 12:56:19.867  INFO 2088 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-03-13 12:56:20.003  INFO 2088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-13 12:56:20.013  INFO 2088 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 25.645 seconds (JVM running for 44.19)
+2020-03-13 12:56:31.290  INFO 2088 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 12:56:31.291  INFO 2088 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-13 12:56:31.310  INFO 2088 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2020-03-13 12:56:31.555 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackage               : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE ( State='未拆包') 
+2020-03-13 12:56:33.140 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackage               : ==> Parameters: 
+2020-03-13 12:56:33.674 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 12:56:33.692 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 12:56:33.738 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 12:56:33.743 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackage               : <==      Total: 2
+2020-03-13 12:56:35.759 DEBUG 2088 --- [http-nio-8080-exec-2] c.x.b.d.s.S.upSorPackageStateById        : ==>  Preparing: update sor_package set PackagePerson=?,`State`='已拆包' where `ID`=? 
+2020-03-13 12:56:36.610 DEBUG 2088 --- [http-nio-8080-exec-2] c.x.b.d.s.S.upSorPackageStateById        : ==> Parameters: 1(Integer), 686609047086039040(String)
+2020-03-13 12:56:36.730 DEBUG 2088 --- [http-nio-8080-exec-2] c.x.b.d.s.S.upSorPackageStateById        : <==    Updates: 1
+2020-03-13 12:56:36.733 DEBUG 2088 --- [http-nio-8080-exec-2] .x.b.d.s.S.upSorPackageDetailPackingNull : ==>  Preparing: update sor_packagedetails set `Packging`=Null where `Packging`=? 
+2020-03-13 12:56:36.753 DEBUG 2088 --- [http-nio-8080-exec-2] .x.b.d.s.S.upSorPackageDetailPackingNull : ==> Parameters: 686609047086039040(String)
+2020-03-13 12:56:37.651 DEBUG 2088 --- [http-nio-8080-exec-2] .x.b.d.s.S.upSorPackageDetailPackingNull : <==    Updates: 1
+2020-03-13 12:56:38.643 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackage               : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE ( State='未拆包') 
+2020-03-13 12:56:38.644 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackage               : ==> Parameters: 
+2020-03-13 12:56:38.684 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 12:56:38.685 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 12:56:38.720 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 12:56:38.721 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackage               : <==      Total: 1
+2020-03-13 12:56:45.822 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 12:56:45.974 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 12:56:46.632 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 12:56:46.634 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 12:56:46.873 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 12:56:46.875 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:01:56.506 DEBUG 2088 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:02:00.615 DEBUG 2088 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:02:00.670 DEBUG 2088 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:02:00.671 DEBUG 2088 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:02:00.792 DEBUG 2088 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:02:00.793 DEBUG 2088 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:02:07.973 DEBUG 2088 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:02:07.976 DEBUG 2088 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:02:08.615 DEBUG 2088 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:02:08.616 DEBUG 2088 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:02:08.692 DEBUG 2088 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:02:08.696 DEBUG 2088 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:05:39.216 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:05:39.615 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:05:39.664 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:05:39.665 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:05:39.701 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:05:39.702 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:06:05.360 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:06:05.361 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:06:05.634 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:06:05.638 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:06:05.675 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:06:05.677 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:06:57.133 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:06:57.134 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:06:57.632 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:06:57.633 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:06:57.667 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:06:57.669 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:07:11.653 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:07:11.654 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:07:11.766 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:07:11.767 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:07:12.644 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:07:12.646 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:08:24.623 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:08:24.663 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:08:25.605 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:08:25.606 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:08:25.655 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:08:25.656 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:10:05.145 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:10:05.624 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:10:05.659 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:10:05.660 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:10:05.693 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:10:05.694 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:11:14.817 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:11:15.606 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:11:15.654 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:11:15.655 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:11:15.694 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:11:15.695 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:14:56.731 DEBUG 2088 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:15:00.820 DEBUG 2088 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:15:01.626 DEBUG 2088 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:15:01.627 DEBUG 2088 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:15:01.669 DEBUG 2088 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:15:01.671 DEBUG 2088 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:20:13.193 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:20:17.773 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:20:18.621 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:20:18.622 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:20:18.661 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:20:18.662 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:20:20.195  WARN 2088 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /
+2020-03-13 13:21:16.456 DEBUG 2088 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:21:16.457 DEBUG 2088 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:21:16.594 DEBUG 2088 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:21:16.596 DEBUG 2088 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:21:16.639 DEBUG 2088 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:21:16.644 DEBUG 2088 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:21:39.471 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:21:39.473 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:21:39.624 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:21:39.625 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:21:39.729 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:21:39.731 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:22:12.163 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:22:12.164 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:22:12.614 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:22:12.615 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:22:12.654 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:22:12.656 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:23:27.251 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:23:31.732 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:23:31.766 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:23:31.767 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:23:31.801 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:23:31.802 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:26:18.913 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:26:19.595 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:26:19.626 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:26:19.627 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:26:19.666 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:26:19.667 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:28:52.694 DEBUG 2088 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:28:53.606 DEBUG 2088 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:28:53.922 DEBUG 2088 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:28:53.924 DEBUG 2088 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:28:54.623 DEBUG 2088 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:28:54.624 DEBUG 2088 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:32:07.965 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:32:08.607 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:32:08.654 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:32:08.655 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:32:08.689 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:32:08.690 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:32:24.490 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:32:24.495 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:32:24.587 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:32:24.588 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:32:24.630 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:32:24.631 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:33:11.311 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:33:11.312 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:33:11.590 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:33:11.591 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:33:11.630 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:33:11.632 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:35:28.100 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:35:28.588 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:35:28.631 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:35:28.632 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:35:28.870 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:35:28.871 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:37:45.592 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:37:45.626 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:37:45.664 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:37:45.664 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:37:45.701 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:37:45.702 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 13:43:56.835 DEBUG 2088 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 13:43:59.744 DEBUG 2088 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 13:44:00.579 DEBUG 2088 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 13:44:00.579 DEBUG 2088 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 13:44:00.611 DEBUG 2088 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 13:44:00.612 DEBUG 2088 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 14:01:38.242 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 14:01:41.663 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 14:01:41.704 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 14:01:41.704 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 14:01:41.741 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 14:01:41.743 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 14:01:48.539  INFO 2088 --- [http-nio-8080-exec-6] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-03-13 14:01:48.547  INFO 2088 --- [http-nio-8080-exec-6] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-03-13 14:01:49.617 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.c.b.BasicArchiveController         : 从redis中取出值
+2020-03-13 14:01:55.125 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 14:01:55.126 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 14:01:55.563 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 14:01:55.564 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 14:01:55.608 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 14:01:55.609 DEBUG 2088 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 14:02:19.249 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 14:02:19.252 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 14:02:19.708 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 14:02:19.709 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 14:02:19.748 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 14:02:19.749 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 14:02:36.550 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 14:02:36.555 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 14:02:36.626 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 14:02:36.627 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 14:02:36.686 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 14:02:36.687 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 14:05:50.234 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 14:05:50.568 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 14:05:50.617 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 14:05:50.618 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 14:05:50.664 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 14:05:50.665 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 14:06:15.384 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 14:06:15.387 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 14:06:15.615 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 14:06:15.616 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 14:06:15.658 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 14:06:15.659 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 14:06:28.811 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 14:06:28.811 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 14:06:29.561 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 14:06:29.562 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 14:06:29.603 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 14:06:29.604 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 14:06:40.842 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 14:06:40.843 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 14:06:42.512 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 14:06:42.513 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 14:06:42.572 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 14:06:42.574 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 14:07:07.749 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 14:07:07.750 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 14:07:08.565 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 14:07:08.565 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 14:07:08.599 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 14:07:08.600 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 14:08:16.382 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 14:08:16.559 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 14:08:16.593 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 14:08:16.595 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 14:08:16.629 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 14:08:16.630 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 14:44:26.743 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 14:44:33.559 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 14:44:33.604 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 14:44:33.604 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 14:44:33.638 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 14:44:33.638 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 14:44:35.932 DEBUG 2088 --- [http-nio-8080-exec-1] .x.b.d.s.S.findSorPackageDetailByPackage : ==>  Preparing: select ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging from sor_packagedetails where Packging=? 
+2020-03-13 14:44:36.036 DEBUG 2088 --- [http-nio-8080-exec-1] .x.b.d.s.S.findSorPackageDetailByPackage : ==> Parameters: undefined(String)
+2020-03-13 14:44:36.550 DEBUG 2088 --- [http-nio-8080-exec-1] .x.b.d.s.S.findSorPackageDetailByPackage : <==      Total: 0
+2020-03-13 14:46:47.496 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackage               : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE ( State='未拆包') 
+2020-03-13 14:46:47.634 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackage               : ==> Parameters: 
+2020-03-13 14:46:47.897 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 14:46:47.898 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 14:46:48.534 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 14:46:48.535 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackage               : <==      Total: 1
+2020-03-13 14:46:50.914 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 14:46:50.916 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 14:46:51.533 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 14:46:51.534 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 14:46:51.577 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 14:46:51.577 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 14:46:52.853 DEBUG 2088 --- [http-nio-8080-exec-7] .x.b.d.s.S.findSorPackageDetailByPackage : ==>  Preparing: select ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging from sor_packagedetails where Packging=? 
+2020-03-13 14:46:52.861 DEBUG 2088 --- [http-nio-8080-exec-7] .x.b.d.s.S.findSorPackageDetailByPackage : ==> Parameters: 686609047086039040(String)
+2020-03-13 14:46:53.533 DEBUG 2088 --- [http-nio-8080-exec-7] .x.b.d.s.S.findSorPackageDetailByPackage : <==      Total: 0
+2020-03-13 15:04:11.155 DEBUG 2088 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorPackage               : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE ( State='未拆包') 
+2020-03-13 15:04:13.739 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==>  Preparing: SELECT ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging FROM sor_packagedetails WHERE (Packging is NULL) 
+2020-03-13 15:04:14.603 DEBUG 2088 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorPackage               : ==> Parameters: 
+2020-03-13 15:04:14.639 DEBUG 2088 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 15:04:14.640 DEBUG 2088 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 15:04:14.673 DEBUG 2088 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 15:04:14.674 DEBUG 2088 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorPackage               : <==      Total: 1
+2020-03-13 15:04:14.675 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==> Parameters: 
+2020-03-13 15:04:17.549 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageDetailNoPack   : <==      Total: 1
+2020-03-13 15:04:23.867 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==>  Preparing: SELECT ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging FROM sor_packagedetails WHERE (Packging is NULL) 
+2020-03-13 15:04:23.868 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==> Parameters: 
+2020-03-13 15:04:24.527 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageDetailNoPack   : <==      Total: 1
+2020-03-13 15:05:13.588 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==>  Preparing: SELECT ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging FROM sor_packagedetails WHERE (Packging is NULL) 
+2020-03-13 15:05:13.589 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==> Parameters: 
+2020-03-13 15:05:13.666 DEBUG 2088 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageDetailNoPack   : <==      Total: 1
+2020-03-13 15:08:55.516  INFO 2088 --- [http-nio-8080-exec-6] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-13 15:08:55.679  INFO 2088 --- [http-nio-8080-exec-6] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 162ms. Found 0 repository interfaces.
+2020-03-13 15:08:59.728  INFO 2088 --- [http-nio-8080-exec-6] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-13 15:08:59.729  INFO 2088 --- [http-nio-8080-exec-6] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-13 15:09:00.626  INFO 2088 --- [http-nio-8080-exec-6] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 779ms. Found 0 repository interfaces.
+2020-03-13 15:09:01.815 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==>  Preparing: SELECT ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging FROM sor_packagedetails WHERE (Packging is NULL) 
+2020-03-13 15:09:02.518 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==> Parameters: 
+2020-03-13 15:09:02.568 DEBUG 2088 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageDetailNoPack   : <==      Total: 1
+2020-03-13 15:09:20.558 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==>  Preparing: SELECT ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging FROM sor_packagedetails WHERE (Packging is NULL) 
+2020-03-13 15:09:20.560 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==> Parameters: 
+2020-03-13 15:09:20.694 DEBUG 2088 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageDetailNoPack   : <==      Total: 1
+2020-03-13 15:09:26.286 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==>  Preparing: SELECT ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging FROM sor_packagedetails WHERE (Packging is NULL) 
+2020-03-13 15:09:26.287 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==> Parameters: 
+2020-03-13 15:09:26.571 DEBUG 2088 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageDetailNoPack   : <==      Total: 1
+2020-03-13 15:09:57.499 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==>  Preparing: SELECT ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging FROM sor_packagedetails WHERE (Packging is NULL) 
+2020-03-13 15:09:57.500 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==> Parameters: 
+2020-03-13 15:09:57.553 DEBUG 2088 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageDetailNoPack   : <==      Total: 1
+2020-03-13 15:10:09.912 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==>  Preparing: SELECT ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging FROM sor_packagedetails WHERE (Packging is NULL) 
+2020-03-13 15:10:09.914 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==> Parameters: 
+2020-03-13 15:10:10.601 DEBUG 2088 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackageDetailNoPack   : <==      Total: 1
+2020-03-13 15:10:46.978  INFO 12696 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 12696 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
+2020-03-13 15:10:46.984 DEBUG 12696 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-03-13 15:10:46.986  INFO 12696 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-03-13 15:10:50.925  INFO 12696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-13 15:10:50.929  INFO 12696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-13 15:10:51.079  INFO 12696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117ms. Found 0 repository interfaces.
+2020-03-13 15:10:51.945  INFO 12696 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-13 15:10:53.267  INFO 12696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-13 15:10:53.291  INFO 12696 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 15:10:53.292  INFO 12696 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-03-13 15:10:53.896  INFO 12696 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-13 15:10:53.897  INFO 12696 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5786 ms
+2020-03-13 15:10:54.103 DEBUG 12696 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-03-13 15:10:55.553  INFO 12696 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-03-13 15:10:58.610  INFO 12696 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-03-13 15:11:00.669  INFO 12696 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
 loadBalanceAlgorithmType: round_robin
 masterDataSourceName: ds0
 name: dataSource
 slaveDataSourceNames:
 - ds1
 
-2020-03-12 14:12:14.216  INFO 13216 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+2020-03-13 15:11:00.672  INFO 12696 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
 {}
 
-2020-03-12 14:12:21.071  INFO 13216 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-12 14:12:22.741  INFO 13216 --- [main] org.redisson.Version                     : Redisson 3.2.0
-2020-03-12 14:12:30.124  INFO 13216 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
-2020-03-12 14:12:30.124  INFO 13216 --- [nioEventLoopGroup-4-5] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
-2020-03-12 14:12:30.462  INFO 13216 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-03-12 14:12:30.541  INFO 13216 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-03-12 14:12:30.668  INFO 13216 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-03-12 14:12:30.855  INFO 13216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-03-12 14:12:30.863  INFO 13216 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 45.991 seconds (JVM running for 70.641)
-2020-03-12 14:12:43.270  INFO 13216 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-03-12 14:12:43.271  INFO 13216 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-03-12 14:12:43.298  INFO 13216 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 27 ms
-2020-03-12 14:12:44.375 DEBUG 13216 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 14:12:46.553 DEBUG 13216 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 14:12:47.198 DEBUG 13216 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 14:19:01.826  INFO 13216 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 14:19:01.961  INFO 13216 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134ms. Found 0 repository interfaces.
-2020-03-12 14:19:03.993  INFO 13216 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-03-12 14:19:03.994  INFO 13216 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 14:19:04.691  INFO 13216 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 696ms. Found 0 repository interfaces.
-2020-03-12 14:19:05.781  INFO 13216 --- [http-nio-8080-exec-4] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-12 14:19:05.806 DEBUG 13216 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 14:19:08.288 DEBUG 13216 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 14:19:09.291 DEBUG 13216 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 14:19:37.722  WARN 13216 --- [http-nio-8080-exec-7] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
-2020-03-12 14:19:37.722  INFO 13216 --- [http-nio-8080-exec-7] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 14:19:37.925  INFO 13216 --- [http-nio-8080-exec-7] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 194ms. Found 0 repository interfaces.
-2020-03-12 14:19:38.547  INFO 13216 --- [http-nio-8080-exec-7] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-12 14:19:38.608 DEBUG 13216 --- [http-nio-8080-exec-7] c.x.b.d.s.S.upSorAbnormalAboStateById    : ==>  Preparing: update sor_abnormal set AboState='已处理' where id=? 
-2020-03-12 14:19:43.223 DEBUG 13216 --- [http-nio-8080-exec-7] c.x.b.d.s.S.upSorAbnormalAboStateById    : ==> Parameters: 687303156935688196(String)
-2020-03-12 14:19:44.104 DEBUG 13216 --- [http-nio-8080-exec-7] c.x.b.d.s.S.upSorAbnormalAboStateById    : <==    Updates: 1
-2020-03-12 14:22:01.797  WARN 13216 --- [http-nio-8080-exec-8] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
-2020-03-12 14:22:01.797  INFO 13216 --- [http-nio-8080-exec-8] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 14:22:01.879  INFO 13216 --- [http-nio-8080-exec-8] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81ms. Found 0 repository interfaces.
-2020-03-12 14:22:02.313  INFO 13216 --- [http-nio-8080-exec-8] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-12 14:22:03.810 DEBUG 13216 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 14:22:04.355 DEBUG 13216 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 14:22:05.237 DEBUG 13216 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 14:22:36.967 DEBUG 13216 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 14:22:36.969 DEBUG 13216 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 14:22:37.100 DEBUG 13216 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 14:22:45.115 DEBUG 13216 --- [http-nio-8080-exec-1] c.x.b.d.s.S.upSorAbnormalAboStateById    : ==>  Preparing: update sor_abnormal set AboState='已处理' where id=? 
-2020-03-12 14:22:46.301 DEBUG 13216 --- [http-nio-8080-exec-1] c.x.b.d.s.S.upSorAbnormalAboStateById    : ==> Parameters: 687303156935688196(String)
-2020-03-12 14:22:47.256 DEBUG 13216 --- [http-nio-8080-exec-1] c.x.b.d.s.S.upSorAbnormalAboStateById    : <==    Updates: 1
-2020-03-12 14:23:56.233  INFO 9336 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 9336 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
-2020-03-12 14:23:56.239 DEBUG 9336 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-03-12 14:23:56.240  INFO 9336 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
-2020-03-12 14:24:00.324  INFO 9336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-03-12 14:24:00.332  INFO 9336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 14:24:00.506  INFO 9336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137ms. Found 0 repository interfaces.
-2020-03-12 14:24:01.549  INFO 9336 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-03-12 14:24:02.867  INFO 9336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-03-12 14:24:02.890  INFO 9336 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-03-12 14:24:02.891  INFO 9336 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2020-03-12 14:24:03.198  INFO 9336 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-03-12 14:24:03.198  INFO 9336 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6408 ms
-2020-03-12 14:24:03.299 DEBUG 9336 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
-2020-03-12 14:24:05.238  INFO 9336 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-03-12 14:24:08.145  INFO 9336 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2020-03-12 14:24:10.387  INFO 9336 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
-loadBalanceAlgorithmType: round_robin
-masterDataSourceName: ds0
-name: dataSource
-slaveDataSourceNames:
-- ds1
-
-2020-03-12 14:24:10.401  INFO 9336 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
-{}
-
-2020-03-12 14:24:14.662  INFO 9336 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-12 14:24:15.661  INFO 9336 --- [main] org.redisson.Version                     : Redisson 3.2.0
-2020-03-12 14:24:21.115  INFO 9336 --- [nioEventLoopGroup-4-2] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
-2020-03-12 14:24:21.116  INFO 9336 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
-2020-03-12 14:24:21.264  INFO 9336 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-03-12 14:24:21.299  INFO 9336 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-03-12 14:24:21.427  INFO 9336 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-03-12 14:24:21.539  INFO 9336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-03-12 14:24:21.545  INFO 9336 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 27.307 seconds (JVM running for 47.064)
-2020-03-12 14:24:56.289  INFO 9336 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-03-12 14:24:56.290  INFO 9336 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-03-12 14:24:56.336  INFO 9336 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 46 ms
-2020-03-12 14:24:57.960 DEBUG 9336 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 14:24:59.990 DEBUG 9336 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 14:25:00.183 DEBUG 9336 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 14:25:17.436 DEBUG 9336 --- [http-nio-8080-exec-3] c.x.b.d.s.S.upSorAbnormalAboStateById    : ==>  Preparing: update sor_abnormal set AboState='已处理' where id=? 
-2020-03-12 14:25:18.136 DEBUG 9336 --- [http-nio-8080-exec-3] c.x.b.d.s.S.upSorAbnormalAboStateById    : ==> Parameters: 687303156935688196(String)
-2020-03-12 14:25:18.231 DEBUG 9336 --- [http-nio-8080-exec-3] c.x.b.d.s.S.upSorAbnormalAboStateById    : <==    Updates: 1
-2020-03-12 14:25:50.559  WARN 9336 --- [http-nio-8080-exec-4] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
-2020-03-12 14:25:50.848  INFO 9336 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 14:25:51.090  INFO 9336 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 241ms. Found 0 repository interfaces.
-2020-03-12 14:25:52.611  INFO 9336 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-03-12 14:25:52.612  INFO 9336 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-12 14:25:53.112  INFO 9336 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 499ms. Found 0 repository interfaces.
-2020-03-12 14:25:53.779  INFO 9336 --- [http-nio-8080-exec-5] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-12 14:25:53.798 DEBUG 9336 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 14:25:53.799 DEBUG 9336 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 14:25:54.100 DEBUG 9336 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 14:25:56.021 DEBUG 9336 --- [http-nio-8080-exec-6] c.x.b.d.s.S.upSorAbnormalAboStateById    : ==>  Preparing: update sor_abnormal set AboState='已处理' where id=? 
-2020-03-12 14:25:56.096 DEBUG 9336 --- [http-nio-8080-exec-6] c.x.b.d.s.S.upSorAbnormalAboStateById    : ==> Parameters: 687303156935688196(String)
-2020-03-12 14:25:56.163 DEBUG 9336 --- [http-nio-8080-exec-6] c.x.b.d.s.S.upSorAbnormalAboStateById    : <==    Updates: 1
-2020-03-12 14:26:21.124 DEBUG 9336 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 14:26:21.124 DEBUG 9336 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 14:26:21.162 DEBUG 9336 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 14:26:24.891 DEBUG 9336 --- [http-nio-8080-exec-9] c.x.b.d.s.S.upSorAbnormalAboStateById    : ==>  Preparing: update sor_abnormal set AboState='已处理' where id=? 
-2020-03-12 14:26:25.098 DEBUG 9336 --- [http-nio-8080-exec-9] c.x.b.d.s.S.upSorAbnormalAboStateById    : ==> Parameters: 687303156935688196(String)
-2020-03-12 14:26:25.186 DEBUG 9336 --- [http-nio-8080-exec-9] c.x.b.d.s.S.upSorAbnormalAboStateById    : <==    Updates: 1
-2020-03-12 14:26:26.348 DEBUG 9336 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-12 14:26:26.349 DEBUG 9336 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-12 14:26:27.226 DEBUG 9336 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-12 14:27:04.281 DEBUG 9336 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package 
-2020-03-12 14:27:04.550 DEBUG 9336 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 
-2020-03-12 14:27:05.103 DEBUG 9336 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
-2020-03-12 14:27:05.131 DEBUG 9336 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
-2020-03-12 14:27:05.172 DEBUG 9336 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
-2020-03-12 14:27:05.179 DEBUG 9336 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 3
-2020-03-12 14:27:48.908 DEBUG 9336 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorStorageByWhere        : ==>  Preparing: SELECT ID,AcceptDate,AcceptPerson,AcceptCompany,PackageID FROM sor_storage 
-2020-03-12 14:27:48.966 DEBUG 9336 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorStorageByWhere        : ==> Parameters: 
-2020-03-12 14:27:49.101 DEBUG 9336 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
-2020-03-12 14:27:49.102 DEBUG 9336 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
-2020-03-12 14:27:49.136 DEBUG 9336 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
-2020-03-12 14:27:49.137 DEBUG 9336 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorStorageByWhere        : <==      Total: 1
-2020-03-12 14:27:50.721 DEBUG 9336 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==>  Preparing: SELECT ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging FROM sor_packagedetails WHERE (Packging is NULL) 
-2020-03-12 14:27:50.887 DEBUG 9336 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==> Parameters: 
-2020-03-12 14:27:51.129 DEBUG 9336 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageDetailNoPack   : <==      Total: 0
-2020-03-12 14:27:52.485 DEBUG 9336 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorStorageByWhere        : ==>  Preparing: SELECT ID,AcceptDate,AcceptPerson,AcceptCompany,PackageID FROM sor_storage 
-2020-03-12 14:27:52.486 DEBUG 9336 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorStorageByWhere        : ==> Parameters: 
-2020-03-12 14:27:53.109 DEBUG 9336 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
-2020-03-12 14:27:53.109 DEBUG 9336 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
-2020-03-12 14:27:53.141 DEBUG 9336 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
-2020-03-12 14:27:53.142 DEBUG 9336 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorStorageByWhere        : <==      Total: 1
-2020-03-12 14:27:53.741 DEBUG 9336 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==>  Preparing: SELECT ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging FROM sor_packagedetails WHERE (Packging is NULL) 
-2020-03-12 14:27:53.742 DEBUG 9336 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==> Parameters: 
-2020-03-12 14:27:54.126 DEBUG 9336 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageDetailNoPack   : <==      Total: 0
-2020-03-12 14:27:56.956 DEBUG 9336 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==>  Preparing: SELECT ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging FROM sor_packagedetails WHERE (Packging is NULL) 
-2020-03-12 14:27:56.958 DEBUG 9336 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==> Parameters: 
-2020-03-12 14:27:57.108 DEBUG 9336 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageDetailNoPack   : <==      Total: 0
+2020-03-13 15:11:04.725  INFO 12696 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-03-13 15:11:06.084  INFO 12696 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-03-13 15:11:11.644  INFO 12696 --- [nioEventLoopGroup-4-4] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-03-13 15:11:11.645  INFO 12696 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-03-13 15:11:11.797  INFO 12696 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-03-13 15:11:11.845  INFO 12696 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-03-13 15:11:11.960  INFO 12696 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-03-13 15:11:12.067  INFO 12696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-13 15:11:12.073  INFO 12696 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 27.998 seconds (JVM running for 45.574)
+2020-03-13 15:11:17.308  INFO 12696 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-13 15:11:17.308  INFO 12696 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-13 15:11:17.325  INFO 12696 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-03-13 15:11:17.496 DEBUG 12696 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==>  Preparing: SELECT ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging FROM sor_packagedetails WHERE (Packging is NULL) 
+2020-03-13 15:11:19.139 DEBUG 12696 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==> Parameters: 
+2020-03-13 15:11:19.778 DEBUG 12696 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorPackageDetailNoPack   : <==      Total: 1
+2020-03-13 15:11:34.320 DEBUG 12696 --- [http-nio-8080-exec-3] c.x.b.d.s.S.saveSorPackage               : ==>  Preparing: insert into sor_package values(?,?,?,?,?,?,?,?,?,?,?,?) 
+2020-03-13 15:11:36.615 DEBUG 12696 --- [http-nio-8080-exec-3] c.x.b.d.s.S.saveSorPackage               : ==> Parameters: 688041573503598592(String), 1(Integer), 688041573503729668(String), 12(String), 12(String), 2020-03-31(String), 1(Integer), 2(Integer), 2.0(Double), 2.0(Double), 已拆包(String), 无(String)
+2020-03-13 15:11:39.385 DEBUG 12696 --- [http-nio-8080-exec-3] c.x.b.d.s.S.saveSorPackage               : <==    Updates: 1
+2020-03-13 15:11:39.386 DEBUG 12696 --- [http-nio-8080-exec-3] c.x.b.d.s.S.upSorPackageDetail           : ==>  Preparing: update sor_packagedetails set Packging=? where ID=? 
+2020-03-13 15:11:39.417 DEBUG 12696 --- [http-nio-8080-exec-3] c.x.b.d.s.S.upSorPackageDetail           : ==> Parameters: 688041573503598592(String), 686609047086301187(String)
+2020-03-13 15:11:40.702 DEBUG 12696 --- [http-nio-8080-exec-3] c.x.b.d.s.S.upSorPackageDetail           : <==    Updates: 1
+2020-03-13 15:11:44.781 DEBUG 12696 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==>  Preparing: SELECT ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging FROM sor_packagedetails WHERE (Packging is NULL) 
+2020-03-13 15:11:44.783 DEBUG 12696 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==> Parameters: 
+2020-03-13 15:11:45.515 DEBUG 12696 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageDetailNoPack   : <==      Total: 0
+2020-03-13 15:11:46.747 DEBUG 12696 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackage               : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE ( State='未拆包') 
+2020-03-13 15:11:46.807 DEBUG 12696 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackage               : ==> Parameters: 
+2020-03-13 15:11:47.518 DEBUG 12696 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 15:11:47.528 DEBUG 12696 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 15:11:47.561 DEBUG 12696 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 15:11:47.563 DEBUG 12696 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorPackage               : <==      Total: 1
+2020-03-13 15:11:50.476 DEBUG 12696 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 15:11:50.632 DEBUG 12696 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 15:11:51.517 DEBUG 12696 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 15:11:51.517 DEBUG 12696 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 15:11:51.792 DEBUG 12696 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 15:11:51.795 DEBUG 12696 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 2
+2020-03-13 15:13:24.454  WARN 12696 --- [http-nio-8080-exec-9] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-03-13 15:13:24.459  INFO 12696 --- [http-nio-8080-exec-9] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-13 15:13:24.558  INFO 12696 --- [http-nio-8080-exec-9] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98ms. Found 0 repository interfaces.
+2020-03-13 15:13:25.310  INFO 12696 --- [http-nio-8080-exec-9] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-13 15:13:25.310  INFO 12696 --- [http-nio-8080-exec-9] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-13 15:13:25.539  INFO 12696 --- [http-nio-8080-exec-9] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 229ms. Found 0 repository interfaces.
+2020-03-13 15:13:25.931 DEBUG 12696 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorPackage               : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE ( State='未拆包') 
+2020-03-13 15:13:25.931 DEBUG 12696 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackage               : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE ( State='未拆包') 
+2020-03-13 15:13:26.519 DEBUG 12696 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorPackage               : ==> Parameters: 
+2020-03-13 15:13:26.557 DEBUG 12696 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 15:13:26.558 DEBUG 12696 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 15:13:26.593 DEBUG 12696 --- [http-nio-8080-exec-2] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 15:13:26.595 DEBUG 12696 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorPackage               : <==      Total: 1
+2020-03-13 15:13:26.596 DEBUG 12696 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackage               : ==> Parameters: 
+2020-03-13 15:13:26.636 DEBUG 12696 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 15:13:26.637 DEBUG 12696 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 15:13:26.672 DEBUG 12696 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 15:13:26.674 DEBUG 12696 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackage               : <==      Total: 1
+2020-03-13 15:13:27.865 DEBUG 12696 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 15:13:27.869 DEBUG 12696 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 15:13:28.522 DEBUG 12696 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 15:13:28.523 DEBUG 12696 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 15:13:28.558 DEBUG 12696 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 15:13:28.562 DEBUG 12696 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 2
+2020-03-13 15:14:50.739 DEBUG 12696 --- [http-nio-8080-exec-5] .x.b.d.s.S.findSorPackageDetailByPackage : ==>  Preparing: select ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging from sor_packagedetails where Packging=? 
+2020-03-13 15:14:51.533 DEBUG 12696 --- [http-nio-8080-exec-5] .x.b.d.s.S.findSorPackageDetailByPackage : ==> Parameters: 688041573503598592(String)
+2020-03-13 15:14:51.615 DEBUG 12696 --- [http-nio-8080-exec-5] .x.b.d.s.S.findSorPackageDetailByPackage : <==      Total: 1
+2020-03-13 15:33:12.565 DEBUG 12696 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 15:33:38.078 DEBUG 12696 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-13 15:33:38.692 DEBUG 12696 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 15:33:39.502 DEBUG 12696 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 15:33:39.503 DEBUG 12696 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 15:33:39.550 DEBUG 12696 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 15:33:39.552 DEBUG 12696 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 15:33:39.554 DEBUG 12696 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-13 15:33:39.604 DEBUG 12696 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-13 15:33:39.605 DEBUG 12696 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-13 15:33:39.655 DEBUG 12696 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-13 15:33:39.659 DEBUG 12696 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-13 15:33:52.879 DEBUG 12696 --- [http-nio-8080-exec-2] .x.b.d.s.S.findSorPackageDetailByPackage : ==>  Preparing: select ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging from sor_packagedetails where Packging=? 
+2020-03-13 15:33:52.882 DEBUG 12696 --- [http-nio-8080-exec-2] .x.b.d.s.S.findSorPackageDetailByPackage : ==> Parameters: 688041573503598592(String)
+2020-03-13 15:33:53.501 DEBUG 12696 --- [http-nio-8080-exec-2] .x.b.d.s.S.findSorPackageDetailByPackage : <==      Total: 1

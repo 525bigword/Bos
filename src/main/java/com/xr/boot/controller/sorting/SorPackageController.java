@@ -69,4 +69,17 @@ public class SorPackageController {
         }
 
     }
+    @ApiOperation("查询所有已拆包的数据")
+    @GetMapping("/queryunpacking")
+    public ResponseEntity<List<SorPackage>> unpacking(){
+        SorPackage sorPackage=new SorPackage();
+        sorPackage.setState("已拆包");
+        try {
+            List<SorPackage> sorPackages = sorPackageService.findSorPackageByIdAndState(sorPackage);
+            return new ResponseEntity<List<SorPackage>>(sorPackages,HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<List<SorPackage>>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }

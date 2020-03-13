@@ -57,8 +57,8 @@ public class SorPackageServiceimpl implements SorPackageService {
     @Klock
     public void unpacking(String[] packing,Integer personid) throws Exception {
         for (String s : packing) {
-            sorPackageMapper.upSorPackageStateById(s,personid);
             sorPackageDetailMapper.upSorPackageDetailPackingNull(s);
+            sorPackageMapper.delSorPackageStateById(s);
         }
     }
 

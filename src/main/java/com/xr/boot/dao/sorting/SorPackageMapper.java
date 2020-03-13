@@ -36,8 +36,8 @@ public interface SorPackageMapper {
     })
     List<SorPackage> findSorPackage(SorPackage sorPackage);
     /**根据单号将状态改为已拆*/
-    @Update("update sor_package set PackagePerson=#{packageperson}  `State`='已拆包' where ID=#{packing}")
-    void upSorPackageStateById(@Param("packing") String packing,@Param("packageperson") Integer packageperson);
+    @Delete("delete from sor_package  where `ID`=#{packing}")
+    void delSorPackageStateById(@Param("packing") String packing);
     /**动态查询所有合包或者按拆包查询*/
     @SelectProvider(type = SorPackageMapperProviderSql.class,method = "findSorPackageByIdAndState")
     @Results({

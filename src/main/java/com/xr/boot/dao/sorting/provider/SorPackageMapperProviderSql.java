@@ -32,7 +32,7 @@ public class SorPackageMapperProviderSql {
             sql.WHERE("ID="+sorPackage.getId());
         }
         if(!"全部".equals(sorPackage.getState())){
-            sql.WHERE("State="+sorPackage.getState());
+            sql.WHERE("State=#{state}");
         }
         return sql.toString();
     }
