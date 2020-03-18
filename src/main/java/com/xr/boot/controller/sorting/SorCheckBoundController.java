@@ -6,10 +6,7 @@ import io.swagger.annotations.Authorization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,11 +16,13 @@ public class SorCheckBoundController {
     @Autowired
     private SorCheckBoundService sorCheckBoundService;
     @PostMapping("/add")
-    public void add(SorCheckBound sorCheckBound){
+    public ResponseEntity add(SorCheckBound sorCheckBound){
         try {
             sorCheckBoundService.saveSorCheckBound(sorCheckBound);
+            return new ResponseEntity(HttpStatus.OK,HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR,HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
     @GetMapping("/query")
@@ -34,6 +33,16 @@ public class SorCheckBoundController {
         } catch (Exception e) {
             e.printStackTrace();
             return new ResponseEntity<List<SorCheckBound>>( HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+    @PostMapping("/del")
+    public ResponseEntity del(@RequestParam("packgings[]")String[] packgings){
+        try {
+            sorCheckBoundService.delSorCheckBoundByPackings(packgings);
+            return new ResponseEntity(HttpStatus.OK,HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR,HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }

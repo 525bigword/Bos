@@ -57,4 +57,13 @@ public class SorCheckBoundServiceImpl implements SorCheckBoundService {
     public List<SorCheckBound> findSorCheckBound(SorCheckBound sorCheckBound) throws Exception {
         return sorCheckBoundMapper.findSorCheckBoundByWhere(sorCheckBound);
     }
+    @Transactional
+    @Override
+    public void delSorCheckBoundByPackings(String[] packings) throws Exception {
+        for (String packing : packings) {
+            sorCheckBoundMapper.delSorCheckBoundByPackging(packing);
+            sorCheckBoundDetailsMapper.delSorCheckboundDetailsByPackging(packing);
+        }
+    }
+
 }

@@ -1,6 +1,7 @@
 package com.xr.boot.dao.sorting;
 
 import com.xr.boot.entity.SorCheckBoundDetails;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -17,4 +18,7 @@ public interface SorCheckBoundDetailsMapper {
     @Select("select ID,CargoCount,Weight,Volume,Direction,StoragePerson,StorageDate,Packging from " +
             "sor_checkbounddetails where Packging=#{packing}")
     List<SorCheckBoundDetails> findSorCheckBoundDetailsByPacking(@Param("packing")String packing);
+    /**按合包号删除合包明细*/
+    @Delete("delete from sor_checkbounddetails where Packging=#{packging}")
+    void delSorCheckboundDetailsByPackging(@Param("packging")String packging);
 }

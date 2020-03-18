@@ -9,4 +9,6 @@ public interface SorCheckBoundService {
     void saveSorCheckBound(SorCheckBound sorCheckBound) throws Exception;
     /**盘库查询业务*/
     List<SorCheckBound> findSorCheckBound(SorCheckBound sorCheckBound) throws Exception;
+    /**删除盘库信息业务*/
+    void delSorCheckBoundByPackings(String[] packings) throws Exception;
 }
