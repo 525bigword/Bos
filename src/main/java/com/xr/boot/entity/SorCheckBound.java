@@ -19,9 +19,13 @@ public class SorCheckBound implements Serializable {
     * @pdOid 8c72ad24-2e82-426f-b646-8c5d1a2d3d32 */
    private String id;
    /** 总件数
-    * 
+    *
     * @pdOid 674ae4ee-6527-4208-ae83-e6b2225dc959 */
    private int cargoSum;
+   /** 总体积
+    *
+    * @pdOid 674ae4ee-6527-4208-ae83-e6b2225dc959 */
+   private int volumeSum;
    /** 盘库人
     *
     * @pdOid c30ac8fa-3b9f-4913-8a2a-1e21140f5e2c */
@@ -49,6 +53,14 @@ public class SorCheckBound implements Serializable {
               ", checkCompany='" + checkCompany + '\'' +
               ", packging='" + packging + '\'' +
               '}';
+   }
+
+   public int getVolumeSum() {
+      return volumeSum;
+   }
+
+   public void setVolumeSum(int volumeSum) {
+      this.volumeSum = volumeSum;
    }
 
    public String getId() {

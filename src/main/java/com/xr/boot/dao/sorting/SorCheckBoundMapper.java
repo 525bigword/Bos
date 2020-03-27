@@ -12,7 +12,8 @@ import java.util.List;
 
 @Repository
 public interface SorCheckBoundMapper {
-    @Insert("insert into sor_checkbound values(#{id},#{cargoSum},#{checkPerson},#{checkDate},#{checkCompany}," +
+    @Insert("insert into sor_checkbound values(#{id},#{cargoSum},#{volumeSum},#{checkPerson},#{checkDate}," +
+            "#{checkCompany}," +
             "#{packging})")
     void saveSorCheckBound(SorCheckBound sorCheckBound);
     @SelectProvider(type = SorCheckBoundProviderSql.class,method = "findSorCheckBoundByWhere")

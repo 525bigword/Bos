@@ -11,7 +11,7 @@ import java.util.List;
 public class SorCheckBoundProviderSql {
     public String findSorCheckBoundByWhere(SorCheckBound sorCheckBound){
         SQL sql=new SQL();
-        sql.SELECT("ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging");
+        sql.SELECT("ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging");
         sql.FROM("sor_checkbound");
         if(StringUtil.isNotEmpty(sorCheckBound.getId())){
             sql.WHERE("ID=#{id}");

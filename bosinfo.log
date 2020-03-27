@@ -1,347 +1,226 @@
-2020-03-18 12:48:07.239  INFO 2508 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 2508 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
-2020-03-18 12:48:07.309 DEBUG 2508 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
-2020-03-18 12:48:07.312  INFO 2508 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
-2020-03-18 12:48:11.421  INFO 2508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-03-18 12:48:11.431  INFO 2508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-18 12:48:11.644  INFO 2508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 169ms. Found 0 repository interfaces.
-2020-03-18 12:48:12.727  INFO 2508 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-03-18 12:48:14.464  INFO 2508 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-03-18 12:48:14.490  INFO 2508 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-03-18 12:48:14.491  INFO 2508 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2020-03-18 12:48:14.793  INFO 2508 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-03-18 12:48:14.793  INFO 2508 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6712 ms
-2020-03-18 12:48:14.888 DEBUG 2508 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
-2020-03-18 12:48:16.033  INFO 2508 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-03-18 12:48:18.841  INFO 2508 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2020-03-18 12:48:20.940  INFO 2508 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
+2020-03-27 12:24:07.298  INFO 6108 --- [main] com.xr.boot.BootApplication              : Starting BootApplication on SC-201908131052 with PID 6108 (F:\ideaworkspace\boot\target\classes started by Administrator in F:\ideaworkspace\boot)
+2020-03-27 12:24:07.380 DEBUG 6108 --- [main] com.xr.boot.BootApplication              : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-03-27 12:24:07.382  INFO 6108 --- [main] com.xr.boot.BootApplication              : No active profile set, falling back to default profiles: default
+2020-03-27 12:24:11.923  INFO 6108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-27 12:24:11.931  INFO 6108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-27 12:24:12.153  INFO 6108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 176ms. Found 0 repository interfaces.
+2020-03-27 12:24:13.248  INFO 6108 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-27 12:24:15.004  INFO 6108 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-27 12:24:15.037  INFO 6108 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-27 12:24:15.038  INFO 6108 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-03-27 12:24:15.411  INFO 6108 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-27 12:24:15.411  INFO 6108 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7170 ms
+2020-03-27 12:24:15.509 DEBUG 6108 --- [main] com.xr.boot.config.PutFilter             : Filter 'putFilter' configured for use
+2020-03-27 12:24:16.615  INFO 6108 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-03-27 12:24:17.424  INFO 6108 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-03-27 12:24:17.835  INFO 6108 --- [main] o.a.s.core.util.ConfigurationLogger      : MasterSlaveRuleConfiguration
 loadBalanceAlgorithmType: round_robin
 masterDataSourceName: ds0
 name: dataSource
 slaveDataSourceNames:
 - ds1
 
-2020-03-18 12:48:20.942  INFO 2508 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
+2020-03-27 12:24:17.837  INFO 6108 --- [main] o.a.s.core.util.ConfigurationLogger      : Properties
 {}
 
-2020-03-18 12:48:27.303  INFO 2508 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-18 12:48:28.352  INFO 2508 --- [main] org.redisson.Version                     : Redisson 3.2.0
-2020-03-18 12:48:33.919  INFO 2508 --- [nioEventLoopGroup-4-3] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
-2020-03-18 12:48:33.919  INFO 2508 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
-2020-03-18 12:48:34.107  INFO 2508 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-03-18 12:48:34.181  INFO 2508 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-03-18 12:48:34.341  INFO 2508 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-03-18 12:48:34.476  INFO 2508 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-03-18 12:48:34.485  INFO 2508 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 29.612 seconds (JVM running for 50.2)
-2020-03-18 12:49:03.082  INFO 2508 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-03-18 12:49:03.082  INFO 2508 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-03-18 12:49:03.116  INFO 2508 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 33 ms
-2020-03-18 12:49:24.817 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyEmpByEmpNoAndPwd       : ==>  Preparing: select id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled from sy_emp where empno=? and ? 
-2020-03-18 12:49:26.864 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyEmpByEmpNoAndPwd       : ==> Parameters: 007(String), 36E205C05D8FF28AAD410CF5CABD16ED(String)
-2020-03-18 12:49:26.981 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.SyRoleMapper.findSyRolesById   : ====>  Preparing: select id,rolename,roledesc,disabled from sy_roles where id=? 
-2020-03-18 12:49:27.018 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.SyRoleMapper.findSyRolesById   : ====> Parameters: 1(Integer)
-2020-03-18 12:49:27.739 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.SyRoleMapper.findSyRolesById   : <====      Total: 1
-2020-03-18 12:49:27.745 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyUnitAllById            : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
-2020-03-18 12:49:27.782 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyUnitAllById            : ====> Parameters: 2(Integer)
-2020-03-18 12:49:27.812 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyUnitAllById            : <====      Total: 1
-2020-03-18 12:49:27.813 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyEmpByEmpNoAndPwd       : <==      Total: 1
-2020-03-18 12:49:27.823 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyBigMenusAll            : ==>  Preparing: select id,bigmenus,url,icon from sy_bigmenus 
-2020-03-18 12:49:27.842 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyBigMenusAll            : ==> Parameters: 
-2020-03-18 12:49:27.891 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyBigMenusAll            : <==      Total: 8
-2020-03-18 12:49:27.930  WARN 2508 --- [http-nio-8080-exec-3] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.system.impl.SyEmpServiceImpl.login)
-2020-03-18 12:50:19.718 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorStorageByWhere        : ==>  Preparing: SELECT ID,AcceptDate,AcceptPerson,AcceptCompany,PackageID FROM sor_storage 
-2020-03-18 12:50:19.748 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorStorageByWhere        : ==> Parameters: 
-2020-03-18 12:50:19.784 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
-2020-03-18 12:50:19.796 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
-2020-03-18 12:50:19.827 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
-2020-03-18 12:50:19.828 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorStorageByWhere        : <==      Total: 1
-2020-03-18 12:50:33.653 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 12:50:33.673 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 12:50:33.757 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
-2020-03-18 12:58:19.742 DEBUG 2508 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 12:58:22.840 DEBUG 2508 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 12:58:22.882 DEBUG 2508 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
-2020-03-18 12:58:52.320 DEBUG 2508 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 12:58:52.322 DEBUG 2508 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 12:58:52.732 DEBUG 2508 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
-2020-03-18 12:59:59.624 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 12:59:59.908 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:00:00.829 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
-2020-03-18 13:07:37.723  WARN 2508 --- [http-nio-8080-exec-4] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
-2020-03-18 13:07:37.989  INFO 2508 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-18 13:07:38.105  INFO 2508 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114ms. Found 0 repository interfaces.
-2020-03-18 13:07:38.986  INFO 2508 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-03-18 13:07:38.988  INFO 2508 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-18 13:07:39.310  INFO 2508 --- [http-nio-8080-exec-4] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 320ms. Found 0 repository interfaces.
-2020-03-18 13:07:39.737  INFO 2508 --- [http-nio-8080-exec-4] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-18 13:07:43.527 DEBUG 2508 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:07:48.807 DEBUG 2508 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:07:48.847 DEBUG 2508 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
-2020-03-18 13:09:37.261 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:09:37.743 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:09:37.776 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
-2020-03-18 13:20:39.196  INFO 2508 --- [http-nio-8080-exec-10] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-18 13:20:39.295  INFO 2508 --- [http-nio-8080-exec-10] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97ms. Found 0 repository interfaces.
-2020-03-18 13:20:39.866  INFO 2508 --- [http-nio-8080-exec-10] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-18 13:20:41.136 DEBUG 2508 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:20:43.904 DEBUG 2508 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:20:44.803 DEBUG 2508 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
-2020-03-18 13:20:47.148  WARN 2508 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String[] parameter 'packgings[]' is not present]
-2020-03-18 13:22:24.411  WARN 2508 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String[] parameter 'packgings[]' is not present]
-2020-03-18 13:22:36.946 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:22:37.715 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:22:37.752 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
-2020-03-18 13:22:38.944 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.S.delSorCheckBoundByPackging   : ==>  Preparing: delete from sor_checkbound where Packging=? 
-2020-03-18 13:22:53.558 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.delSorCheckBoundByPackging   : ==>  Preparing: delete from sor_checkbound where Packging=? 
-2020-03-18 13:23:57.011 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:23:57.906 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:23:58.790 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
-2020-03-18 13:24:24.083  INFO 2508 --- [http-nio-8080-exec-1] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-18 13:24:24.134  INFO 2508 --- [http-nio-8080-exec-1] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50ms. Found 0 repository interfaces.
-2020-03-18 13:24:24.392 DEBUG 2508 --- [http-nio-8080-exec-1] c.x.b.d.s.S.delSorCheckBoundByPackging   : ==>  Preparing: delete from sor_checkbound where Packging=? 
-2020-03-18 13:24:24.766 DEBUG 2508 --- [http-nio-8080-exec-1] c.x.b.d.s.S.delSorCheckBoundByPackging   : ==> Parameters: 688749113245564937(String)
-2020-03-18 13:24:24.896 DEBUG 2508 --- [http-nio-8080-exec-1] c.x.b.d.s.S.delSorCheckBoundByPackging   : <==    Updates: 0
-2020-03-18 13:24:24.900 DEBUG 2508 --- [http-nio-8080-exec-1] .d.s.S.delSorCheckboundDetailsByPackging : ==>  Preparing: delete from sor_checkbounddetails where Packging=? 
-2020-03-18 13:24:24.919 DEBUG 2508 --- [http-nio-8080-exec-1] .d.s.S.delSorCheckboundDetailsByPackging : ==> Parameters: 688749113245564937(String)
-2020-03-18 13:24:27.911 DEBUG 2508 --- [http-nio-8080-exec-1] .d.s.S.delSorCheckboundDetailsByPackging : <==    Updates: 0
-2020-03-18 13:29:07.949 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:29:13.747 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:29:13.789 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
-2020-03-18 13:29:26.761 DEBUG 2508 --- [http-nio-8080-exec-4] c.x.b.d.s.S.delSorCheckBoundByPackging   : ==>  Preparing: delete from sor_checkbound where Packging=? 
-2020-03-18 13:29:29.807 DEBUG 2508 --- [http-nio-8080-exec-4] c.x.b.d.s.S.delSorCheckBoundByPackging   : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:29:29.881 DEBUG 2508 --- [http-nio-8080-exec-4] c.x.b.d.s.S.delSorCheckBoundByPackging   : <==    Updates: 1
-2020-03-18 13:29:29.883 DEBUG 2508 --- [http-nio-8080-exec-4] .d.s.S.delSorCheckboundDetailsByPackging : ==>  Preparing: delete from sor_checkbounddetails where Packging=? 
-2020-03-18 13:29:29.884 DEBUG 2508 --- [http-nio-8080-exec-4] .d.s.S.delSorCheckboundDetailsByPackging : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:29:30.748 DEBUG 2508 --- [http-nio-8080-exec-4] .d.s.S.delSorCheckboundDetailsByPackging : <==    Updates: 1
-2020-03-18 13:30:15.594 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:30:17.175 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
-2020-03-18 13:30:17.830 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:30:17.866 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 0
-2020-03-18 13:30:17.868 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
-2020-03-18 13:30:17.909 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
-2020-03-18 13:30:17.910 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
-2020-03-18 13:30:18.711 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
-2020-03-18 13:30:18.713 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
-2020-03-18 13:30:20.390 DEBUG 2508 --- [http-nio-8080-exec-9] .x.b.d.s.S.findSorPackageDetailByPackage : ==>  Preparing: select ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging from sor_packagedetails where Packging=? 
-2020-03-18 13:30:20.509 DEBUG 2508 --- [http-nio-8080-exec-9] .x.b.d.s.S.findSorPackageDetailByPackage : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:30:20.740 DEBUG 2508 --- [http-nio-8080-exec-9] .x.b.d.s.S.findSorPackageDetailByPackage : <==      Total: 1
-2020-03-18 13:30:21.868 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.saveSorCheckBound            : ==>  Preparing: insert into sor_checkbound values(?,?,?,?,?,?) 
-2020-03-18 13:30:22.953 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.saveSorCheckBound            : ==> Parameters: 689828043117428740(String), 2(Integer), 邬童(String), 2020/3/18 13:30:21(String), 长沙分部(String), 688041573503598592(String)
-2020-03-18 13:30:23.911 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.saveSorCheckBound            : <==    Updates: 1
-2020-03-18 13:30:23.914 DEBUG 2508 --- [http-nio-8080-exec-10] .x.b.d.s.S.findSorPackageDetailByPackage : ==>  Preparing: select ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging from sor_packagedetails where Packging=? 
-2020-03-18 13:30:23.915 DEBUG 2508 --- [http-nio-8080-exec-10] .x.b.d.s.S.findSorPackageDetailByPackage : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:30:24.801 DEBUG 2508 --- [http-nio-8080-exec-10] .x.b.d.s.S.findSorPackageDetailByPackage : <==      Total: 1
-2020-03-18 13:30:24.804 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.saveSorCheckBoundDetails     : ==>  Preparing: insert into sor_checkbounddetails values(?,?,?,?,?,?,?,?) 
-2020-03-18 13:30:24.820 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.saveSorCheckBoundDetails     : ==> Parameters: 689828055444619272(String), 2(Integer), 2.0(Double), 2.0(Double), 2(String), 邬童(String), 2020-3-18(String), 688041573503598592(String)
-2020-03-18 13:30:25.126 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.saveSorCheckBoundDetails     : <==    Updates: 1
-2020-03-18 13:32:03.037 DEBUG 2508 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:32:04.708 DEBUG 2508 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:32:04.741 DEBUG 2508 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
-2020-03-18 13:32:06.641 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.delSorCheckBoundByPackging   : ==>  Preparing: delete from sor_checkbound where Packging=? 
-2020-03-18 13:32:06.642 DEBUG 2508 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:32:06.643 DEBUG 2508 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:32:06.862 DEBUG 2508 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
-2020-03-18 13:32:06.888 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.delSorCheckBoundByPackging   : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:32:07.807 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.delSorCheckBoundByPackging   : <==    Updates: 1
-2020-03-18 13:32:07.808 DEBUG 2508 --- [http-nio-8080-exec-3] .d.s.S.delSorCheckboundDetailsByPackging : ==>  Preparing: delete from sor_checkbounddetails where Packging=? 
-2020-03-18 13:32:07.809 DEBUG 2508 --- [http-nio-8080-exec-3] .d.s.S.delSorCheckboundDetailsByPackging : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:32:07.872 DEBUG 2508 --- [http-nio-8080-exec-3] .d.s.S.delSorCheckboundDetailsByPackging : <==    Updates: 1
-2020-03-18 13:34:23.732  WARN 2508 --- [http-nio-8080-exec-5] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
-2020-03-18 13:34:23.962  INFO 2508 --- [http-nio-8080-exec-5] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-18 13:34:24.095  INFO 2508 --- [http-nio-8080-exec-5] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 133ms. Found 0 repository interfaces.
-2020-03-18 13:34:24.487  INFO 2508 --- [http-nio-8080-exec-5] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-18 13:34:26.572 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:34:26.712 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:34:26.747 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 0
-2020-03-18 13:34:31.294 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
-2020-03-18 13:34:31.296 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
-2020-03-18 13:34:31.715 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
-2020-03-18 13:34:31.716 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
-2020-03-18 13:34:31.746 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
-2020-03-18 13:34:31.748 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
-2020-03-18 13:34:32.860 DEBUG 2508 --- [http-nio-8080-exec-9] .x.b.d.s.S.findSorPackageDetailByPackage : ==>  Preparing: select ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging from sor_packagedetails where Packging=? 
-2020-03-18 13:34:32.861 DEBUG 2508 --- [http-nio-8080-exec-9] .x.b.d.s.S.findSorPackageDetailByPackage : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:34:32.900 DEBUG 2508 --- [http-nio-8080-exec-9] .x.b.d.s.S.findSorPackageDetailByPackage : <==      Total: 1
-2020-03-18 13:34:34.240 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.saveSorCheckBound            : ==>  Preparing: insert into sor_checkbound values(?,?,?,?,?,?) 
-2020-03-18 13:34:34.851 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.saveSorCheckBound            : ==> Parameters: 689829101654900737(String), 2(Integer), 邬童(String), 2020/3/18 13:30:21(String), 长沙分部(String), 688041573503598592(String)
-2020-03-18 13:34:35.714 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.saveSorCheckBound            : <==    Updates: 1
-2020-03-18 13:34:35.715 DEBUG 2508 --- [http-nio-8080-exec-10] .x.b.d.s.S.findSorPackageDetailByPackage : ==>  Preparing: select ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging from sor_packagedetails where Packging=? 
-2020-03-18 13:34:35.716 DEBUG 2508 --- [http-nio-8080-exec-10] .x.b.d.s.S.findSorPackageDetailByPackage : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:34:35.780 DEBUG 2508 --- [http-nio-8080-exec-10] .x.b.d.s.S.findSorPackageDetailByPackage : <==      Total: 1
-2020-03-18 13:34:35.781 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.saveSorCheckBoundDetails     : ==>  Preparing: insert into sor_checkbounddetails values(?,?,?,?,?,?,?,?) 
-2020-03-18 13:34:35.782 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.saveSorCheckBoundDetails     : ==> Parameters: 689829108122648580(String), 2(Integer), 2.0(Double), 2.0(Double), 2(String), 邬童(String), 2020-3-18(String), 688041573503598592(String)
-2020-03-18 13:34:36.708 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.saveSorCheckBoundDetails     : <==    Updates: 1
-2020-03-18 13:35:41.467 DEBUG 2508 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:35:41.706 DEBUG 2508 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:35:41.739 DEBUG 2508 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
-2020-03-18 13:35:43.948 DEBUG 2508 --- [http-nio-8080-exec-4] c.x.b.d.s.S.delSorCheckBoundByPackging   : ==>  Preparing: delete from sor_checkbound where Packging=? 
-2020-03-18 13:35:44.742 DEBUG 2508 --- [http-nio-8080-exec-4] c.x.b.d.s.S.delSorCheckBoundByPackging   : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:35:44.807 DEBUG 2508 --- [http-nio-8080-exec-4] c.x.b.d.s.S.delSorCheckBoundByPackging   : <==    Updates: 1
-2020-03-18 13:35:44.808 DEBUG 2508 --- [http-nio-8080-exec-4] .d.s.S.delSorCheckboundDetailsByPackging : ==>  Preparing: delete from sor_checkbounddetails where Packging=? 
-2020-03-18 13:35:44.810 DEBUG 2508 --- [http-nio-8080-exec-4] .d.s.S.delSorCheckboundDetailsByPackging : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:35:44.880 DEBUG 2508 --- [http-nio-8080-exec-4] .d.s.S.delSorCheckboundDetailsByPackging : <==    Updates: 1
-2020-03-18 13:35:45.836 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:35:45.837 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:35:47.856 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 0
-2020-03-18 13:35:49.116 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
-2020-03-18 13:35:49.117 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
-2020-03-18 13:35:49.715 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
-2020-03-18 13:35:49.716 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
-2020-03-18 13:35:49.745 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
-2020-03-18 13:35:49.746 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
-2020-03-18 13:35:50.953 DEBUG 2508 --- [http-nio-8080-exec-6] .x.b.d.s.S.findSorPackageDetailByPackage : ==>  Preparing: select ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging from sor_packagedetails where Packging=? 
-2020-03-18 13:35:50.954 DEBUG 2508 --- [http-nio-8080-exec-6] .x.b.d.s.S.findSorPackageDetailByPackage : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:35:51.713 DEBUG 2508 --- [http-nio-8080-exec-6] .x.b.d.s.S.findSorPackageDetailByPackage : <==      Total: 1
-2020-03-18 13:35:52.871 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.saveSorCheckBound            : ==>  Preparing: insert into sor_checkbound values(?,?,?,?,?,?) 
-2020-03-18 13:35:53.087 DEBUG 2508 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:35:53.088 DEBUG 2508 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:35:53.727 DEBUG 2508 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 0
-2020-03-18 13:35:53.728 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.saveSorCheckBound            : ==> Parameters: 689829431457218566(String), 2(Integer), 邬童(String), 2020/3/18 13:30:21(String), 长沙分部(String), 688041573503598592(String)
-2020-03-18 13:35:53.826 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.saveSorCheckBound            : <==    Updates: 1
-2020-03-18 13:35:53.827 DEBUG 2508 --- [http-nio-8080-exec-8] .x.b.d.s.S.findSorPackageDetailByPackage : ==>  Preparing: select ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging from sor_packagedetails where Packging=? 
-2020-03-18 13:35:53.828 DEBUG 2508 --- [http-nio-8080-exec-8] .x.b.d.s.S.findSorPackageDetailByPackage : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:35:53.861 DEBUG 2508 --- [http-nio-8080-exec-8] .x.b.d.s.S.findSorPackageDetailByPackage : <==      Total: 1
-2020-03-18 13:35:53.861 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.saveSorCheckBoundDetails     : ==>  Preparing: insert into sor_checkbounddetails values(?,?,?,?,?,?,?,?) 
-2020-03-18 13:35:53.863 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.saveSorCheckBoundDetails     : ==> Parameters: 689829435613904901(String), 2(Integer), 2.0(Double), 2.0(Double), 2(String), 邬童(String), 2020-3-18(String), 688041573503598592(String)
-2020-03-18 13:35:53.921 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.saveSorCheckBoundDetails     : <==    Updates: 1
-2020-03-18 13:36:31.072 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:36:31.073 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:36:31.707 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
-2020-03-18 13:36:33.243 DEBUG 2508 --- [http-nio-8080-exec-1] c.x.b.d.s.S.delSorCheckBoundByPackging   : ==>  Preparing: delete from sor_checkbound where Packging=? 
-2020-03-18 13:36:33.706 DEBUG 2508 --- [http-nio-8080-exec-1] c.x.b.d.s.S.delSorCheckBoundByPackging   : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:36:33.780 DEBUG 2508 --- [http-nio-8080-exec-1] c.x.b.d.s.S.delSorCheckBoundByPackging   : <==    Updates: 1
-2020-03-18 13:36:33.782 DEBUG 2508 --- [http-nio-8080-exec-1] .d.s.S.delSorCheckboundDetailsByPackging : ==>  Preparing: delete from sor_checkbounddetails where Packging=? 
-2020-03-18 13:36:33.783 DEBUG 2508 --- [http-nio-8080-exec-1] .d.s.S.delSorCheckboundDetailsByPackging : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:36:33.852 DEBUG 2508 --- [http-nio-8080-exec-1] .d.s.S.delSorCheckboundDetailsByPackging : <==    Updates: 1
-2020-03-18 13:36:34.810 DEBUG 2508 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:36:34.811 DEBUG 2508 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:36:35.723 DEBUG 2508 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 0
-2020-03-18 13:36:36.735 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
-2020-03-18 13:36:36.737 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
-2020-03-18 13:36:36.792 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
-2020-03-18 13:36:36.793 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
-2020-03-18 13:36:36.828 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
-2020-03-18 13:36:36.830 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
-2020-03-18 13:36:38.703 DEBUG 2508 --- [http-nio-8080-exec-5] .x.b.d.s.S.findSorPackageDetailByPackage : ==>  Preparing: select ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging from sor_packagedetails where Packging=? 
-2020-03-18 13:36:38.704 DEBUG 2508 --- [http-nio-8080-exec-5] .x.b.d.s.S.findSorPackageDetailByPackage : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:36:38.738 DEBUG 2508 --- [http-nio-8080-exec-5] .x.b.d.s.S.findSorPackageDetailByPackage : <==      Total: 1
-2020-03-18 13:36:41.652 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.S.saveSorCheckBound            : ==>  Preparing: insert into sor_checkbound values(?,?,?,?,?,?) 
-2020-03-18 13:36:41.706 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.S.saveSorCheckBound            : ==> Parameters: 689829636059561985(String), 2(Integer), 邬童(String), 2020/3/18 13:30:21(String), 长沙分部(String), 688041573503598592(String)
-2020-03-18 13:36:41.776 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.S.saveSorCheckBound            : <==    Updates: 1
-2020-03-18 13:36:41.777 DEBUG 2508 --- [http-nio-8080-exec-7] .x.b.d.s.S.findSorPackageDetailByPackage : ==>  Preparing: select ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging from sor_packagedetails where Packging=? 
-2020-03-18 13:36:41.777 DEBUG 2508 --- [http-nio-8080-exec-7] .x.b.d.s.S.findSorPackageDetailByPackage : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:36:41.827 DEBUG 2508 --- [http-nio-8080-exec-7] .x.b.d.s.S.findSorPackageDetailByPackage : <==      Total: 1
-2020-03-18 13:36:41.828 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.S.saveSorCheckBoundDetails     : ==>  Preparing: insert into sor_checkbounddetails values(?,?,?,?,?,?,?,?) 
-2020-03-18 13:36:41.832 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.S.saveSorCheckBoundDetails     : ==> Parameters: 689829636797890561(String), 2(Integer), 2.0(Double), 2.0(Double), 2(String), 邬童(String), 2020-3-18(String), 688041573503598592(String)
-2020-03-18 13:36:41.857 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:36:41.859 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:36:41.900 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 0
-2020-03-18 13:36:42.706 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.S.saveSorCheckBoundDetails     : <==    Updates: 1
-2020-03-18 13:38:27.944  WARN 2508 --- [http-nio-8080-exec-9] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
-2020-03-18 13:38:28.078  INFO 2508 --- [http-nio-8080-exec-9] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-18 13:38:28.139  INFO 2508 --- [http-nio-8080-exec-9] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59ms. Found 0 repository interfaces.
-2020-03-18 13:38:28.385  INFO 2508 --- [http-nio-8080-exec-9] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-03-18 13:38:29.336 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:38:29.851 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:38:29.884 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
-2020-03-18 13:38:31.780 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.delSorCheckBoundByPackging   : ==>  Preparing: delete from sor_checkbound where Packging=? 
-2020-03-18 13:38:32.941 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.delSorCheckBoundByPackging   : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:38:33.736 DEBUG 2508 --- [http-nio-8080-exec-10] c.x.b.d.s.S.delSorCheckBoundByPackging   : <==    Updates: 1
-2020-03-18 13:38:33.737 DEBUG 2508 --- [http-nio-8080-exec-10] .d.s.S.delSorCheckboundDetailsByPackging : ==>  Preparing: delete from sor_checkbounddetails where Packging=? 
-2020-03-18 13:38:33.738 DEBUG 2508 --- [http-nio-8080-exec-10] .d.s.S.delSorCheckboundDetailsByPackging : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:38:33.808 DEBUG 2508 --- [http-nio-8080-exec-10] .d.s.S.delSorCheckboundDetailsByPackging : <==    Updates: 1
-2020-03-18 13:38:35.744 DEBUG 2508 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:38:35.745 DEBUG 2508 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:38:35.785 DEBUG 2508 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 0
-2020-03-18 13:38:36.548 DEBUG 2508 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
-2020-03-18 13:38:36.549 DEBUG 2508 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
-2020-03-18 13:38:36.712 DEBUG 2508 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
-2020-03-18 13:38:36.713 DEBUG 2508 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
-2020-03-18 13:38:36.748 DEBUG 2508 --- [http-nio-8080-exec-4] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
-2020-03-18 13:38:36.751 DEBUG 2508 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
-2020-03-18 13:38:38.090 DEBUG 2508 --- [http-nio-8080-exec-3] .x.b.d.s.S.findSorPackageDetailByPackage : ==>  Preparing: select ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging from sor_packagedetails where Packging=? 
-2020-03-18 13:38:38.091 DEBUG 2508 --- [http-nio-8080-exec-3] .x.b.d.s.S.findSorPackageDetailByPackage : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:38:38.712 DEBUG 2508 --- [http-nio-8080-exec-3] .x.b.d.s.S.findSorPackageDetailByPackage : <==      Total: 1
-2020-03-18 13:38:39.394 DEBUG 2508 --- [http-nio-8080-exec-5] c.x.b.d.s.S.saveSorCheckBound            : ==>  Preparing: insert into sor_checkbound values(?,?,?,?,?,?) 
-2020-03-18 13:38:39.709 DEBUG 2508 --- [http-nio-8080-exec-5] c.x.b.d.s.S.saveSorCheckBound            : ==> Parameters: 689830129909497857(String), 2(Integer), 邬童(String), 2020/3/18 13:30:21(String), 长沙分部(String), 688041573503598592(String)
-2020-03-18 13:38:39.770 DEBUG 2508 --- [http-nio-8080-exec-5] c.x.b.d.s.S.saveSorCheckBound            : <==    Updates: 1
-2020-03-18 13:38:39.772 DEBUG 2508 --- [http-nio-8080-exec-5] .x.b.d.s.S.findSorPackageDetailByPackage : ==>  Preparing: select ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging from sor_packagedetails where Packging=? 
-2020-03-18 13:38:39.773 DEBUG 2508 --- [http-nio-8080-exec-5] .x.b.d.s.S.findSorPackageDetailByPackage : ==> Parameters: 688041573503598592(String)
-2020-03-18 13:38:39.806 DEBUG 2508 --- [http-nio-8080-exec-5] .x.b.d.s.S.findSorPackageDetailByPackage : <==      Total: 1
-2020-03-18 13:38:39.807 DEBUG 2508 --- [http-nio-8080-exec-5] c.x.b.d.s.S.saveSorCheckBoundDetails     : ==>  Preparing: insert into sor_checkbounddetails values(?,?,?,?,?,?,?,?) 
-2020-03-18 13:38:39.808 DEBUG 2508 --- [http-nio-8080-exec-5] c.x.b.d.s.S.saveSorCheckBoundDetails     : ==> Parameters: 689830131641876482(String), 2(Integer), 2.0(Double), 2.0(Double), 2(String), 邬童(String), 2020-3-18(String), 688041573503598592(String)
-2020-03-18 13:38:39.871 DEBUG 2508 --- [http-nio-8080-exec-5] c.x.b.d.s.S.saveSorCheckBoundDetails     : <==    Updates: 1
-2020-03-18 13:38:41.035 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:38:41.037 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:38:41.710 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
-2020-03-18 13:38:59.732 DEBUG 2508 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:38:59.733 DEBUG 2508 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:39:00.863 DEBUG 2508 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
-2020-03-18 13:43:27.220 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:43:31.707 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:43:31.856 DEBUG 2508 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
-2020-03-18 13:48:52.421 DEBUG 2508 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==>  Preparing: SELECT ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging FROM sor_packagedetails WHERE (Packging is NULL) 
-2020-03-18 13:48:53.367 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackage               : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE ( State='未拆包') 
-2020-03-18 13:48:54.821 DEBUG 2508 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
-2020-03-18 13:48:56.705 DEBUG 2508 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorPackageDetailNoPack   : ==> Parameters: 
-2020-03-18 13:48:56.774 DEBUG 2508 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorPackageDetailNoPack   : <==      Total: 0
-2020-03-18 13:48:56.777 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackage               : ==> Parameters: 
-2020-03-18 13:48:56.834 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
-2020-03-18 13:48:56.834 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
-2020-03-18 13:48:56.867 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
-2020-03-18 13:48:56.869 DEBUG 2508 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackage               : <==      Total: 1
-2020-03-18 13:48:56.870 DEBUG 2508 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
-2020-03-18 13:48:57.709 DEBUG 2508 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
-2020-03-18 13:48:59.750 ERROR 2508 --- [Druid-ConnectionPool-Create-519650817] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://47.100.39.234:3308/bos?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true, errorCode 0, state 08S01
-
-com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
-
-The last packet successfully received from the server was 1,001 milliseconds ago.  The last packet sent successfully to the server was 1,001 milliseconds ago.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_211]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_211]
-	at sun.reflect.DelegatingConstructorAccessorImpl.__newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_211]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45009) ~[na:1.8.0_211]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45012) ~[na:1.8.0_211]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_211]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3562) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3462) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3905) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.ConnectionImpl.pingInternal(ConnectionImpl.java:3935) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at sun.reflect.GeneratedMethodAccessor154.invoke(Unknown Source) ~[na:na]
-	at sun.reflect.DelegatingMethodAccessorImpl.__invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_211]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:45009) ~[na:1.8.0_211]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:45012) ~[na:1.8.0_211]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_211]
-	at com.alibaba.druid.pool.vendor.MySqlValidConnectionChecker.isValidConnection(MySqlValidConnectionChecker.java:107) ~[druid-1.1.18.jar:1.1.18]
-	at com.alibaba.druid.pool.DruidAbstractDataSource.validateConnection(DruidAbstractDataSource.java:1384) ~[druid-1.1.18.jar:1.1.18]
-	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1672) ~[druid-1.1.18.jar:1.1.18]
-	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2697) ~[druid-1.1.18.jar:1.1.18]
-Caused by: java.net.SocketTimeoutException: Read timed out
-	at java.net.SocketInputStream.socketRead0(SocketInputStream.java) ~[na:1.8.0_211]
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[na:1.8.0_211]
-	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[na:1.8.0_211]
-	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[na:1.8.0_211]
-	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:101) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:144) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:174) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3011) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3472) ~[mysql-connector-java-5.1.47.jar:5.1.47]
-	... 13 common frames omitted
-
-2020-03-18 13:56:10.030 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorAbnormal              : ==>  Preparing: SELECT ID,LaunchDate,LaunchPerson,LaunchCompany,AbnormalType,TransferInt,PackageInt,HedgeAbnInt,AboState,HandleDate,Textare FROM sor_abnormal 
-2020-03-18 13:56:10.757 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package 
-2020-03-18 13:56:11.602 DEBUG 2508 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package 
-2020-03-18 13:56:12.881 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 
-2020-03-18 13:56:13.702 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
-2020-03-18 13:56:13.703 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
-2020-03-18 13:56:13.736 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
-2020-03-18 13:56:13.742 DEBUG 2508 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 2
-2020-03-18 13:56:13.744 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorAbnormal              : ==> Parameters: 
-2020-03-18 13:56:13.782 DEBUG 2508 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorAbnormal              : <==      Total: 1
-2020-03-18 13:56:13.784 DEBUG 2508 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 
-2020-03-18 13:56:13.814 DEBUG 2508 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
-2020-03-18 13:56:13.815 DEBUG 2508 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
-2020-03-18 13:56:13.842 DEBUG 2508 --- [http-nio-8080-exec-9] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
-2020-03-18 13:56:13.845 DEBUG 2508 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 2
+2020-03-27 12:24:22.938  INFO 6108 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-03-27 12:24:24.330  INFO 6108 --- [main] org.redisson.Version                     : Redisson 3.2.0
+2020-03-27 12:24:31.520  INFO 6108 --- [nioEventLoopGroup-4-7] o.r.c.pool.SinglePubSubConnectionPool    : 1 connections initialized for /47.100.39.234:6378
+2020-03-27 12:24:31.521  INFO 6108 --- [nioEventLoopGroup-4-2] o.r.c.pool.MasterConnectionPool          : 5 connections initialized for /47.100.39.234:6378
+2020-03-27 12:24:32.095  INFO 6108 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-03-27 12:24:32.174  INFO 6108 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-03-27 12:24:32.421  INFO 6108 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-03-27 12:24:32.681  INFO 6108 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-27 12:24:32.697  INFO 6108 --- [main] com.xr.boot.BootApplication              : Started BootApplication in 27.993 seconds (JVM running for 53.229)
+2020-03-27 12:25:04.718  INFO 6108 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-27 12:25:04.719  INFO 6108 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-27 12:25:04.762  INFO 6108 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 42 ms
+2020-03-27 12:25:13.118 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyEmpByEmpNoAndPwd       : ==>  Preparing: select id,empname,empno,pwd,querypwd,roleid,empunit,remark,disabled from sy_emp where empno=? and ? 
+2020-03-27 12:25:15.661 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyEmpByEmpNoAndPwd       : ==> Parameters: 007(String), 36E205C05D8FF28AAD410CF5CABD16ED(String)
+2020-03-27 12:25:15.790 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.SyRoleMapper.findSyRolesById   : ====>  Preparing: select id,rolename,roledesc,disabled from sy_roles where id=? 
+2020-03-27 12:25:15.830 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.SyRoleMapper.findSyRolesById   : ====> Parameters: 1(Integer)
+2020-03-27 12:25:15.861 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.SyRoleMapper.findSyRolesById   : <====      Total: 1
+2020-03-27 12:25:15.869 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyUnitAllById            : ====>  Preparing: select ID,`Name`,Remarks,OperatorID,parentid,OperationTime,Stats from sy_units where id=? 
+2020-03-27 12:25:15.912 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyUnitAllById            : ====> Parameters: 2(Integer)
+2020-03-27 12:25:15.944 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyUnitAllById            : <====      Total: 1
+2020-03-27 12:25:15.946 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSyEmpByEmpNoAndPwd       : <==      Total: 1
+2020-03-27 12:25:15.959 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyBigMenusAll            : ==>  Preparing: select id,bigmenus,url,icon from sy_bigmenus 
+2020-03-27 12:25:15.983 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyBigMenusAll            : ==> Parameters: 
+2020-03-27 12:25:16.017 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.M.findSyBigMenusAll            : <==      Total: 8
+2020-03-27 12:25:16.048  WARN 6108 --- [http-nio-8080-exec-3] o.s.b.a.klock.core.KlockAspectHandler    : Timeout while release Lock(lock.com.xr.boot.service.system.impl.SyEmpServiceImpl.login)
+2020-03-27 12:25:29.089 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorStorageByWhere        : ==>  Preparing: SELECT ID,AcceptDate,AcceptPerson,AcceptCompany,PackageID FROM sor_storage 
+2020-03-27 12:25:29.114 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorStorageByWhere        : ==> Parameters: 
+2020-03-27 12:25:29.145 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-27 12:25:29.157 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-27 12:25:29.186 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-27 12:25:29.187 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorStorageByWhere        : <==      Total: 1
+2020-03-27 12:25:40.955 DEBUG 6108 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 12:25:41.019 DEBUG 6108 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 12:25:41.050 DEBUG 6108 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 12:31:01.724 DEBUG 6108 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 12:31:02.833 DEBUG 6108 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-27 12:31:03.127 DEBUG 6108 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 12:31:03.159 DEBUG 6108 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 12:31:03.164 DEBUG 6108 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-27 12:31:03.196 DEBUG 6108 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-27 12:31:03.197 DEBUG 6108 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-27 12:31:03.225 DEBUG 6108 --- [http-nio-8080-exec-1] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-27 12:31:03.227 DEBUG 6108 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-27 12:41:01.754 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 12:41:03.759 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 12:41:03.789 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 12:44:22.512 DEBUG 6108 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 12:44:22.547 DEBUG 6108 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 12:44:22.577 DEBUG 6108 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 12:44:23.344 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-27 12:44:23.345 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-27 12:44:23.375 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-27 12:44:23.376 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-27 12:44:23.405 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-27 12:44:23.407 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-27 12:45:08.725 DEBUG 6108 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 12:45:08.725 DEBUG 6108 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 12:45:08.756 DEBUG 6108 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 12:45:09.479 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-27 12:45:09.482 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-27 12:45:09.515 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-27 12:45:09.516 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-27 12:45:09.546 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-27 12:45:09.550 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-27 12:45:14.234 DEBUG 6108 --- [http-nio-8080-exec-9] .x.b.d.s.S.findSorPackageDetailByPackage : ==>  Preparing: select ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging from sor_packagedetails where Packging=? 
+2020-03-27 12:45:14.273 DEBUG 6108 --- [http-nio-8080-exec-9] .x.b.d.s.S.findSorPackageDetailByPackage : ==> Parameters: 688041573503598592(String)
+2020-03-27 12:45:14.303 DEBUG 6108 --- [http-nio-8080-exec-9] .x.b.d.s.S.findSorPackageDetailByPackage : <==      Total: 1
+2020-03-27 12:45:21.978 DEBUG 6108 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 12:45:21.978 DEBUG 6108 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 12:45:22.008 DEBUG 6108 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 12:46:04.555 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-27 12:46:04.556 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-27 12:46:04.588 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-27 12:46:04.589 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-27 12:46:04.619 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-27 12:46:04.621 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-27 12:46:06.923 DEBUG 6108 --- [http-nio-8080-exec-4] .x.b.d.s.S.findSorPackageDetailByPackage : ==>  Preparing: select ID,WareName,Destination,Ticket,ActualCargoInt,CargoInt,Weight,Volume,Service,ImportantHints,Ask,InputType,Packging from sor_packagedetails where Packging=? 
+2020-03-27 12:46:06.924 DEBUG 6108 --- [http-nio-8080-exec-4] .x.b.d.s.S.findSorPackageDetailByPackage : ==> Parameters: 688041573503598592(String)
+2020-03-27 12:46:06.955 DEBUG 6108 --- [http-nio-8080-exec-4] .x.b.d.s.S.findSorPackageDetailByPackage : <==      Total: 1
+2020-03-27 12:51:36.153  WARN 6108 --- [http-nio-8080-exec-6] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-03-27 12:51:36.155  INFO 6108 --- [http-nio-8080-exec-6] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-27 12:51:36.307  INFO 6108 --- [http-nio-8080-exec-6] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 151ms. Found 0 repository interfaces.
+2020-03-27 12:51:36.558 DEBUG 6108 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 12:51:38.563 DEBUG 6108 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 12:51:38.596 DEBUG 6108 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 12:52:23.789  INFO 6108 --- [http-nio-8080-exec-5] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-27 12:52:23.962  INFO 6108 --- [http-nio-8080-exec-5] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 171ms. Found 0 repository interfaces.
+2020-03-27 12:52:25.472  INFO 6108 --- [http-nio-8080-exec-5] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-03-27 12:52:25.474  INFO 6108 --- [http-nio-8080-exec-5] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-27 12:52:25.996  INFO 6108 --- [http-nio-8080-exec-5] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 518ms. Found 0 repository interfaces.
+2020-03-27 12:52:29.241 DEBUG 6108 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 12:52:29.243 DEBUG 6108 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 12:52:29.276 DEBUG 6108 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 12:52:33.658 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : ==>  Preparing: SELECT ID,PackagePerson,SealInt,Destination,ReckonDes,TimeLimit,TicketSum,CargoSum,WeightSum,VolumeSum,State,Ask FROM sor_package WHERE (State=?) 
+2020-03-27 12:52:33.659 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : ==> Parameters: 已拆包(String)
+2020-03-27 12:52:33.692 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====>  Preparing: select empname from sy_emp where id=? 
+2020-03-27 12:52:33.693 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : ====> Parameters: 1(Integer)
+2020-03-27 12:52:33.723 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.SyEmpMapper.findSyEmpNameById  : <====      Total: 1
+2020-03-27 12:52:33.724 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorPackageByIdAndState   : <==      Total: 1
+2020-03-27 12:52:38.069 DEBUG 6108 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 12:52:38.071 DEBUG 6108 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 12:52:38.102 DEBUG 6108 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 12:56:21.554  WARN 6108 --- [http-nio-8080-exec-1] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xr.boot.dao]' package. Please check your configuration.
+2020-03-27 12:56:21.555  INFO 6108 --- [http-nio-8080-exec-1] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-27 12:56:21.621  INFO 6108 --- [http-nio-8080-exec-1] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65ms. Found 0 repository interfaces.
+2020-03-27 12:56:21.970 DEBUG 6108 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 12:56:22.112 DEBUG 6108 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 12:56:22.146 DEBUG 6108 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 12:56:26.811 DEBUG 6108 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 12:56:26.812 DEBUG 6108 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 12:56:26.856 DEBUG 6108 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 12:57:15.104 DEBUG 6108 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 12:57:15.106 DEBUG 6108 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 12:57:15.137 DEBUG 6108 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 12:57:26.855 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 12:57:26.856 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 12:57:26.887 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 12:58:58.674 DEBUG 6108 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 12:58:58.705 DEBUG 6108 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 12:58:58.736 DEBUG 6108 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:01:15.142 DEBUG 6108 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:01:15.174 DEBUG 6108 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:01:15.206 DEBUG 6108 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:06:27.420 DEBUG 6108 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:06:29.426 DEBUG 6108 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:06:29.459 DEBUG 6108 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:09:42.372 DEBUG 6108 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:09:42.404 DEBUG 6108 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:09:42.435 DEBUG 6108 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:10:04.178 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:10:04.179 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:10:04.210 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:10:06.935 DEBUG 6108 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:10:06.936 DEBUG 6108 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:10:06.967 DEBUG 6108 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:11:15.968 DEBUG 6108 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:11:15.999 DEBUG 6108 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:11:16.033 DEBUG 6108 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:11:17.125 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:11:17.127 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:11:17.164 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:12:33.787 DEBUG 6108 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:12:33.817 DEBUG 6108 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:12:33.855 DEBUG 6108 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:13:28.196 DEBUG 6108 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:13:28.197 DEBUG 6108 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:13:28.235 DEBUG 6108 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:13:52.214 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:13:52.215 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:13:52.249 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:14:19.844 DEBUG 6108 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:14:19.846 DEBUG 6108 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:14:19.880 DEBUG 6108 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:14:34.686 DEBUG 6108 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:14:34.689 DEBUG 6108 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:14:34.720 DEBUG 6108 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:15:24.203 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:15:24.204 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:15:24.235 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:15:36.968 DEBUG 6108 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:15:36.970 DEBUG 6108 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:15:37.000 DEBUG 6108 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:16:42.161 DEBUG 6108 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:16:42.192 DEBUG 6108 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:16:42.225 DEBUG 6108 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:21:52.381 DEBUG 6108 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:21:54.387 DEBUG 6108 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:21:54.417 DEBUG 6108 --- [http-nio-8080-exec-9] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:27:00.433 DEBUG 6108 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:27:02.440 DEBUG 6108 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:27:02.476 DEBUG 6108 --- [http-nio-8080-exec-2] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:27:31.416 DEBUG 6108 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:27:31.420 DEBUG 6108 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:27:31.451 DEBUG 6108 --- [http-nio-8080-exec-4] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:33:21.014 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:33:23.020 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:33:23.054 DEBUG 6108 --- [http-nio-8080-exec-5] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:36:17.419 DEBUG 6108 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:36:17.448 DEBUG 6108 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:36:17.476 DEBUG 6108 --- [http-nio-8080-exec-8] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:36:19.535 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:36:19.537 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:36:19.565 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:42:34.801 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:42:36.804 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:42:36.834 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:43:18.689 DEBUG 6108 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:43:18.691 DEBUG 6108 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:43:18.722 DEBUG 6108 --- [http-nio-8080-exec-6] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 13:43:40.628 DEBUG 6108 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 13:43:40.630 DEBUG 6108 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 13:43:40.661 DEBUG 6108 --- [http-nio-8080-exec-7] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 14:00:04.049 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 14:00:06.055 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 14:00:06.085 DEBUG 6108 --- [http-nio-8080-exec-10] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 14:00:23.691 DEBUG 6108 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 14:00:23.693 DEBUG 6108 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 14:00:23.723 DEBUG 6108 --- [http-nio-8080-exec-1] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
+2020-03-27 14:01:16.937 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==>  Preparing: SELECT ID,CargoSum,VolumeSum,CheckPerson,CheckDate,CheckCompany,Packging FROM sor_checkbound 
+2020-03-27 14:01:16.940 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : ==> Parameters: 
+2020-03-27 14:01:16.970 DEBUG 6108 --- [http-nio-8080-exec-3] c.x.b.d.s.S.findSorCheckBoundByWhere     : <==      Total: 1
